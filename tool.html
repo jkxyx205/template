@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tool</title>
+    <style>
+
+    html {
+        color: #fff;
+        font-size: 12px;
+    }
+
+     html, body, .edit-panel, #divice-panel, /*#container-device,*/ iframe {
+        height: 100%;
+        margin:0;
+        padding: 0;
+    }
+    iframe {
+        /*margin-top: */
+         width: 100%;
+    }
+
+    select {
+        margin-right: 10px;
+    }
+        
+.tool-bar {
+  position: absolute;
+  padding: 17px 20px 0 20px;
+  height: 54px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #000;
+}
+/* line 410, ../sass/style.scss */
+.tool-bar ul, .tool-bar li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  list-style: none;
+}
+/* line 417, ../sass/style.scss */
+.tool-bar li {
+  margin-right: 5px;
+}
+/* line 424, ../sass/style.scss */
+.tool-bar #Device div[class|=icon] {
+  width: 16px;
+  height: 16px;
+}
+/* line 430, ../sass/style.scss */
+.tool-bar .icon-monitor {
+  background: transparent url(images/mon-spr.png) 0 0 no-repeat;
+}
+/* line 433, ../sass/style.scss */
+.tool-bar .icon-monitor.active, .tool-bar .icon-monitor:hover {
+  background: transparent url(images/mon-spr.png) 0 -16px no-repeat;
+}
+/* line 441, ../sass/style.scss */
+.tool-bar .icon-tablet {
+  background: transparent url(images/mon-spr.png) -24px 0 no-repeat;
+}
+/* line 444, ../sass/style.scss */
+.tool-bar .icon-tablet.active, .tool-bar .icon-tablet:hover {
+  background: transparent url(images/mon-spr.png) -24px -16px no-repeat;
+}
+/* line 449, ../sass/style.scss */
+.tool-bar .icon-mobile-1 {
+  background: transparent url(images/mon-spr.png) -48px 0 no-repeat;
+}
+/* line 452, ../sass/style.scss */
+.tool-bar .icon-mobile-1.active, .tool-bar .icon-mobile-1:hover {
+  background: transparent url(images/mon-spr.png) -48px -16px no-repeat;
+}
+/* line 457, ../sass/style.scss */
+.tool-bar .icon-mobile-2 {
+  background: transparent url(images/mon-spr.png) -72px 0 no-repeat;
+}
+/* line 460, ../sass/style.scss */
+.tool-bar .icon-mobile-2.active, .tool-bar .icon-mobile-2:hover {
+  background: transparent url(images/mon-spr.png) -72px -16px no-repeat;
+}
+/* line 465, ../sass/style.scss */
+.tool-bar .icon-mobile-3 {
+  background: transparent url(images/mon-spr.png) -96px 0 no-repeat;
+}
+/* line 468, ../sass/style.scss */
+.tool-bar .icon-mobile-3.active, .tool-bar .icon-mobile-3:hover {
+  background: transparent url(images/mon-spr.png) -96px -16px no-repeat;
+}
+/* line 473, ../sass/style.scss */
+.tool-bar .icon-edit {
+  background: transparent url(images/mon-spr.png) -119px 0 no-repeat;
+}
+/* line 476, ../sass/style.scss */
+.tool-bar .icon-edit.active, .tool-bar .icon-edit:hover {
+  background: transparent url(images/mon-spr.png) -120px -16px no-repeat;
+}
+/* line 481, ../sass/style.scss */
+.tool-bar .icon-view {
+  background: transparent url(images/mon-spr.png) -146px 0 no-repeat;
+}
+/* line 484, ../sass/style.scss */
+.tool-bar .icon-view.active, .tool-bar .icon-view:hover {
+  background: transparent url(images/mon-spr.png) -146px -16px no-repeat;
+}
+/* line 489, ../sass/style.scss */
+.tool-bar .icon-full {
+  background: transparent url(images/mon-spr.png) -172px 0 no-repeat;
+}
+/* line 492, ../sass/style.scss */
+.tool-bar .icon-full.active, .tool-bar .icon-full:hover {
+  background: transparent url(images/mon-spr.png) -172px -16px no-repeat;
+}
+
+/* line 548, ../sass/style.scss */
+#divice-panel {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-top: 54px;
+  overflow: hidden;
+}
+
+/* line 557, ../sass/style.scss */
+.full-width, .tablet-edit, .tablet-full {
+  height: 100%;
+}
+
+/* line 562, ../sass/style.scss */
+.tablet-width {
+  width: 785px;
+  height: 960px;
+  margin: 0 auto;
+  padding: 175px 100px 115px 100px;
+  background: url(images/bg-mob.png) no-repeat 0 0;
+}
+
+/* line 571, ../sass/style.scss */
+.mobile-width {
+  width: 1041px;
+  height: 703px;
+  margin: 0 auto;
+  padding: 165px 115px 100px 100px;
+  background: url(images/bg-mob.png) no-repeat 0 -1249px;
+}
+
+/* line 579, ../sass/style.scss */
+.mobile-width-2 {
+  width: 337px;
+  height: 417px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 125px 25px 159px 25px;
+  background: url(images/bg-mob.png) no-repeat 0 -2217px;
+}
+
+/* line 588, ../sass/style.scss */
+.mobile-width-3 {
+  width: 497px;
+  height: 256px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 45px 115px 69px 105px;
+  background: url(images/bg-mob.png) no-repeat -387px -2217px;
+}
+
+/* line 598, ../sass/style.scss */
+.design-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="edit-panel">
+            <div class="tool-bar">
+                <div id="Device">
+                    <ul>
+                            <li class="device-monitor" data-device="full-width">
+                                <a href="javascript:">
+                                    <div class="icon-monitor active">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="device-mobile" data-device="tablet-width"><a href="javascript:">
+                                <div class="icon-tablet">
+                                </div>
+                            </a></li>
+                 
+                            <li class="device-mobile-2" data-device="mobile-width-2"><a href="javascript:">
+                                <div class="icon-mobile-2">
+                                </div>
+                            </a></li>
+                            <li class="device-mobile-3" data-device="mobile-width-3"><a href="javascript:">
+                                <div class="icon-mobile-3">
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="select-area" style="float: right;">
+                    页面：<select name="" id="page">
+                            <option value="tpl/index.html" selected>首页</option>
+                            <option value="tpl/full-text.html">分页-全文搜索</option>
+                            <option value="tpl/article.html">分页-图文详情</option>
+                        </select>
+                         页眉：<select name="" id="header">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                        </select>
+                         页脚：<select name="" id="footer">
+                           <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        风格：<select name="" id="style">
+                            <option value="1">1</option>
+                            <option value="2" selected="">2</option>
+                        </select>
+                        配色：<select name="" id="block">
+                           <option value="1">1</option>
+                            <option value="2">2</option>
+                             <option value="3">3</option>
+                        </select>
+                         <button onclick="change()">刷新</button>
+                </div>
+              
+            </div>
+
+            <div id="divice-panel">
+            <div class="full-width" id="container-device">
+                <iframe id="iframe" name="iframe" src="" frameborder="0"></iframe>
+            </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+
+        <script>
+
+            $(function() {
+                init()
+            })
+
+            $('#Device li').on('click', function() {
+                    //set divice
+                    var device = $(this).data('device')
+
+                    $(this).siblings().find('div').removeClass('active')
+                    $(this).find('div').addClass('active')
+                    $('#container-device').removeClass().addClass(device)
+
+            })
+
+            $('select').on('change', function() {
+                id = this.id;
+                if(id === "page") { //global
+                    init()
+                    change()
+                } else if (id === "style") { //global
+                    change()
+                } else if (id === "header") {
+                    var params = getParams()
+                    var id = params.header
+                    addHeader(id)
+                    change()
+
+                } else if (id === "footer") {
+                    //TODO
+                } else if (id === "block") { //global
+                    change()
+                } 
+
+            })
+
+            function init() {
+                var params = getParams()
+                $('#iframe').attr("src", params.page);
+
+                var id = params.header
+
+                var sh;
+                sh=setInterval(function() {
+                    if (window.frames["iframe"] && window.frames["iframe"].loaded) {
+                        console.log('add...')
+                        
+                        addHeader(id)
+                        change()
+                        clearInterval(sh);
+                    }
+                },100);
+            }
+
+            function addHeader(id) {
+                 var doc = $(window.frames["iframe"].document)[0];
+                 
+                 $(doc).find(".header-container").html($('#header_'+id).html())
+
+                 window.frames["iframe"].init()
+            }
+
+            function change() {
+                 var doc = $(window.frames["iframe"].document)[0];
+                 removeStyles(doc)
+                 var params = getParams()
+
+                 loadStyles(doc, '../header/'+params.header+'/'+params.style+'/css/'+params.block+'.css')
+                 loadStyles(doc, '../footer/'+params.footer+'/'+params.style+'/css/'+params.block+'.css')
+                 loadStyles(doc, '../style/'+params.style+'/css/'+params.block+'.css')
+            }
+
+
+            function getParams() {
+                var params = {};
+                params.page = $('#page').val()
+                params.style = $('#style').val()
+                params.header = $('#header').val()
+                params.footer = $('#footer').val()
+                params.block = $('#block').val()
+                return params;
+            }
+
+            // 动态加载css文件
+            function loadStyles(doc, url) {
+                var link = doc.createElement("link");
+                link.type = "text/css";''
+                link.rel = "stylesheet";
+                link.href = url;
+                doc.getElementsByTagName("head")[0].appendChild(link);
+            }
+
+            function removeStyles(doc){
+                var targetelement= "link";
+                var targetattr= "href";
+                var allsuspects=doc.getElementsByTagName(targetelement);
+                for (var i=allsuspects.length; i>=0; i--){
+                    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null &&
+                        (allsuspects[i].href.indexOf("header") > -1
+                            || allsuspects[i].href.indexOf("footer") > -1
+                            || allsuspects[i].href.indexOf("style") > -1
+                        )) {
+                        // console.log(allsuspects[i])
+                        allsuspects[i].parentNode.removeChild(allsuspects[i]);
+                    }
+
+                }
+            }
+
+
+        </script>
+</body>
+</html>
+
+<script type="text/html" id="header_1">
+ <header>
+        <div class="top-bar">
+          <div class="container">
+            <ul class="nav-left pull-left">
+              <li><a href="#">网站地图</a></li>
+              <li><a href="#">公司招聘</a></li>
+              <li><a href="#">联系我们</a></li>
+            </ul>
+
+            <ul class="nav-right pull-right">
+             <li class="lang-list">
+                <span class="lang-active">简</span><span style="color: #ccc;">EN</span>
+              </li>
+              <li><i class="iconfont icon-telephone"></i><span>+123 456 78-90</span></li>
+              <li><i class="iconfont icon-1"></i><a href="mailto:info@gmail.com">INFO@GMAIL.COM</a></li>
+               <li>
+                  <div class="container-query">
+                      <input type="text" placeholder = "搜索">
+                      <a href="full-text.html" class="query"><i class="iconfont icon-search"></i></a>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+         <!--导航开始-->
+        <div class="container">
+            <div class="drawer-navbar" role="banner">
+                <div class="drawer-container">
+                      <div class="drawer-navbar-header">
+                        <a class="drawer-brand" href="./index.html"><img src="../images/logo-small.png"/></a>
+                        <button type="button" class="drawer-toggle drawer-hamburger">
+                          <span class="sr-only">toggle navigation</span>
+                          <span class="drawer-hamburger-icon"></span>
+                        </button>
+                      </div>
+
+                      <nav class="drawer-nav" role="navigation">
+                        <ul class="drawer-menu">
+                          <li class="drawer-dropdown current"><a class="drawer-menu-item" href="#">首页</a></li>
+                 
+                          <li class="drawer-dropdown">
+                            <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                              投资者关系</span>
+                            </a>
+                            <ul class="drawer-dropdown-menu">
+                              <li class="drawer-dropdown"><a class="drawer-dropdown-menu-item" href="./navbar-top.html">新闻公告</a>
+
+                                  <ul class="drawer-dropdown-menu third-dropdown-menu">
+                                    <li><a class="drawer-dropdown-menu-item" href="">xxxxxxx</a></li>
+                                  </ul>
+
+                              </li>
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">通知</a></li>
+                              <li class="drawer-dropdown">
+                                   <a class="drawer-dropdown-menu-item" href="./navbar-right.html">产品中心</a>
+                                    <ul class="drawer-dropdown-menu third-dropdown-menu">
+                                    <li><a class="drawer-dropdown-menu-item" href="">xxxxxxx</a></li>
+                                    <li><a class="drawer-dropdown-menu-item" href="">aaa</a></li>
+                                    <li><a class="drawer-dropdown-menu-item" href="">cccc</a></li>
+                                  </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+
+                </div>
+            </div>
+          </div>
+          <!--导航结束-->
+     </header>
+</script>
+
+<script type="text/html" id="header_2">
+ <header>
+        <div class="top-bar">
+          <div class="container">
+            <ul class="nav-left pull-right">
+              <li><a href="#">网站地图</a></li>
+              <li><a href="#">公司招聘</a></li>
+              <li><a href="#">联系我们</a></li>
+            </ul>
+
+            <ul class="nav-right pull-left">
+            <li>
+                  <div class="container-query">
+                      <input type="text" placeholder = "搜索">
+                      <a href="full-text.html" class="query"><i class="iconfont icon-search"></i></a>
+                  </div>
+              </li>
+             <li class="lang-list">
+                <span class="lang-active">简</span><span style="color: #ccc;">EN</span>
+              </li>
+              <li><i class="iconfont icon-telephone"></i><span>+123 456 78-90</span></li>
+              <li><i class="iconfont icon-1"></i><a href="mailto:info@gmail.com">INFO@GMAIL.COM</a></li>
+              
+            </ul>
+          </div>
+        </div>
+
+         <!--导航开始-->
+        <div class="container">
+            <div class="drawer-navbar" role="banner">
+                <div class="drawer-container">
+                      <div class="drawer-navbar-header">
+                        <a class="drawer-brand" href="./index.html"><img src="../images/logo-small.png"/></a>
+                        <button type="button" class="drawer-toggle drawer-hamburger">
+                          <span class="sr-only">toggle navigation</span>
+                          <span class="drawer-hamburger-icon"></span>
+                        </button>
+                      </div>
+
+                      <nav class="drawer-nav" role="navigation">
+                        <ul class="drawer-menu">
+                          <li class="drawer-dropdown current"><a class="drawer-menu-item" href="#">首页</a></li>
+                 
+                          <li class="drawer-dropdown">
+                            <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                              投资者关系</span>
+                            </a>
+                            <ul class="drawer-dropdown-menu">
+                              <li class="drawer-dropdown"><a class="drawer-dropdown-menu-item" href="./navbar-top.html">新闻公告</a>
+
+                                  <ul class="drawer-dropdown-menu third-dropdown-menu">
+                                    <li><a class="drawer-dropdown-menu-item" href="">xxxxxxx</a></li>
+                                  </ul>
+
+                              </li>
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">通知</a></li>
+                              <li class="drawer-dropdown">
+                                   <a class="drawer-dropdown-menu-item" href="./navbar-right.html">产品中心</a>
+                                    <ul class="drawer-dropdown-menu third-dropdown-menu">
+                                    <li><a class="drawer-dropdown-menu-item" href="">xxxxxxx</a></li>
+                                    <li><a class="drawer-dropdown-menu-item" href="">aaa</a></li>
+                                    <li><a class="drawer-dropdown-menu-item" href="">cccc</a></li>
+                                  </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+
+                </div>
+            </div>
+          </div>
+          <!--导航结束-->
+     </header>
+</script>
+
+      
