@@ -118,9 +118,7 @@ section {
     color: $content-color;
     margin: 15px 0;
 
-    // .summary {
-        line-height: 1.5;
-    // }
+    line-height: 1.5;
 
     .summary {
         line-height: 1.8;
@@ -129,10 +127,6 @@ section {
     img {
             width: 100%;
         }
-
-    // a {
-    //     color: inherit;
-    // }
 
     a:hover {
         text-decoration: none;
@@ -146,11 +140,12 @@ section {
     .panel-title {
         position: relative;
         background-color: $panel-title-bgcolor;
+        color: $panel-title-color;
 
         h2 {
             padding: 10px;
             font-size: 1.9rem;
-            font-weight: 500;
+            font-weight: 500; 
         }
 
         a.more {
@@ -169,6 +164,7 @@ section {
         box-sizing: border-box;
         padding: 15px;
         font-size: 1.4rem;
+       
 
         .item {
             position: relative;
@@ -180,6 +176,8 @@ section {
             color: $content-title-color;
             font-weight: 500; 
         }
+
+
     }
 
 }
