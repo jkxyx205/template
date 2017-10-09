@@ -1,0 +1,11 @@
+@import "variable-3";
+@import "../../components";
+@import "../style";
+
+.article-list-2 .item {
+    color: #666;
+    border: none;
+    &:hover {
+        color: $main-color;
+    }
+}

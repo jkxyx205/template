@@ -1,0 +1,28 @@
+.panel .panel-title {
+    border-bottom: 1px solid #DEE0E1;
+    h2 {
+        display: inline-block;
+        padding-left: 0;
+        border-bottom: 3px solid $main-color;
+    }
+
+    a.more {
+        position: absolute;
+        right: 0;
+        top: 50px;
+        background: #fff;
+        padding: 0 0 0 15px;
+    }
+}
+
+.panel .panel-body {
+    padding-left: 0;
+}
+
+.btn {
+    // border-radius: 15px;
+}
+
+// .icon-more:before {
+//     content: "\e620";
+// }

@@ -1,0 +1,24 @@
+
+.panel {
+     border-bottom: 3px solid #EEF0F1;
+}
+
+.panel .panel-title {
+  border-bottom: 3px solid #ccc;
+
+  a.more>span {
+    display: none;
+  }
+
+  .icon-more {
+    font-size: 30px;
+  }
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.icon-more:before {
+    content: "+";
+}

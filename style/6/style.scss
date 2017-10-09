@@ -1,0 +1,65 @@
+// .panel .panel-title {
+//   background-color: transparent;
+// }
+
+.btn {
+    // border-radius: 15px;
+    background: transparent;
+    border: 1px solid $main-color;
+    color: $main-color;
+
+    &:hover {
+        color: #fff;
+        background-color: $main-color;
+    }
+}
+
+// .icon-more:before {
+//     content: "\e620";
+// }
+
+.panel {
+    .panel-title h2 {
+        position: relative;
+        z-index: 999;
+        display: inline-block;
+        padding-left: 10px;
+        background-color: #fff;
+    }
+
+    .panel-title a.more {
+         position: absolute;
+         display: inline-block;
+        z-index: 999;
+        right: 0;
+        padding-left: 15px;
+        background-color: #fff;
+    }
+
+    .panel-title:before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color:  #DEE0E1;
+        left: 0;
+        top: 50%;
+    }
+
+
+    .panel-title h2:after{
+        content: "";
+        height: 1em;
+        width: 3px;
+        background-color: $main-color;
+        // color: $main-color;
+        position: absolute;
+        left: 0;
+        top: 13px;
+    }
+
+    .panel-body {
+        padding-left: 0;
+    }
+}
+

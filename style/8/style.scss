@@ -1,0 +1,21 @@
+.panel .panel-title {
+  background-color: transparent;
+  border-top: 5px solid $main-color;
+}
+
+.btn {
+    background: transparent;
+    border: 1px solid $main-color;
+    color: $main-color;
+
+    &:hover {
+        color: #fff;
+        background-color: $main-color;
+    }
+}
+
+
+
+// .icon-more:before {
+//     content: "\e620";
+// }

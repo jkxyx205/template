@@ -209,7 +209,7 @@
                             <option value="tpl/article.html">分页-图文详情</option>
                         </select>
                          页眉：<select name="" id="header">
-                            <option value="1" selected>1</option>
+                            <option value="1">1</option>
                             <option value="2">2</option>
                         </select>
                          页脚：<select name="" id="footer">
@@ -218,12 +218,24 @@
                         </select>
                         风格：<select name="" id="style">
                             <option value="1">1</option>
-                            <option value="2" selected="">2</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9" selected="">9</option>
                         </select>
                         配色：<select name="" id="block">
                            <option value="1">1</option>
-                            <option value="2">2</option>
-                             <option value="3">3</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                             <option value="4">4</option>
+                             <option value="5">5</option>
+                             <option value="6">6</option>
+                             <option value="7">7</option>
+                             <option value="8">8</option>
                         </select>
                          <button onclick="change()">刷新</button>
                 </div>
@@ -305,7 +317,6 @@
                  var doc = $(window.frames["iframe"].document)[0];
                  removeStyles(doc)
                  var params = getParams()
-
                  loadStyles(doc, '../header/'+params.header+'/'+params.style+'/css/'+params.block+'.css')
                  loadStyles(doc, '../footer/'+params.footer+'/'+params.style+'/css/'+params.block+'.css')
                  loadStyles(doc, '../style/'+params.style+'/css/'+params.block+'.css')
@@ -394,7 +405,7 @@
                       <nav class="drawer-nav" role="navigation">
                         <ul class="drawer-menu">
                           <li class="drawer-dropdown current"><a class="drawer-menu-item" href="#">首页</a></li>
-                 
+                          <li class="drawer-dropdown"><a class="drawer-menu-item" href="#">产品中心</a></li>
                           <li class="drawer-dropdown">
                             <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
                               投资者关系</span>
@@ -503,5 +514,3 @@
           <!--导航结束-->
      </header>
 </script>
-
-      
