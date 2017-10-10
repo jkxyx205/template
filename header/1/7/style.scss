@@ -1,4 +1,11 @@
 header {
+    @media (min-width: 64em) {
+    .drawer-navbar .drawer-navbar-header {
+      margin-top: -6px;
+    }
+  }
+
+
   .drawer-navbar {
       @media (min-width: 64em) {
         .drawer-menu > li {

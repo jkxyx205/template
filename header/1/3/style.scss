@@ -3,14 +3,10 @@ header {
       @media (min-width: 64em) {
         .drawer-menu > li {
             margin-left: 15px;
-            // padding: 0 10px;
+            padding: 0 10px;
             // border-radius: 15px;
 
             &:hover {
-                border-bottom: none;
-                // border-radius: 15px;
-                background-color: $main-color;
-
                 .drawer-menu-item{
                    color: $nav-hover-color;
                 }
@@ -18,16 +14,27 @@ header {
 
             &>.drawer-dropdown-menu {
                top: 30px;
+               padding-top: 10px;
             }
         }
 
         .drawer-menu .current {
-          border-bottom: none;
           background-color: $main-color;
+          height: 66px;          
+            &>a {
+                color: #fff;
+            }
 
-          & .drawer-menu-item {
-            color: $nav-hover-color;
-          }
+
+            & .drawer-menu-item {
+              color: #fff;
+            }
+
+             &:hover {
+                .drawer-menu-item{
+                   color: #fff
+                }
+            }
         }
 
         .drawer-menu-item {
@@ -37,3 +44,5 @@ header {
       }
   }
 }
+
+

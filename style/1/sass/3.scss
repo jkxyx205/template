@@ -13,5 +13,24 @@
         color: $main-color;
     }
 }
+.pic-list-2,.pic-list-1 {
+    .panel-body .content-title {
+        color: #000;
+    }
+
+    .summary {
+    color: #000;
+}
+}
+
+
+.article-list-4 .item:not(:last-child) {
+    border-bottom: 1px solid #5d4865;
+}
+
+.pic-list-1 a.item:hover .summary {
+    color: #fff;
+}
+
 
 

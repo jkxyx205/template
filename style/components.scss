@@ -1,4 +1,4 @@
-$default-color: #ccc;
+$default-color: #ecedf1;
 
 html {
     font-size: 62.5%;
@@ -15,8 +15,8 @@ html {
 .btn {
     display: inline-block;
     border: none;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
     width: 124px;
     text-align: center;
     // margin-top: 10px;
@@ -49,13 +49,17 @@ a {
         left: 50%;
         top: 40%;
         color: #fff;
+        transform: translateX(-50%);
         h1 {
             font-size: 6rem;
             margin: 20px 0;
+            font-weight: 100;
         }
         p {
             font-size: 3.2rem;
+            font-weight: 100;
         }
+
     } 
 
     .swiper-pagination-bullet-active {
@@ -116,7 +120,7 @@ section {
     position: relative;
     background-color: $panel-body;
     color: $content-color;
-    margin: 15px 0;
+    margin-bottom: 20px;
 
     line-height: 1.5;
 
@@ -138,6 +142,7 @@ section {
     
 
     .panel-title {
+        $more-color: #c1c1c1;
         position: relative;
         background-color: $panel-title-bgcolor;
         color: $panel-title-color;
@@ -145,7 +150,7 @@ section {
         h2 {
             padding: 10px;
             font-size: 1.9rem;
-            font-weight: 500; 
+            // font-weight: 500; 
         }
 
         a.more {
@@ -155,6 +160,12 @@ section {
             top: 50%; 
             transform: translateY(-50%); 
             font-size: 1.4rem;
+            color: $more-color;
+        }
+
+        .icon-more {
+            font-size: 1.8rem;
+            color: $more-color;
         }
     }
 
@@ -162,7 +173,7 @@ section {
     .panel-body {
         display: block;
         box-sizing: border-box;
-        padding: 15px;
+        padding: 20px 15px;
         font-size: 1.4rem;
        
 
@@ -281,7 +292,7 @@ $min-width: 262.5px;
         }
 
         .content-title {
-            font-size: 2rem;
+            font-size: 1.6rem;
             margin-bottom: 8px;
         }
 
@@ -306,7 +317,7 @@ $min-width: 262.5px;
     }
 
     .content-title {
-        padding: 40px 0 35px 0;
+        padding: 15px 0 10px 0;
         font-size: 2.1rem;
         // color: #333333;
         // line-height: 1.5;
@@ -316,13 +327,13 @@ $min-width: 262.5px;
             width: 20px;
             height: 1px;
             display: block;
-            background-color: $default-color;
+            background-color: $main-color;
             margin-top: 10px;
         }
     }
 
     a.btn {
-        margin-top: 10px; 
+        margin-top: 15px; 
         &:hover {
             color: $btn-color;
         }
@@ -331,7 +342,7 @@ $min-width: 262.5px;
 
 .article-2  {
     .content-title {
-        padding: 0 0 35px 0;
+        padding: 0 0 10px 0;
     }
 }
 
@@ -370,12 +381,13 @@ $min-width: 262.5px;
     }
     .content-title {
         font-size: 1.6rem;
+        padding-top: 5px;
     }
 }
 
 .pic-list-1 {
     .content {
-        height: 80px;
+        height: 120px;
         background-color: $default-color;
         overflow: hidden;
     }
@@ -491,7 +503,7 @@ $min-width: 262.5px;
 }
 
 .panel-full-text {
-    padding: 20px;
+    // padding: 20px;
 
     img {
         width: 100%;

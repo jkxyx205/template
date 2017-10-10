@@ -36,6 +36,8 @@ header {
     
 
     @media (min-width: 64em) {
+       
+
         //height
         height: $nav-height;
         .drawer-navbar-header {
@@ -100,11 +102,11 @@ header {
                 }
         }
 
-        .drawer-menu>li{
-            &:hover {
-             border-bottom: 2px solid $main-color;
-            }
-        }
+        // .drawer-menu>li{
+        //     &:hover {
+        //      border-bottom: 2px solid $main-color;
+        //     }
+        // } // rick back
 
         .drawer-menu-item {
             color: $nav-color;
@@ -115,7 +117,7 @@ header {
                 &>a {
                     color: $main-color;
                 }
-                border-bottom: 2px solid $main-color;
+                //border-bottom: 2px solid $main-color; rick back
             } 
 
 

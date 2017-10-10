@@ -13,3 +13,17 @@
         color: $main-color;
     }
 }
+
+
+ .panel .panel-title {
+        $more-color: #fff;
+
+        a.more {
+            color: $more-color;
+        }
+
+        .icon-more {
+            color: #748484;
+        }
+    }
+

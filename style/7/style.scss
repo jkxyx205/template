@@ -1,11 +1,52 @@
-.panel .panel-title {
-  background-color: transparent;
+.panel {
+    // -moz-box-shadow:0px 20px 20px #eee; -webkit-box-shadow:0px 20px 20px #eee; box-shadow:0px 20px 20px #eee;
+
+    .panel-title {
+        // background-color: transparent;
+         a.more>span {
+            display: none;
+        }
+    }
+
+    .panel-body {
+        // background-color: transparent;
+        padding: 15px; 
+    }
 }
 
 .btn {
-    border-radius: 15px;
+    // border-radius: 15px;
 }
 
 .icon-more:before {
     content: "\e620";
+
 }
+
+.article-list-2 .item .item-title > div {
+    background-color: $background-color;
+}
+
+
+.pic-list-1 {
+    .content {
+        background-color: $background-color;
+    }
+    
+}
+
+.pic-list-2 {
+   .content-title {
+        background-color: $background-color;
+   } 
+
+  
+}
+
+.article-list-4 .item:not(:last-child) {
+    border-bottom: none;
+}
+
+
+
+
