@@ -1,0 +1,20 @@
+$main-color: #e5493a; //主色调/交互色
+
+$panel-title-color: #666; //控件标题颜色
+$panel-title-bgcolor: #232323; ///控件背景色
+
+$panel-body: #232323; //控件背景色
+$content-title-color: #666; // 文章标题
+$content-color: #666; // 文章副标题／正文
+
+$background-color: #232323; //背景颜色
+
+$btn-color: #fff;
+$btn-bgcolor: $main-color;
+
+// section {
+  // background: -webkit-linear-gradient(left, rgb(246, 248, 249) , rgb(246, 248, 249)); /* Safari 5.1 - 6.0 */
+  // background: -o-linear-gradient(right, rgb(246, 248, 249), rgb(246, 248, 249)); /* Opera 11.1 - 12.0 */
+  // background: -moz-linear-gradient(right, rgb(246, 248, 249), rgb(246, 248, 249)); /* Firefox 3.6 - 15 */
+  // background: linear-gradient(to right, rgb(246, 248, 249) , rgb(246, 248, 249)); /* 标准的语法 */
+// }

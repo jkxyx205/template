@@ -9,3 +9,32 @@
         color: $main-color;
     }
 }
+
+.pic-list-2,.pic-list-1 {
+    .panel-body .content-title {
+        color: #000;
+    }
+
+    .summary {
+    color: #000;
+}
+}
+
+
+.panel {
+
+   
+    .panel-title {
+         background-color: transparent;
+     }
+    
+}
+
+
+.article-list-4 .item:not(:last-child) {
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.pic-list-1 a.item:hover .summary {
+    color: #fff;
+}

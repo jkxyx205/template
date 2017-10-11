@@ -208,18 +208,18 @@
                             <option value="tpl/full-text.html">分页-全文搜索</option>
                             <option value="tpl/article.html">分页-图文详情</option>
                         </select>
-                         页眉：<select name="" id="header">
+                        <!--  页眉： --><select name="" id="header" style="display: none;">
                             <option value="1">1</option>
                             <option value="2">2</option>
                         </select>
-                         页脚：<select name="" id="footer">
+                        <!--  页脚： --><select name="" id="footer" style="display: none;">
                            <option value="1">1</option>
                             <option value="2">2</option>
                         </select>
                         风格：<select name="" id="style">
                             <option value="1">1</option>
                             <option value="2">2</option>
-                            <option value="3" selected="">3</option>
+                            <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
                             <option value="6">6</option>
@@ -234,7 +234,7 @@
                              <option value="4">4</option>
                              <option value="5">5</option>
                              <option value="6">6</option>
-                             <option value="7" selected="">7</option>
+                             <option value="7">7</option>
                              <option value="8">8</option>
                         </select>
                          <button onclick="change()">刷新</button>
@@ -280,7 +280,10 @@
                     change()
 
                 } else if (id === "footer") {
-                    //TODO
+                    var params = getParams()
+                    var id = params.footer
+                    addFooter(id)
+                    change()
                 } else if (id === "block") { //global
                     change()
                 } 
@@ -291,14 +294,15 @@
                 var params = getParams()
                 $('#iframe').attr("src", params.page);
 
-                var id = params.header
+                
 
                 var sh;
                 sh=setInterval(function() {
                     if (window.frames["iframe"] && window.frames["iframe"].loaded) {
                         console.log('add...')
                         
-                        addHeader(id)
+                        addHeader(params.header)
+                        addFooter(params.footer)
                         change()
                         clearInterval(sh);
                     }
@@ -312,6 +316,15 @@
 
                  window.frames["iframe"].init()
             }
+
+            function addFooter(id) {
+                 var doc = $(window.frames["iframe"].document)[0];
+                 
+                 $(doc).find(".footer-container").html($('#footer_'+id).html())
+
+                 window.frames["iframe"].init()
+            }
+
 
             function change() {
                  var doc = $(window.frames["iframe"].document)[0];
@@ -405,10 +418,26 @@
                       <nav class="drawer-nav" role="navigation">
                         <ul class="drawer-menu">
                           <li class="drawer-dropdown current"><a class="drawer-menu-item" href="#">首页</a></li>
-                          <li class="drawer-dropdown"><a class="drawer-menu-item" href="#">产品中心</a></li>
+                          <li class="drawer-dropdown">
+                            <a class="drawer-menu-item" href="#">关于我们</a>
+                            <ul class="drawer-dropdown-menu">
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-top.html">企业介绍</a></li>
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">企业文化</a></li>
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">组织架构</a></li>
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">管理团队</a></li>
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">发展历程</a></li>
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">企业刊物</a></li>
+                              <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">视频中心</a></li>
+                            </ul>
+
+                          </li>
+                          <li class="drawer-dropdown"><a class="drawer-menu-item" href="#">新闻中心</a></li>
+                          <li class="drawer-dropdown"><a class="drawer-menu-item" href="#">业务中心</a></li>
+                          <li class="drawer-dropdown"><a class="drawer-menu-item" href="#">研发创新</a></li>
+                          <li class="drawer-dropdown"><a class="drawer-menu-item" href="#">人力资源</a></li>
                           <li class="drawer-dropdown">
                             <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
-                              投资者关系</span>
+                              研发创新</span>
                             </a>
                             <ul class="drawer-dropdown-menu">
                               <li class="drawer-dropdown"><a class="drawer-dropdown-menu-item" href="./navbar-top.html">新闻公告</a>
@@ -429,6 +458,7 @@
                               </li>
                             </ul>
                           </li>
+                          <li class="drawer-dropdown"><a class="drawer-menu-item" href="#">联系我们</a></li>
                         </ul>
                       </nav>
 
@@ -441,7 +471,7 @@
 
 <script type="text/html" id="header_2">
  <header>
-        <div class="top-bar">
+<!--         <div class="top-bar">
           <div class="container">
             <ul class="nav-left pull-right">
               <li><a href="#">网站地图</a></li>
@@ -464,7 +494,7 @@
               
             </ul>
           </div>
-        </div>
+        </div> -->
 
          <!--导航开始-->
         <div class="container">
@@ -514,3 +544,109 @@
           <!--导航结束-->
      </header>
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/html" id="footer_1">
+<footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-4">
+                    <img src="../images/logo2.png" alt="">
+                    <div class="copyright">© UI Chest, 2015. All Rights Reserved.</div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="row">
+                       <div class="col-xs-6 col-sm-3">
+                         <dl class="list">
+                           <dt><h3>我们的产品</h3></dt>
+                           <dd>产品AAA</dd>
+                           <dd>产品AAA</dd>
+                           <dd>产品AAA</dd>
+                           <dd>产品AAA</dd> 
+                         </dl>
+                       </div>
+                       <div class="col-xs-6 col-sm-3">
+                         <dl class="list">
+                           <dt><h3>关于我们</h3></dt>
+                           <dd>联系我们</dd>
+                           <dd>我们的团队</dd>
+                           <dd>技术支持</dd>
+                           <dd>公司业务</dd> 
+                         </dl>
+                       </div>
+                       <div class="col-xs-6 col-sm-3">
+                         <dl class="list">
+                           <dt><h3>友情链接</h3></dt>
+                           <dd>国际公司A</dd>
+                           <dd>国际公司A</dd>
+                           <dd>国际公司A</dd>
+                           <dd>国际公司A</dd> 
+                         </dl>
+                       </div>
+                       <div class="col-xs-6 col-sm-3">
+                         <dl class="list">
+                           <dt><h3>公司微信</h3></dt>
+                           <dd><img src="../images/qcore.jpg" alt=""></dd>
+                         </dl>
+                       </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+       </footer>
+</script>
+
+
+<script type="text/html" id="footer_2">
+<footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-4">
+                    <img src="../images/logo2.png" alt="">
+                    <div class="copyright">© UI Chest, 2015. All Rights Reserved.</div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="row">
+                       <div class="col-xs-6 col-sm-3">
+                         <dl class="list">
+                           <dt><h3>我们的产品</h3></dt>
+                         </dl>
+                       </div>
+                       <div class="col-xs-6 col-sm-3">
+                         <dl class="list">
+                           <dt><h3>关于我们</h3></dt>
+                         </dl>
+                       </div>
+                       <div class="col-xs-6 col-sm-3">
+                         <dl class="list">
+                           <dt><h3>友情链接</h3></dt>
+                         </dl>
+                       </div>
+                       <div class="col-xs-6 col-sm-3">
+                         <dl class="list">
+                           <dt><h3>公司微信</h3></dt>
+                           <dd><img src="../images/qcore.jpg" alt=""></dd>
+                         </dl>
+                       </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+       </footer>
+</script>
+

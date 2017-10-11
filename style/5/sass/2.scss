@@ -1,3 +1,7 @@
 @import "variable-2";
 @import "../../components";
 @import "../style";
+
+.panel .panel-title {
+        border-bottom: 3px solid #ececec;
+}

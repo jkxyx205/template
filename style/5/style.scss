@@ -15,8 +15,17 @@
   }
 }
 
+
+
 .btn {
     border-radius: 5px;
+     border-bottom: 3px solid $btn-shadow-color;
+
+  // -moz-box-shadow:0px 2px 2px $btn-shadow-color;
+  // -webkit-box-shadow:0px 2px 2px $btn-shadow-color;
+  // box-shadow:0px 2px 2px $btn-shadow-color;
+  margin-bottom: 3px;
+
 }
 
 .icon-more:before {

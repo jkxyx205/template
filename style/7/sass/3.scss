@@ -2,10 +2,52 @@
 @import "../../components";
 @import "../style";
 
-.article-list-2 .item {
-    color: #666;
-    border: none;
-    &:hover {
-        color: $main-color;
+.article-list-2 .item .item-title > div {
+    background-color: #e5e5e5;
+    color: #000;
+}
+
+
+.pic-list-2,.pic-list-1 {
+    .content {
+        background-color: #e5e5e5;
     }
+
+    .panel-body .content-title {
+       // background-color: #e5e5e5;
+        color: #000;
+    }
+
+    .summary {
+        // background-color: #e5e5e5;
+        color: #000;
+    }
+}
+
+.pic-list-2{
+    .panel-body .content-title {
+       background-color: #e5e5e5;
+    }
+}
+
+
+.pic-list-1 a.item:hover .summary {
+    color: #fff;
+}
+
+.panel {
+  
+    .panel-title {
+         background-color: transparent;
+     }
+    
+}
+
+
+.article-list-4 .item:not(:last-child) {
+    border-bottom: 1px solid #5d4865;
+}
+
+.pic-list-1 a.item:hover .summary {
+    color: #fff;
 }

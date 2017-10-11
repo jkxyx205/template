@@ -1,3 +1,4 @@
+ 
 header {
     background-color: $nav-bgcolor;
 
@@ -65,7 +66,7 @@ header {
     background-color: $nav-bgcolor;
 
     .drawer-navbar-header {
-        background-color: $nav-bgcolor;
+        background-color: transparent;
      }
 
 
@@ -128,7 +129,7 @@ header {
          .drawer-dropdown-menu {
             width: 12.25rem;
             border: none;
-            top: 47px;
+            // top: 47px;
             border-top-left-radius:0em;
             border-top-right-radius:0em;
             border-bottom-right-radius:2px;

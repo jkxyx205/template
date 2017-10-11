@@ -1,0 +1,44 @@
+@import "variable-6";
+@import "../../components";
+@import "../style";
+
+// .swiper-button-white {
+//         // background-color: #6b5471;
+//     }
+
+
+.article-list-2 .item {
+    color: #666;
+    border: none;
+    &:hover {
+        color: $main-color;
+    }
+}
+
+
+ .panel .panel-title {
+        $more-color: #bfbfbf;
+
+        a.more {
+            color: $more-color;
+        }
+
+        .icon-more {
+            color: #bfbfbf;
+        }
+    }
+
+.article-list-4 .item:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+
+.panel .panel-title h2:after {
+    color: #454545;
+}
+
+.article-1 .content-title:after, .article-2 .content-title:after {
+   color: #454545;
+}
+
+

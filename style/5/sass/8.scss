@@ -1,0 +1,58 @@
+@import "variable-8";
+@import "../../components";
+@import "../style";
+// .swiper-button-white {
+//         // background-color: #6b5471;
+//     }
+
+section {
+      background: -webkit-linear-gradient(bottom, rgb(100, 108, 111) , rgb(95, 103, 106)); /* Safari 5.1 - 6.0 */
+         background: -o-linear-gradient(bottom, rgb(100, 108, 111), rgb(95, 103, 106)); /* Opera 11.1 - 12.0 */
+         background: -moz-linear-gradient(bottom, rgb(100, 108, 111), rgb(95, 103, 106)); /* Firefox 3.6 - 15 */
+        background: linear-gradient(to bottom, rgb(100, 108, 111) , rgb(95, 103, 106)); /* 标准的语法 */
+}
+
+.article-list-2 .item {
+    color: #666;
+    border: none;
+    &:hover {
+        color: $main-color;
+    }
+}
+
+
+ .panel .panel-title {
+    border-bottom-color: #e1e1e1;
+        $more-color: #fff;
+
+        a.more {
+            color: $more-color;
+        }
+
+        .icon-more {
+            color: #bdbdbd;
+        }
+    }
+
+.pic-list-1 a.item:hover .summary {
+    color: #fff;
+}
+
+.pic-list-2,.pic-list-1 {
+    .panel-body .content-title {
+        color: #000;
+    }
+
+    .summary {
+    color: #000;
+}
+}
+
+
+.article-list-4 .item:not(:last-child) {
+    border-bottom: none;
+}
+.panel {
+    // $bgc-shadow: #333;
+    // -moz-box-shadow:0 0 0 $bgc-shadow; -webkit-box-shadow:0 0 0 $bgc-shadow; box-shadow:0 0 0 $bgc-shadow;
+}

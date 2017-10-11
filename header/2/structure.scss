@@ -1,3 +1,4 @@
+ 
 header {
     background-color: $nav-bgcolor;
 
@@ -7,12 +8,14 @@ header {
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 64em) {
         .container {
+            width: auto;
             padding: 0;
+            margin: 0;
         }
     }
-        
+
      .drawer--left .drawer-hamburger, .drawer--left.drawer-open .drawer-hamburger {
         left: 0;
     }
@@ -31,16 +34,20 @@ header {
     }
     //reset end
     
-    //height
-    height: $nav-height;
-    .drawer-navbar-header {
-        height: $nav-height;
-    }
-    .drawer-brand {
-        line-height: $nav-height;
-    }
+    
 
     @media (min-width: 64em) {
+       
+
+        //height
+        height: $nav-height;
+        .drawer-navbar-header {
+            height: $nav-height;
+        }
+        .drawer-brand {
+            line-height: $nav-height;
+        }
+
         .drawer-nav {
             height: $nav-height;
             background-color: $nav-bgcolor;
@@ -59,7 +66,7 @@ header {
     background-color: $nav-bgcolor;
 
     .drawer-navbar-header {
-        background-color: $nav-bgcolor;
+        background-color: transparent;
      }
 
 
@@ -96,11 +103,11 @@ header {
                 }
         }
 
-        .drawer-menu>li{
-            &:hover {
-             border-bottom: 2px solid $main-color;
-            }
-        }
+        // .drawer-menu>li{
+        //     &:hover {
+        //      border-bottom: 2px solid $main-color;
+        //     }
+        // } // rick back
 
         .drawer-menu-item {
             color: $nav-color;
@@ -111,7 +118,7 @@ header {
                 &>a {
                     color: $main-color;
                 }
-                border-bottom: 2px solid $main-color;
+                //border-bottom: 2px solid $main-color; rick back
             } 
 
 
@@ -152,7 +159,7 @@ header {
 //菜单管理结束
 
     .top-bar {
-        @media (max-width: 768px) {
+      @media (max-width: 64em) {
             & {
                 display: none;
             }
@@ -175,20 +182,21 @@ header {
             font-size: 1.7rem;
 
             li {
-                position: relative;
+                // position: relative;
                 list-style: none;
                 float: left;
                 padding: 0 10px;
 
                 &:not(:last-child):after {
-                    content: "";
-                    width: 2px;
-                    height: 18px;
-                    background-color: #fff;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: -3px;
+                    content: "|";
+                    // width: 2px;
+                    // height: 18px;
+                    // background-color: #fff;
+                    position: relative;
+                    // top: 50%;
+                    // transform: translateY(-50%);
+                    // right: -3px;
+                    right: -10px;
                 }
 
                
