@@ -6,3 +6,4 @@
 *.sassc
 
 node_modules/*
+dist/*

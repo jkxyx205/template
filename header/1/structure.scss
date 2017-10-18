@@ -33,7 +33,9 @@ header {
         text-decoration: none;
     }
     //reset end
-    
+    .drawer-brand img {
+            height: 42px;
+        }
     
 
     @media (min-width: 64em) {
@@ -101,6 +103,11 @@ header {
              &>a {
                     color: $main-color;
                 }
+        }
+
+        .drawer-menu > li {
+            margin-left: 8px;
+            padding: 0 6px;
         }
 
         // .drawer-menu>li{

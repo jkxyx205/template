@@ -208,11 +208,11 @@
                             <option value="tpl/full-text.html">分页-全文搜索</option>
                             <option value="tpl/article.html">分页-图文详情</option>
                         </select>
-                        <!--  页眉： --><select name="" id="header" style="display: none;">
+                        页眉：<select name="" id="header">
                             <option value="1">1</option>
                             <option value="2">2</option>
                         </select>
-                        <!--  页脚： --><select name="" id="footer" style="display: none;">
+                        页脚：<select name="" id="footer">
                            <option value="1">1</option>
                             <option value="2">2</option>
                         </select>
@@ -330,9 +330,13 @@
                  var doc = $(window.frames["iframe"].document)[0];
                  removeStyles(doc)
                  var params = getParams()
-                 loadStyles(doc, '../header/'+params.header+'/'+params.style+'/css/'+params.block+'.css')
-                 loadStyles(doc, '../footer/'+params.footer+'/'+params.style+'/css/'+params.block+'.css')
-                 loadStyles(doc, '../style/'+params.style+'/css/'+params.block+'.css')
+                 // loadStyles(doc, '../header/'+params.header+'/'+params.style+'/css/'+params.block+'.css')
+                 // loadStyles(doc, '../footer/'+params.footer+'/'+params.style+'/css/'+params.block+'.css')
+                 // loadStyles(doc, '../style/'+params.style+'/css/'+params.block+'.css')
+
+                 loadStyles(doc, '../dist/tpl-css/header/'+params.header+'/'+params.style+'/sass/'+params.block+'.css')
+                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/sass/'+params.block+'.css')
+                 loadStyles(doc, '../dist/tpl-css/style/'+params.style+'/sass/'+params.block+'.css')
             }
 
 
@@ -395,7 +399,7 @@
               <li><i class="iconfont icon-1"></i><a href="mailto:info@gmail.com">INFO@GMAIL.COM</a></li>
                <li>
                   <div class="container-query">
-                      <input type="text" placeholder = "搜索">
+                      <input type="text">
                       <a href="full-text.html" class="query"><i class="iconfont icon-search"></i></a>
                   </div>
               </li>
