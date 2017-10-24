@@ -3,9 +3,14 @@ header {
   // margin-bottom: 3px;
   .drawer-navbar {
       @media (min-width: 64em) {
+        margin: 25px 0;
+        .drawer-nav {
+          // float: right;
+        }
+
         .drawer-menu > li {
-            margin-left: 15px;
-            padding: 0 5px;
+            // margin-left: 15px;
+            // padding: 0 5px;
             border-radius: 5px;
 
             &:hover {

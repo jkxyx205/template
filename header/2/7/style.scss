@@ -8,9 +8,14 @@ header {
 
   .drawer-navbar {
       @media (min-width: 64em) {
+        margin: 25px 0;
+        .drawer-nav {
+          // float: right;
+        }
+        
         .drawer-menu > li {
-            margin-left: 15px;
-            padding: 0 10px;
+            // margin-left: 15px;
+            // padding: 0 10px;
             border-radius: 15px;
 
             &:hover {
