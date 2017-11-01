@@ -1,36 +1,26 @@
+@import "../../base";
+
 header {
-  // .top-bar {
-  //   color: $bar-color;
-  // }
-  @media (min-width: 64em) {
-    .drawer-navbar .drawer-navbar-header {
-      margin-top: -6px;
-    }
-  }
 
   .drawer-navbar {
+      $border-radius: 5px;
       @media (min-width: 64em) {
-        .drawer-nav {
-          // float: right;
+
+        .drawer-navbar-header {
+            margin-top: -5px;
         }
-        margin: 25px 0;
+
+        margin: 28px 0;
         .drawer-menu > li {
-            // margin-left: 15px;
-            // padding: 0 10px;
-            border-radius: 15px;
+            border-radius: $border-radius;
 
             &:hover {
-                border-bottom: none;
-                border-radius: 15px;
+                border-radius: $border-radius;
                 background-color: $main-color;
-
-                .drawer-menu-item{
-                   color: $nav-hover-color;
-                }
             }
 
             &>.drawer-dropdown-menu {
-               top: 30px;
+               top: 29px;
                padding-top: 10px;
             }
         }
@@ -38,16 +28,8 @@ header {
         .drawer-menu .current {
           border-bottom: none;
           background-color: $main-color;
-
-          & .drawer-menu-item {
-            color: $nav-hover-color;
-          }
         }
-
-        .drawer-menu-item {
-            color: $nav-color;
-          }
-
       }
   }
 }
+

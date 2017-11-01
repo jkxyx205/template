@@ -1,52 +1,37 @@
+@import "../../base";
+
 header {
   .drawer-navbar {
+      $border-radius: 15px;
       @media (min-width: 64em) {
-        margin: 25px 0;
-        .drawer-nav {
-          // float: right;
+         .drawer-navbar-header {
+            margin-top: -5px;
         }
+        
+        margin: 28px 0;
         .drawer-menu > li {
-            // margin-left: 15px;
-            // padding: 0 10px;
-            // border-radius: 15px;
+            border-radius: $border-radius;
 
             &:hover {
-                .drawer-menu-item{
-                   color: $nav-hover-color;
-                }
+                border-bottom: none;
+                border-radius: $border-radius;
+                background-color: $main-color;
             }
 
             &>.drawer-dropdown-menu {
-               top: 30px;
+               top: 29px;
                padding-top: 10px;
             }
         }
 
         .drawer-menu .current {
+          
           background-color: $main-color;
-          height: 66px;          
-            &>a {
-                color: #fff;
-            }
 
-
-            & .drawer-menu-item {
-              color: #fff;
-            }
-
-             &:hover {
-                .drawer-menu-item{
-                   color: #fff
-                }
-            }
         }
-
-        .drawer-menu-item {
-            color: $nav-color;
-          }
-
       }
   }
 }
+
 
 

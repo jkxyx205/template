@@ -1,32 +1,33 @@
-@media (min-width: 64em) {
-   // header .drawer-navbar {
-   //    margin: 0 0 2px 0;
-   //  }
+@import "../../base";
 
+header {
+  .drawer-navbar {
+      @media (min-width: 64em) {
+         .drawer-navbar-header {
+            margin-top: -5px;
+        }
+        
+        margin: 20px 0;
+        .drawer-menu > li {
 
-    // header .drawer-navbar .drawer-nav {
-    //       float: right;
-    // }
-        .drawer-menu>li{
-            &:hover {
-             border-bottom: 2px solid $main-color;
-            }
-        } 
-
-
-    .drawer-menu .current {
+            &:hover >a {
                 border-bottom: 2px solid $main-color;
             }
 
-        .drawer-menu > li {
-
             &>.drawer-dropdown-menu {
-               top: 60px;
-               padding-top: 20px;
+               top: 47px;
+               padding-top: 10px;
             }
         }
 
-
-
+        .drawer-menu .current >a {
+          // border-bottom: none;
+          // background-color: $main-color;
+          border-bottom: 2px solid $main-color;
+        }
+      }
+  }
 }
+
+
 

@@ -1,12 +1,48 @@
-@media (min-width: 64em) {
-   // header .drawer-navbar .drawer-nav {
-   //    float: right;
-   //  }
+@import "../../base";
 
+header {
+  .drawer-navbar {
+      @media (min-width: 64em) {
+         .drawer-navbar-header {
+            margin-top: -5px;
+        }
+        
+        margin: 2px 0;
+        .drawer-menu > li {
+            // width: 120px;
+            // text-align: center;;
+            &:hover >a {
+                border-bottom: 2px solid $main-color;
+            }
 
-    // .drawer-navbar .drawer-brand {
-    //     margin-top: 20px;
-    // }
+            &>.drawer-dropdown-menu {
+               top: 81px;
+               padding-top: 10px;
 
+                  // background-color: red;
+                  border-top: 2px solid $main-color;
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    left: 20%;
+                    top: -10px;
+                    width: 0;
+                    height: 0;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid blue;
+                    border-left: 10px solid transparent;
+                  }
+            }
+        }
 
+        .drawer-menu .current >a {
+          // border-bottom: none;
+          // background-color: $main-color;
+          border-bottom: 2px solid $main-color;
+        }
+      }
+  }
 }
+
+
+

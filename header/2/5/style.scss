@@ -1,46 +1,35 @@
+@import "../../base";
+
+
+
+
+
 header {
-  border-bottom: 4px solid $header-shadow-color;
-  // margin-bottom: 3px;
   .drawer-navbar {
       @media (min-width: 64em) {
-        margin: 25px 0;
-        .drawer-nav {
-          // float: right;
-        }
-
         .drawer-menu > li {
-            // margin-left: 15px;
-            // padding: 0 5px;
-            border-radius: 5px;
-
-            &:hover {
-                border-bottom: none;
-                border-radius: 5px;
-                background-color: $main-color;
-
-                .drawer-menu-item{
-                   color: $nav-hover-color;
-                }
+            margin-left: 0;
+            &:hover  {
+                // border-bottom: 2px solid $main-color;
+                 background-color: $nav-hover-bgColor;
             }
 
             &>.drawer-dropdown-menu {
-               top: 30px;
+               top: 72px;
+               padding-top: 10px;
+               left:0;
             }
         }
 
         .drawer-menu .current {
-          border-bottom: none;
-          background-color: $main-color;
-
-          & .drawer-menu-item {
-            color: $nav-hover-color;
-          }
+          // border-bottom: none;
+          // background-color: $main-color;
+           background-color: $nav-hover-bgColor;
         }
-
-        .drawer-menu-item {
-            color: $nav-color;
-          }
-
       }
   }
 }
+
+
+
+
