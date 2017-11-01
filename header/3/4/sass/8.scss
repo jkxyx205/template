@@ -1,0 +1,14 @@
+@import "variable-8";
+@import "../../../structure";
+@import "../style";
+
+.panel-full-text .panel-query input{
+    // background-color: $bg-color; 
+}
+
+header .top-bar {
+        background: -webkit-linear-gradient(right, rgb(90, 98, 101) , rgb(134, 143, 150)); /* Safari 5.1 - 6.0 */
+         background: -o-linear-gradient(right, rgb(90, 98, 101), rgb(134, 143, 150)); /* Opera 11.1 - 12.0 */
+         background: -moz-linear-gradient(right, rgb(90, 98, 101), rgb(134, 143, 150)); /* Firefox 3.6 - 15 */
+        background: linear-gradient(to right, rgb(90, 98, 101) , rgb(134, 143, 150)); /* 标准的语法 */
+}

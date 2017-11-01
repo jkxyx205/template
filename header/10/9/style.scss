@@ -1,0 +1,68 @@
+$header-shadow-color: #ccc;
+
+body > div.header-container > header > div.container > div, body > div.header-container > header > div.container > div > div > nav {
+background-color: transparent;
+}
+
+header {
+  border-bottom: 3px solid #e7e7e7;
+  // position: relative;
+  // z-index: 999;
+  // -moz-box-shadow:0px 3px 15px $header-shadow-color;
+  // -webkit-box-shadow:0px 3px 15px $header-shadow-color;
+  // box-shadow:0px 3px 15px $header-shadow-color;
+
+               background: -webkit-linear-gradient(bottom, rgb(255, 255, 255) , rgb(229, 229, 229)); /* Safari 5.1 - 6.0 */
+         background: -o-linear-gradient(bottom, rgb(255, 255, 255), rgb(229, 229, 229)); /* Opera 11.1 - 12.0 */
+         background: -moz-linear-gradient(bottom, rgb(255, 255, 255), rgb(229, 229, 229)); /* Firefox 3.6 - 15 */
+        background: linear-gradient(to bottom, rgb(255, 255, 255) , rgb(229, 229, 229)); /* 标准的语法 */
+
+    .drawer-navbar .drawer-navbar-header {
+      margin-top: -6px;
+    }
+ 
+
+
+
+  .drawer-navbar {
+  
+
+
+      @media (min-width: 64em) {
+        .drawer-menu > li {
+            // margin-left: 15px;
+            // padding: 0 5px;
+            border-radius: 5px;
+
+            &:hover {
+                border-bottom: none;
+                border-radius: 5px;
+                background-color: $main-color;
+
+                .drawer-menu-item{
+                   color: $nav-hover-color;
+                }
+            }
+
+            &>.drawer-dropdown-menu {
+               top: 30px;
+               padding-top: 10px;
+            }
+        }
+
+        .drawer-menu .current {
+          border-bottom: none;
+          background-color: $main-color;
+
+          & .drawer-menu-item {
+            color: $nav-hover-color;
+          }
+        }
+
+        .drawer-menu-item {
+            color: $nav-color;
+          }
+
+      }
+  }
+}

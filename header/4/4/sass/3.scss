@@ -1,0 +1,6 @@
+@import "variable-3";
+@import "../../structure";
+@import "../style";
+.panel-full-text .panel-query input{
+    background-color: $bg-color; 
+}
