@@ -216,7 +216,7 @@
                             <option value="5">5</option>
                             <option value="6">6</option>
                             <option value="7">7</option>
-                            <option value="8">8</option>
+                            <option value="8" selected="">8</option>
                             <option value="9">9</option>
                             <option value="10">10</option>
                         </select>
@@ -226,14 +226,14 @@
                         </select>
                         风格：<select name="" id="style">
                             <option value="1">1</option>
-                            <option value="2" selected="">2</option>
-                            <option value="3" selected="">3</option>
-                            <option value="4" selected="">4</option>
-                            <option value="5" selected="">5</option>
-                            <option value="6" selected="">6</option>
-                            <option value="7" selected="">7</option>
-                            <option value="8" selected="">8</option>
-                            <option value="9" >9</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
                         </select>
                         配色：<select name="" id="block">
                            <option value="1">1</option>
@@ -257,11 +257,23 @@
             </div>
         </div>
         <script src="js/jquery.min.js"></script>
+        <script src="db.js"></script>
 
         <script>
-
+            var index  = refresh
             $(function() {
                 init()
+                setInterval(function() {
+                  $.getScript("./db.js")
+                  .done(function(script, textStatus) {
+                    // console.log(index + "->" + refresh)
+                      if (index < refresh) {
+                                      change()
+                                      index = refresh;
+                                    }
+                  })
+                
+                }, 2000);
             })
 
             $('#Device li').on('click', function() {
@@ -275,6 +287,7 @@
             })
 
             $('select').on('change', function() {
+           
                 id = this.id;
                 if(id === "page") { //global
                     init()
@@ -307,8 +320,6 @@
                 var sh;
                 sh=setInterval(function() {
                     if (window.frames["iframe"] && window.frames["iframe"].loaded) {
-                        console.log('add...')
-                        
                         addHeader(params.header)
                         addFooter(params.footer)
                         change()
@@ -319,11 +330,19 @@
 
             function addHeader(id) {
                  var doc = $(window.frames["iframe"].document)[0];
-                 
+
                  $(doc).find(".header-container").html($('#header_'+id).html())
 
                  window.frames["iframe"].init()
+
+               
+                
             }
+
+
+          
+
+
 
             function addFooter(id) {
                  var doc = $(window.frames["iframe"].document)[0];
@@ -342,9 +361,9 @@
                  // loadStyles(doc, '../footer/'+params.footer+'/'+params.style+'/css/'+params.block+'.css')
                  // loadStyles(doc, '../style/'+params.style+'/css/'+params.block+'.css')
 
-                 loadStyles(doc, '../dist/tpl-css/header/'+params.header+'/'+params.style+'/sass/'+params.block+'.css')
-                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/sass/'+params.block+'.css')
-                 loadStyles(doc, '../dist/tpl-css/style/'+params.style+'/sass/'+params.block+'.css')
+                 loadStyles(doc, '../dist/tpl-css/header/'+params.header+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
+                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
+                 loadStyles(doc, '../dist/tpl-css/style/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
             }
 
 
@@ -390,7 +409,7 @@
 
 </html>
 <script type="text/html" id="header_10">
- <header>
+ <header id="header_10">
 <div class="second-bar div-hidden">
     <div class="container">
         <div class="pull-left">
@@ -410,7 +429,7 @@
                      <ul>
                        <li><a href="#"><span>登录</span></a></li>
                        <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
+                       <li style="margin-right: 25px;"><a href="#"><span>注册</span></a></li>
                        <li><a href="#"><span>简</span></a></li>
                        <li class="separator">|</li>
                        <li><a href="#"><span>EN</span></a></li>
@@ -433,6 +452,12 @@
                           <span class="sr-only">toggle navigation</span>
                           <span class="drawer-hamburger-icon"></span>
                         </button>
+                      </div>
+                       <div class="pull-right div-hidden">
+                           <div class="search">
+                                          <input type="text" class="hidden-line-text" id="keywords" placeholder="搜索">
+                                           <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
+                                      </div>
                       </div>
                       <nav class="drawer-nav" role="navigation">
                         <ul class="drawer-menu">
@@ -463,12 +488,7 @@
                           </li>
                         </ul>
                       </nav>
-                      <div class="pull-left">
-                           <div class="search">
-                                          <input type="text" class="hidden-line-text2" id="keywords" placeholder="搜索">
-                                           <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
-                                      </div>
-                      </div>
+                     
 
                 </div>
                 
@@ -476,11 +496,24 @@
 
           </div>
           <!--导航结束-->
+          <script>
+              //全文搜索交互
+                 var $btn10 = $('#header_10 .search a')
+                  var $keywords10 = $('#header_10 .search input')
+
+                 $btn10.on('click', function() {
+                     $keywords10.show('slow')
+                })
+
+                  $('section').on('click', function() {
+                    !$keywords10.val() && $keywords10.hide('slow')
+                 })
+          </script>
      </header>
 </script>
 
 <script type="text/html" id="header_9">
- <header>
+ <header id="header_9">
 <div class="second-bar div-hidden">
     <div class="container">
         <div class="pull-left">
@@ -491,7 +524,7 @@
         <div class="pull-center">
              <div class="search">
                             <input type="text" id="keywords" placeholder="搜索">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -5px"> <i class="iconfont icon-search"></i></a>
                         </div>
         </div>
          <div class="pull-right">
@@ -499,7 +532,7 @@
                      <ul>
                        <li><a href="#"><span>登录</span></a></li>
                        <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
+                       <li style="margin-right: 25px;"><a href="#"><span>注册</span></a></li>
                        <li><a href="#"><span>简</span></a></li>
                        <li class="separator">|</li>
                        <li><a href="#"><span>EN</span></a></li>
@@ -565,7 +598,7 @@
 
 
 <script type="text/html" id="header_8">
- <header>
+ <header id="header_8">
 <div class="top-bar div-hidden">
     <div class="container">
       <div class="pull-right">
@@ -573,7 +606,7 @@
                       <ul>
                        <li><a href="#"><span>登录</span></a></li>
                        <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
+                       <li style="margin-right: 25px;"><a href="#"><span>注册</span></a></li>
                        <li><a href="#"><span>简</span></a></li>
                        <li class="separator">|</li>
                        <li><a href="#"><span>EN</span></a></li>
@@ -598,7 +631,7 @@
                      <div class="pull-right div-hidden">
                           <div class="search">
                             <input type="text" id="keywords" placeholder="搜索">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -5px;"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
                       <nav class="drawer-nav" role="navigation">
@@ -643,7 +676,7 @@
 
 
 <script type="text/html" id="header_7">
- <header>
+ <header id="header_7">
 <div class="top-bar div-hidden">
     <div class="container">
       <div class="pull-left">
@@ -651,7 +684,7 @@
                       <ul>
                        <li><a href="#"><span>登录</span></a></li>
                        <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
+                       <li style="margin-right: 25px;"><a href="#"><span>注册</span></a></li>
                        <li><a href="#"><span>简</span></a></li>
                        <li class="separator">|</li>
                        <li><a href="#"><span>EN</span></a></li>
@@ -687,7 +720,7 @@
                      <div class="pull-right div-hidden">
                           <div class="search">
                             <input type="text" class="hidden-line-text" id="keywords">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -30px;"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
                       <nav class="drawer-nav" role="navigation">
@@ -727,11 +760,27 @@
 
           </div>
           <!--导航结束-->
+          <script>
+              //全文搜索交互
+                 var $btn7 = $('#header_7 .search a')
+                  var $keywords7 = $('#header_7 .search input')
+                  var keywordsWidth7 = $keywords7.css('width')
+
+                 $btn7.on('click', function() {
+                     $keywords7.css({'width': 0, 'padding': '0 5px'}).show().animate({'width': keywordsWidth1})
+                })
+
+                  $('section').on('click', function() {
+                    !$keywords7.val() && $keywords7.css({'padding': 0}).animate({'width': 0 }, function() {
+                      $keywords7.hide()
+                    })
+                 })
+          </script>
      </header>
 </script>
 
 <script type="text/html" id="header_6">
- <header>
+ <header id="header_6">
 <div class="second-bar div-hidden">
     <div class="container">
         <div class="pull-left">
@@ -739,7 +788,7 @@
                      <ul>
                        <li><a href="#"><span>登录</span></a></li>
                        <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
+                       <li style="margin-right: 25px;"><a href="#"><span>注册</span></a></li>
                        <li><a href="#"><span>简</span></a></li>
                        <li class="separator">|</li>
                        <li><a href="#"><span>EN</span></a></li>
@@ -754,7 +803,7 @@
         <div class="pull-right">
                           <div class="search">
                             <input type="text" id="keywords" placeholder="搜索">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -5px;"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
         
@@ -817,7 +866,7 @@
 </script>
 
 <script type="text/html" id="header_5">
- <header>
+ <header id="header_5">
 <div class="second-bar div-hidden">
     <div class="container">
         <div class="pull-left">
@@ -825,7 +874,7 @@
                      <ul>
                        <li><a href="#"><span>登录</span></a></li>
                        <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
+                       <li style="margin-right: 25px;"><a href="#"><span>注册</span></a></li>
                        <li><a href="#"><span>简</span></a></li>
                        <li class="separator">|</li>
                        <li><a href="#"><span>EN</span></a></li>
@@ -867,7 +916,7 @@
                       <div class="pull-center">
                            <div class="pull-right div-hidden">
                           <div class="search">
-                            <input type="text" class="hidden-line-text" id="keywords">
+                            <input type="text" class="hidden-line-text3" id="keywords">
                              <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
@@ -909,12 +958,27 @@
 
           </div>
           <!--导航结束-->
+           <script>
+              //全文搜索交互
+                  var $btn5 = $('#header_5 .search a')
+                  var $keywords5 = $('#header_5 .search input')
+
+                   $btn5.on('click', function() {
+                       // $(this).parents('.search').css({'background-color': '#fff'})
+                       $keywords5.show('slow');
+                  })
+
+                    $('section').on('click', function() {
+                      !$keywords5.val() && $keywords5.hide('slow')
+                     
+                   })
+          </script>
      </header>
 </script>
 
 
 <script type="text/html" id="header_4">
- <header>
+ <header id="header_4">
 <div class="top-bar div-hidden">
     <div class="container">
       <div class="pull-left">
@@ -922,7 +986,7 @@
                       <ul>
                        <li><a href="#"><span>登录</span></a></li>
                        <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
+                       <li style="margin-right: 25px;"><a href="#"><span>注册</span></a></li>
                        <li><a href="#"><span>简</span></a></li>
                        <li class="separator">|</li>
                        <li><a href="#"><span>EN</span></a></li>
@@ -958,7 +1022,7 @@
                      <div class="pull-right div-hidden">
                           <div class="search">
                             <input type="text" id="keywords" placeholder="搜索">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -5px;"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
                       <nav class="drawer-nav" role="navigation">
@@ -1004,7 +1068,7 @@
 
 
 <script type="text/html" id="header_3">
- <header>
+ <header id="header_3">
 
 <div class="second-bar div-hidden">
     <div class="container">
@@ -1013,7 +1077,7 @@
                      <ul>
                        <li><a href="#"><span>登录</span></a></li>
                        <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
+                       <li style="margin-right: 25px;"><a href="#"><span>注册</span></a></li>
                        <li><a href="#"><span>简</span></a></li>
                        <li class="separator">|</li>
                        <li><a href="#"><span>EN</span></a></li>
@@ -1052,7 +1116,7 @@
                       <div class="pull-center">
                         <div class="pull-right div-hidden">
                           <div class="search">
-                            <input type="text" class="hidden-line-text" id="keywords">
+                            <input type="text" class="hidden-line-text3" id="keywords">
                              <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
@@ -1094,12 +1158,27 @@
 
           </div>
           <!--导航结束-->
+           <script>
+              //全文搜索交互
+                  var $btn3 = $('#header_3 .search a')
+                  var $keywords3 = $('#header_3 .search input')
+
+                   $btn3.on('click', function() {
+                       // $(this).parents('.search').css({'background-color': '#fff'})
+                       $keywords3.show('slow');
+                  })
+
+                    $('section').on('click', function() {
+                      !$keywords3.val() && $keywords3.hide('slow')
+                     
+                   })
+          </script>
      </header>
 </script>
 
 
 <script type="text/html" id="header_2">
- <header>
+ <header id="header_2">
 
 
 <div class="top-bar div-hidden">
@@ -1109,16 +1188,16 @@
                                     <ul>
                                      <li><a href="#"><span>登录</span></a></li>
                                      <li class="separator">|</li>
-                                     <li><a href="#"><span>注册</span></a></li>
+                                     <li style="margin-right: 50px;"><a href="#"><span>注册</span></a></li>
                                      <li><a href="#"><span>简</span></a></li>
                                      <li class="separator">|</li>
                                      <li><a href="#"><span>EN</span></a></li>
                                   </ul>
                                </div>
                       </div>
-                     <div class="pull-right div-hidden">
+                     <div class="pull-right div-hidden" style="margin-right: 50px;">
                           <div class="search">
-                            <input type="text" class="hidden-line-text" id="keywords">
+                            <input type="text" class="hidden-line-text2" id="keywords">
                              <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
@@ -1188,12 +1267,26 @@
 
           </div>
           <!--导航结束-->
+           <script>
+              //全文搜索交互
+                  var $btn2 = $('#header_2 .search a')
+                  var $keywords2 = $('#header_2 .search input')
+
+                   $btn2.on('click', function() {
+                       $keywords2.show('slow');
+                  })
+
+                    $('section').on('click', function() {
+                      !$keywords2.val() && $keywords2.hide('slow')
+                     
+                   })
+          </script>
      </header>
 </script>
 
 
 <script type="text/html" id="header_1">
- <header>
+ <header id="header_1">
          <!--导航开始-->
          <div class="container">
             <div class="drawer-navbar" role="banner">
@@ -1218,9 +1311,9 @@
                                </div>
                       </div>
                      <div class="pull-right div-hidden">
-                          <div class="search">
+                          <div class="search" style="margin-left: 20px">
                             <input type="text" class="hidden-line-text" id="keywords">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query"  id="btn-full-query" style="margin-left: -30px;"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
 
@@ -1261,174 +1354,24 @@
 
           </div>
           <!--导航结束-->
+          <script>
+              //全文搜索交互
+                 var $btn1 = $('#header_1 .search a')
+                  var $keywords1 = $('#header_1 .search input')
+                  var keywordsWidth1 = $keywords1.css('width')
+
+                 $btn1.on('click', function() {
+                     $keywords1.css({'width': 0, 'padding': '0 5px'}).show().animate({'width': keywordsWidth1})
+                })
+
+                  $('section').on('click', function() {
+                    !$keywords1.val() && $keywords1.css({'padding': 0}).animate({'width': 0 }, function() {
+                      $keywords1.hide()
+                    })
+                 })
+          </script>
      </header>
 </script>
-
-
-<script type="text/html" id="header_demo">
- <header>
-
-
-<!-- <div class="second-bar">
-  <div class="container">
-        <div class="pull-center drawer-brand">
-           <img src="images/logo-small.png" alt="" style="vertical-align: middle;">
-        </div>
-        </div>
-      
-</div> -->
-
-<div class="top-bar div-hidden">
-    <div class="container">
-        <div class="pull-left">
-                 <div class="info">
-                     <ul>
-                        <li><i class="iconfont icon-address"></i><span>北京朝阳区人民路3188号</span></li>  
-                        <li><i class="iconfont icon-dianhua"></i><span>+123 456 78-90</span></li>
-                        <li><i class="iconfont icon-youxiang"></i><span>INFO@GMAIL.COM</span></li>
-                    </ul>
-                 </div>
-        </div>
-        <div class="pull-left">
-                 <div class="lang">
-                      <ul>
-                       <li><a href="#"><span>登录</span></a></li>
-                       <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
-                       <li><a href="#"><span>简</span></a></li>
-                       <li class="separator">|</li>
-                       <li><a href="#"><span>EN</span></a></li>
-                    </ul>
-                 </div>
-        </div>
-
-        <div class="pull-left">
-            <div class="share">
-                <ul> 
-                 <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
-                 <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
-                 <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
-                 <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
-                </ul> 
-            </div>
-        </div>
-        <div class="pull-left">
-            <div class="logo">
-                <img src="../images/logo-small.png" style="" alt="">
-            </div>
-        </div>
-        <div class="pull-left">
-            <div class="search">
-                <input type="text"> <a href="" class="btn-full-query"> <i class="iconfont icon-search"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="second-bar div-hidden">
-    <div class="container">
-        <div class="pull-left">
-                 <div class="info">
-                     <ul>
-                        <li><i class="iconfont icon-address"></i><span>北京朝阳区人民路3188号</span></li>  
-                        <li><i class="iconfont icon-dianhua"></i><span>+123 456 78-90</span></li>
-                        <li><i class="iconfont icon-youxiang"></i><span>INFO@GMAIL.COM</span></li>
-                    </ul>
-                 </div>
-        </div>
-        <div class="pull-center">
-             <div class="logo">
-                <img src="../images/logo-small.png" alt="">
-            </div>
-        </div>
-
-        <div class="pull-right">
-             <div class="lang">
-                     <ul>
-                       <li><a href="#"><span>登录</span></a></li>
-                       <li class="separator">|</li>
-                       <li><a href="#"><span>注册</span></a></li>
-                       <li><a href="#"><span>简</span></a></li>
-                       <li class="separator">|</li>
-                       <li><a href="#"><span>EN</span></a></li>
-                    </ul>
-                 </div>
-        </div>
-         <div class="pull-right">
-              <div class="search">
-                 <a href="javascript:;" class="btn-full-query" id="btn-full-query2"> <i class="iconfont icon-search"></i></a>
-                 <input type="text" class="hidden-line-text2" id="keywords2">
-                </div>
-        </div>
-    </div>
-</div>
-
-    
-         <!--导航开始-->
-         <div class="container">
-            <div class="drawer-navbar" role="banner">
-                <div class="drawer-container">
-                      <div class="drawer-navbar-header header-hidden">
-                        <a class="drawer-brand" href="./index.html"><img src="../images/logo-small.png"/></a>
-                        <button type="button" class="drawer-toggle drawer-hamburger">
-                          <span class="sr-only">toggle navigation</span>
-                          <span class="drawer-hamburger-icon"></span>
-                        </button>
-                      </div>
-                     <div class="pull-right div-hidden">
-                          <div class="search">
-                            <input type="text" class="hidden-line-text" id="keywords">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
-                        </div>
-                     </div>
-                       <div class="pull-right div-hidden">
-                          <div class="search">
-                            <input type="text" class="hidden-line-text3" id="keywords3" style="position: absolute; top: 60px; right: 0;">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query3"> <i class="iconfont icon-search"></i></a>
-                        </div>
-                     </div>
-                      <nav class="drawer-nav" role="navigation">
-                        <ul class="drawer-menu">
-                          <li class="drawer-dropdown current"><a class="drawer-menu-item" href="#">首页</a></li>
-                          <li class="drawer-dropdown"><a class="drawer-menu-item" href="#">新闻中心</a></li>
-                          <li class="drawer-dropdown">
-                            <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
-                              投资者关系</span>
-                            </a>
-                            <ul class="drawer-dropdown-menu">
-                              <li class="drawer-dropdown"><a class="drawer-dropdown-menu-item" href="./navbar-top.html">新闻公告</a>
-
-                                  <ul class="drawer-dropdown-menu third-dropdown-menu">
-                                    <li><a class="drawer-dropdown-menu-item" href="">xxxxxxx</a></li>
-                                  </ul>
-
-                              </li>
-                              <li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">通知</a></li>
-                              <li class="drawer-dropdown">
-                                   <a class="drawer-dropdown-menu-item" href="./navbar-right.html">产品中心</a>
-                                    <ul class="drawer-dropdown-menu third-dropdown-menu">
-                                    <li><a class="drawer-dropdown-menu-item" href="">xxxxxxx</a></li>
-                                    <li><a class="drawer-dropdown-menu-item" href="">aaa</a></li>
-                                    <li><a class="drawer-dropdown-menu-item" href="">cccc</a></li>
-                                  </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </nav>
-
-
-                </div>
-                
-            </div>
-
-          </div>
-          <!--导航结束-->
-     </header>
-</script>
-
-
 <!--------------------------------------------------------------------页脚开始-------------------------------------------------------------------------->
 
 
@@ -1527,4 +1470,5 @@
 
        </footer>
 </script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 

@@ -1,0 +1,51 @@
+header {
+  .drawer-navbar {
+      @media (min-width: 64em) {
+        .drawer-navbar-header {
+            margin-top: -5px;
+        }
+        
+        .drawer-menu > li {
+
+            &>a:after, &>a:before {
+               content: '';
+               width: 0;
+               height: 0px;
+               position: absolute;
+               opacity: 0;
+            }
+    
+            &:hover, &.current {
+              transition: all 0.36s ease 0s;
+                a:after, a:before {
+                   width: 9px;
+                   height: 10px;
+                   transition: all 0.36s ease 0s;
+                }
+
+
+                a:after {
+                      left: 0;
+                      top: 0;
+                      border-top: 1px solid $nav-hover-color;
+                      border-left: 1px solid $nav-hover-color;
+                      opacity: 1;
+                      transition: all 0.36s ease 0s;
+                }
+
+                a:before {
+                      bottom: 0;
+                      right: 0;
+                      border-bottom: 1px solid $nav-hover-color;
+                      border-right: 1px solid $nav-hover-color;
+                      opacity: 1;
+                      transition: all 0.36s ease 0s;
+                }
+            }
+        }
+      }
+  }
+}
+
+
+

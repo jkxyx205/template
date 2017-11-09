@@ -1,26 +1,45 @@
+
 // 获取 gulp
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 
-gulp.task('sass-header', function() { 
-      return gulp.src('header/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+let cleanCSS = require('gulp-clean-css');
+
+var fs = require('fs');
+
+function sync() {
+   setTimeout(function() {
+      fs.writeFile('db.js', 'var refresh =  ' + (++index), function(err){
+          if(err) throw err;
+      });
+    }, 1000)
+}
+
+
+var index = 0;
+gulp.task('sass-header', function() {
+      gulp.src('header/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/header'))
+sync()
+
+      
 })
 
 gulp.task('sass-style', function() { 
-      return gulp.src('style/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+      gulp.src('style/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/style'))
+     sync()
 })
 
 
 gulp.task('sass-footer', function() { 
-      return gulp.src('footer/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+    gulp.src('footer/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/footer'))
+     sync()
 })
-
 
 
 // 在命令行使用 gulp auto 启动此任务
@@ -33,4 +52,21 @@ gulp.task('sass-footer', function() {
 
 // 使用 gulp.task('default') 定义默认任务
 // 在命令行使用 gulp 启动 sass 任务和 auto 任务
-gulp.task('default', ['sass-header', 'sass-style', 'sass-footer'])
+// gulp.task('default', ['sass-header', 'sass-style', 'sass-footer'])
+
+gulp.task('minify-css', () => {
+  return gulp.src('dist/**/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
+});
+
+
+gulp.task('default', ['sass-header'], function() {
+    // gulp.task("minify-css")
+    // console.log('red;')
+})
+
+
+gulp.task('watch', function() {  
+    gulp.watch('header/**/sass/*.scss', ['sass-header'])
+});  

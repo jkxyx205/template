@@ -1,27 +1,25 @@
-$main-color: #1a54e7;
+$main-color: #fc6921;
+$color: #a1a1a1;
+
 //top bar
-$top-bar-height: 55px;
 $top-bar-bgColor: $main-color;
-$top-bar-color: #fff;
+$top-bar-color: #fbe5db;
 $hover: #fff;
 
 //second bar
-$second-bar-height: 80px;
-$second-bar-bgColor: grey;
-$second-bar-color: red;
-$second-hover: green;
-
-//全文检索
-$query-input-width: 120px;
-$query-input-height: 30px;
-$query-btn-bgColor: $main-color;
-$query-btn-color: #fff;
-$query-input-border: #ddd;
+$second-bar-bgColor: #fff;
+$second-bar-color: $color;
+$second-hover: $top-bar-bgColor;
 
 //菜单
 $nav-bgcolor: #fff;
-$nav-height: 97px;
-$nav-color: #333;
+$nav-color: $color;
 $nav-hover-color: $main-color;
 
+//全文检索
+$query-btn-bgColor: $main-color;
+$query-btn-color: $top-bar-color;
+$query-input-border: $main-color;
+$query-input-bgColor: #fff;
+$query-input-color: $color;
 

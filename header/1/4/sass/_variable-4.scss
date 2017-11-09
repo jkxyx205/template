@@ -1,0 +1,27 @@
+$main-color: #28c27d;   //变量
+
+$color: #a1a1a1;
+
+//top bar
+$top-bar-bgColor: transparent;
+$top-bar-color: $color;
+$hover: $main-color;
+
+//second bar
+$second-bar-bgColor: transparent;
+$second-bar-color: $color;
+$second-hover: $main-color;
+
+//菜单
+$nav-bgcolor: transparent;
+$nav-color: $color;
+$nav-hover-color: #e3fcf1;
+
+//全文检索
+$query-btn-bgColor: transparent;
+$query-btn-color: $color;
+$query-input-border: $color;
+$query-input-bgColor: transparent;
+$query-input-color: $color;
+
+

@@ -1,0 +1,22 @@
+header {
+  .drawer-navbar {
+      $border-radius: 5px;
+      @media (min-width: 64em) {
+         .drawer-navbar-header {
+            margin-top: -5px;
+        }
+        
+        .drawer-menu > li {
+            border-radius: $border-radius;
+
+            &:hover, &.current {
+               &>a {
+                 border-radius: $border-radius;
+                 background-color: $main-color;
+               }
+            }
+
+        }
+      }
+  }
+}

@@ -1,0 +1,30 @@
+header {
+  .drawer-navbar {
+      @media (min-width: 64em) {
+        .drawer-menu > li {
+            margin-left: 0;
+            &:hover, &.current  {
+                 background-color: $nav-hover-bgColor;
+            }
+          
+        }
+       
+      }
+  }
+
+  
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+
+}
+
+
+
+

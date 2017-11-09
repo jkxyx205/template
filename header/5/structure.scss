@@ -1,0 +1,44 @@
+$top-bar-height: 50px;
+$second-bar-height: 97px;
+$query-input-width: 220px;
+$query-input-height: 30px;
+$nav-height: 55px;
+
+header {
+  .drawer-navbar {
+        
+        .drawer-menu > li {
+
+            &>a {
+             
+              margin: 13px 0;
+              height: 29px;
+              line-height: 29px;
+            }
+            
+        }
+      }
+}
+
+
+// header {
+//   .drawer-navbar {
+//       @media (min-width: 64em) {
+//         .drawer-menu > li {
+
+//             &:hover >a, &.current >a {
+              
+//                 &:after {
+                   
+//                     border-bottom-color: $nav-color;
+
+//                   }
+//             }
+
+            
+//         }
+//       }
+//   }
+// }
+
+
