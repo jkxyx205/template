@@ -27,7 +27,7 @@
 </head>
 <body class="drawer drawer--top">
    <!--页眉开始-->
-   <div class="header-container">
+   <div class="header-container" id="header-container">
      
    </div>
    <!--页眉结束-->
@@ -514,11 +514,50 @@
 
     loaded = true
 
+
+     //add query event
+    $('#header-container').on('click', '.btn-full-query', function(e) {
+      var $keywords = $(this).prev()
+      var style = $keywords.parent().data('style')
+
+      if ('style1' === style) {
+        var keywordsWidth = $keywords.css('width')
+
+      $keywords.css({'width': 0, 'padding': '0 5px'}).show().animate({'width': keywordsWidth})
+
+      } else if ('style2' === style || 'style3' === style) {
+        $keywords.show('slow');
+      }
+
+      
+
+    })
+
+    $('section').on('click', function() {
+        var $keywords = $('#header-container .search input')
+        var style = $keywords.parent().data('style')
+
+        if ('style1' === style) {
+          var keywordsWidth = $keywords.css('width')
+
+          !$keywords.val() && $keywords.css({'padding': 0}).animate({'width': 0 }, function() {
+            $keywords.hide()
+            $(this).css({'width': keywordsWidth})
+          })
+        } else if ('style2' === style || 'style3' == style) {
+          !$keywords.val() && $keywords.hide('slow')
+        }
+
+     })
+
+
   });
 
   function init() {
     $('.drawer').drawer();
   }
+
+
 </script>
 </body>
 </html>

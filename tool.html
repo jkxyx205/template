@@ -216,7 +216,7 @@
                             <option value="5">5</option>
                             <option value="6">6</option>
                             <option value="7">7</option>
-                            <option value="8" selected="">8</option>
+                            <option value="8">8</option>
                             <option value="9">9</option>
                             <option value="10">10</option>
                         </select>
@@ -409,7 +409,7 @@
 
 </html>
 <script type="text/html" id="header_10">
- <header id="header_10">
+ <header>
 <div class="second-bar div-hidden">
     <div class="container">
         <div class="pull-left">
@@ -454,8 +454,8 @@
                         </button>
                       </div>
                        <div class="pull-right div-hidden">
-                           <div class="search">
-                                          <input type="text" class="hidden-line-text" id="keywords" placeholder="搜索">
+                           <div class="search style1" data-style="style1">
+                                          <input type="text" id="keywords" placeholder="搜索">
                                            <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                                       </div>
                       </div>
@@ -496,24 +496,11 @@
 
           </div>
           <!--导航结束-->
-          <script>
-              //全文搜索交互
-                 var $btn10 = $('#header_10 .search a')
-                  var $keywords10 = $('#header_10 .search input')
-
-                 $btn10.on('click', function() {
-                     $keywords10.show('slow')
-                })
-
-                  $('section').on('click', function() {
-                    !$keywords10.val() && $keywords10.hide('slow')
-                 })
-          </script>
      </header>
 </script>
 
 <script type="text/html" id="header_9">
- <header id="header_9">
+ <header>
 <div class="second-bar div-hidden">
     <div class="container">
         <div class="pull-left">
@@ -522,9 +509,9 @@
             </div>
         </div>
         <div class="pull-center">
-             <div class="search">
+             <div class="search style0">
                             <input type="text" id="keywords" placeholder="搜索">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -5px"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
         </div>
          <div class="pull-right">
@@ -598,7 +585,7 @@
 
 
 <script type="text/html" id="header_8">
- <header id="header_8">
+ <header>
 <div class="top-bar div-hidden">
     <div class="container">
       <div class="pull-right">
@@ -629,9 +616,9 @@
                         </button>
                       </div>
                      <div class="pull-right div-hidden">
-                          <div class="search">
+                          <div class="search style0">
                             <input type="text" id="keywords" placeholder="搜索">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -5px;"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" > <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
                       <nav class="drawer-nav" role="navigation">
@@ -676,7 +663,7 @@
 
 
 <script type="text/html" id="header_7">
- <header id="header_7">
+ <header>
 <div class="top-bar div-hidden">
     <div class="container">
       <div class="pull-left">
@@ -717,10 +704,10 @@
                           <span class="drawer-hamburger-icon"></span>
                         </button>
                       </div>
-                     <div class="pull-right div-hidden">
-                          <div class="search">
-                            <input type="text" class="hidden-line-text" id="keywords">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -30px;"> <i class="iconfont icon-search"></i></a>
+                     <div class="pull-right div-hidden" style="margin-left: 25px;">
+                          <div class="search style1" data-style="style1">
+                            <input type="text" id="keywords">
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
                       <nav class="drawer-nav" role="navigation">
@@ -760,27 +747,11 @@
 
           </div>
           <!--导航结束-->
-          <script>
-              //全文搜索交互
-                 var $btn7 = $('#header_7 .search a')
-                  var $keywords7 = $('#header_7 .search input')
-                  var keywordsWidth7 = $keywords7.css('width')
-
-                 $btn7.on('click', function() {
-                     $keywords7.css({'width': 0, 'padding': '0 5px'}).show().animate({'width': keywordsWidth1})
-                })
-
-                  $('section').on('click', function() {
-                    !$keywords7.val() && $keywords7.css({'padding': 0}).animate({'width': 0 }, function() {
-                      $keywords7.hide()
-                    })
-                 })
-          </script>
      </header>
 </script>
 
 <script type="text/html" id="header_6">
- <header id="header_6">
+ <header>
 <div class="second-bar div-hidden">
     <div class="container">
         <div class="pull-left">
@@ -801,9 +772,9 @@
             </div>
         </div>
         <div class="pull-right">
-                          <div class="search">
+                          <div class="search style0">
                             <input type="text" id="keywords" placeholder="搜索">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -5px;"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
         
@@ -866,7 +837,7 @@
 </script>
 
 <script type="text/html" id="header_5">
- <header id="header_5">
+ <header>
 <div class="second-bar div-hidden">
     <div class="container">
         <div class="pull-left">
@@ -915,8 +886,8 @@
                       </div>
                       <div class="pull-center">
                            <div class="pull-right div-hidden">
-                          <div class="search">
-                            <input type="text" class="hidden-line-text3" id="keywords">
+                          <div class="search style3" data-style="style3">
+                            <input type="text"  id="keywords">
                              <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
@@ -958,27 +929,12 @@
 
           </div>
           <!--导航结束-->
-           <script>
-              //全文搜索交互
-                  var $btn5 = $('#header_5 .search a')
-                  var $keywords5 = $('#header_5 .search input')
-
-                   $btn5.on('click', function() {
-                       // $(this).parents('.search').css({'background-color': '#fff'})
-                       $keywords5.show('slow');
-                  })
-
-                    $('section').on('click', function() {
-                      !$keywords5.val() && $keywords5.hide('slow')
-                     
-                   })
-          </script>
      </header>
 </script>
 
 
 <script type="text/html" id="header_4">
- <header id="header_4">
+ <header>
 <div class="top-bar div-hidden">
     <div class="container">
       <div class="pull-left">
@@ -1020,9 +976,9 @@
                         </button>
                       </div>
                      <div class="pull-right div-hidden">
-                          <div class="search">
+                          <div class="search style0">
                             <input type="text" id="keywords" placeholder="搜索">
-                             <a href="javascript:;" class="btn-full-query" id="btn-full-query" style="margin-left: -5px;"> <i class="iconfont icon-search"></i></a>
+                             <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
                       <nav class="drawer-nav" role="navigation">
@@ -1068,7 +1024,7 @@
 
 
 <script type="text/html" id="header_3">
- <header id="header_3">
+ <header>
 
 <div class="second-bar div-hidden">
     <div class="container">
@@ -1115,8 +1071,8 @@
                    
                       <div class="pull-center">
                         <div class="pull-right div-hidden">
-                          <div class="search">
-                            <input type="text" class="hidden-line-text3" id="keywords">
+                          <div class="search style3" data-style='style3'>
+                            <input type="text"  id="keywords">
                              <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
@@ -1158,27 +1114,12 @@
 
           </div>
           <!--导航结束-->
-           <script>
-              //全文搜索交互
-                  var $btn3 = $('#header_3 .search a')
-                  var $keywords3 = $('#header_3 .search input')
-
-                   $btn3.on('click', function() {
-                       // $(this).parents('.search').css({'background-color': '#fff'})
-                       $keywords3.show('slow');
-                  })
-
-                    $('section').on('click', function() {
-                      !$keywords3.val() && $keywords3.hide('slow')
-                     
-                   })
-          </script>
      </header>
 </script>
 
 
 <script type="text/html" id="header_2">
- <header id="header_2">
+ <header>
 
 
 <div class="top-bar div-hidden">
@@ -1196,8 +1137,8 @@
                                </div>
                       </div>
                      <div class="pull-right div-hidden" style="margin-right: 50px;">
-                          <div class="search">
-                            <input type="text" class="hidden-line-text2" id="keywords">
+                          <div class="search style2" data-style='style2'>
+                            <input type="text" id="keywords">
                              <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
@@ -1266,27 +1207,12 @@
             </div>
 
           </div>
-          <!--导航结束-->
-           <script>
-              //全文搜索交互
-                  var $btn2 = $('#header_2 .search a')
-                  var $keywords2 = $('#header_2 .search input')
-
-                   $btn2.on('click', function() {
-                       $keywords2.show('slow');
-                  })
-
-                    $('section').on('click', function() {
-                      !$keywords2.val() && $keywords2.hide('slow')
-                     
-                   })
-          </script>
      </header>
 </script>
 
 
 <script type="text/html" id="header_1">
- <header id="header_1">
+ <header>
          <!--导航开始-->
          <div class="container">
             <div class="drawer-navbar" role="banner">
@@ -1310,10 +1236,10 @@
                                   </ul>
                                </div>
                       </div>
-                     <div class="pull-right div-hidden">
-                          <div class="search" style="margin-left: 20px">
-                            <input type="text" class="hidden-line-text" id="keywords">
-                             <a href="javascript:;" class="btn-full-query"  id="btn-full-query" style="margin-left: -30px;"> <i class="iconfont icon-search"></i></a>
+                     <div class="pull-right div-hidden" style="margin-left: 25px;">
+                          <div class="search style1" data-style="style1">
+                            <input type="text" id="keywords">
+                             <a href="javascript:;" class="btn-full-query"  id="btn-full-query"> <i class="iconfont icon-search"></i></a>
                         </div>
                      </div>
 
@@ -1354,22 +1280,7 @@
 
           </div>
           <!--导航结束-->
-          <script>
-              //全文搜索交互
-                 var $btn1 = $('#header_1 .search a')
-                  var $keywords1 = $('#header_1 .search input')
-                  var keywordsWidth1 = $keywords1.css('width')
-
-                 $btn1.on('click', function() {
-                     $keywords1.css({'width': 0, 'padding': '0 5px'}).show().animate({'width': keywordsWidth1})
-                })
-
-                  $('section').on('click', function() {
-                    !$keywords1.val() && $keywords1.css({'padding': 0}).animate({'width': 0 }, function() {
-                      $keywords1.hide()
-                    })
-                 })
-          </script>
+          
      </header>
 </script>
 <!--------------------------------------------------------------------页脚开始-------------------------------------------------------------------------->
