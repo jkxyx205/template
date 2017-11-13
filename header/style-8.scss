@@ -4,12 +4,26 @@ header {
          .drawer-navbar-header {
             margin-top: -5px;
         }
+
+        .drawer-menu-item {
+          &:after {
+                  content: '';
+                  position: absolute;
+                  width: 0;
+                  height: 2px;
+                  background-color: $main-color;
+                  left: 0;
+                  bottom: 0;
+                  transition: all 0.36s ease 0s;
+                }
+        }
         
         .drawer-menu > li {
-            &:hover >a, &.current >a {
-                border-bottom: 2px solid $main-color;
+            &.current >a,  &:hover>a {
+                &:after {
+                  width: 100%;
+                }
             }
-           
         }
 
       }

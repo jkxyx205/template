@@ -18,10 +18,10 @@ $nav-color: #b5b9c9;
 $nav-hover-color: #fff;
 
 //全文检索
-$query-btn-bgColor: $main-color;
-$query-btn-color: $top-bar-color;
-$query-input-border: $main-color;
-$query-input-bgColor: #fff;
+$query-btn-bgColor: transparent;
+$query-btn-color: $nav-color;
+$query-input-border: #fff;
+$query-input-bgColor: $nav-color;
 $query-input-color: $color;
 
 

@@ -1,0 +1,90 @@
+ @mixin bar-container($height, $bgColor, $color, $hover) {
+    // font-size: 0;
+    // height: $height;
+    line-height: $height;
+    // padding: $height 0;
+    color: $color;
+    background-color: $bgColor;
+    position: relative;
+    & a:hover {
+        color: $hover;
+    }
+}
+
+footer {
+    .iconfont {
+        line-height: 100%;
+    }
+    .div-hidden {
+        display: none;
+    }
+
+    .container, .pull-left, .pull-center, .pull-right, .logo {
+        height: 100%;
+    }
+
+    ul, li {
+        padding: 0;
+        margin: 0
+    }
+
+    li {
+        float: left;
+        // display: inline-block;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+ .pull-center {
+    position: absolute; 
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%); 
+     -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+ }
+
+ .menu {
+    li {
+        margin-right: 30px;
+
+        a {
+            color: $menu-color;
+        }
+    }
+ }
+ .logo img {
+    max-height: 100%;
+ }
+
+ .share, .info {
+    li:not(:last-child) {
+        margin-right: 5px;
+    }
+
+    a {
+        color: $share-color;
+    }
+ }
+
+ .share2 {
+    @extend .share;
+    
+    a {
+        background-color: red;
+        padding: 5px;
+    }
+
+ }
+ .line-text {
+    font-size: 1.2rem;
+ }
+
+}

@@ -1,0 +1,26 @@
+header {
+  .drawer-navbar {
+      @media (min-width: 64em) {
+        .drawer-navbar-header {
+            margin-top: -5px;
+        }
+        
+        .drawer-menu > li {
+
+            &.current .drawer-menu-item{
+              color: $main-color;
+            }
+    
+            &:hover {
+                .drawer-menu-item {
+
+                   color: $main-color;
+                   transition: none ease-out .3s;
+                   transition-property: color;
+                }
+              
+            }
+        }
+      }
+  }
+}

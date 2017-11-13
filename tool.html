@@ -222,11 +222,17 @@
                         </select>
                         页脚：<select name="" id="footer">
                            <option value="1">1</option>
-                            <option value="2">2</option>
+                           <option value="2">2</option>
+                           <option value="3" selected="">3</option>
+                           <option value="4" selected="">4</option>
+                           <option value="5" selected="">5</option>
+                           <option value="6" selected="">6</option>
+                           <option value="7" selected="">7</option>
+
                         </select>
                         风格：<select name="" id="style">
                             <option value="1">1</option>
-                            <option value="2">2</option>
+                            <option value="2" selected="">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
@@ -239,11 +245,11 @@
                            <option value="1">1</option>
                            <option value="2">2</option>
                            <option value="3">3</option>
-                             <option value="4">4</option>
-                             <option value="5">5</option>
-                             <option value="6">6</option>
-                             <option value="7">7</option>
-                             <option value="8">8</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
                         </select>
                          <button onclick="change()">刷新</button>
                 </div>
@@ -273,7 +279,7 @@
                                     }
                   })
                 
-                }, 2000);
+                }, 1000);
             })
 
             $('#Device li').on('click', function() {
@@ -362,7 +368,8 @@
                  // loadStyles(doc, '../style/'+params.style+'/css/'+params.block+'.css')
 
                  loadStyles(doc, '../dist/tpl-css/header/'+params.header+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
-                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
+                 // loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
+                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/sass/'+params.block+'.css?time'+ (new Date()))
                  loadStyles(doc, '../dist/tpl-css/style/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
             }
 
@@ -453,7 +460,7 @@
                           <span class="drawer-hamburger-icon"></span>
                         </button>
                       </div>
-                       <div class="pull-right div-hidden">
+                       <div class="pull-right div-hidden" style="margin-left: 25px;">
                            <div class="search style1" data-style="style1">
                                           <input type="text" id="keywords" placeholder="搜索">
                                            <a href="javascript:;" class="btn-full-query" id="btn-full-query"> <i class="iconfont icon-search"></i></a>
@@ -1293,93 +1300,294 @@
 
 <script type="text/html" id="footer_1">
 <footer>
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../images/logo2.png" alt="">
-                    <div class="copyright">© UI Chest, 2015. All Rights Reserved.</div>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="row">
-                       <div class="col-xs-6 col-sm-3">
-                         <dl class="list">
-                           <dt><h3>我们的产品</h3></dt>
-                           <dd>产品AAA</dd>
-                           <dd>产品AAA</dd>
-                           <dd>产品AAA</dd>
-                           <dd>产品AAA</dd> 
-                         </dl>
-                       </div>
-                       <div class="col-xs-6 col-sm-3">
-                         <dl class="list">
-                           <dt><h3>关于我们</h3></dt>
-                           <dd>联系我们</dd>
-                           <dd>我们的团队</dd>
-                           <dd>技术支持</dd>
-                           <dd>公司业务</dd> 
-                         </dl>
-                       </div>
-                       <div class="col-xs-6 col-sm-3">
-                         <dl class="list">
-                           <dt><h3>友情链接</h3></dt>
-                           <dd>国际公司A</dd>
-                           <dd>国际公司A</dd>
-                           <dd>国际公司A</dd>
-                           <dd>国际公司A</dd> 
-                         </dl>
-                       </div>
-                       <div class="col-xs-6 col-sm-3">
-                         <dl class="list">
-                           <dt><h3>公司微信</h3></dt>
-                           <dd><img src="../images/qcore.jpg" alt=""></dd>
-                         </dl>
-                       </div>
-                    </div>
-                  </div>
+  <div class="footer-panel">
+     <div class="s1">
+           <div class="container">
+            <div class="wrapper">
+                           <div class="pull-left">
+                <div class="menu">
+                 <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">业务中心</a></li>
+                    <li><a href="#">创新发现</a></li>
+                </ul>
               </div>
+            </div>
+            <div class="pull-right">
+              <div class="share">
+                <ul> 
+                 <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
+                </ul> 
+            </div>
           </div>
+          <div class="clearfix"></div>
+            </div>
+ 
 
-       </footer>
+          </div>
+      </div>
+      <div class="s2">
+           <div class="container">
+            <div class="info">
+                 <ul>
+                    <li>地址：xxxx</li>
+                    <li>邮编：225432</li>
+                    <li>电话：19989876762</li>
+                    <li>邮箱：jkxx@qq.com</li>
+                    <li>传真：weda@163.com</li>
+                </ul>
+            </div>
+          </div> 
+      </div>
+  </div>
+      <div class="s3">
+          <!-- <div class="pull-center"> -->
+              <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
+          <!-- </div> -->
+      </div>
+    </footer>
+
 </script>
 
 
 <script type="text/html" id="footer_2">
-<footer>
-          <div class="container">
+  <footer>
+     <div class="a">
+           <div class="container">
               <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../images/logo2.png" alt="">
-                    <div class="copyright">© UI Chest, 2015. All Rights Reserved.</div>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="row">
-                       <div class="col-xs-6 col-sm-3">
-                         <dl class="list">
-                           <dt><h3>我们的产品</h3></dt>
-                         </dl>
-                       </div>
-                       <div class="col-xs-6 col-sm-3">
-                         <dl class="list">
-                           <dt><h3>关于我们</h3></dt>
-                         </dl>
-                       </div>
-                       <div class="col-xs-6 col-sm-3">
-                         <dl class="list">
-                           <dt><h3>友情链接</h3></dt>
-                         </dl>
-                       </div>
-                       <div class="col-xs-6 col-sm-3">
-                         <dl class="list">
-                           <dt><h3>公司微信</h3></dt>
-                           <dd><img src="../images/qcore.jpg" alt=""></dd>
-                         </dl>
-                       </div>
-                    </div>
-                  </div>
-              </div>
+                <div class="col-sm-4">
+                  <i class="iconfont icon-dianhua"></i>
+                 <div class="box">
+                   <div class="title">联系我们</div>
+                   <span class="detail">17796725527</span>
+                 </div>
+               </div>
+               <div class="col-sm-4"><i class="iconfont icon-address"></i>
+                 <div class="box">
+                   <div class="title">地址</div>
+                   <span class="detail">北京大道西</span>
+                 </div>
+               </div>
+               <div class="col-sm-4"><i class="iconfont icon-youxiang"></i>
+                 <div class="box">
+                   <div class="title">邮箱</div>
+                   <span class="detail">18896717@qq.com</span>
+                 </div>
+               </div>
+              </div> 
           </div>
+      </div>
+      <div class="b">
+           <div class="container">
+             <div class="menu">
+                 <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">业务中心</a></li>
+                    <li><a href="#">创新发现</a></li>
+                </ul>
+            </div>
 
-       </footer>
+          </div> 
+      </div>
+      <div class="c">
+          <div class="container">
+              <div class="pull-left">
+              <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
+          </div>
+           <div class="pull-right">
+              <div class="share">
+                <ul> 
+                 <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
+                </ul> 
+            </div>
+          </div>
+          </div>
+      </div>
+    </footer>
 </script>
+
+<script type="text/html" id="footer_3">
+  <footer>
+      <div class="bb">
+           <div class="container">
+             <div class="line-text pull-left" style="margin-right: 25px;">Copyright © 2004 - 2017  xx.com 版权所有</div>
+             <div class="menu pull-left">
+                 <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">业务中心</a></li>
+                    <li><a href="#">创新发现</a></li>
+                </ul>
+            </div>
+          </div> 
+      </div>
+    </footer>
+</script>
+
+<script type="text/html" id="footer_4">
+  <footer>
+      <div class="f-panel">
+         <div class="container">
+            <div class="f-s-1">
+                <div class="menu">
+                   <ul>
+                      <li><a href="#">首页</a></li>
+                      <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">关于我们</a></li>
+                      <li><a href="#">业务中心</a></li>
+                      <li><a href="#">创新发现</a></li>
+                  </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+             <div class="f-s-2">
+              <div class="info">
+                 <ul>
+                    <li>地址：xxxx</li>
+                    <li>邮编：225432</li>
+                    <li>电话：19989876762</li>
+                    <li>邮箱：jkxx@qq.com</li>
+                    <li>传真：weda@163.com</li>
+                </ul>
+               
+              </div>
+               <div class="share pull-right">
+                <ul> 
+                 <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
+                </ul> 
+            </div>
+             <div class="clearfix"></div>
+            </div>
+             <div class="f-s-3">
+              <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
+            </div>
+         </div>
+    </div>
+    </footer>
+    </div>
+</script>
+
+
+<script type="text/html" id="footer_5">
+  <footer>
+      <div class="f-d-panel">
+         <div class="container">
+            <div class="f-d-1">
+                <div class="menu">
+                   <ul>
+                      <li><a href="#">首页</a></li>
+                      <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">关于我们</a></li>
+                      <li><a href="#">业务中心</a></li>
+                      <li><a href="#">创新发现</a></li>
+                  </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+             <div class="f-d-2">
+              <div class="info">
+                 <ul>
+                    <li>地址：xxxx</li>
+                    <li>邮编：225432</li>
+                    <li>电话：19989876762</li>
+                    <li>邮箱：jkxx@qq.com</li>
+                    <li>传真：weda@163.com</li>
+                </ul>
+               
+              </div>
+             <div class="clearfix"></div>
+            </div>
+             <div class="f-d-3">
+             <div class="share">
+                <ul> 
+                 <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
+                </ul> 
+            </div>
+             <div class="clearfix"></div>
+            </div>
+             
+         </div>
+    </div>
+    <div class="f-d-4" style="text-align: center;">
+              <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
+            </div>
+    </footer>
+    </div>
+</script>
+
+
+<script type="text/html" id="footer_6">
+  <footer>
+      <div class="f-j-panel">
+         <div class="container">
+            <div class="f-j-1">
+        
+               <div class="share pull-left">
+                <ul> 
+                 <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
+                 <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
+                </ul> 
+            </div>
+            <div class="line-text pull-right">Copyright © 2004 - 2017  xx.com 版权所有</div>
+            </div>
+
+         </div>
+    </div>
+    </footer>
+    </div>
+</script>
+
+
+<script type="text/html" id="footer_7">
+  <footer>
+     <div class="f-q-1">
+      <div class="container">
+          <div class="logo pull-left">
+              <img src="../images/logo-small.png" alt="">
+          </div>
+           <div class="info pull-right">
+                 <ul>
+                    <li>地址：xxxx</li>
+                    <li>邮编：225432</li>
+                    <li>电话：19989876762</li>
+                    <li>邮箱：jkxx@qq.com</li>
+                    <li>传真：weda@163.com</li>
+                </ul>
+               
+              </div>
+
+      </div>
+      <div class="clearfix"></div>
+     </div>
+     <div class="f-q-2">
+      <div class="container">
+         <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
+      </div>
+     </div>
+    </footer>
+  </script>
+
+
+
+
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 

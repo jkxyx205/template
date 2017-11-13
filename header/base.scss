@@ -112,6 +112,10 @@ header {
 
       // @media (max-width: 768px) {
         @media (max-width: 64em) {
+            .drawer-navbar-header {
+        background-color: #fff;
+    }
+
             .drawer-dropdown-menu-item {
                 font-size: 1rem;
             }

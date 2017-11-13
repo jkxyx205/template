@@ -1,0 +1,26 @@
+$main-color: #fc6921;
+
+
+
+//structure
+$color: #a1a1a1;
+$menu-color: #fff;
+$share-color: $color;
+
+
+@import '../../base';
+
+footer {
+     $bgColor: rgb(34, 35, 36);
+     $border-bottom-color: $color;
+
+    .bb {
+        $height: 50px;
+        @include bar-container($height, $bgColor, $color, $main-color);
+        border-bottom: 1px solid $border-bottom-color;
+    }
+}
+
+
+@import '../structure';
+

@@ -12,7 +12,7 @@ function sync() {
       fs.writeFile('db.js', 'var refresh =  ' + (++index), function(err){
           if(err) throw err;
       });
-    }, 1000)
+    }, 500)
 }
 
 
@@ -34,7 +34,8 @@ gulp.task('sass-style', function() {
 })
 
 
-gulp.task('sass-footer', function() { 
+gulp.task('sass-footer', function() {
+console.log('fott') 
     gulp.src('footer/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/footer'))
@@ -61,7 +62,7 @@ gulp.task('minify-css', () => {
 });
 
 
-gulp.task('default', ['sass-header'], function() {
+gulp.task('default', ['sass-header', 'sass-footer'], function() {
     // gulp.task("minify-css")
     // console.log('red;')
 })
@@ -69,4 +70,6 @@ gulp.task('default', ['sass-header'], function() {
 
 gulp.task('watch', function() {  
     gulp.watch('header/**/sass/*.scss', ['sass-header'])
+    // gulp.watch('style/**/sass/*.scss', ['sass-style', 'sass-style'])
+    gulp.watch('footer/**/sass/*.scss', ['sass-footer'])
 });  

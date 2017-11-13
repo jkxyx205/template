@@ -1,0 +1,91 @@
+$main-color: #fc6921;
+
+
+
+//structure
+$color: #a1a1a1;
+$menu-color: #fff;
+$share-color: $color;
+
+
+@import '../../base';
+
+footer {
+     $bgColor: rgb(34, 35, 36);
+     $border-bottom-color: $color;
+
+     .f-d-panel {
+        background-color: $bgColor;
+        padding: 20px 0;
+     }
+
+     .f-d-1, .f-d-2, .f-d-3, .f-d-4 {
+        $height: 40px;
+
+        @media (min-width: 1170px) {
+            height: $height;
+
+            .menu, .line-text, .share {
+                position: absolute; 
+                 left: 50%;
+                 top: 50%;
+                 transform: translate(-50%, -50%); 
+                 -webkit-transform: translate(-50%, -50%);
+                 -moz-transform: translate(-50%, -50%);
+            }
+        }
+        
+        @include bar-container($height, $bgColor, $color, $main-color);
+     }
+
+     .f-d-4 {
+        background-color: rgb(10, 11, 12);
+     }
+
+    // .a {
+    //     $height: 100px;
+    //     $new-color: #fff;
+    //     font-size: 1.2rem;
+    //     @include bar-container($height, $bgColor, $new-color, $main-color);
+    //     border-bottom: 1px solid $border-bottom-color;
+
+    //     .iconfont {
+    //         position: absolute; 
+    //         // top: -10px; 
+    //         top: 50%;
+    //         transform: translateY(-50%);
+    //         font-size: 40px
+    //     }
+
+    //     .box {
+    //         padding-left: 50px;
+    //         line-height: 100%;
+    //         display: inline-block;
+    //         vertical-align: middle;
+    //     }
+    //     .title {
+    //         margin-bottom: 10px;
+    //     }
+
+    //     .detail {
+    //         color: $color;
+    //     }
+
+
+    // }
+
+    // .b {
+    //     $height: 50px;
+    //     @include bar-container($height, $bgColor, $color, $main-color);
+    //     border-bottom: 1px solid $border-bottom-color;
+    // }
+
+    // .c {
+    //     $height: 40px;
+    //     @include bar-container($height, $bgColor, $color, $main-color);
+    // }
+}
+
+
+@import '../structure';
+
