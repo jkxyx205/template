@@ -1,0 +1,25 @@
+$main-color: #fc6921;
+$color: #666;
+
+//top bar
+$top-bar-bgColor: #000;
+$top-bar-color: $color;
+$hover: $main-color;
+
+//second bar
+$second-bar-bgColor: #fff;
+$second-bar-color: $color;
+$second-hover: $top-bar-bgColor;
+
+//菜单
+$nav-bgcolor: #202020;
+$nav-color: $color;
+$nav-hover-color: $main-color;
+
+//全文检索
+$query-btn-bgColor: #171717;
+$query-btn-color: $top-bar-color;
+$query-input-border: $query-btn-bgColor;
+$query-input-bgColor: $query-btn-bgColor;
+$query-input-color: $color;
+

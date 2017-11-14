@@ -4,6 +4,13 @@ $query-input-width: 120px;
 $query-input-height: 30px;
 $nav-height: 85px;
 
+//全文检索
+$query-btn-bgColor: transparent;
+$query-btn-color: $nav-color;
+$query-input-border: $nav-color;
+$query-input-bgColor: transparent;
+$query-input-color: inherit;
+
 
 header {
   .drawer-navbar {
@@ -11,8 +18,8 @@ header {
         .drawer-menu > li {
 
             &>a {
-              margin: 27px 0;
-              height: 31px;
+              margin: 28px 0;
+              height: 29px;
               line-height: 31px;
             }
             

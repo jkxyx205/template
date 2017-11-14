@@ -14,7 +14,7 @@ header {
 
 
             &:hover >a, &.current >a {
-               $side: 8px;
+               $side: 5px;
                 &:after {
                     content: '';
                     position: absolute;

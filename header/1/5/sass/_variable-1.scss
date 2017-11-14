@@ -1,4 +1,4 @@
-$main-color: #fc6921;   //变量
+$main-color: #d97b48;   //变量
 
 $color: #a1a1a1;
 
@@ -14,7 +14,7 @@ $second-hover: $main-color;
 
 //菜单
 $nav-bgcolor: $main-color;
-$nav-color: #fbe5db;
+$nav-color: #f3d7ca;
 $nav-hover-color: #fff;
 
 //全文检索
@@ -22,8 +22,8 @@ $query-btn-bgColor: transparent;
 $query-btn-color: $nav-color;
 $query-input-border: $nav-color;
 $query-input-bgColor: transparent;
-$query-input-color: $color;
+$query-input-color: inherit;
 
 
-$nav-hover-bgColor: #e6601e;
+$nav-hover-bgColor: #e6824c;
 

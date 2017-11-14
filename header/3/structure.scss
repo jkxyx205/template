@@ -4,6 +4,16 @@ $query-input-width: 220px;
 $query-input-height: 30px;
 $nav-height: 55px;
 
+
+//全文检索
+$query-btn-bgColor: transparent;
+$query-btn-color: inherit;
+$query-input-border: $main-color;
+$query-input-bgColor: #fff;
+$query-input-color: $color;
+
+
+
 header {
   .drawer-navbar {
         
@@ -15,30 +25,16 @@ header {
               height: 29px;
               line-height: 29px;
             }
-            
+        }
+      }
+
+      .search {
+        a:hover, a:visited, a:focus {
+          color: #fff;
         }
       }
 }
 
 
-// header {
-//   .drawer-navbar {
-//       @media (min-width: 64em) {
-//         .drawer-menu > li {
-
-//             &:hover >a, &.current >a {
-              
-//                 &:after {
-                   
-//                     border-bottom-color: $nav-color;
-
-//                   }
-//             }
-
-            
-//         }
-//       }
-//   }
-// }
 
 

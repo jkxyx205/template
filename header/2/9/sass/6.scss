@@ -1,0 +1,10 @@
+@import "_variable-6";
+@import "../../structure";
+@import "../../../base";
+@import "../../../style-9";
+
+@media (min-width: 64em) {
+   .second-bar .container {
+    border-bottom-color: #333; 
+   }
+}
