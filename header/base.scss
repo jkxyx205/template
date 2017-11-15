@@ -2,18 +2,29 @@ html, body {
     font-family: 'NotoSansHans-Thin',Helvetica, Tahoma, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', '\5FAE\8F6F\96C5\9ED1', 'SimSun', '\5B8B\4F53', 'Heiti', '\9ED1\4F53', sans-serif;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        color: $main-color;
+    }
+
+    &:focus, &:visited {
+        text-decoration: none;
+    }
+}
+
+.main-bg-color {
+    background-color: $main-color;
+   color: #fff; 
+}
+
 header {
 
     background-color: $nav-bgcolor;
-    a {
-        color: inherit;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: none;
-            color: $main-color;
-        }
-    }
+    
 
     .container {
         height: 100%;
@@ -278,7 +289,7 @@ header {
     $font-size: 12px;
     & i.iconfont {
         line-height: 100%;
-        font-size: $font-size;
+        font-size:14px;
     }
 
     span {
@@ -305,6 +316,7 @@ header {
             }
       }
 }
+
 
 .info, .share,{
       ul {

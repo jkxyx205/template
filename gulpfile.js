@@ -7,13 +7,13 @@ let cleanCSS = require('gulp-clean-css');
 
 var fs = require('fs');
 
-function sync() {
-   setTimeout(function() {
-      fs.writeFile('db.js', 'var refresh =  ' + (++index), function(err){
-          if(err) throw err;
-      });
-    }, 500)
-}
+// function sync() {
+//    setTimeout(function() {
+//       fs.writeFile('db.js', 'var refresh =  ' + (++index), function(err){
+//           if(err) throw err;
+//       });
+//     }, 500)
+// }
 
 
 var index = 0;
@@ -21,7 +21,7 @@ gulp.task('sass-header', function() {
       gulp.src('header/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/header'))
-sync()
+// sync()
 
       
 })
@@ -30,16 +30,15 @@ gulp.task('sass-style', function() {
       gulp.src('style/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/style'))
-     sync()
+     // sync()
 })
 
 
 gulp.task('sass-footer', function() {
-console.log('fott') 
     gulp.src('footer/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/footer'))
-     sync()
+     // sync()
 })
 
 
@@ -62,14 +61,14 @@ gulp.task('minify-css', () => {
 });
 
 
-gulp.task('default', ['sass-header', 'sass-footer'], function() {
+gulp.task('default', ['sass-header', 'sass-footer','sass-style'], function() {
     // gulp.task("minify-css")
     // console.log('red;')
 })
 
 
-gulp.task('watch', function() {  
-    gulp.watch('header/**/sass/*.scss', ['sass-header'])
-    // gulp.watch('style/**/sass/*.scss', ['sass-style', 'sass-style'])
-    gulp.watch('footer/**/sass/*.scss', ['sass-footer'])
-});  
+// gulp.task('watch', function() {  
+//     gulp.watch('header/**/sass/*.scss', ['sass-header'])
+//     gulp.watch('style/**/sass/*.scss', ['sass-style', 'sass-style'])
+//     gulp.watch('footer/**/sass/*.scss', ['sass-footer'])
+// });  

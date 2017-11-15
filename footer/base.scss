@@ -1,17 +1,19 @@
- @mixin bar-container($height, $bgColor, $color, $hover) {
+ @mixin bar-container($height, $bgColor) {
     // font-size: 0;
     // height: $height;
     line-height: $height;
     // padding: $height 0;
-    color: $color;
+    // color: $color;
     background-color: $bgColor;
     position: relative;
-    & a:hover {
-        color: $hover;
-    }
+    // & a:hover {
+    //     color: $hover;
+    // }
 }
 
 footer {
+    color: #666;
+    
     .iconfont {
         line-height: 100%;
     }
@@ -23,24 +25,24 @@ footer {
         height: 100%;
     }
 
-    ul, li {
-        padding: 0;
-        margin: 0
-    }
+    // ul, li {
+    //     padding: 0;
+    //     margin: 0
+    // }
 
     li {
         float: left;
         // display: inline-block;
     }
 
-    a {
-        color: inherit;
-        text-decoration: none;
+    // a {
+    //     color: inherit;
+    //     text-decoration: none;
 
-        &:hover {
-            text-decoration: none;
-        }
-    }
+    //     &:hover {
+    //         text-decoration: none;
+    //     }
+    // }
 
  .pull-center {
     position: absolute; 
@@ -54,10 +56,11 @@ footer {
  .menu {
     li {
         margin-right: 30px;
+        color: #fff;
 
-        a {
-            color: $menu-color;
-        }
+        // a {
+        //     color: $menu-color;
+        // }
     }
  }
  .logo img {
@@ -65,23 +68,48 @@ footer {
  }
 
  .share, .info {
+    font-size: 1.2rem;
     li:not(:last-child) {
-        margin-right: 5px;
+        margin-right: 15px;
     }
 
-    a {
-        color: $share-color;
-    }
+    // a {
+    //     color: $share-color;
+    // }
+
+
  }
 
  .share2 {
     @extend .share;
     
     a {
-        background-color: red;
-        padding: 5px;
+        $width: 30px;
+        display: inline-block;
+        text-align: center;
+
+        width: $width;
+        height: $width;
+        line-height: $width;
+
     }
 
+    .iconfont {
+        color: #fff;
+        line-height: 100%;
+    }
+    .weibo {
+        background-color: #e3172c;
+    }
+    .twitter {
+        background-color: #4198ff;
+    }
+    .linkedin {
+        background-color: #0a77b6;
+    }
+    .facebook {
+        background-color: #3a5999;
+    }
  }
  .line-text {
     font-size: 1.2rem;

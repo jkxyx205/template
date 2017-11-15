@@ -1,0 +1,34 @@
+@import '../../base';
+
+footer {
+    .aaa {
+        $height: 100px;
+
+        @include bar-container($height, transparent);
+
+        .iconfont {
+            position: absolute; 
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px
+        }
+
+        .box {
+            padding-left: 55px;
+            line-height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .title {
+            margin-bottom: 10px;
+        }
+
+    }
+    
+
+    .bb {
+        $height: 70px;
+        $bgColor: rgb(34, 35, 36);
+        @include bar-container($height, $bgColor);
+    }
+}

@@ -1,0 +1,20 @@
+@import "_variable-8";
+@import "../../structure";
+@import "../../../base";
+@import "../../../style-7";
+@media (min-width: 64em) {
+    header .drawer-navbar .drawer-navbar-header {
+        background-color: $main-color;
+    }
+   
+}
+
+header .top-bar {
+        $s: #9d50bb; 
+        $e: #6e48aa; 
+       background: -webkit-linear-gradient(right, $s , $e); /* Safari 5.1 - 6.0 */
+       background: -o-linear-gradient(right, $s, $e); /* Opera 11.1 - 12.0 */
+       background: -moz-linear-gradient(right, $s, $e); /* Firefox 3.6 - 15 */
+       background: linear-gradient(right, $s , $e); /* 标准的语法 */ 
+        color: #fff;
+}

@@ -1,0 +1,15 @@
+@import "_variable-1";
+@import "../../structure";
+$nav-color: #fce3d5;
+@import "../../../base";
+$main-color: #fff;
+@import "../../../style-7";
+
+header {
+        $e: #fd746c; 
+        $s: #ff9068; 
+       background: -webkit-linear-gradient(right, $s , $e); /* Safari 5.1 - 6.0 */
+       background: -o-linear-gradient(right, $s, $e); /* Opera 11.1 - 12.0 */
+       background: -moz-linear-gradient(right, $s, $e); /* Firefox 3.6 - 15 */
+       background: linear-gradient(right, $s , $e); /* 标准的语法 */ 
+}

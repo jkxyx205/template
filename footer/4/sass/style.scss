@@ -1,0 +1,19 @@
+@import '../../base';
+
+footer {
+     $bgColor: rgb(34, 35, 36);
+
+     .f-panel {
+        padding: 10px 0;
+        background-color: $bgColor;
+     }
+
+     .f-s-1, .f-s-2, .f-s-3 {
+        $height: 50px;
+        @include bar-container($height, $bgColor);
+     }
+
+}
+
+
+

@@ -2,14 +2,14 @@ $main-color: #fc6921;
 $color: #a1a1a1;
 
 //top bar
-$top-bar-bgColor: #fff;
-$top-bar-color: $color;
-$hover: $main-color;
+$top-bar-bgColor: $main-color;
+$top-bar-color: #fbe5db;
+$hover: #fff;
 
 //second bar
-$second-bar-bgColor: transparent;
+$second-bar-bgColor: #fff;
 $second-bar-color: $color;
-$second-hover: $main-color;
+$second-hover: $top-bar-bgColor;
 
 //菜单
 $nav-bgcolor: #fff;
@@ -18,9 +18,8 @@ $nav-hover-color: $main-color;
 
 //全文检索
 $query-btn-bgColor: $main-color;
-$query-btn-color: #fbe5db;
-$query-input-border: $color;
-$query-input-bgColor: transparent;
+$query-btn-color: $top-bar-color;
+$query-input-border: $main-color;
+$query-input-bgColor: #fff;
 $query-input-color: $color;
-
 

@@ -221,18 +221,18 @@
                             <option value="10">10</option>
                         </select>
                         页脚：<select name="" id="footer">
-                           <option value="1">1</option>
-                           <option value="2">2</option>
+                           <option value="1" selected="">1</option>
+                           <option value="2" selected="">2</option>
                            <option value="3" selected="">3</option>
-                           <option value="4" selected="">4</option>
+                           <option value="4">4</option>
                            <option value="5" selected="">5</option>
-                           <option value="6" selected="">6</option>
-                           <option value="7" selected="">7</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
 
                         </select>
                         风格：<select name="" id="style">
                             <option value="1">1</option>
-                            <option value="2" selected="">2</option>
+                            <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
@@ -269,17 +269,16 @@
             var index  = refresh
             $(function() {
                 init()
-                setInterval(function() {
-                  $.getScript("./db.js")
-                  .done(function(script, textStatus) {
-                    // console.log(index + "->" + refresh)
-                      if (index < refresh) {
-                                      change()
-                                      index = refresh;
-                                    }
-                  })
+                // setInterval(function() {
+                //   $.getScript("./db.js")
+                //   .done(function(script, textStatus) {
+                //       if (index < refresh) {
+                //                       change()
+                //                       index = refresh;
+                //                     }
+                //   })
                 
-                }, 1000);
+                // }, 1000);
             })
 
             $('#Device li').on('click', function() {
@@ -369,7 +368,7 @@
 
                  loadStyles(doc, '../dist/tpl-css/header/'+params.header+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
                  // loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
-                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/sass/'+params.block+'.css?time'+ (new Date()))
+                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/sass/style.css?time'+ (new Date()))
                  loadStyles(doc, '../dist/tpl-css/style/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
             }
 
@@ -1361,19 +1360,19 @@
            <div class="container">
               <div class="row">
                 <div class="col-sm-4">
-                  <i class="iconfont icon-dianhua"></i>
+                  <i class="iconfont icon-shouji"></i>
                  <div class="box">
                    <div class="title">联系我们</div>
                    <span class="detail">17796725527</span>
                  </div>
                </div>
-               <div class="col-sm-4"><i class="iconfont icon-address"></i>
+               <div class="col-sm-4"><i class="iconfont icon-dizhi"></i>
                  <div class="box">
                    <div class="title">地址</div>
                    <span class="detail">北京大道西</span>
                  </div>
                </div>
-               <div class="col-sm-4"><i class="iconfont icon-youxiang"></i>
+               <div class="col-sm-4"><i class="iconfont icon-youxiang1"></i>
                  <div class="box">
                    <div class="title">邮箱</div>
                    <span class="detail">18896717@qq.com</span>
@@ -1418,10 +1417,37 @@
 
 <script type="text/html" id="footer_3">
   <footer>
+      <div class="main-bg-color">
+        <div class="container">
+          <div class="aaa">
+             <div class="row">
+                <div class="col-sm-4">
+                  <i class="iconfont icon-shouji"></i>
+                 <div class="box">
+                   <div class="title">联系我们</div>
+                   <span class="detail">17796725527</span>
+                 </div>
+               </div>
+               <div class="col-sm-4"><i class="iconfont icon-dizhi"></i>
+                 <div class="box">
+                   <div class="title">地址</div>
+                   <span class="detail">北京大道西</span>
+                 </div>
+               </div>
+               <div class="col-sm-4"><i class="iconfont icon-youxiang1"></i>
+                 <div class="box">
+                   <div class="title">邮箱</div>
+                   <span class="detail">18896717@qq.com</span>
+                 </div>
+               </div>
+              </div> 
+          </div>
+        </div> 
+      </div>
       <div class="bb">
            <div class="container">
              <div class="line-text pull-left" style="margin-right: 25px;">Copyright © 2004 - 2017  xx.com 版权所有</div>
-             <div class="menu pull-left">
+             <div class="menu pull-right">
                  <ul>
                     <li><a href="#">首页</a></li>
                     <li><a href="#">新闻中心</a></li>
@@ -1462,12 +1488,12 @@
                 </ul>
                
               </div>
-               <div class="share pull-right">
+               <div class="share2 pull-right">
                 <ul> 
-                 <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
-                 <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
-                 <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
-                 <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
+                 <li><a href="#" class="weibo"><i class="iconfont icon-weibo1"></i></a></li>
+                 <li><a href="#" class="facebook"><i class="iconfont icon-facebook"></i></a></li>
+                 <li><a href="#" class="twitter"><i class="iconfont icon-twitter"></i></a></li>
+                 <li><a href="#" class="linkedin"><i class="iconfont icon-linkedin"></i></a></li>
                 </ul> 
             </div>
              <div class="clearfix"></div>

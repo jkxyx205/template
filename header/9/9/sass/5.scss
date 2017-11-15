@@ -1,0 +1,15 @@
+@import "_variable-5";
+@import "../../structure";
+@import "../../../base";
+@import "../../../style-9";
+header .search {
+    input {
+        border-color: $nav-bgcolor;
+        background-color: $nav-bgcolor;
+    }
+
+    .btn-full-query {
+        background-color: $nav-bgcolor;
+    }
+
+}

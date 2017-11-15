@@ -30,17 +30,17 @@ input[type=text] {
     width: 300px;
 }
 
-a {
-    color: inherit;
-    &:hover {
-        color: $main-color;
-        text-decoration: none;
-    }
+// a {
+//     color: inherit;
+//     &:hover {
+//         color: $main-color;
+//         text-decoration: none;
+//     }
 
-    &:focus {
-        text-decoration: none;
-    }
-}
+//     &:focus {
+//         text-decoration: none;
+//     }
+// }
 
 /*轮播图*/
 .swiper-container {

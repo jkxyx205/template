@@ -15,14 +15,15 @@ $second-hover: $top-bar-bgColor;
 //菜单
 $nav-bgcolor: $top-bar-bgColor;
 $nav-color: #fbe5db;
-$nav-hover-color: #fff;
+$nav-hover-color: $main-color;
 
 //全文检索
-$query-btn-bgColor: $main-color;
-$query-btn-color: $top-bar-color;
+$query-btn-bgColor: transparent;
+$query-btn-color: $nav-color;
 $query-input-border: $main-color;
 $query-input-bgColor: #fff;
 $query-input-color: $color;
+
 
 
 

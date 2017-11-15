@@ -1,0 +1,25 @@
+@import "_variable-1";
+@import "../../structure";
+@import "../../../base";
+@import "../../../style-9";
+
+
+
+header {
+     background-color: #000;
+    .drawer-navbar {
+      .search {
+        a:hover, a:visited, a:focus {
+          color: $color;
+        }
+      }
+  }
+
+      @media (min-width: 64em) {
+        .second-bar .container {
+          border-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+      
+}

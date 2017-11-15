@@ -4,16 +4,40 @@ $query-input-width: 150px;
 $query-input-height: 30px;
 $nav-height: 97px;
 
+//top bar
+$top-bar-bgColor: #fff;
+$top-bar-color: $color;
+$hover: $main-color;
+
+
+header {
+  .drawer-navbar {
+        
+        .drawer-menu > li {
+
+            &>a {
+              margin: 34px 0;
+              height: 29px;
+              line-height: 29px;
+            }
+        }
+      }
+}
+
+
 @media (min-width: 64em) {
     header .drawer-navbar .drawer-navbar-header {
         position: relative;
+        padding: 0 20px;
         top: 20px;
         background-color: $main-color;
+
+
     }
     .top-bar {
         margin-bottom: 1px;
     }
     .top-bar .container {
-        border-bottom: 1px solid $color;
+        border-bottom: 1px solid #efefef;
     }
 }

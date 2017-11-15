@@ -1,0 +1,20 @@
+@import "_variable-2";
+@import "../../structure";
+@import "../../../base";
+@import "../../../style-4";
+
+header .search.style0 {
+     input {
+        border-radius: 15px;
+        width: 150px;
+        padding: 0 10px;
+    }
+
+    #btn-full-query {
+        margin-left: -40px;
+
+        i {
+            color: $main-color;
+        }
+    }
+}
