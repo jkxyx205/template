@@ -1,32 +1,60 @@
-// .panel .panel-title {
-//   background-color: transparent;
-// }
-
-.btn {
-    // border-radius: 15px;
-    background: transparent;
-    border: 1px solid $main-color;
-    color: $main-color;
-
+.article-list-1 .content-box {
     &:hover {
-        color: #fff;
-        background-color: $main-color;
+        $hover-color: #fff;
+       .content {
+        .title a {
+            color: $hover-color;
+        }
+        .summary-fix, .summary-fulid, .article-bar {
+            color: $hover-color;
+        }
+       }
     }
-}
-
-.icon-more:before {
-    content: "\e620";
 }
 
 .panel {
-    border: 1px solid #DEE0E1; //控件边框颜色
+    .panel-title  {
+        // overflow: hidden;
+        .label {
+            // background-color: $main-color;
+            // color: #fff;
+            line-height: 35px;
+            z-index: 1;
+            // margin-right: 10px;
 
-    .panel-title h2:after{
-        content: "-";
-        color: $main-color;
-        position: absolute;
-        left: 12px;
-        bottom: -10px;
+            &:after {
+                content: "";
+                position: absolute;
+                right: -10px;
+                top: 50%;
+                width: 10px;
+                height: 2px;
+                background-color: #fff;
+
+            }
+        }
+
+        .more {
+            z-index: 1;
+        }
+        .more-text {
+            display: none;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            // left: 116px;
+            left: 0;
+            top: 50%;
+            height: 1px;
+            width: 100%;
+            background-color: #efefef;
+            // z-index: -1;
+        }
+
+        // .icon-more:before {
+        //     content: "\e609";
+        // }
     }
 }
-

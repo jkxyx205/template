@@ -1,23 +1,5 @@
-html, body {
-    font-family: 'NotoSansHans-Thin',Helvetica, Tahoma, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', '\5FAE\8F6F\96C5\9ED1', 'SimSun', '\5B8B\4F53', 'Heiti', '\9ED1\4F53', sans-serif;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-        color: $main-color;
-    }
-
-    &:focus, &:visited {
-        text-decoration: none;
-    }
-}
-
 .main-bg-color {
-    background-color: $main-color;
+   background-color: $main-color;
    color: #fff; 
 }
 

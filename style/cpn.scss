@@ -1,0 +1,562 @@
+html, body {
+    font-family: 'NotoSansHans-Thin',Helvetica, Tahoma, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', '\5FAE\8F6F\96C5\9ED1', 'SimSun', '\5B8B\4F53', 'Heiti', '\9ED1\4F53', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        color: $main-color;
+    }
+
+    &:focus, &:visited {
+        text-decoration: none;
+    }
+}
+
+
+/////////////////////////////////风格//////////////////////////////////////////
+.content-box { 
+    .cover {
+        .title {
+            padding: .5rem $content-box-padding;
+        }
+    }
+
+    .content {
+        .title {
+            // margin-bottom: .15rem;
+            // $height: 30px;
+            // height: $height;
+            // line-height: $height;
+            padding: $content-box-padding;
+        }
+    }
+
+    .summary-fulid, .summary-fix {
+        // margin-bottom: .1rem;
+        line-height: 1.6;
+        padding: 0 $content-box-padding;
+    }
+    
+}
+
+/////////////////////////////////轮播图//////////////////////////////////////////
+.swiper-container {
+    .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: #fff;
+        font-weight: normal;
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+/*****全文检索********/
+.panel-full-text  {
+    em {
+        color: red;
+    }
+
+    input {
+        margin-right: 20px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+     .content-box .content .title a:hover {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+     input[type=text] {
+        width: 400px;
+    }
+}
+
+
+
+/////////////////////////////////article-list//////////////////////////////////////////
+
+%article-list {
+    .content-box {
+        .cover {
+            .title {
+                // padding: 0;
+            }
+        }
+        .content {
+            .title {
+                padding: 5px 0 0 0;
+                margin-bottom: $content-box-padding;
+
+                &>a, &>span {
+                    display: inline;
+                    white-space: normal;
+                }
+
+
+            }
+        }
+
+        .summary-fulid, .summary-fix {
+            padding: 0;
+        }
+    }
+}
+
+.article-1, .article-list-1, .article-list-2, .article-list-3  {
+    @extend %article-list;
+
+    .panel-body {
+        padding-top: 0;
+    }
+
+    .content-box {
+        .wrapper {
+            &:hover {
+                border-color: transparent;
+                background-color: transparent;
+            }
+        }
+
+        padding-top: $panel-padding;
+    }
+}
+
+.article-list-1 {
+     .content-box {
+        border-bottom: 1px solid #eeeeee;
+        // .wrapper {
+            &:hover {
+                background-color: $content-box-hover-bgColor;
+            }
+        // }
+
+        .summary-fix, .summary-fulid {
+            // display: none;
+            position: absolute;
+        }
+    }
+}
+
+.article-list-2, .article-list-3 {
+    .panel-body {
+        padding-top:  $panel-padding;
+        padding-bottom:  $panel-padding;
+    }
+
+    .content-box {
+        $padding: 5px;
+        padding-top: $padding;
+        padding-bottom:$padding;
+
+        .content {
+            .title {
+                $height: 2rem;
+                height: $height;
+                line-height: $height;
+                margin-bottom: 0;
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    position: relative;
+                    // left: -2px;
+                    top: -4px;
+                    margin-right: 5px;
+                }
+            }
+            .article-bar {
+                    float: right;
+                li {
+                    margin-right: 0
+                }
+            }
+        }
+    }
+    
+}
+
+.article-list-2 {
+    .content-box:first-child {
+        margin-bottom: 15px;
+        .content {
+            .title {
+               margin-bottom: $content-box-padding;
+
+                &:first-child:before {
+                    content: '';
+                    display: none;
+                }
+            }
+
+             .article-bar {
+                    float: none;
+                
+            }
+        }
+    }
+}
+
+
+/////////////////////////////////article//////////////////////////////////////////
+.article-1 {
+
+}
+
+// .article-1, .article-2 {
+//     .content-box {
+//         .content {
+//             .title {
+//                 // padding: 0 0 1rem 0 ;
+//                 padding: 5px 0 1rem 0;
+//                 // padding: 0;
+//             }
+//         }
+
+//         .summary-fulid, .summary-fix {
+//             padding: 0;
+//             line-height: 1.8;
+//         }
+
+//         .btn {
+//             margin-top: 1rem;
+//         }
+//     }
+    
+// }
+
+// .article-2 {
+//     .content-box {
+//         .cover {
+//             padding-right: 1.2rem;
+//         }
+//     }
+    
+// }
+
+
+
+
+/////////////////////////////////pic-list//////////////////////////////////////////
+
+%pic {
+    .content-box {
+        .wrapper {
+            border-color: transparent;
+
+            &:hover {
+                border-color: transparent;
+                background-color: transparent
+            }
+        }
+
+         .content {
+             background-color: #fafafa;
+         }
+
+    }
+}
+
+.pic-list-1 {
+    @extend %pic;
+
+    .panel-body {
+        
+    }
+
+    .content-box {
+        &:hover {
+            .content {
+                $hover-color: #fff;
+                background-color: $main-color;
+                
+                .summary-fix, .summary-fluid {
+                    color: $hover-color;
+                }
+
+                & a {
+                    color: $hover-color;
+
+                    &:hover {
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+
+
+        .content {
+            padding-bottom: $content-box-padding;
+            .title {
+               
+            }
+            .article-bar {
+                
+            }
+
+        }
+    }
+}
+
+.pic-list-2 {
+    @extend %pic;
+
+    .panel-body {
+        
+    }
+
+    .content-box {
+        .wrapper {
+            position: relative;
+        }
+
+        &:hover {
+            .content {
+                $hover-color: #fff;
+                // background-color: $main-color;
+                
+                .summary-fix {
+
+                    color: $hover-color;
+                    height: $content-summary-fix-height + 20;
+                    background-color: $main-color;
+
+                    transition-property: height;
+                    transition-duration: .5s;
+                }
+            }
+        }
+
+
+        .content {
+            // background-color: $panel-title-bgColor;
+            .title > a {
+               white-space: normal;
+               height: 4.4rem;
+            }
+
+            .summary-fix {
+                height: 0;
+                
+                position: absolute;
+                &>p {
+                    margin: $content-box-padding 0;
+                    overflow: hidden;
+                }
+
+                bottom: 0;
+                width: 100%;
+                background-color: $main-color;
+            }
+
+            .article-bar {
+                
+            }
+
+        }
+    }
+}
+
+
+.pic-list-3 {
+    @extend %pic;
+
+    .panel-body {
+        
+    }
+
+    .content-box {
+        .wrapper {
+            padding: 10px;
+            border: 1px solid $split-color;
+
+            &:hover {
+                border-color: $main-color;
+            }
+        }
+
+        &:hover {
+            .content {
+                $hover-color: #fff;
+                // background-color: $main-color;
+                
+                .summary-fix {
+
+                    color: $hover-color;
+                    height: $content-summary-fix-height + 20;
+                    background-color: $main-color;
+
+                    transition-property: height;
+                    transition-duration: .5s;
+                }
+            }
+        }
+
+        .cover {
+            .title {
+                $height: 50px;
+                height: $height;
+                line-height: $height;
+                width: 142px;
+                padding: 5px;
+                border: 1px solid $split-color;
+                
+                color: $title-color;
+               left: 50%;
+               top: 50%;
+               transform: translate(-50%, -50%); 
+               -webkit-transform: translate(-50%, -50%);
+               -moz-transform: translate(-50%, -50%);
+               opacity: 1;
+               filter: alpha(opacity=100);
+               background-color: transparent;
+
+               & span {
+                  background-color: $panel-body-bgColor;
+                  text-align: center;
+                  height: 100%;
+                  line-height: $height - 12;
+               }
+            }
+        }
+        .content {
+
+            // background-color: $panel-content-bgColor;
+            .title {
+
+            }
+
+            .summary-fix {
+                height: 0;
+                
+                position: absolute;
+                &>p {
+                    margin: $content-box-padding 0;
+                    overflow: hidden;
+                }
+
+                bottom: 0;
+                width: 100%;
+                background-color: $main-color;
+            }
+
+            .article-bar {
+                
+            }
+
+        }
+    }
+}
+
+
+.pic-list-4 {
+    @extend %pic;
+
+    .panel-body {
+        
+    }
+
+    .content-box {
+        .wrapper {
+            padding: 10px;
+            border: 1px solid $split-color;
+
+            &:hover {
+                border-color: $main-color;
+            }
+        }
+
+        &:hover {
+            .content {
+                $hover-color: #fff;
+                // background-color: $main-color;
+                
+                .summary-fix {
+
+                    color: $hover-color;
+                    height: $content-summary-fix-height + 20;
+                    background-color: $main-color;
+
+                    transition-property: height;
+                    transition-duration: .5s;
+                }
+            }
+        }
+
+        .cover {
+            .title {
+                $height: 50px;
+                height: $height;
+                // line-height: $height;
+                width: 142px;
+                padding: 5px;
+                border: 1px solid $split-color;
+                
+                color: $title-color;
+               left: 50%;
+               top: 50%;
+               transform: translate(-50%, -50%); 
+               -webkit-transform: translate(-50%, -50%);
+               -moz-transform: translate(-50%, -50%);
+               opacity: 1;
+               filter: alpha(opacity=100);
+               background-color: transparent;
+
+               & span {
+                  background-color: $panel-body-bgColor;
+                  text-align: center;
+                  height: 100%;
+                  line-height: $height - 12;
+               }
+            }
+        }
+        .content {
+
+            // background-color: $panel-title-bgColor;
+            .title {
+
+            }
+
+            .summary-fix {
+                height: 0;
+                
+                position: absolute;
+                &>p {
+                    margin: $content-box-padding 0;
+                    overflow: hidden;
+                }
+
+                bottom: 0;
+                width: 100%;
+                background-color: $main-color;
+            }
+
+            .article-bar {
+                
+            }
+
+        }
+    }
+}
+
+
+
