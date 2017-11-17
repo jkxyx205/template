@@ -27,16 +27,11 @@ a {
 
     .content {
         .title {
-            // margin-bottom: .15rem;
-            // $height: 30px;
-            // height: $height;
-            // line-height: $height;
-            padding: $content-box-padding;
+            padding: 5px 0;
         }
     }
 
     .summary-fulid, .summary-fix {
-        // margin-bottom: .1rem;
         line-height: 1.6;
         padding: 0 $content-box-padding;
     }
@@ -56,6 +51,7 @@ a {
 
         h1 {
             font-size: 5rem;
+            margin: 1rem 0;
         }
 
         p {
@@ -86,6 +82,9 @@ a {
      input[type=text] {
         width: 400px;
     }
+
+
+
 }
 
 
@@ -101,8 +100,8 @@ a {
         }
         .content {
             .title {
-                padding: 5px 0 0 0;
-                margin-bottom: $content-box-padding;
+                // padding: 5px 0 0 0;
+                // margin-bottom: .5rem;
 
                 &>a, &>span {
                     display: inline;
@@ -113,9 +112,15 @@ a {
             }
         }
 
-        .summary-fulid, .summary-fix {
-            padding: 0;
+        .summary-fix, .summary-fulid {
+            padding-left: 0;
+            position: absolute;
         }
+    }
+
+
+    .panel-body .btn {
+        margin-top: 20px;
     }
 }
 
@@ -139,22 +144,21 @@ a {
 }
 
 .article-list-1 {
-     .content-box {
-        border-bottom: 1px solid #eeeeee;
-        // .wrapper {
-            &:hover {
-                background-color: $content-box-hover-bgColor;
-            }
-        // }
+    .content-box {
 
-        .summary-fix, .summary-fulid {
-            // display: none;
-            position: absolute;
+        &:hover {
+            background-color: $content-box-hover-bgColor;
+        }
+
+        
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #eeeeee;
         }
     }
 }
 
-.article-list-2, .article-list-3 {
+ .article-list-2, .article-list-3 {
     .panel-body {
         padding-top:  $panel-padding;
         padding-bottom:  $panel-padding;
@@ -167,10 +171,12 @@ a {
 
         .content {
             .title {
-                $height: 2rem;
-                height: $height;
-                line-height: $height;
-                margin-bottom: 0;
+                // $height: 2rem;
+                // height: $height;
+                // line-height: $height;
+                // margin-bottom: 0;
+
+                // padding-top: 0;
 
                 &:before {
                     content: '';
@@ -200,8 +206,8 @@ a {
         margin-bottom: 15px;
         .content {
             .title {
-               margin-bottom: $content-box-padding;
-
+               // margin-bottom: .5rem;
+               // padding-top: 5px;
                 &:first-child:before {
                     content: '';
                     display: none;
@@ -213,48 +219,28 @@ a {
                 
             }
         }
+
+    }
+
+    .content-box:not(:first-child) {
+        .content {
+            .title {
+                padding: 0
+            }
+        }
+        
     }
 }
 
 
 /////////////////////////////////article//////////////////////////////////////////
 .article-1 {
-
+    .content-box {
+        .summary-fix, .summary-fulid {
+            position: static;
+        }
+    }
 }
-
-// .article-1, .article-2 {
-//     .content-box {
-//         .content {
-//             .title {
-//                 // padding: 0 0 1rem 0 ;
-//                 padding: 5px 0 1rem 0;
-//                 // padding: 0;
-//             }
-//         }
-
-//         .summary-fulid, .summary-fix {
-//             padding: 0;
-//             line-height: 1.8;
-//         }
-
-//         .btn {
-//             margin-top: 1rem;
-//         }
-//     }
-    
-// }
-
-// .article-2 {
-//     .content-box {
-//         .cover {
-//             padding-right: 1.2rem;
-//         }
-//     }
-    
-// }
-
-
-
 
 /////////////////////////////////pic-list//////////////////////////////////////////
 
@@ -270,7 +256,12 @@ a {
         }
 
          .content {
-             background-color: #fafafa;
+             background-color: $pic-content-bgColor;
+             .title {
+                padding-left: $content-box-padding;
+                padding-right: $content-box-padding;
+                margin-top: 10px;
+             }
          }
 
     }

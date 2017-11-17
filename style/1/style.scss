@@ -1,4 +1,9 @@
 .article-list-1 .content-box {
+    &:not(:last-child) {
+        border-bottom: none;
+    }
+
+
     &:hover {
         $hover-color: #fff;
        .content {
@@ -10,6 +15,10 @@
         }
        }
     }
+}
+
+section .panel {
+    margin-bottom: 50px;
 }
 
 .panel-title > span:after {
@@ -27,8 +36,4 @@
     .more-text {
         display: none;
     }
-
-    // .icon-more:before {
-    //     content: "\e609";
-    // }
 }

@@ -234,13 +234,36 @@ section {
 
     .panel {
         margin-bottom: $panel-padding + 5;
+
+        //
+        .more-position-bottom {
+            text-align: center;
+            margin-top: $panel-padding;
+
+            @if ($more-position == right) {
+                display: none;
+            }
+
+            .btn {
+                width: 200px;
+                border-color: #a1a1a1;
+                color: #a1a1a1;
+                line-height: 40px;
+
+                &:hover {
+                    background: $main-color;
+                    color: #fff;
+                    border-color: $main-color;
+                }
+            }
+        }
     }
     
     
 
     .panel-title {
         position: relative;
-        height: $panel-title-height;
+        // height: $panel-title-height;
         line-height: $panel-title-height;
         background-color: $panel-title-bgColor;
         color: $panel-title-color;
@@ -254,16 +277,22 @@ section {
             padding: 0 $panel-padding;
 
         }
-
+        
         .more {
-            background-color: $panel-title-more-bgColor;
-            padding: 0 $panel-padding;
+                background-color: $panel-title-more-bgColor;
+                padding: 0 $panel-padding;
 
-            & a {
-                color: $panel-title-more-color;
-                &:hover {
-                    color: $main-color;
+                & a {
+                    color: $panel-title-more-color;
+                    &:hover {
+                        color: $main-color;
+                    }
                 }
+        }
+
+        @if ($more-position == bottom) {
+            .more {
+                display: none;
             }
         }
     }
@@ -402,7 +431,7 @@ section {
             .article-bar {
                 display: inline-block;
                 color: $content-summary-color;
-                font-size: $content-summary-font-size;
+                font-size: 1.2rem;
 
                 li {
                     float: left;
@@ -428,6 +457,7 @@ section {
 
             .summary-fulid {
                  @extend %summary;
+                 margin-top: 10px;
             }
         }        
     }
