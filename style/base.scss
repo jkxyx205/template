@@ -202,10 +202,10 @@ section {
         // text-overflow:ellipsis;
     }
 
-    .pull-right {
-        position: absolute;
-        right: 0;
-    }
+    // .pull-right {
+    //     position: absolute;
+    //     right: 0;
+    // }
 
     .btn {
         display: inline-block;
@@ -279,10 +279,12 @@ section {
         }
         
         .more {
+                position: relative;
                 background-color: $panel-title-more-bgColor;
                 padding: 0 $panel-padding;
 
                 & a {
+                    line-height: 1;
                     color: $panel-title-more-color;
                     &:hover {
                         color: $main-color;

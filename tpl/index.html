@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="../plugins/drawer/css/drawer.min.css">
     <link rel="stylesheet" href="../plugins/Swiper-3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="../plugins/wow/animate.css">
 
     
     <!--[if lt IE 9]>
@@ -99,7 +100,7 @@
                 </div>
                 <div class="panel-body">
                       <div class="row">
-                          <div class="content-box col-lg-12">
+                          <div class="content-box col-lg-12 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                               <div class="wrapper">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -130,7 +131,7 @@
                              
                               </div>
                           </div>
-                          <div class="content-box col-lg-12">
+                          <div class="content-box col-lg-12 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                               <div class="wrapper">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -160,7 +161,7 @@
                           </div>
 
 
-                          <div class="content-box col-lg-12">
+                          <div class="content-box col-lg-12 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                               <div class="wrapper">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -209,7 +210,7 @@
                 </div>
                 <div class="panel-body">
                       <div class="row">
-                          <div class="content-box col-lg-12">
+                          <div class="content-box col-lg-12 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                               <div class="wrapper">
                                 <div class="row">
                                 <div class="col-sm-4">
@@ -242,7 +243,7 @@
                              
                               </div>
                           </div>
-                          <div class="content-box col-lg-12">
+                          <div class="content-box col-lg-12 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                               <div class="wrapper">
                                 <div class="row">
                                    <div class="col-sm-12">
@@ -259,7 +260,7 @@
                              
                               </div>
                           </div>
-                          <div class="content-box col-lg-12">
+                          <div class="content-box col-lg-12 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                               <div class="wrapper">
                                 <div class="row">
                                    <div class="col-sm-12">
@@ -326,7 +327,7 @@
                 </div>
                 <div class="panel-body">
                       <div class="row">
-                          <div class="content-box col-lg-12">
+                          <div class="content-box col-lg-12 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                               <div class="wrapper">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -375,7 +376,7 @@
                 </div>
                 <div class="panel-body pic-list-1">
                     <div class="row">
-                         <div class="content-box col-sm-4 col-md-4" href="#">
+                         <div class="content-box col-sm-4 col-md-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" href="#">
                             <div class="wrapper">
                                 <a class="cover scale" href="#">
                                   <img src="../images/H.jpg" alt="">
@@ -396,7 +397,7 @@
                             </div>
                         </div> 
 
-                        <div class="content-box col-sm-4 col-md-4" href="#">
+                        <div class="content-box col-sm-4 col-md-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" href="#">
                             <div class="wrapper">
                                 <a class="cover scale" href="#">
                                   <img src="../images/F.jpg" alt="">
@@ -417,7 +418,7 @@
                         </div> 
 
 
-                        <div class="content-box col-sm-4 col-md-4" href="#">
+                        <div class="content-box col-sm-4 col-md-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" href="#">
                             <div class="wrapper">
                                 <a class="cover scale" href="#">
                                   <img src="../images/G.jpg" alt="">
@@ -481,6 +482,8 @@
 <script src="../plugins/Swiper-3.4.2/js/swiper.min.js"></script>
 <script src="../plugins/iscroll/iscroll.js"></script>
 <script src="../plugins/drawer/js/drawer.min.js"></script>
+<script src="../plugins/wow/wow.min.js"></script>
+<script src="../plugins/lazyload/lazyload.min.js"></script>
 <script>
   var loaded = false
 
@@ -495,6 +498,20 @@
            nextButton: '.swiper-button-next',
            prevButton: '.swiper-button-prev'
             });
+
+  $(".lazy").lazyload({
+    effect : "fadeIn",
+   });
+  new WOW().init({
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    }
+    );
+
+
 
     loaded = true
 

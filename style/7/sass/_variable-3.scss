@@ -1,31 +1,31 @@
 //全局变量
-$title-color: #000;        //主标题颜色
-$title-font-size: 1.6rem;  //主标题文字大小
-$summary-color:#a8a8a8;       //概述颜色
+$title-color: #121212;        //主标题颜色
+// $title-font-size: 1.6rem;  //主标题文字大小
+$summary-color: #333;       //概述颜色
 $split-color: #eaeaea;     //分割线颜色
-$background-color: transparent;   //页面背景色
-$panel-padding:15px;          //padding 距离
+$background-color: #fafafa;   //页面背景色
+$panel-padding:25px;          //padding 距离
 $more-position: right;        //按钮位置 bottom right
 
-$main-color: #dc704d;          //主色
+$main-color: #005c97;          //主色
 
 //按钮样式
 $btn-radius: 0;          // 0 5px 17px
 $btn-height: 34px;
 
 //控件样式
-$panel-title-height: 60px;  //标题高度
+$panel-title-height: 70px;  //标题高度
 $panel-title-position: left; //left center
-$panel-title-font-size: 1.4rem;  //标题文字大小
+$panel-title-font-size: 2rem;  //标题文字大小
 $panel-title-bgColor: #fff; // 标题背景色
-$panel-title-color: #fff; // 标题文字颜色
+$panel-title-color: #000; // 标题文字颜色
 
-$panel-title-label-bgColor: $main-color; //label 背景色
+$panel-title-label-bgColor: $panel-title-bgColor; //label 背景色
 
 $panel-title-more-bgColor: $panel-title-bgColor; //查看更多 背景色
 $panel-title-more-color: #c1c1c1; //$panel-title-color; //label 背景色
 
-$panel-body-bgColor: #fff;      //内容背景色
+$panel-body-bgColor: $panel-title-bgColor;      //内容背景色
 
 $content-bgColor: transparent;          //内容背景色
 $pic-content-bgColor: #fafafa; 
@@ -35,7 +35,7 @@ $content-box-hover-bgColor: $main-color;        //box  hover背景色
 $content-box-hover-borderColor: $main-color; //box hover 边框色
 
 $content-title-bgColor: transparent;  //标题背景色 
-$content-title-font-size: 1.6rem;  //标题文字大小
+$content-title-font-size: 1.8rem;  //标题文字大小
 $content-title-color: $title-color;  //标题文字颜色
 
 $content-summary-fix-height: 70px;   //概要高度
