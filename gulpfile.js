@@ -16,9 +16,9 @@ var fs = require('fs');
 // }
 
 
-var index = 0;
+// var index = 0;
 gulp.task('sass-header', function() {
-      gulp.src('header/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+     return gulp.src('header/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/header'))
 // sync()
@@ -27,7 +27,7 @@ gulp.task('sass-header', function() {
 })
 
 gulp.task('sass-style', function() { 
-      gulp.src('style/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+    return  gulp.src('style/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/style'))
      // sync()
@@ -35,7 +35,7 @@ gulp.task('sass-style', function() {
 
 
 gulp.task('sass-footer', function() {
-    gulp.src('footer/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+    return gulp.src('footer/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/footer'))
      // sync()

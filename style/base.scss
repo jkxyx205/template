@@ -90,26 +90,6 @@ html {
     }
 }
 
-//列数选择样式
-.column-selector-container {
-    // display: inline-block;
-  }
-
-.column-selector-container li {
-    // display: inline-block;
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin-right: 2px;
-    border: 1px solid #cfcfcf;
-    background: #eee;
-    cursor: pointer;
-}
-.column-selector-container .active {
-  border-color:  #00b3ee;
-  background: #eef8fb;
-}
-
 
 //分页
 div.page-container {
@@ -225,7 +205,7 @@ section {
     }
 
     input[type=text] {
-        height: $btn-height;
+        height: $btn-height + 2;
         width: 200px;
     }
 
