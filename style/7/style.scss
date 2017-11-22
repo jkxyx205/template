@@ -82,8 +82,8 @@ section .content-box {
      .panel-body {
         padding-bottom: 20px;
      }
-
-     border: 2px solid #f5f4f3;
+    
+     border: 2px solid $panel-border-color;
 }
 
 .swiper-container {

@@ -41,10 +41,10 @@ section .panel-title .more, section .panel-title .label {
     top: 10px
 }
 
-.panel {
-   -moz-box-shadow:0px 5px 0px #EFEDE7;
-    -webkit-box-shadow:0px 5px 0px #EFEDE7;
-     box-shadow:0px 5px 0px #EFEDE7; 
+.panel {   
+   -moz-box-shadow:0px 5px 0px $panel-shadow-color;
+    -webkit-box-shadow:0px 5px 0px $panel-shadow-color;
+     box-shadow:0px 5px 0px $panel-shadow-color;
 
      .panel-body {
         padding-bottom: 20px;
