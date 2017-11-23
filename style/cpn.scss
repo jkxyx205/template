@@ -39,8 +39,53 @@ a {
 }
 
 /////////////////////////////////轮播图//////////////////////////////////////////
+
+.swiper-panel {
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: $panel-padding + 10;
+    }
+}
+
 .swiper-container {
+    width: 100%;
+    .swiper-slide {
+        background-position: center; 
+        background-size: cover;
+         img {
+          width: 100%;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background: #000;
+        opacity: .2;
+
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $main-color;
+        opacity: 1;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        background-color: rgba(7,17,27,.6);
+        opacity: .3;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        background-size: 50%;
+    }
+
+    &:hover {
+        .swiper-button-next, .swiper-button-prev {
+            opacity: 1;
+         }
+    }
+
+
     .banner-text {
+        padding: 10px 20px;
+        
         position: absolute;
         top: 50%;
         left: 50%;
@@ -50,13 +95,18 @@ a {
         font-weight: normal;
 
         h1 {
-            font-size: 5rem;
+            font-size: 4rem;
             margin: 1rem 0;
         }
 
         p {
             font-size: 2rem;
         }
+    }
+
+    .banner-text.banner-text-bgColor {
+        background-color: #000;
+        opacity: .3;
     }
 }
 
@@ -261,6 +311,8 @@ a {
                 padding-left: $content-box-padding;
                 padding-right: $content-box-padding;
                 margin-top: 10px;
+                height: 40px;
+                line-height: 40px;
              }
          }
 

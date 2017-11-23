@@ -142,10 +142,6 @@ div.page-container {
     }
 }
 
-//swiper
-.swiper-pagination-bullet-active {
-    background: $main-color;
-}
 
 section {
     
@@ -400,7 +396,8 @@ section {
             .title {
                 font-size: $content-title-font-size;
                 background-color: $content-title-bgColor;
-                color: $content-title-color;
+                color: $content-title-color;               
+
                 a {
                     color: $content-title-color;
 
