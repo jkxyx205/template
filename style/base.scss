@@ -173,7 +173,7 @@ section {
         display: block;
         overflow: hidden;
         white-space: nowrap;
-        font-weight: 500;
+        // font-weight: 200;
         // letter-spacing: .01rem;
         // text-overflow:ellipsis;
     }
@@ -187,8 +187,8 @@ section {
         display: inline-block;
         border-radius: $btn-radius;
         line-height: $btn-height;
-        color: $main-color;
-        border: 1px solid $main-color;
+        color: $summary-color;//$main-color;
+        border: 1px solid #c0c0c0;//$main-color;
         padding: 0 20px;
         letter-spacing: 2px;
         background-color: transparent;
@@ -196,6 +196,7 @@ section {
 
         &:hover {
             background: $main-color;
+            border-color: $main-color;
             color: #fff;
         }
     }
@@ -222,8 +223,8 @@ section {
 
             .btn {
                 width: 200px;
-                border-color: #a1a1a1;
-                color: #a1a1a1;
+                // border-color: #a1a1a1;
+                // color: #a1a1a1;
                 line-height: 40px;
 
                 &:hover {
@@ -276,6 +277,8 @@ section {
     }
 
     .panel-body {
+        
+        background-color: $panel-body-bgColor;
         .row {
             margin-left: -$panel-padding/2;
             margin-right: -$panel-padding/2;
@@ -284,11 +287,16 @@ section {
             padding-left: $panel-padding/2;
             padding-right: $panel-padding/2;
         }
-        padding:  $panel-padding $panel-padding 0 $panel-padding;
-        background-color: $panel-body-bgColor;
+        
         color: $title-color;
+        padding:  $panel-padding $panel-padding 0 $panel-padding; //todo
     }
-    
+
+    // .panel-title+.panel-body {
+         
+    // }
+
+
     .swiper-container {
         // padding: 15px;
         .panel-body {

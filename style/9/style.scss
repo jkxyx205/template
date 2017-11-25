@@ -1,19 +1,23 @@
+html, body {
+    font-family: NotoSansHans-Thin;  
+}
+
 .article-list-1 .content-box {
     &:not(:last-child) {
         border-bottom: none;
     }
 
-    &:hover {
-        $hover-color: #fff;
-       .content {
-        .title a {
-            color: $hover-color;
-        }
-        .summary-fix, .summary-fulid, .article-bar {
-            color: $hover-color;
-        }
-       }
-    }
+    // &:hover {
+        // $hover-color: transparent;
+       // .content {
+       //  .title a {
+       //      color: $hover-color;
+       //  }
+       //  .summary-fix, .summary-fulid, .article-bar {
+       //      color: $hover-color;
+       //  }
+       // }
+    // }
 
 }
 .panel-title  {

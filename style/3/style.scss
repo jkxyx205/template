@@ -1,3 +1,9 @@
+html, body {
+    font-family: NotoSansHans-Thin;
+    font-weight: 150;
+}
+
+
 .article-list-1 .content-box {
     &:hover {
         $hover-color: #fff;

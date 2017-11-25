@@ -1,6 +1,3 @@
-body {
-    font-family: "Microsoft YaHei",'微软雅黑',Arial,Helvetica,sans-serif;
-}
 .article-list-1 .content-box {
      &:not(:last-child) {
         border-bottom: none;
@@ -52,6 +49,7 @@ section .panel-title .more, section .panel-title .label {
 
      .btn {
          background-color: $main-color;
+         border-color: $main-color;
          color: #fff;
          opacity: 1;
 

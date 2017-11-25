@@ -1,12 +1,5 @@
-@font-face {
-    /* font-properties */
-    font-family: fz;
-    src: url('../../fonts/fz.ttf');
-}
-
-
-body {
-    font-family: fz;
+html, body {
+    font-family: serif;
 }
 .article-list-1 .content-box {
     &:hover {
@@ -42,7 +35,7 @@ body {
         position: absolute;
         width: $width;
         height: $width;
-        background-color: #333;
+        background-color: #505050;
         left: 0;
         top: 3px;
 
