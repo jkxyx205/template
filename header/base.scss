@@ -25,6 +25,10 @@ header {
         
     }
 
+    .logo img {
+        height: 60px;
+    }
+
 //菜单管理
 .drawer-navbar {
     //reset start
@@ -36,7 +40,7 @@ header {
         display: block;
         position: relative;
     }
-    
+  
     .drawer-navbar-header {
         background-color: transparent;
     }
@@ -107,7 +111,7 @@ header {
       // @media (max-width: 768px) {
         @media (max-width: 64em) {
             .drawer-navbar-header {
-        background-color: #fff;
+        // background-color: transparent;
     }
 
             .drawer-dropdown-menu-item {
@@ -264,6 +268,16 @@ header {
      // display: table-cell; vertical-align: middle;
  }
 
+ .pull-center2 {
+    margin: 0 auto;
+    text-align: center;
+    // line-height: 1;
+
+    &>div {
+        display: inline-block;
+    }
+ }
+
 .info, .share, .lang {
     // font-size: 16px;
     // display: inline-block;
@@ -345,6 +359,7 @@ header {
         display: none;
         width: $query-input-width;
         height: $query-input-height;
+        line-height: $query-input-height;
         vertical-align: middle;
         color:inherit;
         outline: none;

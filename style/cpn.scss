@@ -54,6 +54,10 @@ a {
 
 
 /////////////////////////////////风格//////////////////////////////////////////
+section .full-body {
+    padding: 0;
+}
+
 .content-box { 
     .cover {
         .title {
@@ -118,12 +122,14 @@ a {
          }
     }
 
-    .banner-text-container, .banner-text{
+    /* .banner-text-container,*/ .banner-text{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         letter-spacing: 1px;
+        text-align: center;
+        color: #fff;
         h1 {
             font-size: 3.4rem;
             margin: 0 0 5px 0;
@@ -135,22 +141,30 @@ a {
             line-height: 1.4;
         }
     }
+
     .banner-text-container {
         padding: 40px 50px;
+        text-align: center;
     }
 
-    .banner-text-placeholder {
-        color: transparent;
-    }
+    // .banner-text-placeholder {
+    //     color: transparent;
+    // }
 
-    .banner-text {
-        color: #fff;
-        padding: 0 50px;
-    }
+    // .banner-text {
+    //     color: #fff;
+    //     padding: 0 50px;
+    // }
 
     .banner-text-container.banner-text-bgColor {
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
         background-color: #000;
-        opacity: .5;
+        opacity: .2;
+
     }
 }
 
