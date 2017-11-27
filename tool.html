@@ -223,7 +223,7 @@
                         页脚：<select name="" id="footer">
                            <option value="1">1</option>
                            <option value="2">2</option>
-                           <option value="3">3</option>
+                           <option value="3" selected="">3</option>
                            <option value="4">4</option>
                            <option value="5">5</option>
                            <option value="6">6</option>
@@ -367,8 +367,8 @@
                  // loadStyles(doc, '../style/'+params.style+'/css/'+params.block+'.css')
 
                  loadStyles(doc, '../dist/tpl-css/header/'+params.header+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
-                 // loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
-                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/sass/style.css?time'+ (new Date()))
+                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
+                 // loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/sass/'+params.block+'.css?time'+ (new Date()))
                  loadStyles(doc, '../dist/tpl-css/style/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
             }
 

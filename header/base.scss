@@ -1,7 +1,7 @@
-.main-bg-color {
-   background-color: $main-color;
-   color: #fff; 
-}
+// .main-bg-color {
+//    background-color: $main-color;
+//    color: #fff; 
+// }
 
 header {
 
@@ -367,6 +367,7 @@ header {
         padding: 0 5px;
         background-color: $query-input-bgColor;
         color: $query-input-color;
+        z-index: 2
     }
 
 
