@@ -6,6 +6,13 @@
     header .drawer-navbar .drawer-navbar-header {
         background-color: $main-color;
     }
+
+     .top-bar {
+        margin-bottom: 0;
+    }
+    .top-bar .container {
+        border-bottom: 0;
+    }
    
 }
 
