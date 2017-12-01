@@ -1,7 +1,7 @@
 
 // $menu-color: #fff;
-
 @import '../base';
+
 
 footer {
      $bgColor: rgb(34, 35, 36);
@@ -15,10 +15,12 @@ footer {
 
         .iconfont {
             position: absolute; 
-            // top: 50%;
-            // transform: translateY(-50%);
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
             font-size: 40px;
-             top: 30px;
         }
 
         .box {

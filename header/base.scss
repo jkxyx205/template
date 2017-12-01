@@ -295,7 +295,10 @@ header {
 
 
       li.separator {
+        position: relative;
+        top: -1px;
         padding: 0;
+
       }
 
       ul {

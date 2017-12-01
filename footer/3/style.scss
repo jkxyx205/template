@@ -1,4 +1,5 @@
 @import '../base';
+
 .main-bg-color {
     background-color: $main-color;
     color: #fff;
@@ -11,10 +12,12 @@ footer {
 
         .iconfont {
             position: absolute; 
-            // top: 50%;
-            // transform: translateY(-50%);
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
             font-size: 40px;
-            top: 30px;
         }
 
         .box {

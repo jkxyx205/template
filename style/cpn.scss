@@ -232,16 +232,15 @@ $pic-title-top:10px;
         }
     }
 
-
-    .panel-body .btn {
-        margin-top: 20px;
-    }
 }
 
 .article-1, .article-list-1, .article-list-2, .article-list-3  {
     @extend %article-list;
+     .btn {
+        margin-top: 20px;
+    }
 
-    .panel-body {
+    &.panel-body {
         padding-top: 0;
     }
 
@@ -273,7 +272,7 @@ $pic-title-top:10px;
 }
 
  .article-list-2, .article-list-3 {
-    .panel-body {
+    &.panel-body {
         padding-top:  $panel-padding;
         padding-bottom:  $panel-padding;
     }
@@ -305,46 +304,48 @@ $pic-title-top:10px;
                 }
             }
             .article-bar {
-                    float: right;
+                float: right;
                 li {
                     margin-right: 0
                 }
+                margin-top: ($content-title-font-size - 1.2) / 2;
+                // font-size: $content-title-font-size;
             }
         }
     }
     
 }
 
-.article-list-2 {
-    .content-box:first-child {
-        margin-bottom: 15px;
-        .content {
-            .title {
-               // margin-bottom: .5rem;
-               // padding-top: 5px;
-                &:first-child:before {
-                    content: '';
-                    display: none;
-                }
-            }
+// .article-list-2 {
+//     .content-box:first-child {
+//         margin-bottom: 15px;
+//         .content {
+//             .title {
+//                // margin-bottom: .5rem;
+//                // padding-top: 5px;
+//                 &:first-child:before {
+//                     content: '';
+//                     display: none;
+//                 }
+//             }
 
-             .article-bar {
-                    float: none;
+//              .article-bar {
+//                     float: none;
                 
-            }
-        }
+//             }
+//         }
 
-    }
+//     }
 
-    .content-box:not(:first-child) {
-        .content {
-            .title {
-                padding: 0
-            }
-        }
+//     .content-box:not(:first-child) {
+//         .content {
+//             .title {
+//                 padding: 0
+//             }
+//         }
         
-    }
-}
+//     }
+// }
 
 
 /////////////////////////////////article//////////////////////////////////////////
@@ -590,7 +591,7 @@ $pic-title-top:10px;
 .pic-list-4 {
     @extend %pic;
 
-    .panel-body {
+    &.panel-body {
         
     }
 
