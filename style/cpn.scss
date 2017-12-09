@@ -874,16 +874,19 @@ $pic-title-top:10px;
         .row {
             background-color: $split-color;
         }
-
-        .content-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
+        
+        @media (min-width: 992px) {
+             .content-container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+            }
         }
+       
 
         .cover {
             // padding: 30% 30% 0 30%;
@@ -1548,9 +1551,10 @@ $pic-title-top:10px;
 }
 
 .pic-list-1, .pic-list-2, .pic-list-3, .pic-list-4, .pic-list-5, .pic-list-6,
-.pic-list-7, .pic-list-8, .pic-list-9, .pic-list-10, .pic-list-11, .pic-list-12,
+.pic-list-7, .pic-list-8, .pic-list-9, .pic-list-10, .pic-list-11, .pic-list-122,
 .pic-list-13, .pic-list-14, .pic-list-15, .pic-list-16, .pic-list-17, .pic-list-18,
-.pic-list-19, .pic-list-20, .pic-list-21, .pic-list-22, .pic-list-23, .pic-list-24 {
+.pic-list-19, .pic-list-20, .pic-list-21, .pic-list-22, .pic-list-23, .pic-list-24, 
+.pic-list-25, .pic-list-26 {
     // display: none;
 }
 

@@ -15,6 +15,7 @@ $query-input-color: $color;
 
 
 header {
+   @media (min-width: 64em) {
   .drawer-navbar {
         
         .drawer-menu > li {
@@ -27,6 +28,7 @@ header {
             }
         }
       }
+    }
 
       .search {
         a:hover, a:visited, a:focus {

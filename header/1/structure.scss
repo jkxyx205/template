@@ -13,6 +13,7 @@ $query-input-color: inherit;
 
 
 header {
+  @media (min-width: 64em) {
   .drawer-navbar {
         
         .drawer-menu > li {
@@ -25,4 +26,5 @@ header {
             
         }
       }
+  }
 }

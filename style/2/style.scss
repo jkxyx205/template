@@ -37,7 +37,11 @@ html, body {
         height: $width;
         background-color: #505050;
         left: 0;
-        top: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
 
     }
 }

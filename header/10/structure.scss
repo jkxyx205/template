@@ -15,6 +15,7 @@ $query-input-color: $color;
 
 
 header {
+   @media (min-width: 64em) {
   .drawer-navbar {
         
         .drawer-menu > li {
@@ -33,6 +34,7 @@ header {
           color: #fff;
         }
       }
+    }
 }
 
 

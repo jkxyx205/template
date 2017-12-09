@@ -5,6 +5,7 @@ $query-input-height: 30px;
 $nav-height: 97px;
 
 header {
+   @media (min-width: 64em) {
   .drawer-navbar {
         
         .drawer-menu > li {
@@ -24,4 +25,5 @@ header {
             
         }
       }
+    }
 }
