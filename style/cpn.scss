@@ -767,7 +767,7 @@ $pic-title-top:10px;
 }
 
 .pic-list-8 {
-    @include pic-area($border-radius: 5px);
+    @include pic-area($border-radius: 5px, $border-color: $split-color);
     .wrapper {
 
         .cover {
@@ -784,12 +784,22 @@ $pic-title-top:10px;
 
         .content {
             padding: 20px 10px;
-            border: 1px solid $split-color;
+            // border: 1px solid $split-color;
             border-top: none;
         }
 
         &:hover {
-         
+            .content {
+                background-color: $main-color;
+                .summary-fix {
+                    color: #fff;    
+                }
+                
+
+                .title a, .title a:hover {
+                    color: #fff;
+                }
+            } 
         }
 
     }

@@ -315,9 +315,7 @@ section {
         display: block;
         padding-bottom: $panel-padding;
 
-        img {
-            width: 100%;
-        }
+        
 
         .wrapper {
             position: relative;
@@ -339,6 +337,12 @@ section {
             position: relative;
             text-align: center;
             overflow: hidden;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+
             .title {
                 position: absolute;
                 bottom: 0;
