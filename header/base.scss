@@ -46,9 +46,9 @@ header {
         position: relative;
     }
   
-    .drawer-navbar-header {
-        // background-color: transparent;
-    }
+    // .drawer-navbar-header {
+    //     background-color: transparent;
+    // }
 
     .drawer-menu-item:hover {
         text-decoration: none;
@@ -71,6 +71,7 @@ header {
         line-height: $nav-height;
         .drawer-navbar-header {
             height: $nav-height;
+            background-color: transparent;
             // margin-top: -8px;
         }
 
