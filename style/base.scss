@@ -153,6 +153,10 @@ div.page-container {
     }
 }
 
+.layui-layer-content embed, .layui-layer-content iframe {
+        display: block;
+}
+
 
 section {
     
@@ -170,6 +174,9 @@ section {
             text-decoration: none;
         }
     }
+
+
+   
 
     .title>a, .title>span {
         display: block;
@@ -450,6 +457,7 @@ section {
         }
 
         .content {
+            display: block;
             background-color: $content-bgColor;
             overflow: hidden;
             .title {

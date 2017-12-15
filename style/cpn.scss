@@ -1407,7 +1407,7 @@ $pic-title-top:10px;
 
         .content {
             @extend %position-center;
-            width: 70%;
+            max-width: 70%;
 
             .title, .summary-fix {
                 position: relative;
@@ -1718,7 +1718,7 @@ $pic-title-top:10px;
                 bottom: 0;
                 right: 0;
                 // background:  -webkit-gradient(linear,0% 0%, 0% 100%, from(#FFFFFF), to(#4C4C4C));
-                background: transparent url(/images/bg_popular.png) no-repeat;
+                background: transparent url(/static/images/bg_popular.png) no-repeat;
                 background-size: cover;
                 z-index: -1;
                 // width: 100%;
