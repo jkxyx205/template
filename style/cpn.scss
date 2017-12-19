@@ -386,48 +386,16 @@ $pic-title-top:10px;
 
 
 .waterfall {
-
-      .content-box-col-12 {
-        width: 100%; 
-      }
-
-      .content-box-col-6 {
-        width: 50%; 
-      }
-
-      .content-box-col-4 {
-        width: 33.33333333%; 
-      }
-
-      .content-box-col-3 {
-        width: 25%; 
-      }
-
-      .content-box-col-5 {
-        width: 20%; 
-      }
-
-      .content-box-col-2 {
-        width: 16.66666666%; 
-      }
-
-      &:after {
-          content: '';
-          display: block;
-          clear: both;
+        &.panel-body .content-box {
+            padding: 0;
         }
-
-        .content-box {
-            float: left;
-        }
-
 
        .content-box img {
             max-width: 100%;
             display: block;
        }
 
-       .wrapper {
+       .marginable {
             margin: 10px;
             box-shadow: 0 1px 3px rgba(0,0,0,.3);
             -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
