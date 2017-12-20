@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>网页模版</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    
+    <!-- <link rel="stylesheet" href="css/iconfont.css"> -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_417789_ey0og22jzdnjc3di.css">
+
+    <link rel="stylesheet" href="../plugins/drawer/css/drawer.min.css">
+    <link rel="stylesheet" href="../plugins/Swiper-4.0.5/css/swiper.min.css">
+    <link rel="stylesheet" href="http://yodean.com:3000/dist/tpl-css/style/1/sass/1.css?timeMon%20Dec%2018%202017%2015:35:04%20GMT+0800%20(CST)">
+
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="drawer drawer--left">
+   <!--页眉开始-->
+   <div class="header-container">
+     
+   </div>
+   <!--页眉结束-->
+
+
+   <!--正文开始-->
+   <main>
+   <section>
+    
+    <div class="container">
+      <!--多图文-->
+             <div class="panel">
+                <div class="panel-body pic-list-h-1">
+                    <div class="row content-box">
+                        
+                    </div>
+                </div>        
+              </div>
+            <!--多图文结束-->
+
+
+    </div>  
+   </section>
+   </main>
+   
+   <!--正文结束 -->
+
+
+
+   <!--页脚开始-->
+   <div class="footer-container">
+       
+   </div>
+   <!--页脚结束-->
+
+<script src="../js/jquery.min.js"></script>
+<script src="../plugins/Swiper-4.0.5/js/swiper.min.js"></script>
+<script src="../plugins/iscroll/iscroll.js"></script>
+<script src="../plugins/drawer/js/drawer.min.js"></script>
+<script src="../js/masonry.pkgd.min.js"></script>  
+<script src="../js/imagesloaded.pkgd.js"></script>  
+<script>
+
+  // $('.waterfall .content-box').imagesLoaded(function() {
+  //     $('.waterfall').masonry({
+  //           itemSelector: '.content-box',
+  //           columnWidth:'.grid-sizer',
+  //           percentPosition: true
+  //     });
+  // })
+
+var $grid = $('.waterfall').imagesLoaded( function() {
+  // init Masonry after all images have loaded
+  $grid.masonry({
+    itemSelector: '.content-box'
+  });
+});
+
+
+  // $('.waterfall').imagesLoaded( function() {
+  //   debugger;
+  //   var $grid = $('.waterfall').masonry({
+  //     itemSelector: '.content-box'
+  //   });
+  // });
+
+
+    
+
+
+  var loaded = false
+
+  $(document).ready(function() {
+    loaded = true
+  });
+
+  function init() {
+    $('.drawer').drawer();
+  }
+
+
+</script>
+</body>
+</html>
