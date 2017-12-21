@@ -54,9 +54,9 @@ a {
 
 
 /////////////////////////////////风格//////////////////////////////////////////
-section .full-body {
-    padding: 0;
-}
+// section .full-body {
+//     padding: 0;
+// }
 
 .content-box { 
     .cover {
@@ -1784,6 +1784,8 @@ $pic-title-top:10px;
 
 
     &.panel-body {
+        padding-bottom: $panel-padding;
+        
         &>.row {
             margin: 0;
             

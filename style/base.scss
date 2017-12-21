@@ -297,6 +297,17 @@ section {
     }
 
     .panel-body {
+
+        &.paddingDisplayFalse {
+            background: transparent;
+            padding: 0;
+
+            &.single-line-1.single-col-1 .content-box {
+                padding-bottom: 0;
+            }
+
+
+        }
         
         background-color: $panel-body-bgColor;
         .row {
