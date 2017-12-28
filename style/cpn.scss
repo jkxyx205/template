@@ -908,7 +908,7 @@ $pic-title-top:10px;
 
 
         .cover {
-            padding: 30% 30% 0 30%;
+            padding: 15% 15% 0 15%;
             img {
                 border-radius: 100%;
             }
@@ -1292,7 +1292,7 @@ $pic-title-top:10px;
             .title {
                 margin-top: 20px;
 
-                span {
+                a, span {
                     color: #fff;
                 }
 
@@ -1785,11 +1785,11 @@ $pic-title-top:10px;
 
     &.panel-body {
         padding-bottom: $panel-padding;
-        
+
         &>.row {
             margin: 0;
             
-            background-color: $main-color;
+            // background-color: $main-color;
 
             &>div {
                 padding: 0;
@@ -1798,6 +1798,10 @@ $pic-title-top:10px;
 
          .col-xs-6 {
             padding: 0;
+        }
+
+        .content-container {
+            background-color: $main-color;
         }
     }
    

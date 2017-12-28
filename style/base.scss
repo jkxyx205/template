@@ -183,8 +183,7 @@ div.page-container {
 
 
 section {
-    
-
+    position: relative;
     .iconfont {
         line-height: 100%;
     }
@@ -198,9 +197,6 @@ section {
             text-decoration: none;
         }
     }
-
-
-   
 
     .title>a, .title>span {
         display: block;
@@ -225,11 +221,36 @@ section {
 
     background-color: $background-color;
 
-    .container-full .panel { //全屏不显示边框
-        border: none;
-    }
+    .container-fluid, .container {
+        position: relative;
+    } 
+
+    .container-fluid, .container {
+        padding: 0;
+        &>.row {
+            margin: 0;
+        }
+
+        &>.row>.col-md-12 {
+            padding: 0;
+        }
+        .panel { //全屏不显示边框
+            border: none;
+        }
+    } 
+
+    // .cpn-parent {
+    //     min-height: 0;
+    // }
+
+
 
     .panel {
+
+        &.marginDisplayFalse {
+            margin-bottom: 0;
+        }
+
         margin-bottom: $panel-padding + 5;
 
         //
