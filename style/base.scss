@@ -66,14 +66,15 @@ html {
 
 .sider-bar {
     position: fixed;
-    right: 8px;
-    top: 40%;
+    right: 0px;
+    top: 50%;
     z-index: 99999;
     width: 58px;
     padding: 0 16px;
     text-align: center;
     box-shadow: rgba(7, 17, 27, 0.1) 0px 4px 12px 0px;
     background-color: #fff;
+    font-size: 12px;
 
 
     a {
@@ -96,9 +97,10 @@ html {
         img {
             position: absolute;
             top: 0;
-            right: 46px; 
+            right: 43px; 
             // background-color: #fff;
             display: none;
+            width: 120px;
         }
         &:hover {
             i {
