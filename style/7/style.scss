@@ -35,43 +35,22 @@ section .content-box {
 
 }
 
-.panel-title  {
-    .more-text {
-        display: none;
+section {
+    .panel-title  {
+        .more-text {
+            display: none;
+        }
+
+        border-bottom: 1px solid #f5f4f3;
+
+        @media (max-width: 64em) {
+            .label {
+             padding: 0 12px;
+            }
+        }
     }
-
-    border-bottom: 1px solid #f5f4f3;
-
-    // .icon-more:before {
-    //     content: "\e609";
-    // }
-
-    // .label, .more {
-    //     &:after {
-    //         content: '';
-    //         position: absolute;
-    //         bottom: -3px;
-    //         height: 1px;
-    //         background-color: #fff;
-    //         width: $panel-padding;
-
-    //     }
-    // }
-
-    // .label {
-    //     &:after {
-    //         left: 0;
-    //     }
-    // }
-
-
-    // .more {
-    //     &:after {
-    //         right: 0;
-    //     }
-    // }
-
 }
+
 
 
 .panel {

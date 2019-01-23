@@ -22,22 +22,28 @@
 //     height: 4px;
 //     background-color: $main-color;
 // }
+section {
+    .panel-title  {
+        // .more-text {
+        //     display: none;
+        // }
 
-.panel-title  {
-    // .more-text {
-    //     display: none;
-    // }
+        .icon-more1:before {
+            content: "\e643";
+            font-size: 12px;
+        }
 
-    .icon-more1:before {
-        content: "\e643";
-        font-size: 12px;
+        .more-text {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 64em) {
+            .label {
+             padding: 0 12px;
+            }
+        }
     }
-
-    .more-text {
-        font-size: 1.2rem;
-    }
-
-
 }
+
 
 

@@ -19,16 +19,25 @@ body {
     }
 }
 
-.panel-title  {
-    .more-text {
-        display: none;
+section {
+        .panel-title  {
+        .more-text {
+            display: none;
+        }
+
+        border-top: 3px solid $main-color;
+
+        @media (max-width: 64em) {
+            .label {
+             padding: 0 12px;
+            }
+        }
+
+        // .icon-more:before {
+        //     content: "\e609";
+        // }
     }
 
-    border-top: 3px solid $main-color;
-
-    // .icon-more:before {
-    //     content: "\e609";
-    // }
 }
 
 // section .panel-title .label {

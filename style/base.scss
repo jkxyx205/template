@@ -1,6 +1,11 @@
 html {
     font-size: 10px;
+
+    // @media (max-width: 64em) {
+    //     font-size: 16px;
+    // }
 }
+
 
 
 //5列
@@ -60,6 +65,11 @@ html {
             border-color: $main-color;
             color: #fff;
         }
+}
+
+body .layui-layer-setwin .layui-layer-close2 {
+    top: -10px;
+    right: -50px;
 }
 
 
@@ -186,9 +196,9 @@ div.page-container {
 
 section {
     position: relative;
-    .iconfont {
-        line-height: 100%;
-    }
+    // .iconfont {
+    //     line-height: 100%;
+    // }
 
 
     a {
@@ -420,7 +430,7 @@ section {
                      filter: alpha(opacity=80);
                 }
 
-                .icon-play1, .title {
+                .icon-play1/*, .title*/ { // fixed
                     color: $main-color;
                 }
             }
@@ -458,14 +468,25 @@ section {
                 background-color: $main-color;
             } 
 
-            %icon-play1 {
-                position: absolute;
+            .icon-play2 {
+                font-size: 2rem;
                 color: #fff;
-                font-size: 2em;
             }
 
-            .icon-center {
-                @extend %icon-play1;
+            %container-icon-play1 {
+                position: absolute;
+                color: #fff;
+                // font-size: 2.5em;
+                width: 40px;
+                line-height: 40px;
+                height: 40px;
+                text-align: center;
+                border-radius: 40px;
+                background-color: rgba(0, 0, 0, .5);
+            }
+
+            .container-icon-center {
+                @extend %container-icon-play1;
                 left: 50%; 
                 top: 50%;
                 transform: translate(-50%, -50%);
@@ -474,16 +495,16 @@ section {
                 -ms-transform: translate(-50%, -50%);
             }
 
-            .icon-left {
-                @extend %icon-play1;
-                left: 5%;
-                bottom: 2px;
+            .container-icon-left {
+                @extend %container-icon-play1;
+                left: 10%;
+                bottom: 5%;
             }
 
-             .icon-right {
-                @extend %icon-play1;
+             .container-icon-right {
+               @extend %container-icon-play1;
                 right: 5%;
-                bottom: 2px;
+                bottom: 5%;
             }
 
         }

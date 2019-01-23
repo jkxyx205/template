@@ -31,6 +31,10 @@ section .panel-title .label {
     border-left: 4px solid $main-color;
     padding-left: 10px;
     margin-left: 26px;
+
+    @media (max-width: 64em) {
+         margin-left: 12px;
+    }
 }
 
 section .panel-title .more, section .panel-title .label {

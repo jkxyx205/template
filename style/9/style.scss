@@ -53,6 +53,10 @@ section .panel-title .label {
     padding: 13px 0;
     // padding-left: 10px;
     margin-left: 26px;
+
+    @media (max-width: 64em) {
+           margin-left: 12px;
+    }
 }
 
 .panel {
@@ -69,6 +73,36 @@ section .panel-title .label {
 }
 
 
+$nine-border-color: #333;
+
+.waterfall .marginable,
+.pic-list-2 .content-box .wrapper,
+.pic-list-8 .content-box .wrapper,
+.pic-list-8 .wrapper .content .content-footer,
+.pic-list-9 .content-box .wrapper,
+.pic-list-13 .content-box .wrapper,
+.pic-list-17 .wrapper .content,
+.pic-list-28 .wrapper,
+.pic-list-26 .wrapper,
+.pic-list-25 .wrapper,
+.pic-list-21 .content-box .wrapper,
+.pic-list-14.panel-body .row
+ {
+    border-color: $nine-border-color;
+}
 
 
+.article-list-4, .article-list-5 {
+    .wrapper.cover {
+        border: 1px solid $nine-border-color;
+    }
+    
+    .content-box-item {
+        border-bottom: 1px dashed $nine-border-color;
+    }
+}
+
+.pic-list-4 .wrapper .cover:after {
+    border-right-color: #252525;
+}
 
