@@ -8,23 +8,18 @@ footer {
         padding: 20px 0;
      }
 
-     .f-d-1, .f-d-2, .f-d-3, .f-d-4 {
+     .container > div {
         $height: 40px;
 
+        display: flex;
+        justify-content: center;
+    
         @media (min-width: 1170px) {
             height: $height;
-
-            .menu, .line-text, .share, .info {
-                position: absolute; 
-                 left: 50%;
-                 top: 50%;
-                 transform: translate(-50%, -50%); 
-                 -webkit-transform: translate(-50%, -50%);
-                 -moz-transform: translate(-50%, -50%);
-            }
         }
         
         @include bar-container($height, $bgColor);
+        
      }
 
      .f-d-4 {
@@ -32,6 +27,3 @@ footer {
      }
     
 }
-
-
-

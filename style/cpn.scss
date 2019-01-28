@@ -100,7 +100,8 @@ a {
 
 .swiper-panel {
     .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-        bottom: $panel-padding + 10;
+        // bottom: $panel-padding + 10;
+        bottom: 0;
     }
 }
 
@@ -394,6 +395,12 @@ $pic-title-top:10px;
         }
     }
     
+}
+
+.article-list-3 {
+    .swiper-container  .swiper-wrapper {
+        padding-bottom: $panel-padding;
+    }
 }
 
 .article-list-4, .article-list-5 {
@@ -850,23 +857,30 @@ $pic-title-top:10px;
     @include pic-area($border-radius: 5px, $border-color: $split-color);
     .wrapper {
 
-        .cover {
-            .article-bar {
-                position: absolute; 
-                top: 10px;
-                left: 10px; 
-                background: $main-color; 
-                color: #fff; 
-                padding: 5px; 
-                border-radius: 2px;
-            }
-        }
+
 
         .content {
             padding: 20px 10px 0 10px;
             // border: 1px solid $split-color;
             border-top: none;
-            
+
+            .article-bar  {
+               width: calc(100% - 80px);
+               overflow: hidden;
+               white-space: nowrap;
+               text-overflow: ellipsis;
+            }
+
+            .date-bar {
+                position: absolute;
+                right: 0;
+                bottom: -2px;
+                color: #a8a8a8;
+                font-size: 1.2rem;
+                margin-right: 1rem;
+            }
+
+
             .summary-fix {
                 margin-bottom: 10px;
             }
@@ -884,7 +898,6 @@ $pic-title-top:10px;
                     color: $main-color;;
                     font-size: 1.8rem;
                     margin-right: 5px;
-
                 }
 
 
@@ -910,7 +923,7 @@ $pic-title-top:10px;
 }
 
 .pic-list-9 {
-    @include pic-area($padding: 20px,  $border-color: $split-color);
+    @include pic-area($padding: 2rem,  $border-color: $split-color);
     .content-box {
         .wrapper {
 
@@ -989,7 +1002,7 @@ $pic-title-top:10px;
     .wrapper {
 
         .row {
-            background-color: $split-color;
+            background-color: #f6f6f6;
         }
         
         // @media (min-width: 992px) {
@@ -1487,6 +1500,10 @@ $pic-title-top:10px;
                 height: 2px;
                 width: 60px;
                 background-color: #fff;
+
+                @media screen and (max-width: 992px){
+                    height: 1px;
+                }
             }
 
             .summary-fix {
@@ -1584,7 +1601,12 @@ $pic-title-top:10px;
                      
                 }
                 .summary-fix {
-                    color: #fff; 
+                    color: #fff;
+
+                    @media screen and (max-width: 992px) {
+                        padding: 5px 0;     
+                    }
+                    
                 }
             }
         }
@@ -1719,7 +1741,7 @@ $pic-title-top:10px;
             .btn {
                 margin-top: 10px;
 
-                @media (max-width: 768px) { 
+                @media (max-width: 992px) { 
                    margin-bottom: 10px;
                 }
             }
@@ -1864,7 +1886,7 @@ $pic-title-top:10px;
 .pic-list-30 {
     @include pic-area();
 
-
+    $background-color: #f6f6f6;
     &.panel-body {
         padding-bottom: $panel-padding;
 
@@ -1883,7 +1905,7 @@ $pic-title-top:10px;
         }
 
         .content-container {
-            background-color: #e9eaeb;//$main-color;
+            background-color: $background-color;//$main-color;
         }
     }
    
@@ -1894,7 +1916,7 @@ $pic-title-top:10px;
 
     .odd {
         .wrapper {
-             @media (min-width: 992px) {
+             // @media (min-width: 992px) {
                 &:before {
                    $width: 10px;
                    content: '';
@@ -1906,10 +1928,10 @@ $pic-title-top:10px;
                    -ms-transform: translateY(-50%);
                    -moz-transform: translateY(-50%);
                    border: $width dashed rgba(255,255,255,0);
-                   border-left-color: #e9eaeb; //$main-color;
+                   border-left-color: $background-color; //$main-color;
                    z-index: 1;
                 }
-            }
+            // }
         }
     }
 
@@ -1921,7 +1943,7 @@ $pic-title-top:10px;
 
 
             
-        @media (min-width: 992px) {
+        // @media (min-width: 992px) {
             &:before {
                $width: 10px;
                content: '';
@@ -1933,10 +1955,10 @@ $pic-title-top:10px;
                -ms-transform: translateY(-50%);
                -moz-transform: translateY(-50%);
                border: $width dashed rgba(255,255,255,0);
-               border-right-color: #e9eaeb;//$main-color;
+               border-right-color: $background-color;//$main-color;
                z-index: 1;
             }
-        }
+        // }
        
 
         .cover {
@@ -1984,25 +2006,11 @@ $pic-title-top:10px;
 }
 
 
-.pic-list-h-1 {
-    
-}
+@media (max-width: 992px) {
 
-
-.pic-list-1, .pic-list-2, .pic-list-3, .pic-list-4, .pic-list-5, .pic-list-6,
-.pic-list-7, .pic-list-8, .pic-list-9, .pic-list-10, .pic-list-11, .pic-list-12,
-.pic-list-13, .pic-list-14, .pic-list-15, .pic-list-16, .pic-list-17, .pic-list-18,
-.pic-list-19, .pic-list-20, .pic-list-21, .pic-list-22, .pic-list-23, .pic-list-24, 
-.pic-list-25, .pic-list-26, .pic-list-27, .pic-list-28, .pic-list-29 {
-    // display: none;
-}
-
-
-
-
-
-
-@media (max-width: 64em) {
+    section .panel-title .label {
+        font-size: 2rem;
+    }
     section .panel-body {
         padding: 12px 0 0 0;
     }
@@ -2011,108 +2019,13 @@ $pic-title-top:10px;
         margin-bottom: 8px;
     }
 
-    // section .panel-title .label {
-    //     padding: 0 12px;
-    // }
-
-    // .panel-title .label:after, .panel-title .more:after {
-    //     width: 12px;
-    // }
-
-    section .panel-body.pic-list-1 .row,
-    section .panel-body.pic-list-2 .row,
-    section .panel-body.pic-list-3 .row,
-    section .panel-body.pic-list-4 .row,
-    section .panel-body.pic-list-5 .row,
-    section .panel-body.pic-list-6 .row,
-    section .panel-body.pic-list-7 .row,
-    section .panel-body.pic-list-8 .row,
-    section .panel-body.pic-list-9 .row,
-    section .panel-body.pic-list-10 .row,
-    section .panel-body.pic-list-11 .row,
-    // section .panel-body.pic-list-12 .row,
-    section .panel-body.pic-list-13 .row,
-    section .panel-body.pic-list-15 .row,
-    section .panel-body.pic-list-16 .row,
-    section .panel-body.pic-list-17 .row,
-    section .panel-body.pic-list-18 .row,
-    section .panel-body.pic-list-19 .row,
-    section .panel-body.pic-list-20 .row,
-    section .panel-body.pic-list-21 .row,
-    section .panel-body.pic-list-22 .row,
-    section .panel-body.pic-list-23 .row,
-    section .panel-body.pic-list-24 .row,
-    section .panel-body.pic-list-25 .row,
-    section .panel-body.pic-list-26 .row,
-    section .panel-body.pic-list-28 .row,
-    section .panel-body.pic-list-29 .row,
-
-
-    section .panel-body.pic-list-1 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-2 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-3 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-4 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-5 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-6 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-7 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-8 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-9 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-10 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-11 .col-xs-6:nth-child(odd),
-    // section .panel-body.pic-list-12 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-13 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-15 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-16 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-17 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-18 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-19 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-20 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-21 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-22 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-23 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-24 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-25 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-26 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-28 .col-xs-6:nth-child(odd),
-    section .panel-body.pic-list-29 .col-xs-6:nth-child(odd) {
-        padding:0 4px 0 12px;
-    }
-
-    section .panel-body.pic-list-1 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-2 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-3 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-4 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-5 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-6 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-7 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-8 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-9 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-10 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-11 .col-xs-6:nth-child(even),
-    // section .panel-body.pic-list-12 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-13 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-15 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-16 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-17 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-18 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-19 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-20 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-21 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-22 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-23 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-24 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-25 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-26 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-28 .col-xs-6:nth-child(even),
-    section .panel-body.pic-list-29 .col-xs-6:nth-child(even) {
-       padding:0 12px 0 4px;
-    }
-
-
-
-   
     section .content-box {
         padding-bottom: 8px;
+    }
+
+    section .panel-body .row {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
 
@@ -2133,12 +2046,15 @@ $pic-title-top:10px;
         width: 100%;
     }
 
-    section .panel-body.article-list-2 .wow.col-xs-6 .content-box {
-        padding-bottom: 0;
+    section .panel-body.pic-list-27 .swiper-container >.row {
+        padding: 0;
+        margin: 0;
     }
 
 
-
+    section .panel-body.article-list-2 .wow.col-xs-6 .content-box {
+        padding-bottom: 0;
+    }
 
 }
 
