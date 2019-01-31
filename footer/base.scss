@@ -11,6 +11,12 @@
     // }
 }
 
+@media screen and (max-width: 768px) {
+    #footer-container {
+        margin-top: 3rem;
+    }
+}
+
 footer {
     color: #666;
     

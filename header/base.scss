@@ -8,13 +8,13 @@ header {
         height: 100%;
     }
 
-    @media (min-width: 64em) {
+    @media (min-width: 768px) {
         background-color: $nav-bgcolor; 
     }
 
     
 
-    @media (max-width: 64em) {
+    @media (max-width: 768px) {
         .container {
             width: auto;
             padding: 0;
@@ -27,8 +27,23 @@ header {
             font-size: 16px;
         }
 
+        .drawer-hamburger-icon:after, .drawer-hamburger-icon:before {
+            top: -8px;
+        }
+
+        
+        .drawer-hamburger-icon:after {
+            top: 8px;
+        }
+
+        .drawer-hamburger-icon, .drawer-hamburger-icon:after, .drawer-hamburger-icon:before {
+            height: 1px;
+        }
+
+
+
         .drawer-hamburger {
-            width: 32px;
+            width: 20px;
         }
 
 
