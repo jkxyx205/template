@@ -1772,9 +1772,14 @@ $pic-title-top:10px;
     .wrapper {
       
        
-        // .cover {
-        //     padding: 20% 20% 0 20%;
-        // }
+        .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
 
         .content {
             position: absolute;
@@ -1802,9 +1807,9 @@ $pic-title-top:10px;
                 color: #fff;
             }
 
-            .summary-fulid {
-                color: #fff;
-                margin-top: 3px;
+            .summary-fix {
+                -webkit-line-clamp: 2;
+                height: auto;
             }
 
             // text-align: center;
