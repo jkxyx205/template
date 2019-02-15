@@ -935,6 +935,7 @@ $pic-title-top:10px;
            
                 .content {
                     padding-bottom: 0;
+                    height: 65px; //固定高度防止描述不填写 TODO
                 }
 
                 &:hover {
@@ -1434,6 +1435,7 @@ $pic-title-top:10px;
             .title {
                 position: static;
                 color: #fff;
+                background-color: transparent;
             }
         }
         
