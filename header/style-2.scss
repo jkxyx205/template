@@ -1,11 +1,9 @@
 header {
   .drawer-navbar {
       @media (min-width: 64em) {
-        // .drawer-navbar-header {
-        //     margin-top: -5px;
-        // }
         
         .drawer-menu > li {
+            margin-left: 6px;
             &>a:after, &>a:before {
                content: '';
                width: 0;

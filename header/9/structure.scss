@@ -1,13 +1,13 @@
 $top-bar-height: 50px;
 $second-bar-height: 97px;
 $query-input-width: 300px;
-$query-input-height: 30px;
+$query-input-height: 35px;
 $nav-height: 55px;
 
 
 //全文检索
-$query-btn-bgColor: $main-color;
 $query-btn-color: $nav-color;
+$query-btn-bgColor: $main-color;
 $query-input-border: $main-color;
 $query-input-bgColor: #fff;
 $query-input-color: $color;
@@ -15,6 +15,10 @@ $query-input-color: $color;
 
 
 header {
+
+
+
+
    @media (min-width: 64em) {
   .drawer-navbar {
         

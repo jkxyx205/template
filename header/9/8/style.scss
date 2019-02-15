@@ -1,0 +1,30 @@
+// 123569 ，风格需要调整
+header {
+  @media (min-width: 64em) {
+  .drawer-navbar {
+        
+        .drawer-menu > li {
+
+            &>a {
+              line-height: $nav-height;
+              height: auto;
+              margin: 0;
+            }
+            
+        }
+
+        .drawer-menu-item {
+          &:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .drawer-dropdown .drawer-dropdown-menu {
+            border-top: none;
+        }
+
+      }
+  }
+
+}

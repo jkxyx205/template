@@ -1,10 +1,6 @@
 header {
   .drawer-navbar {
       @media (min-width: 64em) {
-        //  .drawer-navbar-header {
-        //     margin-top: -5px;
-        // }
-        
         .drawer-menu > li {
            &>a {
               margin: 0;
@@ -14,7 +10,7 @@ header {
 
            
             &:hover >a, &.current >a {
-               $side: 4px;
+               $side: 6px;
                 position: relative;
                 &:after {
                     content: '';
@@ -37,6 +33,3 @@ header {
       }
   }
 }
-
-
-

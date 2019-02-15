@@ -16,21 +16,12 @@ header {
   @media (min-width: 64em) {
   .drawer-navbar {
         
-        .drawer-dropdown .drawer-dropdown-menu {
-            border-top: 2px solid $main-color;
+        .drawer-nav {
+          margin-left: 14px;
         }
-
-        .drawer-menu > li {
-
-            &>a {
-              margin: 28px 0;
-              height: 29px;
-              line-height: 31px;
-            }
-            
-        }
-
 
       }
   }
+
 }
+

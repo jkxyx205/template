@@ -25,7 +25,7 @@
 
 
 </head>
-<body class="drawer drawer--top">
+<body class="drawer drawer--left">
    <!--页眉开始-->
    <div class="header-container" id="header-container">
      
@@ -652,7 +652,7 @@
       if ('style1' === style) {
         var keywordsWidth = $keywords.css('width')
 
-      $keywords.css({'width': 0, 'padding': '0 5px'}).show().animate({'width': keywordsWidth})
+      $keywords.css({'width': 0}).show().animate({'width': keywordsWidth})
 
       } else if ('style2' === style || 'style3' === style) {
         $keywords.show('slow');
@@ -685,6 +685,29 @@
   function init() {
     $('.drawer').drawer();
   }
+
+  var menuExpend = false
+
+var $headerContainer = $('#header-container')
+$(function () {
+
+    if ($(window).width() > 640) {
+        $headerContainer.css('position', 'fixed');
+        $('#layout').css('padding-top', $headerContainer.height())
+
+        $(document).on('scroll', function() {
+            if ($(document).scrollTop() > 200 && !menuExpend) {
+                $headerContainer.css('margin-top', $(document).scrollTop() - $('.drawer-navbar').offset().top + "px")
+                menuExpend  = true;
+            } else if($(document).scrollTop() <= 200 && menuExpend){
+                $headerContainer.css('margin-top', 0)
+                menuExpend  = false;
+            }
+
+        })
+    }
+
+})
 
 </script>
 </body>

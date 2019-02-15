@@ -1,9 +1,6 @@
 header {
   .drawer-navbar {
       @media (min-width: 64em) {
-        // .drawer-navbar-header {
-        //     margin-top: -5px;
-        // }
         
         .drawer-menu > li {
 
@@ -19,6 +16,10 @@ header {
                    transition-property: color;
                 }
               
+            }
+
+            ul {
+              background-color: #2F2F2F;
             }
         }
       }

@@ -22,9 +22,6 @@ $nav-color: $color;
 header {
    @media (min-width: 64em) {
   .drawer-navbar {
-       .drawer-dropdown .drawer-dropdown-menu {
-            border-top: 2px solid $main-color;
-        }
          
         .drawer-menu > li {
 
