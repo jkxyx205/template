@@ -424,16 +424,17 @@ section {
         //     }
         // }
 
-        img {
-                width: 100%;
-                display: block;
-        }
 
         .cover {
             display: block;
             position: relative;
             text-align: center;
             overflow: hidden;
+
+            img {
+                width: 100%;
+                display: block;
+            }
 
           
 
