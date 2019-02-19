@@ -77,6 +77,14 @@ a {
         line-height: 1.5;
         padding: $content-box-padding;
 
+        .summary-line {
+            height: 21px; //描述单行固定高度
+        }
+
+        .summary-fix {
+            height: 66px; //描述三行行固定高度
+        }
+
         // padding-bottom: $content-box-padding;
 
         // .title {
@@ -935,7 +943,6 @@ $pic-title-top:10px;
            
                 .content {
                     padding-bottom: 0;
-                    height: 65px; //固定高度防止描述不填写 TODO
                 }
 
                 &:hover {
