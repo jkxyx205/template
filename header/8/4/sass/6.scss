@@ -2,7 +2,7 @@
 @import "../../structure";
 @import "../../../base";
 @import "../../../style-4";
-@media (min-width: 64em) {
+@media (min-width: 992px) {
     header .drawer-navbar .drawer-navbar-header {
         background-color: $main-color;
     }

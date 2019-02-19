@@ -1,6 +1,6 @@
 header {
   .drawer-navbar {
-      @media (min-width: 64em) {
+      @media (min-width: 992px) {
         .drawer-menu > li {
             &:hover, &.current  {
                  background-color: $nav-hover-bgColor;

@@ -11,7 +11,7 @@ $hover: $main-color;
 
 
 header {
-   @media (min-width: 64em) {
+   @media (min-width: 992px) {
    .drawer-navbar {
         .drawer-nav {
             margin-left: 14px;
@@ -30,7 +30,7 @@ header {
 }
 
 
-@media (min-width: 64em) {
+@media (min-width: 992px) {
     header .drawer-navbar .drawer-navbar-header {
         position: relative;
         padding: 0 20px;

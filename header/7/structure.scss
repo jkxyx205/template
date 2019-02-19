@@ -7,7 +7,7 @@ $nav-height: 97px;
 $query-btn-bgColor: transparent;
 $query-input-border: $color;
 header {
-   @media (min-width: 64em) {
+   @media (min-width: 992px) {
   .drawer-navbar {
       .drawer-nav {
                   margin-left: 14px;

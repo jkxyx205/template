@@ -1,4 +1,4 @@
-@media (max-width: 64em) {
+@media (max-width: 992px) {
     .drawer--left .drawer-nav {
         left: -29.25rem;
     }
@@ -12,7 +12,7 @@
     }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 992px) {
     #header-container {
         width: 100%;
         z-index: 2; 
@@ -27,12 +27,12 @@ header {
         height: 100%;
     }
 
-    @media (min-width: 64em) {
+    @media (min-width: 992px) {
         background-color: $nav-bgcolor; 
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
     }
 
-    @media (max-width: 64em) {
+    @media (max-width: 992px) {
         .container {
             width: auto;
             padding: 0;
@@ -97,7 +97,7 @@ header {
     }
 
 
-    @media (min-width: 64em) {
+    @media (min-width: 992px) {
         //height
         height: $nav-height;
         line-height: $nav-height;
@@ -135,7 +135,7 @@ header {
     background-color: transparent;
 
    
-    @media (max-width: 64em) {
+    @media (max-width: 992px) {
 
         background-color: #fff;
 
@@ -174,7 +174,7 @@ header {
         }
     } 
 
-    @media (min-width: 64em) {
+    @media (min-width: 992px) {
         font-size: 1.4rem;
          border:none;
          // margin: 20px 0;
@@ -302,7 +302,7 @@ header {
  .pull-center2 {
     margin: 0 auto;
 
-    @media (min-width: 64em) {
+    @media (min-width: 992px) {
        text-align: center;
 
        &>div {

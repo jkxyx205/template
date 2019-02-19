@@ -2,7 +2,7 @@ header {
 
   .drawer-navbar {
       $border-radius: 0;
-      @media (min-width: 64em) {
+      @media (min-width: 992px) {
         
         .drawer-menu > li {
             margin-left: 1px; 

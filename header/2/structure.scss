@@ -4,7 +4,7 @@ $query-input-width: 250px;
 $query-input-height: 30px;
 $nav-height: 72px;
 
-@media (min-width: 64em) {
+@media (min-width: 992px) {
    .second-bar .container {
     border-bottom: 1px solid #efefef;
     margin-bottom: 1px;
@@ -17,7 +17,7 @@ $nav-height: 72px;
 }
 
 header {
-   @media (min-width: 64em) {
+   @media (min-width: 992px) {
   .drawer-navbar {
         .drawer-dropdown .drawer-dropdown-menu {
             border-top: 1px solid $main-color;
