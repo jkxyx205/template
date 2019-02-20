@@ -87,6 +87,15 @@ body .layui-layer-setwin .layui-layer-close2 {
     right: -50px;
 }
 
+.cover img {
+        width: 100%;
+        display: block;
+}
+
+//模版重写样式
+.cover .cke_widget_inline {
+    display: block;
+}
 
 //侧边栏
 .sider-bar {
@@ -432,10 +441,7 @@ section {
             text-align: center;
             overflow: hidden;
 
-            img {
-                width: 100%;
-                display: block;
-            }
+            
 
           
 
