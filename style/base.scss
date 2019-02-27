@@ -6,29 +6,10 @@ html {
     }
 }
 
-//bootstrap栅格系统中同行div高度不一致的解决方法 https://blog.csdn.net/jewely/article/details/53006123
-//手机适配有问题！！
-// .row {
-//     display: -webkit-box;
-//     display: -webkit-flex;
-//     display: -ms-flexbox;
-//     display: flex;
-//     flex-wrap: wrap;
-// }
-// .row > [class*='col-'] {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-//bootstrap栅格系统中同行div高度不一致的解决方法 end
-
-
 //5列
 .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5 {
     position: relative;
     min-height: 1px;
-    // padding-right: 15px;
-    // padding-left: 15px;
 }
  
 @media ( min-width : 768px) {
@@ -115,14 +96,12 @@ body .layui-layer-setwin .layui-layer-close2 {
         color: rgb(217, 221, 225);
         display: block;
         height: 57px;
-        // line-height: 57px;
         padding-top: 18px;
         border-bottom: 1px solid rgb(237, 241, 242);
         text-decoration: none;
 
         span {
             display: none;
-            // display: inline-block;
             line-height: 12px;
             color: #07111b;
         }
@@ -131,7 +110,6 @@ body .layui-layer-setwin .layui-layer-close2 {
             position: absolute;
             top: 0;
             right: 43px; 
-            // background-color: #fff;
             display: none;
             width: 120px;
         }
@@ -143,13 +121,8 @@ body .layui-layer-setwin .layui-layer-close2 {
                 display: inline-block;
             }
 
-             img {
+            img {
                 display: block;
-                // transform: scale(1);
-
-                // transform-origin: 100% 95%;
-                // transition: opacity .25s,transform .3s;
-                // padding: 10px;
             }
         }
     }
@@ -219,10 +192,6 @@ div.page-container {
 
 section {
     position: relative;
-    // .iconfont {
-    //     line-height: 100%;
-    // }
-
 
     a {
         color: $title-color;
@@ -237,17 +206,9 @@ section {
         display: block;
         overflow: hidden;
         white-space: nowrap;
-        // font-weight: 200;
-        // letter-spacing: .01rem;
-        // text-overflow:ellipsis;
+        text-overflow:ellipsis;
     }
 
-    // .pull-right {
-    //     position: absolute;
-    //     right: 0;
-    // }
-
-    
 
     input[type=text] {
         height: $btn-height + 2;
@@ -256,29 +217,49 @@ section {
 
     background-color: $background-color;
 
+
     .container-fluid, .container {
         position: relative;
-    } 
 
-    .container-fluid, .container {
-        padding: 0;
-        &>.row {
-            margin: 0;
-        }
-
-        &>.row>.col-md-12 {
-            // padding: 0;
-        }
         .panel { //全屏不显示边框
             border: none;
         }
     } 
 
-    // .cpn-parent {
-    //     min-height: 0;
-    // }
+    @media (max-width: 992px) { //手机端去除外层边距
+        &>.container {
+            padding: 0;
+            width: 100%;
+
+            &>.row {
+            margin-left: 0;
+            margin-right: 0;
+
+                &> div {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+           
 
 
+        }
+    }
+
+    .container-fluid { //通栏没有边距
+        padding: 0;
+
+        &>.row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .f-12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 
     .panel {
 
@@ -288,7 +269,6 @@ section {
 
         margin-bottom: $panel-padding + 5;
 
-        //
         .more-position-bottom {
             text-align: center;
             margin-top: $panel-padding;
@@ -299,8 +279,6 @@ section {
 
             .btn {
                 width: 200px;
-                // border-color: #a1a1a1;
-                // color: #a1a1a1;
                 line-height: 40px;
 
                 &:hover {
@@ -328,7 +306,9 @@ section {
             background-color: $panel-title-label-bgColor;
             font-size: $panel-title-font-size;
             padding: 0 $panel-padding;
-
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         
         .more {
@@ -366,29 +346,19 @@ section {
         }
         
         background-color: $panel-body-bgColor;
-
+    
+        $item-padding: 5px;
         
 
         .row {
-            margin-left: -$panel-padding/2;
-            margin-right: -$panel-padding/2;
-
-             @media screen and (max-width: 992px) {
-               // margin-left: -5px;
-               // margin-right: -5px;
-            }
+            margin-left: -$item-padding;
+            margin-right: -$item-padding;
         }
+
         .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-            padding-left: $panel-padding/2;
-            padding-right: $panel-padding/2;
-
-            @media screen and (max-width: 992px) {
-            //     padding-left: 5px;
-            //     padding-right: 5px;
-            }
+            padding-left: $item-padding;
+            padding-right: $item-padding
         }
-
-
         
         color: $title-color;
         padding:  $panel-padding $panel-padding 0 $panel-padding; //todo
@@ -400,14 +370,12 @@ section {
 
 
     .swiper-container {
-        // padding: 15px;
         .panel-body {
             padding: 0;
         }
 
          .content-box {
             width: 100%;
-            // padding-right: 15px;
         }
     }
    
@@ -422,26 +390,12 @@ section {
             overflow: hidden;
         }
 
-        
-        
-        // .wrapper.borderable {
-        //     border: 1px solid transparent;
-
-        //     &:hover {
-        //         border-color: $content-box-hover-borderColor;
-        //         background-color: $content-box-hover-bgColor;
-        //     }
-        // }
-
 
         .cover {
             display: block;
             position: relative;
             text-align: center;
             overflow: hidden;
-
-            
-
           
 
             .title {
@@ -591,7 +545,6 @@ section {
             }
 
             %summary {
-                // line-height: 1.6;
                 color: $content-summary-color;
                 background-color: $content-summary-bgColor;
                 font-size: $content-summary-font-size;
@@ -599,14 +552,14 @@ section {
 
             .summary-fix {
                 @extend %summary;
-                height: 66px;
+                // height: 66px;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 3;
                 overflow: hidden;
             }
 
-            .summary-fulid {
+            .summary-fluid {
                  @extend %summary;
             }
 

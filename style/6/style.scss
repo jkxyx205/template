@@ -9,7 +9,7 @@
         .title a {
             color: $hover-color;
         }
-        .summary-fix, .summary-fulid, .article-bar {
+        .summary-fix, .summary-fluid, .article-bar {
             color: $hover-color;
         }
        }
@@ -27,10 +27,23 @@
 }
 
 section .panel-title .label {
-    display: inline;
-    border-left: 4px solid $main-color;
+    // display: inline;
+    // border-left: 4px solid $main-color;
     padding-left: 10px;
     margin-left: 26px;
+    width: calc(100% - 92px);
+
+    &:before {
+        content: '';
+        height: 2rem;
+        width: 4px;
+        position:  absolute;
+        background-color: $main-color;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
 
     @media (max-width: 64em) {
          margin-left: 12px;

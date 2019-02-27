@@ -1,0 +1,422 @@
+@import "cpn";
+
+/////////////////////////////.pic-list-30  照片墙
+.f-12, 
+.c-12 {
+     .pic-list-30 {
+
+        @mixin textOverflow() {
+            .content-box .content {
+                .title {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+
+
+                .summary-fluid {
+                   display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .col-md-2.even, .col-md-2.odd,
+        .col-md-3.even, .col-md-3.odd,
+        .col-md-4.even, .col-md-4.odd,
+        .col-md-5.even, .col-md-5.odd,
+        .col-md-6.even, .col-md-6.odd {
+             @include textOverflow();
+        }
+
+        @media (max-width: 768px) {
+            .col-md-12.even, .col-md-12.odd {
+                @include textOverflow();
+            }
+        }    
+        
+        @media (min-width: 992px) {
+            .col-md-5.even, .col-md-5.odd,
+            .col-md-2.even, .col-md-2.odd { //5,6列不显示描述
+               
+
+                .content-box .content {
+                    // transform: translateY(-40%);
+                    .summary-fluid {
+                        display: none;
+                    }
+                }
+            }
+
+            .col-md-3.even, .col-md-3.odd {//4列
+                .content-box .content {
+                    // transform: translateY(-40%);
+
+                    .title {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+
+
+                    .summary-fluid {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+        }
+
+
+         
+    }
+
+}
+.c-3 {
+     
+    .pic-list-30 {
+
+         @mixin rightArea() {
+            .content-box .content {
+                .title {
+                    font-size: 1.6rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+
+                .summary-fluid {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                }
+            }
+        }
+
+
+        @include rightArea()
+
+
+        @media (min-width: 992px) {
+            .col-md-6.even, .col-md-6.odd,
+            .col-md-4.even, .col-md-4.odd,
+            .col-md-3.even, .col-md-3.odd, 
+            .col-md-5.even, .col-md-5.odd, 
+            .col-md-2.even, .col-md-2.odd {
+                .content-box .content {
+                    padding: 0;
+                    .title {
+                        font-size: 1.2rem;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+
+
+                    .summary-fluid {
+                      display: none;
+                    }
+                }
+            }
+        }
+
+
+
+    }   
+    
+}
+
+.c-4 {
+     
+    .pic-list-30 {
+
+         @mixin rightArea() {
+            .content-box .content {
+                .title {
+                    font-size: 1.6rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+
+                .summary-fluid {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                }
+            }
+        }
+
+
+        @include rightArea()
+
+
+        @media (min-width: 992px) {
+            .col-md-4.even, .col-md-4.odd,
+            .col-md-3.even, .col-md-3.odd, 
+            .col-md-5.even, .col-md-5.odd, 
+            .col-md-2.even, .col-md-2.odd {
+                .content-box .content {
+                    padding: 0;
+                    .title {
+                        font-size: 1.2rem;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+
+
+                    .summary-fluid {
+                      display: none;
+                    }
+                }
+            }
+
+
+            .col-md-6.even, .col-md-6.odd {
+                .content-box .content {
+                    .title {
+                        font-size: 1.6rem;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+
+
+                    .summary-fluid {
+                      display: -webkit-box;
+                      -webkit-box-orient: vertical;
+                      -webkit-line-clamp: 1;
+                      overflow: hidden;
+                    }
+                }
+            }
+        }
+
+
+
+    }   
+    
+}
+
+.c-9 {
+     .pic-list-30 {
+
+        @mixin textOverflow() {
+            .content-box .content {
+                .title {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+
+
+                .summary-fluid {
+                   display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .col-md-2.even, .col-md-2.odd,
+        .col-md-3.even, .col-md-3.odd,
+        .col-md-4.even, .col-md-4.odd,
+        .col-md-5.even, .col-md-5.odd,
+        .col-md-6.even, .col-md-6.odd {
+             @include textOverflow();
+        }
+
+        @media (max-width: 768px) {
+            .col-md-12.even, .col-md-12.odd {
+                @include textOverflow();
+            }
+        }    
+        
+        @media (min-width: 992px) {
+            .col-md-5.even, .col-md-5.odd,
+            .col-md-2.even, .col-md-2.odd { //5,6列不显示描述
+               
+
+                .content-box .content {
+                    .title {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+
+                    .summary-fluid {
+                        display: none;
+                    }
+                }
+            }
+
+            .col-md-4.even, .col-md-4.odd {//3列
+                .content-box .content {
+
+                    .title {
+                        font-size: 1.6rem;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+
+
+                    .summary-fluid {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            .col-md-3.even, .col-md-3.odd {//4列
+                .content-box .content {
+
+                    .title {
+                        font-size: 1.6rem;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+
+
+                    .summary-fluid {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+        }
+
+
+         
+    }
+
+}
+
+.c-6 {
+     .pic-list-30 {
+
+        @media screen and (max-width: 992px) {
+            .title {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+            }
+
+            .summary-fluid {
+                   display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .col-md-12.even, .col-md-12.odd {
+            .title {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+            }
+
+            .summary-fluid {
+                   display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+            }
+        } 
+
+        
+        .col-md-6.even, .col-md-6.odd {
+             .content-box .content {
+                .title {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+
+
+                .summary-fluid {
+                   display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                }
+            }
+        }
+       
+
+        .col-md-4.even, .col-md-4.odd {
+            .title {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+            }
+
+            .summary-fluid {
+                   display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                }
+        }   
+
+        
+        .col-md-3.even, .col-md-3.odd,
+        .col-md-5.even, .col-md-5.odd,
+        .col-md-2.even, .col-md-2.odd {
+            .title {
+                font-size: 1.2rem;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+            }
+
+            .summary-fluid {
+                 display: none;
+            }
+        } 
+
+
+        }
+
+
+         
+         
+    }
+}
+
+/////////////////////////////.pic-list-30 end
