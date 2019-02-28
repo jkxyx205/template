@@ -228,8 +228,8 @@ section {
 
     @media (max-width: 992px) { //手机端去除外层边距
         &>.container {
-            padding: 0;
-            width: 100%;
+            // // padding: 0;
+            // width: 100%;
 
             &>.row {
             margin-left: 0;
@@ -267,11 +267,11 @@ section {
             margin-bottom: 0;
         }
 
-        margin-bottom: $panel-padding + 5;
+        // margin-bottom: $panel-padding + 5; //有「间隔控件」代替
 
         .more-position-bottom {
             text-align: center;
-            margin-top: $panel-padding;
+            margin: $panel-padding 0;
 
             @if ($more-position == right) {
                 display: none;
@@ -550,12 +550,10 @@ section {
                 font-size: $content-summary-font-size;
             }
 
-            .summary-fix {
+            .summary-fixed {
                 @extend %summary;
-                // height: 66px;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
-                -webkit-line-clamp: 3;
                 overflow: hidden;
             }
 

@@ -1,26 +1,160 @@
 @import "cpn";
 
-/////////////////////////////.pic-list-30  照片墙
+@mixin titleLine($line, $fontSize: 1.8rem) {
+    .title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+        overflow: hidden;
+        font-size: $fontSize;
+    }
+}
+
+@mixin titleHide() {
+    .title {
+        display: none;
+    }
+}
+
+@mixin summaryLine($line, $height: auto) {
+    .summary-fluid, .summary-fixed {
+        -webkit-line-clamp: $line;
+        height: $height;
+    }
+}
+
+@mixin summaryHide() {
+    .summary-fluid, .summary-fixed {
+        display: none;
+    }
+}
+///////////////////////////// 瀑布流 start
+
+.f-12, .c-12 {
+    .waterfall {
+        &.col-3,
+        &.col-5,
+        &.col-2 {
+            @include summaryLine(3)
+        }
+    }
+}
+
+.c-3 {
+    .waterfall {
+        @include summaryLine(3)
+       
+        &.col-4 {
+             @media screen and(min-width: 992px) {
+                @include titleLine(1, 1.2rem)
+                @include summaryHide()
+            }
+        }
+
+        &.col-3,
+        &.col-5,
+        &.col-2 {
+            @media screen and(min-width: 992px) {
+                .content {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+.c-9 {
+    .waterfall {
+         @media screen and(min-width: 992px) {
+            &.col-4,
+            &.col-3,
+            &.col-5,
+            &.col-2 {
+                @include summaryLine(3)
+            }
+         }
+    }
+}
+
+.c-6 {
+    .waterfall {
+         @media screen and(min-width: 992px) {
+
+            &.col-6,
+            &.col-4,
+            &.col-3,
+            &.col-5,
+            &.col-2 {
+                @include summaryLine(3)
+            }
+         }
+    }
+}
+
+.c-4 {
+    .waterfall {
+
+        @include summaryLine(3) //
+
+         @media screen and(min-width: 992px) {
+             
+            &.col-5,
+            &.col-2 {
+                @include titleLine(1, 1.2rem)
+                @include summaryHide()
+            }
+           
+         }
+
+         @media screen and(max-width: 1200px) and (min-width: 992px) {
+            
+            &.col-3,
+            &.col-5,
+            &.col-2 {
+                @include titleLine(1, 1.2rem)
+                @include summaryHide()
+            }
+         }
+    }
+}
+
+
+ //移动端样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 { //2. 固定手机端样式
+    
+
+    .waterfall {
+        @include titleLine(1)
+
+        //mobile 6
+        @media screen and(max-width: 768px) {
+            .content-box .content {
+                @include summaryLine(3) //
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-device-width : 350px) {
+            .content-box .content {
+                @include summaryLine(3)
+            }
+        }
+    }
+        
+}
+
+///////////////////////////// 瀑布流 end
+
+/////////////////////////////.pic-list-30  照片墙 start
 .f-12, 
 .c-12 {
      .pic-list-30 {
 
         @mixin textOverflow() {
             .content-box .content {
-                .title {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 3;
-                        overflow: hidden;
-                    }
-
-
-                .summary-fluid {
-                   display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-                }
+                @include titleLine(3)
+                @include summaryLine(3)
             }
         }
 
@@ -41,40 +175,19 @@
         @media (min-width: 992px) {
             .col-md-5.even, .col-md-5.odd,
             .col-md-2.even, .col-md-2.odd { //5,6列不显示描述
-               
 
                 .content-box .content {
-                    // transform: translateY(-40%);
-                    .summary-fluid {
-                        display: none;
-                    }
+                    @include summaryHide()
                 }
             }
 
             .col-md-3.even, .col-md-3.odd {//4列
                 .content-box .content {
-                    // transform: translateY(-40%);
-
-                    .title {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                    }
-
-
-                    .summary-fluid {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 3;
-                        overflow: hidden;
-                    }
+                    @include titleLine(1)
+                    @include summaryLine(3)
                 }
             }
-
         }
-
-
          
     }
 
@@ -83,28 +196,8 @@
      
     .pic-list-30 {
 
-         @mixin rightArea() {
-            .content-box .content {
-                .title {
-                    font-size: 1.6rem;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
-                    overflow: hidden;
-                }
-
-
-                .summary-fluid {
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-                }
-            }
-        }
-
-
-        @include rightArea()
+        @include titleLine(1, 1.6rem)
+        @include summaryLine(3)
 
 
         @media (min-width: 992px) {
@@ -114,56 +207,23 @@
             .col-md-5.even, .col-md-5.odd, 
             .col-md-2.even, .col-md-2.odd {
                 .content-box .content {
-                    padding: 0;
-                    .title {
-                        font-size: 1.2rem;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                    }
-
-
-                    .summary-fluid {
-                      display: none;
-                    }
+                    padding: .2rem;
+                    @include titleLine(1, 1.2rem)
+                    @include summaryHide()
+                   
                 }
             }
         }
-
-
 
     }   
     
 }
 
 .c-4 {
-     
     .pic-list-30 {
 
-         @mixin rightArea() {
-            .content-box .content {
-                .title {
-                    font-size: 1.6rem;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
-                    overflow: hidden;
-                }
-
-
-                .summary-fluid {
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-                }
-            }
-        }
-
-
-        @include rightArea()
-
+        @include titleLine(1, 1.6rem)
+        @include summaryLine(3)
 
         @media (min-width: 992px) {
             .col-md-4.even, .col-md-4.odd,
@@ -172,45 +232,20 @@
             .col-md-2.even, .col-md-2.odd {
                 .content-box .content {
                     padding: 0;
-                    .title {
-                        font-size: 1.2rem;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                    }
 
-
-                    .summary-fluid {
-                      display: none;
-                    }
+                    @include titleLine(1, 1.2rem)
+                    @include summaryHide()
                 }
             }
 
 
             .col-md-6.even, .col-md-6.odd {
                 .content-box .content {
-                    .title {
-                        font-size: 1.6rem;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                    }
-
-
-                    .summary-fluid {
-                      display: -webkit-box;
-                      -webkit-box-orient: vertical;
-                      -webkit-line-clamp: 1;
-                      overflow: hidden;
-                    }
+                    @include titleLine(1, 1.6rem)
+                    @include summaryLine(1)
                 }
             }
         }
-
-
-
     }   
     
 }
@@ -220,20 +255,8 @@
 
         @mixin textOverflow() {
             .content-box .content {
-                .title {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 3;
-                        overflow: hidden;
-                    }
-
-
-                .summary-fluid {
-                   display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-                }
+                @include titleLine(3)
+                @include summaryLine(3)
             }
         }
 
@@ -254,67 +277,29 @@
         @media (min-width: 992px) {
             .col-md-5.even, .col-md-5.odd,
             .col-md-2.even, .col-md-2.odd { //5,6列不显示描述
-               
-
                 .content-box .content {
-                    .title {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                    }
-
-                    .summary-fluid {
-                        display: none;
-                    }
+                    @include titleLine(1)
+                    @include summaryHide()
                 }
             }
 
             .col-md-4.even, .col-md-4.odd {//3列
                 .content-box .content {
 
-                    .title {
-                        font-size: 1.6rem;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                    }
-
-
-                    .summary-fluid {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 3;
-                        overflow: hidden;
-                    }
+                   @include titleLine(1, 1.6rem)
+                   @include summaryLine(3)
                 }
             }
 
             .col-md-3.even, .col-md-3.odd {//4列
                 .content-box .content {
 
-                    .title {
-                        font-size: 1.6rem;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                    }
-
-
-                    .summary-fluid {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 2;
-                        overflow: hidden;
-                    }
+                    @include titleLine(1, 1.6rem)
+                    @include summaryLine(2)
                 }
             }
 
         }
-
-
          
     }
 
@@ -324,99 +309,358 @@
      .pic-list-30 {
 
         @media screen and (max-width: 992px) {
-            .title {
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 3;
-                overflow: hidden;
-            }
-
-            .summary-fluid {
-                   display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-            }
+            @include titleLine(3)
+            @include summaryLine(3)
         }
 
         @media screen and (min-width: 992px) {
             .col-md-12.even, .col-md-12.odd {
-            .title {
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 3;
-                overflow: hidden;
-            }
-
-            .summary-fluid {
-                   display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-            }
+            @include titleLine(3)
+            @include summaryLine(3)
         } 
 
         
         .col-md-6.even, .col-md-6.odd {
-             .content-box .content {
-                .title {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                    }
-
-
-                .summary-fluid {
-                   display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-                }
+            .content-box .content {
+                @include titleLine(1)
+                @include summaryLine(3)
             }
         }
        
 
         .col-md-4.even, .col-md-4.odd {
-            .title {
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 1;
-                overflow: hidden;
-            }
-
-            .summary-fluid {
-                   display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2;
-                    overflow: hidden;
-                }
+            @include titleLine(1)
+            @include summaryLine(2)
         }   
 
         
         .col-md-3.even, .col-md-3.odd,
         .col-md-5.even, .col-md-5.odd,
         .col-md-2.even, .col-md-2.odd {
-            .title {
-                font-size: 1.2rem;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 1;
-                overflow: hidden;
-            }
-
-            .summary-fluid {
-                 display: none;
-            }
+            @include titleLine(1, 1.2rem)
+            @include summaryHide()
         } 
 
-
         }
-
-
-         
          
     }
 }
 
 /////////////////////////////.pic-list-30 end
+
+
+
+/////////////////////////////.pic-list-29 图片库
+
+.f-12, 
+.c-12 {
+     .pic-list-29 {
+
+
+
+     }
+ }
+
+/////////////////////////////.pic-list-29 图片库 end
+
+/////////////////////////////.pic-list-1 列表样式-1
+
+@mixin titleCenter() {
+        .wrapper .content {
+            padding: .2rem;
+
+            .title {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+        }
+}
+
+
+.f-12, 
+.c-12 {
+     .pic-list-1 {
+        .content-box .content {
+            @include summaryLine(3) //1. 总体定基调
+        }
+
+        //PC
+        // @media screen and(min-width: 1200px) {
+        //     .col-md-2 {
+        //         .content-box .content {
+        //                @include titleLine(1)
+        //             }
+        //     }
+
+        // }
+        //ipad pro
+        @media screen and (min-width: 992px) {
+
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                     @include titleLine(1)
+                }
+            }
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+                @include titleLine(1)
+            }
+        }
+
+     }
+ }
+
+ .c-12 {
+     .pic-list-1 {
+        //PC
+        @media screen and(min-width: 1200px) {
+                .col-md-3 {
+                    .content-box .content {
+                        @include titleLine(1)
+                    }
+                }
+
+               .col-md-5,
+               .col-md-2 {
+                    .content-box .content {
+                        @include titleLine(1)
+                    }
+                }
+               
+        }
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+                .col-md-2 {
+                    .content-box .content {
+                        @include titleLine(1)
+                        @include summaryLine(2)  
+                    }
+                }
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            
+        }
+
+     }
+ }
+
+ .c-9 {
+     .pic-list-1 {
+        
+            @include titleLine(1) //1. 总体定基调
+            @include summaryLine(3) //1. 总体定基调
+
+        //PC
+        @media screen and(min-width: 1200px) {
+            .col-md-12, .col-md-6 {
+                @include titleLine(10)
+            }
+
+            .col-md-2 {
+                @include summaryLine(2) //
+            }
+               
+        }
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-12, .col-md-6 {
+                @include titleLine(10)
+            }
+
+            .col-md-4, .col-md-3 {
+                @include summaryLine(3)
+            }
+
+            .col-md-5 {
+                @include summaryLine(2)
+            }
+            .col-md-2 {
+                @include summaryLine(1)
+            }
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            
+        }
+
+     }
+ }
+
+  .c-3 {
+     .pic-list-1 {
+        
+        @include titleLine(1) //1. 总体定基调
+        
+        //ipad pro
+        @media screen and (min-width: 992px) {
+           .col-md-12 {
+                @include summaryLine(3) //
+            }
+
+            .col-md-6 {
+                @include summaryLine(1) //
+            }
+
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                @include summaryHide() //
+                @include titleLine(1, 1.2rem) //
+                @include titleCenter()
+            }
+        }
+
+     }
+ }
+
+  .c-6 {
+     .pic-list-1 {
+        
+            @include titleLine(1) //1. 总体定基调
+            @include summaryLine(3) //1. 总体定基调
+
+        //PC
+        @media screen and(min-width: 1200px) {
+            .col-md-12 {
+                @include titleLine(10)
+            }
+
+            .col-md-6 {
+                @include titleLine(3) 
+            }
+            
+            .col-md-3 {
+                @include summaryLine(2) 
+            }
+
+            .col-md-5 {
+                @include summaryLine(1) 
+            }
+
+            .col-md-2 {
+                @include summaryHide() 
+            }
+               
+        }
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-12{
+                @include titleLine(10)
+            }
+
+            .col-md-4 {
+                @include summaryLine(2)
+            }
+
+            .col-md-3 {
+                @include summaryLine(1)
+            }
+
+            .col-md-5, .col-md-2 {
+                @include summaryHide()
+                @include titleCenter()
+            }
+            
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            
+        }
+
+     }
+ }
+
+.c-4 {
+ .pic-list-1 {
+    
+    @include titleLine(1) //1. 总体定基调
+
+    //PC
+    @media screen and(min-width: 1200px) {
+       .col-md-12 {
+            @include titleLine(10)
+            @include summaryLine(3) //
+        }
+
+        .col-md-6 {
+            @include summaryLine(3) //
+        }
+    
+        .col-md-4 {
+           @include summaryLine(1) //   
+        }
+        
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+            @include summaryHide() //
+            @include titleLine(1, 1.2rem) //
+            @include titleCenter()
+        }
+    }
+
+
+
+    
+    //ipad pro
+    @media screen and(max-width: 1200px) and (min-width: 992px) {
+       .col-md-12 {
+            @include titleLine(3)
+            @include summaryLine(3) //
+        }
+
+        .col-md-6 {
+            @include summaryLine(2) //
+        }
+
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+            @include summaryHide() //
+            @include titleLine(1, 1.2rem) //
+            @include titleCenter()
+        }
+    }
+
+ }
+}
+
+ //移动端样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 { //2. 固定手机端样式
+    .pic-list-1 {
+        //mobile 6
+        @media screen and(max-width: 768px) {
+            .content-box .content {
+                @include titleLine(1)
+                @include summaryLine(3) //
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-device-width : 350px) {
+            .content-box .content {
+                @include titleLine(1)
+                @include summaryLine(2)
+            }
+                    
+        }
+    }
+        
+}
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
