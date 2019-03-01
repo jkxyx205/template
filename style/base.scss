@@ -301,6 +301,7 @@ section {
         text-align: $panel-title-position;
 
         .label {
+            // width: 100%; // 有问题
             position: relative;
             display: inline-block;
             background-color: $panel-title-label-bgColor;

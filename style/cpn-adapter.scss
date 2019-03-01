@@ -24,10 +24,17 @@
 }
 
 @mixin summaryHide() {
-    .summary-fluid, .summary-fixed {
+    .summary-fluid, .summary-fixed, .summary-line {
         display: none;
     }
 }
+
+@mixin contentHide() {
+    .content {
+        display: none;
+    }
+}
+
 ///////////////////////////// 瀑布流 start
 
 .f-12, .c-12 {
@@ -638,7 +645,7 @@
  }
 }
 
- //移动端样式
+ //共性样式
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 { //2. 固定手机端样式
     .pic-list-1 {
         //mobile 6
@@ -661,6 +668,680 @@
     }
         
 }
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+/////////////////////////////.pic-list-3 列表样式-3 start
+
+
+  //共性样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 { //2. 固定手机端样式
+    .pic-list-3 {
+        @include titleLine(1)
+        @include summaryLine(3) //
+
+        //mobile 6
+        @media screen and(max-width: 768px) {
+            .content-box .content {
+                @include summaryLine(2) //
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-device-width : 350px) {
+            .content-box .content {
+                @include summaryLine(1)
+            }
+                    
+        }
+    }
+        
+}
+
+ .f-12, .c-12 {
+     .pic-list-3 {
+
+        //PC
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6 {
+                @include summaryLine(10) //
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryLine(3) //
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLine(2) //
+            }
+
+               
+        }
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-3 {
+                @include summaryLine(2)
+            }
+
+        }
+
+     }
+ }
+
+.c-12 {
+     .pic-list-3 {
+       
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-2 {
+                @include summaryLine(1)
+            }
+
+        }
+
+     }
+ }
+
+ .c-3 {
+     .pic-list-3 {
+      
+       
+        //pc && ipad pro
+        @media screen and (min-width: 992px) {
+            .col-md-12 {
+                @include summaryLine(2)
+            }
+
+            .col-md-6 {
+                @include titleLine(1, 1.2rem)
+                @include summaryHide()
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryHide()
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include contentHide()
+            }
+
+        }
+
+     }
+ }
+
+ .c-9 {
+    .pic-list-3 {
+        //pc && ipad pro
+        @media screen and (min-width: 992px) {
+            .col-md-12 {
+                @include summaryLine(10)
+            }
+
+            .col-md-6 {
+                @include summaryLine(3)
+            }
+
+            .col-md-4 {
+                @include summaryLine(2)
+            }
+
+            .col-md-3,
+            .col-md-5 {
+                @include titleLine(1, 1.2rem)
+                @include summaryLine(1)
+            }
+
+            .col-md-2 {
+                @include titleLine(1, 1.2rem)
+                @include summaryHide()
+            }
+
+        }
+    }
+ }
+
+.c-6 {
+    .pic-list-3 {
+        //pc && ipad pro
+        @media screen and (min-width: 992px) {
+            .col-md-12 {
+                @include summaryLine(10)
+            }
+
+            .col-md-6,
+            .col-md-4 {
+                @include summaryLine(2)
+            }
+
+            .col-md-3 {
+                @include summaryLine(1)
+            }
+
+            .col-md-2,
+            .col-md-5 {
+                @include summaryHide()
+            }
+
+        }
+
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-4 {
+                @include summaryLine(1)
+            }
+
+            .col-md-3,
+            .col-md-5 {
+                @include summaryHide()
+            }
+
+        }
+
+    }
+ }
+
+
+.c-4 {
+    .pic-list-3 {
+        //pc && ipad pro
+        @media screen and (min-width: 992px) {
+            .col-md-12,
+            .col-md-6 {
+                @include summaryLine(2)
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryHide()
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include contentHide()
+            }
+
+        }
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-6 {
+                @include summaryLine(1)
+            }
+
+            .col-md-4 {
+                @include summaryHide()
+            }
+
+        }
+
+    }
+ }
+
+
+
+
+
+
+
+ /////////////////////////////.pic-list-3 列表样式-3 end
+
+
+/////////////////////////////.pic-list-27 列表样式-6 start
+ //通用样式
+// .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+//     .pic-list-1 {
+//         //mobile 6
+//         @media screen and(max-width: 768px) {
+//             .content-box .content {
+//                 @include titleLine(1)
+//                 @include summaryLine(3)
+//             }
+//         }
+
+
+//         //iphone 5
+//         @media screen and (max-device-width : 350px) {
+//             .content-box .content {
+//                 @include titleLine(1)
+//                 @include summaryLine(2)
+//             }
+                    
+//         }
+//     }
+        
+// }
+
+
+@mixin smallContent() {
+    .wrapper .content {
+        padding: 0 .2rem;
+        .title {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+ .c-3 {
+     .pic-list-27 {
+        
+        //ipad pro & PC
+        @media screen and (min-width: 992px) {
+
+            .col-md-4,
+            .col-md-3,
+            .col-md-5 {
+                @include summaryHide()
+            }
+
+            .col-md-5 {
+                @include smallContent()
+                
+            }
+
+            .col-md-2 {
+                @include contentHide()
+            }
+        }
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-6 {
+                @include summaryHide()
+            }
+        }
+
+     }
+ }
+
+  .c-6 {
+     .pic-list-27 {
+        
+        //ipad pro & PC
+        @media screen and (min-width: 992px) {
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-5,
+            .col-md-2 {
+                @include smallContent()
+                @include summaryHide()
+            }
+        }
+
+     }
+ }
+
+.c-4 {
+     .pic-list-27 {
+        
+        //ipad pro & PC
+        @media screen and (min-width: 992px) {
+
+            .col-md-3 {
+               .wrapper .content {
+                    padding: .2rem;
+                    .title {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include smallContent()
+                @include summaryHide()
+            }
+        }
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            
+            .col-md-4 {
+               .wrapper .content {
+                    padding: .2rem;
+                    .title {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            .col-md-3 {
+                // @include smallContent()
+                @include summaryHide()
+            }
+        }
+
+     }
+ }
+
+/////////////////////////////.pic-list-27 列表样式-6 end
+
+
+ /////////////////////////////.pic-list-2 列表样式-2 start
+.f-12, .c-12 {
+     .pic-list-2 {
+
+        //PC & ipad pros
+        @media screen and(min-width: 992px) {
+           .col-md-12 {
+                .wrapper .content {
+                    padding: 2.4rem 1rem;
+                    bottom: -50px;
+                }
+
+                .wrapper:hover {
+                    .content {
+                        bottom: 0;
+                    }
+                }
+           }
+               
+        }
+
+     }
+ }
+
+ .c-3, .c-4 {
+     .pic-list-2 {
+        //PC & ipad pros
+        @media screen and(min-width: 992px) {
+            .col-md-2 {
+                .content-parent {
+                    display: none;
+                }
+           }
+               
+        }
+     }
+ }
+
+
+ /////////////////////////////.pic-list-2 列表样式-2 end
+
+
+
+  /////////////////////////////.pic-list-6 列表样式-4 start
+  .f-12, .c-12 {
+     .pic-list-6 {
+        
+        //PC
+        @media screen and(min-width: 992px) {
+            .col-md-12, .col-md-6, .col-md-4 {
+                 .wrapper .content {
+                    padding: 2.4rem 1rem;
+                }
+            }
+        }
+
+
+     }
+ }
+
+.c-3 {
+     .pic-list-6 {
+        
+        //PC
+        @media screen and(min-width: 992px) {
+            .col-md-4,
+            .col-md-3,
+            .col-md-5 {
+               @include summaryHide()
+            }
+
+            .col-md-2 {
+               @include contentHide()
+            }
+        }
+     }
+ }
+
+ .c-6 {
+     .pic-list-6 {
+        
+        //PC
+        @media screen and(min-width: 992px) {
+            .col-md-4,
+            .col-md-3,
+            .col-md-5 {
+               @include summaryHide()
+            }
+
+            .col-md-2 {
+               @include contentHide()
+            }
+        }
+     }
+ }
+
+ /////////////////////////////.pic-list-6 列表样式-4 end
+
+
+
+
+  /////////////////////////////.pic-list-5 列表样式-5 start
+
+  .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-5 {
+        //mobile 6
+        @media screen and(max-width: 768px) {
+            .content-box .content {
+                padding: .8rem 1rem;
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-device-width : 350px) {
+            .content-box .content {
+                padding: .8em 1rem;
+            }
+                    
+        }
+    }
+        
+}
+
+
+.f-12, .c-12 {
+     .pic-list-5 {
+        
+        //PC & pad pro
+        @media screen and(min-width: 992px) {
+            .col-md-3,
+            .col-md-5, 
+            .col-md-2 {
+                 .wrapper .content {
+                    padding: .8rem 1rem;
+                }
+            }
+        }
+
+
+     }
+ }
+
+.c-3 {
+    .pic-list-5 {
+
+     @media screen and(min-width: 992px) {
+         .col-md-12,
+         .col-md-6,
+         .col-md-4,
+         .col-md-3,
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                .title {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .wrapper .content {
+                    padding: .8rem 1rem;
+            }
+         }
+
+     }
+    }
+ }
+
+ .c-9 {
+    .pic-list-5 {
+
+     @media screen and(min-width: 992px) {
+
+        .col-md-4 {
+            .content {
+                .title {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+         .col-md-3,
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                .title {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .wrapper .content {
+                    padding: .8rem 1rem;
+            }
+         }
+     }
+    }
+ }
+
+.c-6 {
+    .pic-list-5 {
+
+     @media screen and(min-width: 992px) {
+
+        .col-md-6 {
+            .content {
+                .title {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .wrapper .content {
+                    padding: .8rem 1rem;
+            }
+        }
+         
+         
+         .col-md-4,
+         .col-md-3,
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                .title {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .wrapper .content {
+                    padding: .8rem 1rem;
+            }
+         }
+     }
+    }
+ }
+
+.c-4 {
+    .pic-list-5 {
+
+     @media screen and(min-width: 992px) {
+         
+         .col-md-6,
+         .col-md-4,
+         .col-md-3,
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                .title {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .wrapper .content {
+                    padding: .8rem 1rem;
+            }
+         }
+     }
+    }
+ }
+
+
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
+ /////////////////////////////.pic-list-1 列表样式-1 end
+
+
+  /////////////////////////////.pic-list-1 列表样式-1 start
  /////////////////////////////.pic-list-1 列表样式-1 end
 
 

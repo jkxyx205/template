@@ -65,7 +65,7 @@ a {
 .content-box { 
     .cover {
         .title {
-            padding: .5rem 0;
+            padding: .5rem;
         }
     }
 
@@ -74,7 +74,7 @@ a {
         padding: $content-box-padding;
 
         .summary-fluid, .summary-fixed, .summary-line {
-            margin-top: 8px;
+            margin-top: .8rem;
         }
     }
     
@@ -440,7 +440,7 @@ section .article-list-5 .content-box {
             }
 
          .content {
-            padding: 15px 10px;
+            padding: 1.6rem 1rem;
          }
         }
     // }
@@ -478,6 +478,11 @@ section .article-list-5 .content-box {
 .pic-list-2 {
     @include pic-area($border-color: $split-color);
     .wrapper {
+
+        .content-parent {
+            height: 92px;
+        }
+
         .content {
            position: absolute;
            left: 0;
@@ -485,6 +490,10 @@ section .article-list-5 .content-box {
             background: #fff;
             bottom: -37px;
             transition: all 0.36s ease 0s;
+
+            .article-bar {
+                margin-top: 2rem;
+            }
         }
 
         &:after {
@@ -541,9 +550,9 @@ section .article-list-5 .content-box {
                 }
             }
 
-            .summary-line {
+            .summary-fixed {
                 color: #fff;
-                margin-top: 20px;
+                // margin-top: 1.6rem;
             }
            
         }
@@ -798,7 +807,7 @@ section .article-list-5 .content-box {
 
         .content {
             transition: all 0.36s ease 0s;
-            padding: 10px;
+            // padding: 10px;
 
             // .summary-line {
             //     margin-top: 5px;
@@ -1794,7 +1803,7 @@ section .article-list-5 .content-box {
 
 
             }
-            .title>span {
+            .title>span, .summary-line {
                 color: #fff;
             }
             
