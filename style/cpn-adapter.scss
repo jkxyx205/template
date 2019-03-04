@@ -1158,6 +1158,7 @@
         
         //PC & pad pro
         @media screen and(min-width: 992px) {
+            .col-md-4,
             .col-md-3,
             .col-md-5, 
             .col-md-2 {
@@ -1175,8 +1176,30 @@
     .pic-list-5 {
 
      @media screen and(min-width: 992px) {
-         .col-md-12,
-         .col-md-6,
+        .col-md-12 {
+            .content {
+                .title {
+                    font-size: 1.6rem; // 1.8rem也可
+                }
+            }
+
+           .wrapper .content {
+                    padding: .8rem 1rem;
+            } 
+        }
+         
+         .col-md-6 {
+            .content {
+                .title {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .wrapper .content {
+                    padding: .8rem 1rem;
+            }
+         }
+
          .col-md-4,
          .col-md-3,
          .col-md-5,
@@ -1201,15 +1224,26 @@
 
      @media screen and(min-width: 992px) {
 
+
+        .col-md-6,
         .col-md-4 {
-            .content {
-                .title {
-                    font-size: 1.6rem;
-                }
+            .wrapper .content {
+                    padding: .8rem 1rem;
             }
         }
 
-         .col-md-3,
+         .col-md-3 {
+            .content {
+                .title {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .wrapper .content {
+                    padding: .8rem 1rem;
+            }
+         }
+
          .col-md-5,
          .col-md-2 {
             .content {
