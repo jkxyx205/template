@@ -521,7 +521,7 @@ section {
             background-color: $content-bgColor;
             overflow: hidden;
             .title {
-                font-size: $content-title-font-size;
+                // font-size: $content-title-font-size;
                 background-color: $content-title-bgColor;
                 color: $content-title-color;               
 
@@ -548,7 +548,7 @@ section {
             %summary {
                 color: $content-summary-color;
                 background-color: $content-summary-bgColor;
-                font-size: $content-summary-font-size;
+                // font-size: $content-summary-font-size;
             }
 
             .summary-fixed {
@@ -556,6 +556,7 @@ section {
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .summary-fluid {

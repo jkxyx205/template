@@ -60,24 +60,21 @@ a {
 }
 
 
-/////////////////////////////////风格//////////////////////////////////////////
-
 .content-box { 
-    .cover {
-        .title {
-            padding: .5rem;
-        }
-    }
+    // .cover {
+    //     .title {
+    //         padding: .5rem;
+    //     }
+    // }
 
     .content {
         line-height: 1.5;
-        padding: $content-box-padding;
+        // padding: $content-box-padding;
 
         .summary-fluid, .summary-fixed, .summary-line {
             margin-top: .8rem;
         }
     }
-    
 }
 
 /////////////////////////////////轮播图//////////////////////////////////////////
@@ -439,9 +436,9 @@ section .article-list-5 .content-box {
                 border: 1px solid $border-color;
             }
 
-         .content {
-            padding: 1.6rem 1rem;
-         }
+         // .content {
+         //    padding: 1.6rem 1rem;
+         // }
         }
     // }
 }
@@ -1595,19 +1592,18 @@ section .article-list-5 .content-box {
                     overflow: hidden;
                 }
 
-                h1 {
-                    font-size: $content-title-font-size;
-                    overflow: hidden;
-                    white-space: nowrap;
+                // h1 {
+                //     font-size: $content-title-font-size;
+                //     overflow: hidden;
+                //     white-space: nowrap;
                      
+                // }
+                .title {
+                    position: static;
                 }
-                .summary-fixed {
-                    color: #fff;
 
-                    @media screen and (max-width: 992px) {
-                        padding: 5px 0;     
-                    }
-                    
+                .summary-fixed, .title {
+                    color: #fff;
                 }
             }
         }
