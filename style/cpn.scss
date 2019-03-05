@@ -71,7 +71,7 @@ a {
         line-height: 1.5;
         // padding: $content-box-padding;
 
-        .summary-fluid, .summary-fixed, .summary-line {
+        .summary-fixed, .summary-line {
             margin-top: .8rem;
         }
     }
@@ -263,7 +263,7 @@ $pic-title-top:10px;
             }
         }
 
-        .summary-fixed, .summary-fluid {
+        .summary-fixed {
             padding-left: 0;
         }
     }
@@ -315,7 +315,7 @@ $pic-title-top:10px;
 .article-list-1, .article-list-2 {
     .content-box {
 
-        .summary-fluid, .summary-fixed {
+        .summary-fixed {
             margin-right: $panel-padding/2;
         }
         
@@ -408,7 +408,7 @@ section .article-list-5 .content-box {
 /////////////////////////////////article//////////////////////////////////////////
 .article-1 {
     .content-box {
-        .summary-fixed, .summary-fluid {
+        .summary-fixed {
             position: static;
         }
     }
@@ -537,7 +537,7 @@ section .article-list-5 .content-box {
             // padding: 25px;
             // transition: all 0.36s ease 0s;
 
-            padding: 15px 30px;
+            // padding: 15px 30px;
 
             .title {
                 // margin-top: 10px;
@@ -986,9 +986,15 @@ section .article-list-5 .content-box {
                 text-align: center;
 
                 .more {
+                    display: block;
                     font-size: $content-summary-font-size;
                     color: $title-color;
                     font-weight: bold;
+                    margin-top: 1.6rem;
+
+                    i {
+                        margin-right: .6rem;
+                    }
                 }
         }
 
@@ -1026,13 +1032,19 @@ section .article-list-5 .content-box {
         .content {
             padding: 0 $panel-padding/2 0 0;
 
+            .title {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
             .summary-fixed {
                 margin-top: 10px;
             }
 
-            .title>span, .title>a {
-                white-space: normal;
-            }
+            // .title>span, .title>a {
+            //     white-space: normal;
+            // }
             
         }
 
@@ -1113,10 +1125,11 @@ section .article-list-5 .content-box {
         // padding-left: $panel-padding/2;
         // padding-right: $panel-padding/2;
         border-left: 1px solid $split-color;
-        border-top: 1px solid $split-color;
+        
 
         &>div {
             padding: 0;
+            border-top: 1px solid $split-color;
         }
     }
 
@@ -1137,6 +1150,11 @@ section .article-list-5 .content-box {
         .content {
             text-align: center;
             // padding: 10px;
+
+            .summary-line {
+                padding: 0 20% 20% 20%;
+            }
+
             .content-footer {
                 margin-top: 10px;
             }
@@ -1164,10 +1182,6 @@ section .article-list-5 .content-box {
             transition: all 0.5s ease 0s;
             padding: 15px;
             .content-footer {
-                margin-top: 10px;
-            }
-
-            .btn {
                 margin-top: 10px;
             }
 
@@ -1706,7 +1720,7 @@ section .article-list-5 .content-box {
         .content {
             padding: 15px 15px 0 0;
 
-            .summary-fluid {
+            .summary-fixed {
                 position: absolute;
                 margin-right: 10px;
             }
@@ -1730,7 +1744,7 @@ section .article-list-5 .content-box {
         .content {
             padding: 10px 10px 0 0;
 
-            .summary-fluid {
+            .summary-fixed {
                 position: absolute;
                 margin-right: 10px;
             }
@@ -1836,14 +1850,7 @@ section .article-list-5 .content-box {
             }
 
             padding: 5px 0;
-            .title>a {
-                // color: #fff;
-            }
-
-            .summary-fluid {
-                // color: #fff;
-            }
-
+            
         }
         
         &:hover {

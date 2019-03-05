@@ -55,6 +55,10 @@ html {
         background-color: transparent;
         font-size: 1.2rem;
 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
         &:hover {
             background: $main-color;
             border-color: $main-color;
@@ -553,14 +557,11 @@ section {
 
             .summary-fixed {
                 @extend %summary;
-                display: -webkit-box;
                 -webkit-box-orient: vertical;
+                word-wrap: break-word;
                 overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .summary-fluid {
-                 @extend %summary;
+                white-space: normal;
+                word-break: break-all;
             }
 
             .summary-line {
