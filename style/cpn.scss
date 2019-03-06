@@ -1441,6 +1441,7 @@ section .article-list-5 .content-box {
 
         .content {
             @extend %position-center;
+            width: 100%;
 
             .title {
                 position: static;
@@ -1528,7 +1529,7 @@ section .article-list-5 .content-box {
 
 
 .pic-list-22 {
-    @include pic-area($background-color: #f8f8f8, $padding: 30px);
+    @include pic-area($background-color: #f8f8f8);
     .wrapper {
 
         .cover {
@@ -1536,10 +1537,8 @@ section .article-list-5 .content-box {
         }
 
         .content {
-            padding: 15px 0;
             .article-bar {
-                font-size: $content-title-font-size + 0.6;
-                margin-bottom: 10px;
+                margin-bottom: 1rem;
             }
 
             .summary-fixed {
@@ -1549,7 +1548,7 @@ section .article-list-5 .content-box {
         }
 
         .btn {
-            margin-top: 10px;
+            margin-top: 2.4rem;
             opacity: 0;
             transition: all 0.3s ease 0.1s;
         }
@@ -1557,7 +1556,7 @@ section .article-list-5 .content-box {
         &:hover {
            .summary-fixed {
                 border-left-width: 1px;
-                padding-left: 30px;
+                padding-left: 2rem;
            }
            .btn {
             opacity: 1;
@@ -1640,8 +1639,23 @@ section .article-list-5 .content-box {
     .wrapper {
 
         .cover {
+
+             .tip-content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .tip-content .title {
+                margin: 0;
+                background-color: #505050;
+            }
+            
+
             &:hover {
-                .title {
+                .tip-content .title {
                     display: none;
                 }
 
@@ -1653,8 +1667,6 @@ section .article-list-5 .content-box {
                     opacity: 0.6;
                     filter: alpha(opacity=100);
                 }
-
-
             } 
 
             .black-mask {
@@ -1684,12 +1696,8 @@ section .article-list-5 .content-box {
                     overflow: hidden;
                 }
 
-                h1 {
-                    font-size: $content-title-font-size;
-                    overflow: hidden;
-                    white-space: nowrap;
-                     
-                }
+
+
                 .summary-fixed {
                     color: #fff; 
                 }
@@ -1698,9 +1706,12 @@ section .article-list-5 .content-box {
 
         .content {
             text-align: center;
-        }
 
-       
+            .title {
+                position: static;
+                color: #fff;
+            }
+        }
 
     }
 }
@@ -1730,33 +1741,13 @@ section .article-list-5 .content-box {
 }
 
 .pic-list-26 {
-    @include pic-area($padding: 10px);
+    @include pic-area();
     .wrapper {
         .row {
             overflow: hidden;
         }
         border: 1px solid $split-color;
 
-        .cover {
-            
-        }
-
-        .content {
-            padding: 10px 10px 0 0;
-
-            .summary-fixed {
-                position: absolute;
-                margin-right: 10px;
-            }
-
-            .btn {
-                margin-top: 10px;
-
-                @media (max-width: 992px) { 
-                   margin-bottom: 10px;
-                }
-            }
-        }
 
     }
 }
@@ -1840,13 +1831,13 @@ section .article-list-5 .content-box {
                 bottom: 0;
                 color: #fff;
                 background: $main-color;
-                padding: 5px;
+                padding: .5rem .8rem;
                 opacity: 0;
             }
         }
         .content {
             .article-bar {
-                margin-top: 10px;
+                margin-top: .8rem;
             }
 
             padding: 5px 0;
