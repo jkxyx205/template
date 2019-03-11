@@ -382,6 +382,13 @@ section {
 
 
     .swiper-container {
+
+        .swiper-wrapper {
+            &>div {
+                padding: 0; //必须
+            }
+        }
+
         .panel-body {
             padding: 0;
         }

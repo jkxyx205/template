@@ -82,16 +82,16 @@ a {
 .swiper-panel {
     .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
         // bottom: $panel-padding + 10;
-        bottom: 0;
+        // bottom: 0;
     }
 }
 
 .swiper-container {
     width: 100%;
     
-    .swiper-wrapper {
-        padding-bottom: 3rem;    
-    }
+    // .swiper-wrapper {
+    //     padding-bottom: 3rem; //
+    // }
 
     .swiper-slide {
         background-position: center; 
