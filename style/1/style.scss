@@ -23,7 +23,6 @@ html, body {
 }
 
 section .panel {
-    // margin-bottom: 50px;
 
     .panel-body {
         padding: 0;
@@ -43,10 +42,6 @@ section .panel {
     width: 30%;
     height: 4px;
     background-color: $main-color;
-
-    @media (max-width: 768px) {
-        height: 2px;
-    }
 }
 
 .panel-title  {

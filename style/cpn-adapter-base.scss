@@ -1,0 +1,1457 @@
+@mixin titleLine($line) { // 标题行数
+    .title {
+        display: -webkit-box;
+        white-space: normal;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+@mixin titleHide() {//隐藏标题
+    .title {
+        display: none;
+    }
+}
+
+@mixin summaryLine($line) { //描述行数&高度
+    .summary-fixed {
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+    }
+}
+
+@mixin summaryHide() { // 隐藏描述
+    .summary-fixed, .summary-line {
+        display: none;
+    }
+}
+
+@mixin summaryLineHeight($height) {
+    .summary-fixed {
+        height: $height;
+    }
+}
+
+@mixin contentHide() { // 隐藏标题和描述
+    .content {
+        display: none;
+    }
+}
+
+
+/////////////////////////////common style start///////////////////
+$title-font-size-big: 1.8rem;
+$title-font-size-medium: 1.6rem;
+$title-font-size-small: 1.4rem;
+$title-font-size-smallest: 1.2rem;
+
+$summary-font-size-big: 1.4rem;
+$summary-font-size-small: 1.2rem;
+
+$content-padding-big: 2.4rem 1rem;
+$content-padding-medium: 1.6rem 1rem;
+$content-padding-small: .8rem 1rem;
+$content-padding-smallest: .2rem .2rem;
+
+$summaryFixedH00: 16px;
+$summaryFixedH0: 21px;
+
+$summaryFixedH1: 41px;
+$summaryFixedH2: 38px; //36xx
+
+$summaryFixedH3: 62px;
+$summaryFixedH4: 54px;
+
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    //ipad plus
+    @media screen and(max-width: 992px) and (min-width: 768px) {
+        // .col-sm-4 { //不要写的太详细
+            
+            .content-box .content {
+                padding: $content-padding-medium;
+
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-fixed, .summary-line {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        // }
+    }
+
+    //mobile 6 
+    @media screen and(max-width: 768px) and (min-width: 640px) {
+        // .col-xs-6 {
+            .content-box .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-fixed, .summary-line {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        // }
+    }
+
+
+    //iphone 5
+    @media screen and (max-width: 640px) {
+        .content-box .content {
+            padding: $content-padding-small;
+
+            .title {
+                font-size: $title-font-size-medium;
+            }
+
+            .summary-fixed, .summary-line {
+                font-size: $summary-font-size-big;
+            }
+        }
+                
+    }
+        
+}
+
+
+.f-12, .c-12 {
+        
+    //PC & pad pro
+    @media screen and(min-width: 992px) {
+        .col-md-12,
+        .col-md-6 {
+            .content {
+                padding: $content-padding-big;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+
+
+         .col-md-4,
+         .col-md-3 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+         }
+        
+        
+        .col-md-5, 
+        .col-md-2 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+            
+        }
+    }
+
+    //ipad plus
+    @media screen and(max-width: 992px) and (min-width: 768px) {
+        .col-md-12,
+        .col-md-6 {
+            .content {
+                padding: $content-padding-big;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+
+
+         .col-md-4,
+         .col-md-3 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+         }
+        
+        
+        .col-md-5, 
+        .col-md-2 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+            
+        }
+    }
+ }
+
+.c-3 {
+
+     //PC & pad pro
+     @media screen and(min-width: 992px) {
+        .col-md-12 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+         
+         .col-md-6 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-small;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-4,
+         .col-md-3,
+         .col-md-5 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-2 {.content {
+                padding: $content-padding-smallest;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+
+         }
+
+     }
+
+     //ipad plus
+    @media screen and(max-width: 992px) and (min-width: 768px) {
+        .col-md-12 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+         
+         .col-md-6 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-small;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-4,
+         .col-md-3,
+         .col-md-5 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-2 {.content {
+                padding: $content-padding-smallest;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+
+         }
+    }
+ }
+
+ .c-9 {
+
+    @media screen and(min-width: 992px) {
+        .col-md-12 {
+            .content {
+                padding: $content-padding-medium;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+
+        .col-md-6,
+        .col-md-4 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+
+
+        
+
+        .col-md-3 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+         }
+
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+     }
+
+
+
+     //ipad plus
+    @media screen and(max-width: 992px) and (min-width: 768px) {
+        .col-md-12 {
+            .content {
+                padding: $content-padding-medium;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+
+        .col-md-6,
+        .col-md-4 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+
+
+        
+
+        .col-md-3 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+         }
+
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+    }
+ }
+
+.c-6 {
+
+     @media screen and(min-width: 992px) {
+
+        .col-md-12 {
+            .content {
+                padding: $content-padding-medium;
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+        .col-md-6 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+         
+         .col-md-4 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-small;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-3 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-small;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+     }
+
+     //ipad plus
+    @media screen and(max-width: 992px) and (min-width: 768px) {
+        .col-md-12 {
+            .content {
+                padding: $content-padding-medium;
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+        .col-md-6 {
+            .content {
+                padding: $content-padding-small;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+         
+         .col-md-4 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-small;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-3,
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+    }
+ }
+
+.c-4 {
+     @media screen and(min-width: 992px) {
+         .col-md-12 {
+            .content {
+                padding: $content-padding-medium;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+         }
+         .col-md-6 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-4,
+         .col-md-3 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-small;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+     }
+
+     //ipad plus
+    @media screen and(max-width: 992px) and (min-width: 768px) {
+        .col-md-12 {
+            .content {
+                padding: $content-padding-medium;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+         }
+         .col-md-6 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+
+         .col-md-4,
+         .col-md-3 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-small;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+         .col-md-5,
+         .col-md-2 {
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+         }
+    }
+ }
+
+            
+    
+
+/////////////////////////////s-pic 单图片 start ////////////////
+.s-pic .cover .title {
+    padding: 1rem;
+}
+
+/////////////////////////////s-pic 单图片 end ////////////////
+
+
+/////////////////////////////pic-list-7 列表样式-7 start ////////////////
+
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-2,
+    .pic-list-7,
+    .pic-list-8,
+    .pic-list-9,
+    .pic-list-10,
+    .pic-list-11,
+    .pic-list-14,
+    .pic-list-15,
+    .pic-list-16,
+    .pic-list-22,
+    .pic-list-31 {
+        //mobile 6 
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            
+            .col-xs-6 {
+                .content {
+                    padding: $content-padding-medium;
+
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+            .col-sm-4 {
+                .content {
+                    padding: $content-padding-medium;
+
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+            
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content {
+                padding: $content-padding-medium;
+
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summary-fixed, .summary-line {
+                    font-size: $summary-font-size-big;
+                }
+            }
+                    
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .pic-list-2,
+    .pic-list-7,
+    .pic-list-8,
+    .pic-list-9,
+    .pic-list-10,
+    .pic-list-11,
+    .pic-list-14,
+    .pic-list-15,
+    .pic-list-16,
+    .pic-list-22,
+    .pic-list-31 {
+         //PC & pad pro
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6 {
+                .content {
+                    padding: $content-padding-big;
+                }
+            }
+            .col-md-4,
+            .col-md-3 {
+                .content {
+                    padding: $content-padding-medium;
+                }
+            }
+            .col-md-5, 
+            .col-md-2 {
+                .content {
+                    padding: $content-padding-medium;
+                }
+            }
+        }
+
+         //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-12,
+            .col-md-6 {
+                .content {
+                    padding: $content-padding-big;
+                }
+            }
+            .col-md-4,
+            .col-md-3 {
+                .content {
+                    padding: $content-padding-medium;
+                }
+            }
+            .col-md-5, 
+            .col-md-2 {
+                .content {
+                    padding: $content-padding-medium;
+                }
+            }
+        }
+    }
+}
+
+.c-9 {
+    .pic-list-2,
+    .pic-list-7,
+    .pic-list-8,
+    .pic-list-9,
+    .pic-list-10,
+    .pic-list-11,
+    .pic-list-14,
+    .pic-list-15,
+    .pic-list-16,
+    .pic-list-22,
+    .pic-list-31 {
+         //PC & pad pro
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6 {
+                 .content {
+                    padding: $content-padding-big;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+                    
+            }
+
+            
+            .col-md-5,
+            .col-md-2 {
+                 .content {
+                    padding: $content-padding-medium;
+
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+                    
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+            }
+        }
+
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-12,
+            .col-md-6 {
+                 .content {
+                    padding: $content-padding-big;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+                    
+            }
+
+            
+            .col-md-5,
+            .col-md-2 {
+                 .content {
+                    padding: $content-padding-medium;
+
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+                    
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-6 {
+    .pic-list-2,
+    .pic-list-7,
+    .pic-list-8,
+    .pic-list-9,
+    .pic-list-10,
+    .pic-list-11,
+    .pic-list-14,
+    .pic-list-15,
+    .pic-list-16,
+    .pic-list-22,
+    .pic-list-31 {
+         //PC & pad pro
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6 {
+                 .content {
+                    padding: $content-padding-big;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+                }
+            }
+
+            .col-md-4, 
+            .col-md-3{
+                 .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+
+            
+
+            .col-md-5,
+            .col-md-2 {
+                 .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+            }
+
+        }
+
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-12,
+            .col-md-6 {
+                 .content {
+                    padding: $content-padding-big;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+                }
+            }
+
+            .col-md-4, 
+            .col-md-3{
+                 .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+
+            
+
+            .col-md-5,
+            .col-md-2 {
+                 .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-4 {
+    .pic-list-2,
+    .pic-list-7,
+    .pic-list-8,
+    .pic-list-9,
+    .pic-list-10,
+    .pic-list-11,
+    .pic-list-14,
+    .pic-list-15,
+    .pic-list-16,
+    .pic-list-22,
+    .pic-list-31 {
+         //PC & pad pro
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4 {
+                 .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                 .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-medium
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+            }
+        }
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4 {
+                 .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                 .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-medium
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-3 {
+    .pic-list-2,
+    .pic-list-7,
+    .pic-list-8,
+    .pic-list-9,
+    .pic-list-10,
+    .pic-list-11,
+    .pic-list-14,
+    .pic-list-15,
+    .pic-list-16,
+    .pic-list-22,
+    .pic-list-31 {
+         //PC & pad pro
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-big;
+                    }
+
+                }
+            }
+
+            .col-md-6,
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2, {
+                .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-medium
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+
+                }
+            }
+
+            .col-md-2 {
+                @include contentHide()
+            }
+        }
+
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-12 {
+                .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-big;
+                    }
+
+                }
+            }
+
+            .col-md-6,
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2, {
+                .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-medium
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+
+                }
+            }
+
+            .col-md-2 {
+                @include contentHide()
+            }
+        }
+    }
+}
+
+/////////////////////////////pic-list-7 列表样式-7 end ////////////////
+
+
+$play-width: 30px;
+
+@mixin smallPlay() {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    width: $play-width;
+    line-height: $play-width;
+    height: $play-width;
+}
+
+section .content-box .cover {
+
+    .container-icon-center,
+    .container-icon-right,
+    .container-icon-left {
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+             @include smallPlay()
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+             @include smallPlay()
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            @include smallPlay()
+        }
+            
+    }
+}
+
+
+.f-12, .c-12 {
+
+    @media screen and (max-width: 1200px) and (min-width: 992px) {
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+
+    @media screen and (min-width: 1200px) {
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+}
+
+
+.c-9 {
+
+    @media screen and (max-width: 1200px) and (min-width: 992px) {
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+
+    @media screen and (min-width: 1200px) {
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+}
+
+
+.c-6 {
+
+    @media screen and (max-width: 1200px) and (min-width: 992px) {
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+
+    @media screen and (min-width: 1200px) {
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+}
+
+
+
+.c-4 {
+
+    @media screen and (max-width: 1200px) and (min-width: 992px) {
+        .col-md-6,
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+
+    @media screen and (min-width: 1200px) {
+        .col-md-6,
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+}
+
+.c-3 {
+
+    @media screen and (max-width: 1200px) and (min-width: 992px) {
+        .col-md-6,
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+
+    @media screen and (min-width: 1200px) {
+        .col-md-6,
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-5,
+        .col-md-2 {
+
+            .content-box .cover {
+                .container-icon-center,
+                .container-icon-right,
+                .container-icon-left {
+                    @include smallPlay() 
+                }
+            }
+        }
+               
+    }
+}
+
+
+
+

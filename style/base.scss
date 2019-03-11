@@ -141,7 +141,8 @@ body .layui-layer-setwin .layui-layer-close2 {
 //分页
 div.page-container {
     text-align: center;
-    // margin-top: 20px;
+    margin-top: 1.6rem;
+
     ul.pagination {
         display: inline-block;
     }
@@ -206,11 +207,18 @@ section {
         }
     }
 
-    .title>a, .title>span {
-        display: block;
+    .title {
         overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        word-break: break-all;
         white-space: nowrap;
-        text-overflow:ellipsis;
+        &>a, &>span {
+            display: block;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 
 
@@ -338,6 +346,7 @@ section {
     }
 
     .panel-body {
+        overflow: hidden;
 
         &.paddingDisplayFalse {
             background: transparent;
@@ -346,8 +355,6 @@ section {
             &.single-line-1.single-col-1 .content-box {
                 padding-bottom: 0;
             }
-
-
         }
         
         background-color: $panel-body-bgColor;
@@ -385,8 +392,10 @@ section {
     }
    
     .content-box {
+        $item-padding: 5px;
+
         display: block;
-        padding-bottom: $panel-padding;
+        padding-bottom: $item-padding * 2; //TODO 
 
         
 
@@ -489,6 +498,7 @@ section {
                 -webkit-transform: translate(-50%, -50%);
                 -moz-transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
+                z-index: 3;
             }
 
             .container-icon-left {
@@ -558,9 +568,9 @@ section {
             .summary-fixed {
                 @extend %summary;
                 -webkit-box-orient: vertical;
-                word-wrap: break-word;
                 overflow: hidden;
                 white-space: normal;
+                word-wrap: break-word;
                 word-break: break-all;
             }
 

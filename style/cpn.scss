@@ -88,6 +88,11 @@ a {
 
 .swiper-container {
     width: 100%;
+    
+    .swiper-wrapper {
+        padding-bottom: 3rem;    
+    }
+
     .swiper-slide {
         background-position: center; 
         background-size: cover;
@@ -219,8 +224,7 @@ a {
             padding: 0;
             float: left;
             .content {
-                padding-top: 2.4rem;
-                padding-bottom: 2.4rem;
+                padding: 2.4rem 1rem;
             }
         }
         
@@ -1499,6 +1503,9 @@ section .article-list-5 .content-box {
         .content {
             @extend %position-center;
             width: 70%;
+            .title {
+                padding-bottom: .5rem;
+            }
 
             .title, .summary-fixed {
                 position: relative;
@@ -1509,7 +1516,7 @@ section .article-list-5 .content-box {
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: -6px;
+                bottom: 0;
                 height: 2px;
                 width: 60px;
                 background-color: #fff;
@@ -1717,27 +1724,12 @@ section .article-list-5 .content-box {
 }
 
 .pic-list-25 {
-    @include pic-area($padding: 10px);
+
+    @include pic-area();
     .wrapper {
-        .row {
-            overflow: hidden;
-        }
         border: 1px solid $split-color;
-
-        .cover {
-            
-        }
-
-        .content {
-            padding: 15px 15px 0 0;
-
-            .summary-fixed {
-                position: absolute;
-                margin-right: 10px;
-            }
-        }
-
     }
+
 }
 
 .pic-list-26 {
@@ -1758,8 +1750,8 @@ section .article-list-5 .content-box {
         
     .row {
         margin: 0;
-        padding-left: $panel-padding/2;
-        padding-right: $panel-padding/2;
+        // padding-left: $panel-padding/2;
+        // padding-right: $panel-padding/2;
 
         &>div {
             padding: 0;
@@ -1771,23 +1763,12 @@ section .article-list-5 .content-box {
     }
 
     .wrapper {
-      
        
-        // .cover {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     z-index: 3;
-        // }
-
         .content {
             position: absolute;
             width: 100%;
             left: 0;
             bottom: 0;
-            // padding: 0 10px;
             z-index: 2;
             &:after {
                 content: '';
@@ -1796,22 +1777,21 @@ section .article-list-5 .content-box {
                 top: 0;
                 bottom: 0;
                 right: 0;
-                // background:  -webkit-gradient(linear,0% 0%, 0% 100%, from(#FFFFFF), to(#4C4C4C));
                 background: transparent url(/static/images/bg_popular.png) no-repeat;
                 background-size: cover;
                 z-index: -1;
-                // width: 100%;
 
 
             }
+
+            .title {
+                position: static;
+            }
+
             .title>span, .summary-line {
                 color: #fff;
             }
             
-        }
-        
-        &:hover {
-            // box-shadow: inset 0 0 38px rgba(0,0,0,.08);
         }
 
     }
@@ -1991,6 +1971,44 @@ section .article-list-5 .content-box {
         }
 
     }
+
+
+
+}
+
+.pic-list-31 {
+    @include pic-area();
+
+
+    .wrapper {
+        // border-bottom: 1px solid $split-color;
+         position: relative;
+
+        &:after {
+            transition: all 0.5s ease 0s;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 100%;
+            height: 1px;
+            background-color:  $split-color;
+        }
+
+        .content {
+            .article-bar {
+                margin-top: .8rem;
+            }            
+        }
+        
+        &:hover {
+            &:after {
+                bottom: 0;
+                background-color: $main-color;
+            }
+        }
+
+    }
 }
 
 ////////模版／／／／／／／
@@ -2043,56 +2061,54 @@ section .article-list-5 .content-box {
 }
 
 //文章详情结束
+//遗留代码 一坨屎
+// @media (max-width: 992px) {
 
-@media (max-width: 992px) {
+    // section .panel-title .label {
+    //     font-size: 2rem;
+    // }
+    // section .panel-body {
+    //     padding: 12px 0 0 0;
+    // }
 
-    section .panel-title .label {
-        font-size: 2rem;
-    }
-    section .panel-body {
-        padding: 12px 0 0 0;
-    }
+    // section .cpn .panel {
+    //     margin-bottom: 8px;
+    // }
 
-    section .cpn .panel {
-        margin-bottom: 8px;
-    }
+    // section .content-box {
+    //     padding-bottom: 8px;
+    // }
 
-    section .content-box {
-        padding-bottom: 8px;
-    }
-
-    section .panel-body .row {
-        // margin-left: 5px;
-        // margin-right: 5px;
-    }
-
-
-    section .panel-body.pic-list-12 .wrapper .row .col-xs-6:first-child {
-        padding-left: 0;
-    }
-
-    section .panel-body.pic-list-12 .swiper-container >.row,
-    section .panel-body.article-list-2 .swiper-container >.row,
-    section .panel-body.article-list-3 .swiper-container >.row  {
-        margin: 0;
-    }
-
-     section .panel-body.pic-list-12 .wow.col-xs-6,
-     section .panel-body.article-list-1 .wow.col-xs-6,
-     section .panel-body.article-list-2 .wow.col-xs-6,
-     section .panel-body.article-list-3 .wow.col-xs-6 {
-        width: 100%;
-    }
-
-    section .panel-body.pic-list-27 .swiper-container >.row {
-        padding: 0;
-        margin: 0;
-    }
+    // section .panel-body .row {
+       
+    // }
 
 
-    section .panel-body.article-list-2 .wow.col-xs-6 .content-box {
-        padding-bottom: 0;
-    }
+    // section .panel-body.pic-list-12 .wrapper .row .col-xs-6:first-child {
+    //     padding-left: 0;
+    // }
 
-}
+    // section .panel-body.pic-list-12 .swiper-container >.row,
+    // section .panel-body.article-list-2 .swiper-container >.row,
+    // section .panel-body.article-list-3 .swiper-container >.row  {
+    //     margin: 0;
+    // }
 
+    //  section .panel-body.pic-list-12 .wow.col-xs-6,
+    //  section .panel-body.article-list-1 .wow.col-xs-6,
+    //  section .panel-body.article-list-2 .wow.col-xs-6,
+    //  section .panel-body.article-list-3 .wow.col-xs-6 {
+    //     width: 100%;
+    // }
+
+    // section .panel-body.pic-list-27 .swiper-container >.row {
+    //     padding: 0;
+    //     margin: 0;
+    // }
+
+
+    // section .panel-body.article-list-2 .wow.col-xs-6 .content-box {
+    //     padding-bottom: 0;
+    // }
+
+// }
