@@ -541,10 +541,13 @@ section {
             display: block;
             background-color: $content-bgColor;
             overflow: hidden;
-            .title {
+            .title {//都显示1行，省略号
                 // font-size: $content-title-font-size;
                 background-color: $content-title-bgColor;
-                color: $content-title-color;               
+                color: $content-title-color;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;          
 
                 a {
                     color: $content-title-color;

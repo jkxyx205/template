@@ -3,9 +3,12 @@
 
 
  ///////////////////////////// 瀑布流 start
-
-.f-12, .c-12 {
+ .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
     .waterfall {
+        .title {
+            font-size: 1.6rem;
+        }
+
         &.col-3,
         &.col-5,
         &.col-2 {
@@ -346,19 +349,6 @@
 }
 
 
-@mixin titleCenter() {
-        .wrapper .content {
-            padding: .2rem;
-            .title {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
-        }
-}
-
-
 .f-12, 
 .c-12 {
      .pic-list-1 {
@@ -392,25 +382,12 @@
      .pic-list-1 {
         //PC
         @media screen and(min-width: 1200px) {
-                .col-md-3 {
-                    .content-box .content {
-                        @include titleLine(1)
-                    }
-                }
 
-               .col-md-5,
-               .col-md-2 {
-                    .content-box .content {
-                        @include titleLine(1)
-                    }
-                }
-               
         }
         //ipad pro
         @media screen and(max-width: 1200px) and (min-width: 992px) {
                 .col-md-2 {
                     .content-box .content {
-                        @include titleLine(1)
                         @include summaryLine(2)  
                     }
                 }
@@ -427,14 +404,10 @@
  .c-9 {
      .pic-list-1 {
         
-            @include titleLine(1) //1. 总体定基调
-            @include summaryLine(3) //1. 总体定基调
+        @include summaryLine(3) //1. 总体定基调
 
         //PC
         @media screen and(min-width: 1200px) {
-            .col-md-12, .col-md-6 {
-                @include titleLine(10)
-            }
 
             .col-md-2 {
                 @include summaryLine(2) //
@@ -443,10 +416,6 @@
         }
         //ipad pro
         @media screen and(max-width: 1200px) and (min-width: 992px) {
-            .col-md-12, .col-md-6 {
-                @include titleLine(10)
-            }
-
             .col-md-4, .col-md-3 {
                 @include summaryLine(3)
             }
@@ -488,7 +457,11 @@
             .col-md-2 {
                 @include summaryHide() //
                 @include titleLine(1) //
-                @include titleCenter()
+
+                .content {
+                    padding: $content-padding-smallest;
+                }
+                
             }
         }
 
@@ -540,7 +513,9 @@
 
             .col-md-5, .col-md-2 {
                 @include summaryHide()
-                @include titleCenter()
+                .content {
+                    padding: $content-padding-smallest;
+                }
             }
             
         }
@@ -578,13 +553,12 @@
         .col-md-2 {
             @include summaryHide() //
             @include titleLine(1) //
-            @include titleCenter()
+            .content {
+                    padding: $content-padding-smallest;
+            }
         }
     }
 
-
-
-    
     //ipad pro
     @media screen and(max-width: 1200px) and (min-width: 992px) {
        .col-md-12 {
@@ -602,14 +576,15 @@
         .col-md-2 {
             @include summaryHide() //
             @include titleLine(1) //
-            @include titleCenter()
+            
+            .content {
+                padding: $content-padding-smallest;
+            }
         }
     }
 
  }
 }
-
-
 
 
  /////////////////////////////.pic-list-1 列表样式-1 end /////////////////////////////////
@@ -933,7 +908,7 @@
                     }
                    
                 }
-                
+
             }
         }
      }

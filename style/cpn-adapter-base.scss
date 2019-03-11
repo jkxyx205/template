@@ -1,10 +1,10 @@
 @mixin titleLine($line) { // 标题行数
-    .title {
-        display: -webkit-box;
-        white-space: normal;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: $line;
-    }
+    // .title {
+    //     display: -webkit-box;
+    //     white-space: normal;
+    //     -webkit-box-orient: vertical;
+    //     -webkit-line-clamp: $line;
+    // }
 }
 
 @mixin titleHide() {//隐藏标题
@@ -40,19 +40,24 @@
 
 
 /////////////////////////////common style start///////////////////
+//标题大小
 $title-font-size-big: 1.8rem;
 $title-font-size-medium: 1.6rem;
 $title-font-size-small: 1.4rem;
 $title-font-size-smallest: 1.2rem;
 
+
+//描述大小
 $summary-font-size-big: 1.4rem;
 $summary-font-size-small: 1.2rem;
 
-$content-padding-big: 2.4rem 1rem;
-$content-padding-medium: 1.6rem 1rem;
-$content-padding-small: .8rem 1rem;
-$content-padding-smallest: .2rem .2rem;
+//内容空白大小
+$content-padding-big: 3.2rem 2.4rem;
+$content-padding-medium: 2.4rem 1.6rem;
+$content-padding-small: 1.6rem .8rem;
+$content-padding-smallest: .8rem .4rem;
 
+//描述高度
 $summaryFixedH00: 16px;
 $summaryFixedH0: 21px;
 
@@ -142,7 +147,7 @@ $summaryFixedH4: 54px;
          .col-md-4,
          .col-md-3 {
             .content {
-                padding: $content-padding-small;
+                padding: $content-padding-medium;
 
                 .title {
                     font-size: $title-font-size-big;
@@ -349,6 +354,20 @@ $summaryFixedH4: 54px;
     @media screen and(min-width: 992px) {
         .col-md-12 {
             .content {
+                padding: $content-padding-big;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+        }
+
+        .col-md-6 {
+            .content {
                 padding: $content-padding-medium;
 
                 .title {
@@ -361,7 +380,6 @@ $summaryFixedH4: 54px;
             }
         }
 
-        .col-md-6,
         .col-md-4 {
             .content {
                 padding: $content-padding-small;
