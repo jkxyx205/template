@@ -485,7 +485,6 @@ section .article-list-5 .content-box {
            left: 0;
             width: 100%;
             background: #fff;
-            bottom: -38px;
             transition: all 0.36s ease 0s;
 
             .article-bar {
@@ -505,10 +504,6 @@ section .article-list-5 .content-box {
 
 
         &:hover {
-            .content {
-                bottom: 0;
-            }
-
             &:after {
                 width: 100%;
             }
@@ -924,19 +919,15 @@ section .article-list-5 .content-box {
     @include pic-area($padding: 2rem,  $border-color: $split-color);
     .content-box {
         .wrapper {
-
-            .cover {
-                
-            }
-
+            padding-bottom: 10px;
            
-                .content {
-                    padding-bottom: 0;
-                }
+            // .content {
+            //     padding-bottom: 0;
+            // }
 
-                &:hover {
-                 
-                }
+            &:hover {
+             
+            }
            
         }
     }
@@ -1695,7 +1686,7 @@ section .article-list-5 .content-box {
                     -ms-transform: translateY(-50%);
                     -moz-transform: translateY(-50%);
                     width: 100%;
-                    padding: 0 20px;
+                    padding: 0 24px;
                     overflow: hidden;
                 }
 
@@ -1929,13 +1920,6 @@ section .article-list-5 .content-box {
         // }
        
 
-        .cover {
-            // padding: 30% 30% 0 30%;
-            // img {
-            //     border-radius: 100%;
-            // }
-        }
-
         .content-container {
             padding-bottom: 50%;
             height: 0;
@@ -1945,17 +1929,8 @@ section .article-list-5 .content-box {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            padding: 0 20px;
             
-
-            .title>span, .title>a {
-                // color: #fff;
-                white-space: normal;
-
-                &:hover {
-                    // color: #fff;
-                }
-            }
+            width: 100%;
 
             .article-bar {
                 margin-top: 10px;

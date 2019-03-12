@@ -51,11 +51,17 @@ $title-font-size-smallest: 1.2rem;
 $summary-font-size-big: 1.4rem;
 $summary-font-size-small: 1.2rem;
 
-//内容空白大小
-$content-padding-big: 3.2rem 2.4rem;
-$content-padding-medium: 2.4rem 1.6rem;
-$content-padding-small: 1.6rem .8rem;
-$content-padding-smallest: .8rem .4rem;
+//仅标题空白大小
+$content-padding-big: 24px 10px;
+$content-padding-medium: 16px 10px;
+$content-padding-small: 8px 8px;
+$content-padding-smallest: 8px 6px;
+
+//标题+描述空白大小
+$content-padding-big2: 32px 24px;
+$content-padding-medium2: 24px 16px;
+$content-padding-small2: 16px 8px;
+$content-padding-smallest2: 8px 8px;
 
 //描述高度
 $summaryFixedH00: 16px;
@@ -275,7 +281,8 @@ $summaryFixedH4: 54px;
             }
          }
 
-         .col-md-2 {.content {
+         .col-md-2 {
+            .content {
                 padding: $content-padding-smallest;
                 .title {
                     font-size: $title-font-size-smallest;
@@ -334,7 +341,8 @@ $summaryFixedH4: 54px;
             }
          }
 
-         .col-md-2 {.content {
+         .col-md-2 {
+                .content {
                 padding: $content-padding-smallest;
                 .title {
                     font-size: $title-font-size-smallest;
@@ -748,16 +756,19 @@ $summaryFixedH4: 54px;
 /////////////////////////////pic-list-7 列表样式-7 start ////////////////
 
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-1,
     .pic-list-2,
     .pic-list-7,
     .pic-list-8,
     .pic-list-9,
     .pic-list-10,
     .pic-list-11,
+    .pic-list-13,
     .pic-list-14,
     .pic-list-15,
     .pic-list-16,
     .pic-list-22,
+    .pic-list-30,
     .pic-list-31 {
         //mobile 6 
         @media screen and(max-width: 768px) and (min-width: 640px) {
@@ -814,35 +825,38 @@ $summaryFixedH4: 54px;
 }
 
 .f-12, .c-12 {
+    .pic-list-1,
     .pic-list-2,
     .pic-list-7,
     .pic-list-8,
     .pic-list-9,
     .pic-list-10,
     .pic-list-11,
+    .pic-list-13,
     .pic-list-14,
     .pic-list-15,
     .pic-list-16,
     .pic-list-22,
+    .pic-list-30,
     .pic-list-31 {
          //PC & pad pro
         @media screen and(min-width: 992px) {
             .col-md-12,
             .col-md-6 {
                 .content {
-                    padding: $content-padding-big;
+                    padding: $content-padding-big2;
                 }
             }
             .col-md-4,
             .col-md-3 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                 }
             }
             .col-md-5, 
             .col-md-2 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                 }
             }
         }
@@ -852,19 +866,19 @@ $summaryFixedH4: 54px;
             .col-md-12,
             .col-md-6 {
                 .content {
-                    padding: $content-padding-big;
+                    padding: $content-padding-big2;
                 }
             }
             .col-md-4,
             .col-md-3 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                 }
             }
             .col-md-5, 
             .col-md-2 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                 }
             }
         }
@@ -872,23 +886,26 @@ $summaryFixedH4: 54px;
 }
 
 .c-9 {
+    .pic-list-1,
     .pic-list-2,
     .pic-list-7,
     .pic-list-8,
     .pic-list-9,
     .pic-list-10,
     .pic-list-11,
+    .pic-list-13,
     .pic-list-14,
     .pic-list-15,
     .pic-list-16,
     .pic-list-22,
+    .pic-list-30,
     .pic-list-31 {
          //PC & pad pro
         @media screen and(min-width: 992px) {
             .col-md-12,
             .col-md-6 {
                  .content {
-                    padding: $content-padding-big;
+                    padding: $content-padding-big2;
                     .title {
                         font-size: $title-font-size-big;
                     }
@@ -902,7 +919,7 @@ $summaryFixedH4: 54px;
             .col-md-4,
             .col-md-3 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-big;
                     }
@@ -918,7 +935,7 @@ $summaryFixedH4: 54px;
             .col-md-5,
             .col-md-2 {
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
 
                     .title {
                         font-size: $title-font-size-medium;
@@ -935,7 +952,7 @@ $summaryFixedH4: 54px;
             .col-md-12,
             .col-md-6 {
                  .content {
-                    padding: $content-padding-big;
+                    padding: $content-padding-big2;
                     .title {
                         font-size: $title-font-size-big;
                     }
@@ -949,7 +966,7 @@ $summaryFixedH4: 54px;
             .col-md-4,
             .col-md-3 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-big;
                     }
@@ -965,7 +982,7 @@ $summaryFixedH4: 54px;
             .col-md-5,
             .col-md-2 {
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
 
                     .title {
                         font-size: $title-font-size-medium;
@@ -981,23 +998,26 @@ $summaryFixedH4: 54px;
 }
 
 .c-6 {
+    .pic-list-1,
     .pic-list-2,
     .pic-list-7,
     .pic-list-8,
     .pic-list-9,
     .pic-list-10,
     .pic-list-11,
+    .pic-list-13,
     .pic-list-14,
     .pic-list-15,
     .pic-list-16,
     .pic-list-22,
+    .pic-list-30,
     .pic-list-31 {
          //PC & pad pro
         @media screen and(min-width: 992px) {
             .col-md-12,
             .col-md-6 {
                  .content {
-                    padding: $content-padding-big;
+                    padding: $content-padding-big2;
                     .title {
                         font-size: $title-font-size-big;
                     }
@@ -1007,7 +1027,7 @@ $summaryFixedH4: 54px;
             .col-md-4, 
             .col-md-3{
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-big;
                     }
@@ -1024,7 +1044,7 @@ $summaryFixedH4: 54px;
             .col-md-5,
             .col-md-2 {
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-medium;
                     }
@@ -1040,7 +1060,7 @@ $summaryFixedH4: 54px;
             .col-md-12,
             .col-md-6 {
                  .content {
-                    padding: $content-padding-big;
+                    padding: $content-padding-big2;
                     .title {
                         font-size: $title-font-size-big;
                     }
@@ -1050,7 +1070,7 @@ $summaryFixedH4: 54px;
             .col-md-4, 
             .col-md-3{
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-big;
                     }
@@ -1067,7 +1087,7 @@ $summaryFixedH4: 54px;
             .col-md-5,
             .col-md-2 {
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-medium;
                     }
@@ -1081,16 +1101,19 @@ $summaryFixedH4: 54px;
 }
 
 .c-4 {
+    .pic-list-1,
     .pic-list-2,
     .pic-list-7,
     .pic-list-8,
     .pic-list-9,
     .pic-list-10,
     .pic-list-11,
+    .pic-list-13,
     .pic-list-14,
     .pic-list-15,
     .pic-list-16,
     .pic-list-22,
+    .pic-list-30,
     .pic-list-31 {
          //PC & pad pro
         @media screen and(min-width: 992px) {
@@ -1098,7 +1121,7 @@ $summaryFixedH4: 54px;
             .col-md-6,
             .col-md-4 {
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-big
                     }
@@ -1112,7 +1135,7 @@ $summaryFixedH4: 54px;
             .col-md-5,
             .col-md-2 {
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-medium
                     }
@@ -1127,7 +1150,7 @@ $summaryFixedH4: 54px;
             .col-md-6,
             .col-md-4 {
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-big
                     }
@@ -1141,7 +1164,7 @@ $summaryFixedH4: 54px;
             .col-md-5,
             .col-md-2 {
                  .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-medium
                     }
@@ -1155,22 +1178,25 @@ $summaryFixedH4: 54px;
 }
 
 .c-3 {
+    .pic-list-1,
     .pic-list-2,
     .pic-list-7,
     .pic-list-8,
     .pic-list-9,
     .pic-list-10,
     .pic-list-11,
+    .pic-list-13,
     .pic-list-14,
     .pic-list-15,
     .pic-list-16,
     .pic-list-22,
+    .pic-list-30,
     .pic-list-31 {
          //PC & pad pro
         @media screen and(min-width: 992px) {
             .col-md-12 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-big
                     }
@@ -1183,11 +1209,9 @@ $summaryFixedH4: 54px;
 
             .col-md-6,
             .col-md-4,
-            .col-md-3,
-            .col-md-5,
-            .col-md-2, {
+            .col-md-3 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-medium
                     }
@@ -1198,6 +1222,20 @@ $summaryFixedH4: 54px;
                 }
             }
 
+            .col-md-5 {
+                .content {
+                    padding: $content-padding-small;
+                    .title {
+                        font-size: $title-font-size-small
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+
+                }
+
+            }
+
             .col-md-2 {
                 @include contentHide()
             }
@@ -1206,7 +1244,7 @@ $summaryFixedH4: 54px;
         @media screen and(max-width: 992px) and (min-width: 768px) {
             .col-md-12 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-big
                     }
@@ -1219,13 +1257,24 @@ $summaryFixedH4: 54px;
 
             .col-md-6,
             .col-md-4,
-            .col-md-3,
-            .col-md-5,
-            .col-md-2, {
+            .col-md-3 {
                 .content {
-                    padding: $content-padding-medium;
+                    padding: $content-padding-medium2;
                     .title {
                         font-size: $title-font-size-medium
+                    }
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-small;
+                    }
+
+                }
+            }
+
+            .col-md-5 {
+                .content {
+                    padding: $content-padding-small;
+                    .title {
+                        font-size: $title-font-size-small
                     }
                     .summary-fixed, .summary-line {
                         font-size: $summary-font-size-small;
@@ -1469,7 +1518,3 @@ section .content-box .cover {
                
     }
 }
-
-
-
-

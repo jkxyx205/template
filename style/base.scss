@@ -1,9 +1,8 @@
 html {
     font-size: 10px;
-
-    @media (max-width: 768px) {
-        font-size: 9px;
-    }
+    // @media (max-width: 768px) {
+    //     font-size: 9px;
+    // }
 }
 
 //5列
@@ -213,11 +212,12 @@ section {
         word-wrap: break-word;
         word-break: break-all;
         white-space: nowrap;
+        
         &>a, &>span {
             display: block;
-
             overflow: hidden;
             text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
 

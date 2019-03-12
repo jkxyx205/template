@@ -409,8 +409,12 @@
         //PC
         @media screen and(min-width: 1200px) {
 
+            .col-md-5 {
+                @include summaryLine(2)
+            }
+
             .col-md-2 {
-                @include summaryLine(2) //
+                @include summaryLine(1) //
             }
                
         }
@@ -484,15 +488,16 @@
                 @include titleLine(3) 
             }
             
-            .col-md-3 {
+            .col-md-4 {
                 @include summaryLine(2) 
             }
 
-            .col-md-5 {
+            .col-md-3 {
                 @include summaryLine(1) 
             }
 
-            .col-md-2 {
+            .col-md-2,
+            .col-md-5 {
                 @include summaryHide() 
             }
                
@@ -541,18 +546,18 @@
         }
 
         .col-md-6 {
-            @include summaryLine(3) //
+            @include summaryLine(2) //
         }
     
-        .col-md-4 {
-           @include summaryLine(1) //   
-        }
+        // .col-md-4 {
+        //    @include summaryLine(1) //   
+        // }
         
+        .col-md-4,
         .col-md-3,
         .col-md-5,
         .col-md-2 {
             @include summaryHide() //
-            @include titleLine(1) //
             .content {
                     padding: $content-padding-smallest;
             }
@@ -593,11 +598,11 @@
   //共性样式
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 { //2. 固定手机端样式
     .pic-list-3 {
+        
         .wrapper .content {
-            padding: 15px 30px;
+            padding: 0 30px;
         }
 
-        @include titleLine(1)
         @include summaryLine(3) //
 
         //mobile 6
@@ -626,15 +631,26 @@
             .col-md-12,
             .col-md-6 {
                 @include summaryLine(10) //
+
+                .wrapper .content {
+                    padding: 0 50px;
+                }
+
             }
 
             .col-md-4,
             .col-md-3 {
+                .wrapper .content {
+                    padding: 0 42px;
+                }
                 @include summaryLine(3) //
             }
 
             .col-md-5,
             .col-md-2 {
+                .wrapper .content {
+                    padding: 0 34px;
+                }
                 @include summaryLine(2) //
             }
 
@@ -672,6 +688,9 @@
         //pc && ipad pro
         @media screen and (min-width: 992px) {
             .col-md-12 {
+                .wrapper .content {
+                    padding: 0 42px;
+                }
                 @include summaryLine(2)
             }
 
@@ -700,10 +719,17 @@
         //pc && ipad pro
         @media screen and (min-width: 992px) {
             .col-md-12 {
+                .wrapper .content {
+                    padding: 0 50px;
+                }
+
                 @include summaryLine(10)
             }
 
             .col-md-6 {
+                .wrapper .content {
+                    padding: 0 50px;
+                }
                 @include summaryLine(3)
             }
 
@@ -713,12 +739,11 @@
 
             .col-md-3,
             .col-md-5 {
-                @include titleLine(1)
                 @include summaryLine(1)
             }
 
             .col-md-2 {
-                @include titleLine(1)
+                
                 @include summaryHide()
             }
 
@@ -731,6 +756,9 @@
         //pc && ipad pro
         @media screen and (min-width: 992px) {
             .col-md-12 {
+                .wrapper .content {
+                    padding: 0 50px;
+                }
                 @include summaryLine(10)
             }
 
@@ -772,7 +800,13 @@
     .pic-list-3 {
         //pc && ipad pro
         @media screen and (min-width: 992px) {
-            .col-md-12,
+            .col-md-12 {
+                .wrapper .content {
+                    padding: 0 42px;
+                }
+                @include summaryLine(2)
+            }
+
             .col-md-6 {
                 @include summaryLine(2)
             }
@@ -807,7 +841,7 @@
  /////////////////////////////pic-list-3 列表样式-3 end ////////////////
 
 
-/////////////////////////////pic-list-27 列表样式-6 end ////////////////
+/////////////////////////////pic-list-27 列表样式-6 start ////////////////
  .c-3 {
      .pic-list-27 {
         
@@ -862,6 +896,7 @@
         //ipad pro & PC
         @media screen and (min-width: 992px) {
 
+            .col-md-3,
             .col-md-5,
             .col-md-2 {
                 @include summaryHide()
@@ -870,9 +905,7 @@
 
         //ipad pro
         @media screen and(max-width: 1200px) and (min-width: 992px) {
-            .col-md-3 {
-                @include summaryHide()
-            }
+            
         }
 
      }
@@ -894,7 +927,7 @@
         .col-md-5,
         .col-md-2 {
             .wrapper .content {
-                padding: $content-padding-medium;
+                // padding: $content-padding-medium;
 
                   .article-bar  {
                     display: block;
@@ -911,6 +944,75 @@
 
             }
         }
+
+
+        @media screen and (min-width: 992px) {
+            .content-box {
+                .content {
+                  bottom: -48px;
+                }
+
+                &:hover {
+                   .content {
+                        bottom: 0;
+                    }
+                }
+
+            }
+        }
+
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box {
+                .content {
+                  bottom: -48px;
+                }
+
+                &:hover {
+                   .content {
+                        bottom: 0;
+                    }
+                }
+
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box {
+                .content {
+                  bottom: -30px;
+                }
+
+                &:hover {
+                   .content {
+                        bottom: 0;
+                    }
+                }
+
+            } 
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+             .content-box {
+                .content {
+                  bottom: -30px;
+                }
+
+                &:hover {
+                   .content {
+                        bottom: 0;
+                    }
+                }
+
+            } 
+                    
+        }
+
+
      }
  }
 
@@ -1839,10 +1941,15 @@
 }
 
 .c-6 {
-    .col-md-5, 
-    .col-md-2 {
+    .col-md-5 {
         .wrapper .content .more {
             font-size: 1.2rem;
+        }
+    }
+
+    .col-md-2 {
+        .wrapper .content .more {
+            display: none;
         }
     } 
 }
@@ -1861,7 +1968,7 @@
             .col-md-5, 
             .col-md-2 {
                 @include summaryLineHeight($summaryFixedH4)
-                .more {
+                .wrapper .content .more {
                     display: none;
                 }
             } 
@@ -1898,7 +2005,7 @@
             .col-md-3,
             .col-md-5,
             .col-md-2 {
-                 .more {
+                .wrapper .content .more {
                     display: none;
                 }
             }
