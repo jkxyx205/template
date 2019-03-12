@@ -61,11 +61,16 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
 
-
-gulp.task('default', ['sass-header', 'sass-footer','sass-style'], function() {
+gulp.task('default', ['sass-style'], function() {
     // gulp.task("minify-css")
     // console.log('red;')
 })
+
+
+// gulp.task('default', ['sass-header', 'sass-footer','sass-style'], function() {
+    // gulp.task("minify-css")
+    // console.log('red;')
+// })
 
 
 // gulp.task('watch', function() {  

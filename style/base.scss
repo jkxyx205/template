@@ -397,12 +397,16 @@ section {
             width: 100%;
         }
     }
+
+    .swiper-wrapper .content-box {
+        padding-bottom: 0; // 轮播图的间隔由swiper去实现
+    }
    
     .content-box {
         $item-padding: 5px;
 
         display: block;
-        padding-bottom: $item-padding * 2; //TODO 
+        padding-bottom: $item-padding * 2;
 
         
 
