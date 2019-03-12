@@ -1,6 +1,86 @@
 @import "cpn";
 @import "cpn-adapter-base";
 
+//////////////////////////////单图片 单视频
+ //通用样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .s-pic {
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .cover {
+                .title {
+                    padding: 1.2rem 1rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .cover {
+                
+                .title {
+                    padding: .8rem 1rem;
+                    font-size: 1.4rem;
+                }
+
+            }
+        }
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .cover {
+                .title {
+                    padding: .8rem 1rem;
+                    font-size: 1.4rem;
+                }
+
+            }
+        }
+    }
+        
+}
+
+.f-12, .c-12, .c-9, .c-6 {
+    .s-pic {
+        @media screen and (min-width: 992px) {
+            .cover {
+                .title {
+                    font-size: 1.8rem;
+                    padding: 2.4rem 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+.c-9, .c-6 {
+    .s-pic {
+        @media screen and (min-width: 992px) {
+            .cover {
+                .title {
+                    font-size: 1.6rem;
+                    padding: 1.8rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+.c-4, .c-3 {
+    .s-pic {
+        @media screen and (min-width: 992px) {
+            .cover {
+                .title {
+                    font-size: 1.4rem;
+                    padding: 1.6rem 1rem;
+                }
+            }
+        }
+    }
+}
+
 
  ///////////////////////////// 瀑布流 start
  .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
@@ -1720,12 +1800,12 @@
 
             //mobile 6 
             @media screen and(max-width: 768px) and (min-width: 640px) {
-                @include summaryLine(2)
+                @include summaryLine(1)
             }
 
             //iphone 5
             @media screen and (max-width: 640px) {
-                @include summaryLine(2)
+                @include summaryLine(1)
             }
     }
         

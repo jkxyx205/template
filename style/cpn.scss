@@ -77,6 +77,15 @@ a {
     }
 }
 
+/////////////////////////////s-pic 单图片 start ////////////////
+.s-pic {
+    .cover {
+        border-radius: 5px;
+    }
+}
+
+/////////////////////////////s-pic 单图片 end ////////////////
+
 /////////////////////////////////轮播图//////////////////////////////////////////
 
 .swiper-panel {
@@ -92,6 +101,11 @@ a {
     // .swiper-wrapper {
     //     padding-bottom: 3rem; //
     // }
+
+    .swiper-button-next.swiper-button-disabled, 
+    .swiper-button-prev.swiper-button-disabled {
+        pointer-events: auto;
+    }
 
     .swiper-slide {
         background-position: center; 
@@ -721,6 +735,7 @@ section .article-list-5 .content-box {
 
         }
 
+
         &:hover {
             .icon-btn {
                 opacity: 1;
@@ -742,6 +757,18 @@ section .article-list-5 .content-box {
 
     }
 }
+
+section .pic-list-5 .content-box .wrapper .container-icon-center {
+  transition: all 0.36s ease 0s;
+  top: -30px;
+}
+
+section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
+  top: 50%;
+}
+
+
+
 
 .pic-list-6 {
     @include pic-area();
@@ -1622,6 +1649,10 @@ section .article-list-5 .content-box {
         &:hover {
             .cover .main-mask {
                 height: 100%;
+            }
+
+            .container-icon-center {
+                top: -30px;
             }
         }
 
