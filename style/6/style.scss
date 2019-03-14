@@ -1,36 +1,14 @@
-.article-list-1 .content-box {
-     &:not(:last-child) {
-        border-bottom: none;
-    }
-
-    &:hover {
-        $hover-color: #fff;
-       .content {
-        .title a {
-            color: $hover-color;
-        }
-        .summary-fix, .summary-fluid, .article-bar {
-            color: $hover-color;
-        }
-       }
-    }
-}
-
 .panel-title  {
     .more-text {
         display: none;
     }
-
-    // .icon-more:before {
-    //     content: "\e609";
-    // }
 }
 
 section .panel-title .label {
     // display: inline;
     // border-left: 4px solid $main-color;
     padding-left: 10px;
-    margin-left: 26px;
+    // margin-left: 26px;
     width: calc(100% - 92px);
 
     &:before {
@@ -93,8 +71,8 @@ section .panel-title .more, section .panel-title .label {
 
 }
 
-.panel.article-list-2, .panel.article-list-3 {
-    .panel-body {
-        padding-bottom: 45px;
-    }
-}
+// .panel.article-list-2, .panel.article-list-3 {
+//     .panel-body {
+//         padding-bottom: 45px;
+//     }
+// }

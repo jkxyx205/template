@@ -1,19 +1,19 @@
 html, body {
     font-family: serif;
 }
-.article-list-1 .content-box {
-    &:hover {
-        $hover-color: #fff;
-       .content {
-        .title a {
-            color: $hover-color;
-        }
-        .summary-fix, .summary-fluid, .article-bar {
-            color: $hover-color;
-        }
-       }
-    }
-}
+// .article-list-1 .content-box {
+//     &:hover {
+//         $hover-color: #fff;
+//        .content {
+//         .title a {
+//             color: $hover-color;
+//         }
+//         .summary-fix, .summary-fluid, .article-bar {
+//             color: $hover-color;
+//         }
+//        }
+//     }
+// }
 
 .panel-title  {
     .more-text {

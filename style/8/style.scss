@@ -1,23 +1,23 @@
 body {
     font-family: "Microsoft YaHei",'微软雅黑',Arial,Helvetica,sans-serif;
 }
-.article-list-1 .content-box {
-     &:not(:last-child) {
-        border-bottom: none;
-    }
+// .article-list-1 .content-box {
+//      &:not(:last-child) {
+//         border-bottom: none;
+//     }
 
-    &:hover {
-        $hover-color: #fff;
-       .content {
-        .title a {
-            color: $hover-color;
-        }
-        .summary-fix, .summary-fluid, .article-bar {
-            color: $hover-color;
-        }
-       }
-    }
-}
+//     &:hover {
+//         $hover-color: #fff;
+//        .content {
+//         .title a {
+//             color: $hover-color;
+//         }
+//         .summary-fix, .summary-fluid, .article-bar {
+//             color: $hover-color;
+//         }
+//        }
+//     }
+// }
 
 section {
         .panel-title  {
@@ -62,8 +62,8 @@ section .panel-title .more, section .panel-title .label {
      }
 }
 
-.panel.article-list-2, .panel.article-list-3 {
-    .panel-body {
-        padding-bottom: 45px;
-    }
-}
+// .panel.article-list-2, .panel.article-list-3 {
+//     .panel-body {
+//         padding-bottom: 45px;
+//     }
+// }

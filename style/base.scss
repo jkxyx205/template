@@ -306,22 +306,23 @@ section {
 
     .panel-title {
         position: relative;
-        // height: $panel-title-height;
-        line-height: $panel-title-height;
         background-color: $panel-title-bgColor;
         color: $panel-title-color;
         text-align: $panel-title-position;
+        padding: 0 $panel-padding;
+        height: $panel-title-height;
+        line-height: $panel-title-height;
 
         .label {
-            // width: 100%; // 有问题
             position: relative;
+            max-width: 100%;
             display: inline-block;
             background-color: $panel-title-label-bgColor;
             font-size: $panel-title-font-size;
-            padding: 0 $panel-padding;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            
         }
         
         .more {

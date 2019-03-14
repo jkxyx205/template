@@ -2,33 +2,11 @@ html, body {
     font-family: NotoSansHans-Thin;  
 }
 
-.article-list-1 .content-box {
-    &:not(:last-child) {
-        border-bottom: none;
-    }
-
-    // &:hover {
-        // $hover-color: transparent;
-       // .content {
-       //  .title a {
-       //      color: $hover-color;
-       //  }
-       //  .summary-fix, .summary-fluid, .article-bar {
-       //      color: $hover-color;
-       //  }
-       // }
-    // }
-
-}
 .panel-title  {
     .more-text {
         display: none;
     }
 
-    // .icon-more1:before {
-    //     content: "\e643";
-    //     font-size: 12px;
-    // }
 
     .more-text {
         font-size: 1.2rem;
@@ -43,27 +21,15 @@ html, body {
 
 }
 
-section .content-box .cover .title {
-    background-color: $background-color;
-}
 
 section .panel-title .label {
-    display: inline;
     border-bottom: 1px solid $main-color;
-    padding: 13px 0;
-    // padding-left: 10px;
-    margin-left: 26px;
-
-    @media (max-width: 64em) {
-           margin-left: 12px;
-    }
+    padding: 0;
+    // margin: 0 26px;
 }
 
 .panel {
     .btn {
-         // background-color: $main-color;
-         // color: #fff;
-         // opacity: 1;
             border-color: $summary-color;
             color: $summary-color;
              &:hover {
@@ -71,7 +37,6 @@ section .panel-title .label {
              }
      }
 }
-
 
 $nine-border-color: #333;
 
@@ -92,15 +57,15 @@ $nine-border-color: #333;
 }
 
 
-.article-list-4, .article-list-5 {
-    .wrapper.cover {
-        border: 1px solid $nine-border-color;
-    }
+// .article-list-4, .article-list-5 {
+//     .wrapper.cover {
+//         border: 1px solid $nine-border-color;
+//     }
     
-    .content-box-item {
-        border-bottom: 1px dashed $nine-border-color;
-    }
-}
+//     .content-box-item {
+//         border-bottom: 1px dashed $nine-border-color;
+//     }
+// }
 
 .pic-list-4 .wrapper .cover:after {
     border-right-color: #252525;

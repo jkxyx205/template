@@ -1,27 +1,27 @@
 body {
     font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
-.article-list-1 .content-box {
-    &:not(:last-child) {
-        border-bottom: none;
-    }
+// .article-list-1 .content-box {
+//     &:not(:last-child) {
+//         border-bottom: none;
+//     }
 
-    // &:first-child {
-    //     border-top: 1px solid $split-color;
-    // }
+//     // &:first-child {
+//     //     border-top: 1px solid $split-color;
+//     // }
 
-    &:hover {
-        $hover-color: #fff;
-       .content {
-        .title a {
-            color: $hover-color;
-        }
-        .summary-fix, .summary-fluid, .article-bar {
-            color: $hover-color;
-        }
-       }
-    }
-}
+//     &:hover {
+//         $hover-color: #fff;
+//        .content {
+//         .title a {
+//             color: $hover-color;
+//         }
+//         .summary-fix, .summary-fluid, .article-bar {
+//             color: $hover-color;
+//         }
+//        }
+//     }
+// }
 
 section .content-box {
     font-weight: 300;
@@ -65,11 +65,11 @@ section {
     border: none;
 }
 
-.panel.article-list-2, .panel.article-list-3 {
-    .panel-body {
-        padding-bottom: 45px;
-    }
-}
+// .panel.article-list-2, .panel.article-list-3 {
+//     .panel-body {
+//         padding-bottom: 45px;
+//     }
+// }
 
 
 

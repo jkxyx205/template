@@ -1,27 +1,3 @@
-// .article-list-1 .content-box {
-//     .wrapper:hover {
-//         $hover-color: #fff;
-//        .content {
-//         .title a {
-//             color: $hover-color;
-//         }
-//         .summary-fix, .summary-fluid, .article-bar {
-//             color: $hover-color;
-//         }
-//        }
-//     }
-// }
-
-// .panel-title > span:after {
-//     content: '';
-//     position: absolute;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     bottom: 40px;
-//     width: 30%;
-//     height: 4px;
-//     background-color: $main-color;
-// }
 section {
     .panel-title  {
         // .more-text {
@@ -37,13 +13,6 @@ section {
             font-size: 1.2rem;
         }
 
-        @media (max-width: 64em) {
-            .label {
-             padding: 0 12px;
-            }
-        }
+      
     }
 }
-
-
-

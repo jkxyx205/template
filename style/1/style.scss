@@ -3,46 +3,30 @@ html, body {
     font-weight: 150;
 }
 
-.article-list-1 .content-box {
-    &:not(:last-child) {
-        border-bottom: none;
-    }
-
-
-    &:hover {
-        $hover-color: #fff;
-       .content {
-        .title a {
-            color: $hover-color;
-        }
-        .summary-fix, .summary-fluid, .article-bar {
-            color: $hover-color;
-        }
-       }
-    }
-}
-
 section .panel {
+    .panel-title .label {
+
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            width: 60%;
+            bottom: 40px;
+            height: 4px;
+            background-color: $main-color;
+        }
+    }
 
     .panel-body {
         padding: 0;
     }
 }
 
-.panel-title > span:after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-
-    bottom: 40px;
-    width: 30%;
-    height: 4px;
-    background-color: $main-color;
-}
 
 .panel-title  {
     .more-text {
