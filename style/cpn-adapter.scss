@@ -5112,7 +5112,7 @@ $padding24Small: .3rem 1rem;
     .col-md-4:nth-of-type(3n + 2) {
         @media screen and (min-width: 768px) {
            .content-box {
-                padding: 0 $panel-padding/2;
+                padding: 5px $panel-padding/2;
            }      
         }
     }
@@ -5125,15 +5125,15 @@ $padding24Small: .3rem 1rem;
         }
     }
 
-    .col-md-3,
-    .col-md-5,
-    .col-md-2 {
-        @media screen and (min-width: 768px) {
-           .content-box {
-               border-bottom: 1px dashed $summary-color;
-           }      
-        }
-    }
+    // .col-md-3,
+    // .col-md-5,
+    // .col-md-2 {
+    //     @media screen and (min-width: 768px) {
+    //        .content-box {
+    //            border-bottom: 1px dashed $summary-color;
+    //        }      
+    //     }
+    // }
 
 }
 
