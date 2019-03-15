@@ -5,47 +5,52 @@ html, body {
 
 
 
+section {
 
-.panel {
-    .panel-title  {
+    .panel {
+        .panel-title  {
 
-        padding: 0;
-     
-        .label {
-           
-            line-height: 35px;
-            z-index: 1;
-            padding: 0 15px;
-  
+            padding: 0;
+         
+            .label {
+               
+                line-height: 35px;
+                z-index: 1;
+                padding: 0 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: calc(100% - 92px);
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: -10px;
+                    top: 45%;
+                    width: 10px;
+                    height: 4px;
+                    background-color: #fff;
+
+                }
+            }
+
+            .more {
+                z-index: 1;
+            }
+            .more-text {
+                display: none;
+            }
 
             &:after {
-                content: "";
+                content: '';
                 position: absolute;
-                right: -10px;
-                top: 45%;
-                width: 10px;
-                height: 4px;
-                background-color: #fff;
-
+                left: 0;
+                top: 50%;
+                height: 1px;
+                width: 100%;
+                background-color: #efefef;
+               
             }
         }
-
-        .more {
-            z-index: 1;
-        }
-        .more-text {
-            display: none;
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            height: 1px;
-            width: 100%;
-            background-color: #efefef;
-           
-        }
     }
+
 }

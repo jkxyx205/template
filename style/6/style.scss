@@ -1,78 +1,52 @@
-.panel-title  {
-    .more-text {
-        display: none;
-    }
-}
+section {
+    .panel-title {
+        .label {
+            padding-left: 15px;
+            width: calc(100% - 92px);
 
-section .panel-title .label {
-    // display: inline;
-    // border-left: 4px solid $main-color;
-    padding-left: 10px;
-    // margin-left: 26px;
-    width: calc(100% - 92px);
+            &:before {
+                content: '';
+                height: 15px;
+                width: 5px;
+                position:  absolute;
+                border-radius: 6px;
+                background-color: $main-color;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
 
-    &:before {
-        content: '';
-        height: 2rem;
-        width: 4px;
-        position:  absolute;
-        background-color: $main-color;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+            }
 
-    }
+            @media (max-width: 64em) {
+                 margin-left: 12px;
+            }
+        }
 
-    @media (max-width: 64em) {
-         margin-left: 12px;
-    }
-}
+        .more-text {
+            display: none;
+        }
+    } 
 
-section .panel-title .more, section .panel-title .label {
-    position: relative;
-    top: 10px
-}
+    .panel {  
+        -moz-box-shadow:0px 5px 0px $panel-shadow-color;
+        -webkit-box-shadow:0px 5px 0px $panel-shadow-color;
+         box-shadow:0px 5px 0px $panel-shadow-color;
+         margin-bottom: 5px;
 
-.panel {   
-   -moz-box-shadow:0px 5px 0px $panel-shadow-color;
-    -webkit-box-shadow:0px 5px 0px $panel-shadow-color;
-     box-shadow:0px 5px 0px $panel-shadow-color;
-
-     .panel-body {
-        padding-bottom: 20px;
-     }
-
-     .btn {
-         background-color: $main-color;
-         border-color: $main-color;
-         color: #fff;
-         opacity: 1;
-
-         &:hover {
-            opacity: .8;
+         .panel-body {
+            padding-bottom: 20px;
+            padding-top: 0
          }
-     }
 
-     // display: inline-block;
-     //    border-radius: $btn-radius;
-     //    line-height: $btn-height;
-     //    color: $main-color;
-     //    border: 1px solid $main-color;
-     //    padding: 0 20px;
-     //    letter-spacing: 2px;
-     //    background-color: transparent;
-     //    font-size: 1.2rem;
+         .btn {
+             background-color: $main-color;
+             border-color: $main-color;
+             color: #fff;
+             opacity: 1;
 
-     //    &:hover {
-     //        background: $main-color;
-     //        color: #fff;
-     //    }
-
-
+             &:hover {
+                opacity: .8;
+             }
+         }
+    }
 }
-
-// .panel.article-list-2, .panel.article-list-3 {
-//     .panel-body {
-//         padding-bottom: 45px;
-//     }
-// }

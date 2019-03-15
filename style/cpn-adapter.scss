@@ -1210,6 +1210,10 @@
     .pic-list-23 {
         @include titleLine(1)
 
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            @include summaryLine(2)
+        }
+
         //mobile 6 
         @media screen and(max-width: 768px) and (min-width: 640px) {
             @include summaryLine(1)
@@ -2605,7 +2609,11 @@ $content-padding-medium2: 1.4rem 1rem;
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
     .pic-list-18 {
            .content {
-                 //mobile 6 
+                @media screen and(max-width: 992px) and (min-width: 768px) {
+                    @include summaryLine(2)
+                }
+
+                //mobile 6 
                 @media screen and(max-width: 768px) and (min-width: 640px) {
                     @include summaryHide()    
                 }
@@ -2623,7 +2631,7 @@ $content-padding-medium2: 1.4rem 1rem;
 
 .f-12, .c-12 {
     .pic-list-18 {
-            @media screen and(min-width: 768px) {
+            @media screen and(min-width: 992px) {
 
                 .col-md-4,
                 .col-md-3 {
@@ -3419,7 +3427,7 @@ $content-padding-medium2: 1.4rem 1rem;
 
             //ipad plus
             @media screen and(max-width: 992px) and (min-width: 768px) {
-                @include summaryLineHeight($summaryFixedH2)
+                @include summaryLineHeight($summaryFixedH1)
                 @include summaryLine(2)
                 .content {
                         .btn {
@@ -3430,7 +3438,7 @@ $content-padding-medium2: 1.4rem 1rem;
 
             //mobile 6 
             @media screen and(max-width: 768px) and (min-width: 640px) {
-                @include summaryLineHeight($summaryFixedH2)
+                @include summaryLineHeight($summaryFixedH1)
                 @include summaryLine(2)
                 .content {
                         .btn {
@@ -3441,7 +3449,7 @@ $content-padding-medium2: 1.4rem 1rem;
 
             //iphone 5
             @media screen and (max-width: 640px) {
-                @include summaryLineHeight($summaryFixedH2)
+                @include summaryLineHeight($summaryFixedH1)
                 @include summaryLine(2)
                 .content {
                         .btn {
@@ -4150,7 +4158,7 @@ $padding24Small: .3rem 1rem;
         @media screen and(max-width: 992px) and (min-width: 768px) {
             .content-box .content {
                 padding: $content-padding-medium;
-                @include summaryLineHeight($summaryFixedH0)
+                @include summaryLineHeight($summaryFixedH00)
                 @include summaryLine(1)
             }
         }
@@ -5125,15 +5133,17 @@ $padding24Small: .3rem 1rem;
         }
     }
 
-    // .col-md-3,
-    // .col-md-5,
-    // .col-md-2 {
-    //     @media screen and (min-width: 768px) {
-    //        .content-box {
-    //            border-bottom: 1px dashed $summary-color;
-    //        }      
-    //     }
-    // }
+    .col-md-3,
+    .col-md-5,
+    .col-md-2 {
+        @media screen and (min-width: 768px) {
+           .content-box .content {
+              .publish-date {
+                display: none;
+              }
+           }      
+        }
+    }
 
 }
 
@@ -5187,4 +5197,93 @@ $padding24Small: .3rem 1rem;
 }
 
 
-/////////////////////////////图文列表样式-3 article-list-3 start ///////////////////////
+/////////////////////////////图文列表样式-3 article-list-3 end ///////////////////////
+
+/////////////////////////////  图文详情  start ///////////////////////
+    .article-detail {
+        
+        @media screen and (min-width: 992px) {
+            .info-bar {
+                margin-bottom: 2rem;
+            }
+
+            .article-title-bar {
+                padding: 3rem 0;
+                font-size: 2.4rem;
+            }
+
+            .article-cover {
+                padding-top: 30%;
+            }
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .article-cover {
+                padding-top: 35%;
+            }
+
+
+            .info-bar {
+                margin-bottom: 1.5rem;
+            }
+
+            .article-title-bar {
+                padding: 2rem 0;
+                font-size: 2rem;
+            }
+
+            .bdsharebuttonbox {
+                display: none;
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .article-cover {
+                padding-top: 50%;
+            }
+
+            .info-bar {
+                margin-bottom: 1rem;
+            }
+
+            .article-title-bar {
+                padding: 1rem 0;
+                font-size: 1.8rem;
+            }
+
+            .bdsharebuttonbox {
+                display: none;
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .article-cover {
+                padding-top: 50%;
+            }
+
+            .info-bar {
+                margin-bottom: 1rem;
+            }
+
+            .article-title-bar {
+                padding: 1rem 0;
+                font-size: 1.8rem;
+            }
+
+            .bdsharebuttonbox {
+                display: none;
+            }
+                    
+        }
+    }
+
+/////////////////////////////  图文详情  end ///////////////////////
+
+
+  
+
+

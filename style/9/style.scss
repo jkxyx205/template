@@ -2,41 +2,37 @@ html, body {
     font-family: NotoSansHans-Thin;  
 }
 
-.panel-title  {
-    .more-text {
-        display: none;
-    }
+section {
+    .panel-title {
+        
+        .label {
+            border-bottom: 1px solid $main-color;
+            max-width: calc(100% - 92px);
+        }
 
+        .more-text {
+            display: none;
+        }
+    } 
 
-    .more-text {
-        font-size: 1.2rem;
-    }
+    .panel {   
+         .panel-body {
+            padding: 25px 0;
+         }
 
+         .btn {
+             background-color: $main-color;
+             border-color: $main-color;
+             color: #fff;
+             opacity: 1;
 
-    .more {
-        position: relative;
-        top: 2px;
-    }
-
-
-}
-
-
-section .panel-title .label {
-    border-bottom: 1px solid $main-color;
-    padding: 0;
-    // margin: 0 26px;
-}
-
-.panel {
-    .btn {
-            border-color: $summary-color;
-            color: $summary-color;
              &:hover {
-                 border-color: $main-color;
+                opacity: .8;
              }
-     }
+         }
+    }
 }
+
 
 $nine-border-color: #333;
 
@@ -56,16 +52,9 @@ $nine-border-color: #333;
     border-color: $nine-border-color;
 }
 
-
-// .article-list-4, .article-list-5 {
-//     .wrapper.cover {
-//         border: 1px solid $nine-border-color;
-//     }
-    
-//     .content-box-item {
-//         border-bottom: 1px dashed $nine-border-color;
-//     }
-// }
+.pic-list-22 .content-box .wrapper {
+    background-color: transparent;
+}
 
 .pic-list-4 .wrapper .cover:after {
     border-right-color: #252525;

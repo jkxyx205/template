@@ -3,7 +3,11 @@ section {
         // .more-text {
         //     display: none;
         // }
-
+        
+        .label {
+            max-width: calc(100% - 92px);
+        }
+        
         .icon-more1:before {
             content: "\e643";
             font-size: 12px;

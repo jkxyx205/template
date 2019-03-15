@@ -1,35 +1,38 @@
 html, body {
-    font-family: NotoSansHans-Thin;
-    font-weight: 150;
+    // font-family: artingStyle;
+    font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
 
-section .panel {
-    .panel-title .label {
+section {
+     .panel {
 
+        .panel-title  {
+            .more-text {
+                display: none;
+            }
 
-        &:after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            width: 60%;
-            bottom: 40px;
-            height: 4px;
-            background-color: $main-color;
+            .label {
+                font-weight: bold;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    width: 60%;
+                    bottom: 40px;
+                    height: 2px;
+                    background-color: $main-color;
+                }
+            }
+        }
+
+        .panel-body {
+            padding: 0;
         }
     }
 
-    .panel-body {
-        padding: 0;
-    }
-}
-
-
-.panel-title  {
-    .more-text {
-        display: none;
-    }
 }

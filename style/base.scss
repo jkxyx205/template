@@ -8,7 +8,7 @@ html {
 //5列
 .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5 {
     position: relative;
-    min-height: 1px;
+    min-height: 1px
 }
  
 @media ( min-width : 768px) {
@@ -317,7 +317,7 @@ section {
             position: relative;
             max-width: 100%;
             display: inline-block;
-            background-color: $panel-title-label-bgColor;
+            background-color: $panel-title-label-bgColor; 
             font-size: $panel-title-font-size;
             overflow: hidden;
             white-space: nowrap;
@@ -328,7 +328,7 @@ section {
         .more {
                 position: relative;
                 background-color: $panel-title-more-bgColor;
-                padding: 0 $panel-padding;
+                // padding: 0 $panel-padding;
 
                 & a {
                     line-height: 1;
@@ -347,7 +347,7 @@ section {
     }
 
     .panel-body {
-        overflow: hidden;
+        // overflow: hidden;
 
         &.paddingDisplayFalse {
             background: transparent;

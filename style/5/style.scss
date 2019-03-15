@@ -2,26 +2,9 @@ body {
     font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
 
-section .content-box {
-
-    .content {
-        .title {
-            font-weight: 500;
-        }
-
-        // .article-bar, 
-        // .float-content-footer,
-        // .content-footer {
-        //     color: #787878;
-        // }
-    }
-
-}
-
 section {
-    .panel-title  {
-
-
+    .panel-title {
+        
         &:after {
             content: '';
             position: absolute;
@@ -31,64 +14,31 @@ section {
             width: 100%;
             background-color: $split-color;
         }
+        
+        .label {
+            width: calc(100% - 92px);
+        }
 
         .more-text {
             display: none;
         }
+    } 
 
+    .panel {   
+         .panel-body {
+            padding-bottom: 20px;
+         }
 
-        .label, .more {
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: -3px;
-                height: 1px;
-                background-color: #fff;
-                width: $panel-padding;
-                @media (max-width: 64em) {
-                    width: 12px;
-                }
+         .btn {
+             background-color: $main-color;
+             border-color: $main-color;
+             color: #fff;
+             opacity: 1;
 
-            }
-        }
-
-        .label {
-            &:after {
-                left: 0;
-            }
-        }
-
-        @media (max-width: 64em) {
-            .label {
-             padding: 0 12px;
-            }
-        }
-
-
-
-        .more {
-            &:after {
-                right: 0;
-            }
-        }
-
+             &:hover {
+                opacity: .8;
+             }
+         }
+    }
 }
-}
-
-
-
-
-.panel {
-     .panel-body {
-        padding-bottom: 20px;
-     }
-}
-
-// .panel.article-list-2, .panel.article-list-3 {
-//     .panel-body {
-//         padding-bottom: 45px;
-//     }
-// }
-
-
 
