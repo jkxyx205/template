@@ -5056,6 +5056,130 @@ $padding24Small: .3rem 1rem;
 }
 /////////////////////////////图文列表样式-1 article-list-1 end ///////////////////////
 
+/////////////////////////////图文列表样式-2 article-list-2 start ///////////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .article-list-2 {
+
+        
+
+        .list-content-box.content-box .content {
+            padding: $content-padding-zero;
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+                .title {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .header-content-box.content-box .content {
+                    @include summaryLine(3)
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                .title {
+                    font-size: 1.6rem;
+                }
+            }
+            .header-content-box.content-box .content {
+                    @include summaryLine(3)
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content-box .content {
+                .title {
+                    font-size: 1.6rem;
+                }
+            }
+            .header-content-box.content-box .content {
+                @include summaryLine(3)
+            }
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .article-list-2 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .header-content-box.content-box .content {
+                    @include summaryLine(3)
+                }
+            }
+        }
+    }
+}
+
+.c-9 {
+    .article-list-2 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .content-box .content {
+                    padding: $content-padding-medium;
+                }
+                
+                .header-content-box.content-box .content {
+                    @include summaryLine(3)
+                }
+            }
+        }
+    }
+} 
+
+
+.c-6 {
+    .article-list-2 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .content-box .content {
+                    padding: $content-padding-medium;
+                }
+                .header-content-box.content-box .content {
+                    @include summaryLine(2)
+                }
+            }
+        }
+    }
+} 
+
+
+
+.c-4, .c-3 {
+
+    .article-list-2 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+
+                    .title {
+                        font-size: 1.6rem;
+                    }
+
+                    .float-content-footer {
+                        margin-top: .2rem;
+                    }
+                }
+                @include summaryHide();
+            }
+        }
+    }
+
+}
+/////////////////////////////图文列表样式-2 article-list-2 end ///////////////////////
+
+
+
+
 /////////////////////////////图文列表样式-3 article-list-3 start ///////////////////////
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
 
@@ -5204,12 +5328,17 @@ $padding24Small: .3rem 1rem;
         
         @media screen and (min-width: 992px) {
             .info-bar {
-                margin-bottom: 2rem;
+                margin-bottom: 10px;
             }
 
             .article-title-bar {
-                padding: 3rem 0;
-                font-size: 2.4rem;
+                padding: 20px 0;
+                font-size: 24px;
+            }
+
+            .article-summary { 
+                padding: 15px;
+                margin-bottom: 20px;
             }
 
             .article-cover {
@@ -5223,13 +5352,18 @@ $padding24Small: .3rem 1rem;
                 padding-top: 35%;
             }
 
+            .article-summary { 
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
 
             .info-bar {
-                margin-bottom: 1.5rem;
+                margin-bottom: 15px;
             }
 
             .article-title-bar {
-                padding: 2rem 0;
+                padding: 20px 0;
                 font-size: 2rem;
             }
 
@@ -5244,13 +5378,18 @@ $padding24Small: .3rem 1rem;
                 padding-top: 50%;
             }
 
+            .article-summary { 
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
             .info-bar {
                 margin-bottom: 1rem;
             }
 
             .article-title-bar {
-                padding: 1rem 0;
-                font-size: 1.8rem;
+                padding: 10px 0;
+                font-size: 18px;
             }
 
             .bdsharebuttonbox {
@@ -5261,17 +5400,23 @@ $padding24Small: .3rem 1rem;
 
         //iphone 5
         @media screen and (max-width: 640px) {
+
+            .article-summary { 
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
             .article-cover {
                 padding-top: 50%;
             }
 
             .info-bar {
-                margin-bottom: 1rem;
+                margin-bottom: 10px;
             }
 
             .article-title-bar {
-                padding: 1rem 0;
-                font-size: 1.8rem;
+                padding: 10px 0;
+                font-size: 18px;
             }
 
             .bdsharebuttonbox {
