@@ -4,24 +4,34 @@ body {
 
 section {
     .panel {
+
+        background-color: #fff;
+
         .panel-title  {
+            line-height: 69px;
+            border-bottom: 1px solid #f5f4f3;
+
+            padding-left: 38px;
+            
             .label {
                 width: calc(100% - 92px);
+            }
+            
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 20px;
+                top: 24px;
+                width: 6px;
+                height: 18px;
+                transform: skewX(-15deg); 
+                background-color: $main-color;
+
             }
 
             .more-text {
                 display: none;
-            }
-
-            &:after {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                content: '';
-                width: 100%;
-                height: 1px;
-                background-color: #f5f4f3;
-
             }
         }
 
@@ -30,6 +40,5 @@ section {
          }
         
          border: 2px solid $panel-border-color;
-    }
-    
+    }   
 }

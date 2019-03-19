@@ -6,6 +6,7 @@ body {
 section {
     .panel-title {
         border-top: 2px solid $main-color;
+        line-height: 77px;
         .label {
             padding-left: 15px;
             width: calc(100% - 92px);
@@ -14,12 +15,15 @@ section {
         .more-text {
             display: none;
         }
+
+        border-bottom: 1px dashed #e6e8eb;
+
     } 
 
     .panel {   
          .panel-body {
             padding-bottom: 20px;
-            padding-top: 0
+            // padding-top: 0
          }
 
          .btn {

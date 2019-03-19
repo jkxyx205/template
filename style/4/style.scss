@@ -1,22 +1,29 @@
 section {
-    .panel-title  {
-        // .more-text {
-        //     display: none;
-        // }
-        
-        .label {
-            max-width: calc(100% - 92px);
-        }
-        
-        .icon-more1:before {
-            content: "\e643";
-            font-size: 12px;
+
+
+    .panel {
+        border-radius: 20px;
+
+        .panel-title  {
+            
+            .label {
+                max-width: calc(100% - 92px);
+            }
+            
+            .icon-more1:before {
+                content: "\e643";
+                font-size: 12px;
+            }
+
+            .more-text {
+                font-size: 1.2rem;
+            }
         }
 
-        .more-text {
-            font-size: 1.2rem;
+        .panel-body {
+            padding-bottom: $panel-padding;
         }
 
-      
     }
+  
 }

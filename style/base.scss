@@ -230,7 +230,7 @@ section {
     background-color: $background-color;
 
 
-    .container-fluid, .container {
+    .container-fluid {
         position: relative;
 
         .panel { //全屏不显示边框
@@ -274,7 +274,7 @@ section {
     }
 
     .panel {
-
+        overflow: hidden;
         &.marginDisplayFalse {
             margin-bottom: 0;
         }

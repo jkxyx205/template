@@ -17,10 +17,10 @@ section {
                 line-height: 35px;
                 z-index: 1;
                 padding: 0 15px;
-                top: 50%;
-                transform: translateY(-50%);
+                top: 11px;
                 max-width: calc(100% - 92px);
-
+                transform: skewX(-15deg);
+                margin-left: 5px;
                 &:after {
                     content: "";
                     position: absolute;
@@ -43,10 +43,10 @@ section {
             &:after {
                 content: '';
                 position: absolute;
-                left: 0;
+                left: 4px;
                 top: 50%;
                 height: 1px;
-                width: 100%;
+                width: calc(100% - 4px);
                 background-color: #efefef;
                
             }

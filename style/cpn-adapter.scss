@@ -5065,6 +5065,22 @@ $padding24Small: .3rem 1rem;
 
         .list-content-box.content-box .content {
             padding: $content-padding-zero;
+
+            padding-left: 15px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                background-color: $main-color;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+
         }
 
         //ipad plus
@@ -5322,6 +5338,206 @@ $padding24Small: .3rem 1rem;
 
 
 /////////////////////////////图文列表样式-3 article-list-3 end ///////////////////////
+
+/////////////////////////////图文列表样式-4 article-list-4 start ///////////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .article-list-4 {
+
+            .col-md-12, 
+            .col-md-6, 
+            .col-md-4, 
+            .col-md-3, 
+            .col-md-5, 
+            .col-md-2 {
+                .list-content-box.content-box .content {
+                    padding: 0 8px 8px 8px;
+                    @include summaryLine(2)
+                }
+            }
+       
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+                    
+        }
+    }
+        
+}
+
+.c-4, .c-3 {
+
+    .article-list-4 {
+
+        @media screen and(min-width: 992px) {
+            .list-content-box.content-box .content {
+                height: 91px;
+                .content-left, .relative-line {
+                    display: none;
+                }
+
+                .relative-content-right {
+                    position: static;
+                    padding-left: 0;
+
+                    .relative-content {
+                        width: 100%;    
+                    }
+                }
+            } 
+        }
+    
+    }
+        
+}
+
+/////////////////////////////图文列表样式-4 article-list-4 end ///////////////////////
+
+
+
+/////////////////////////////图文列表样式-5 article-list-5 start ///////////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .article-list-5 {
+
+        .list-content-box.content-box .content {
+            padding: 4px 0;
+            padding-left: 15px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background-color: $main-color;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+
+            border-bottom: 1px solid $split-color;
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+                .title {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .header-content-box.content-box .content {
+                    @include summaryLine(3)
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                .title {
+                    font-size: 1.6rem;
+                }
+            }
+            .header-content-box.content-box .content {
+                    @include summaryLine(3)
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content-box .content {
+                .title {
+                    font-size: 1.6rem;
+                }
+            }
+            .header-content-box.content-box .content {
+                @include summaryLine(3)
+            }
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .article-list-5 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .header-content-box.content-box .content {
+                    padding: 24px;
+                    @include summaryLine(3)
+                }
+            }
+        }
+    }
+}
+
+.c-9 {
+    .article-list-5 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .header-content-box.content-box .content {
+                    padding: 24px;
+                    @include summaryLine(3)
+                }
+            }
+        }
+    }
+} 
+
+
+.c-6 {
+    .article-list-5 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .content-box .content {
+                    padding: $content-padding-medium;
+                }
+                .header-content-box.content-box .content {
+                    @include summaryLine(2)
+                }
+            }
+        }
+    }
+} 
+
+
+
+.c-4, .c-3 {
+
+    .article-list-5 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+
+                    .title {
+                        font-size: 1.6rem;
+                    }
+
+                    .float-content-footer {
+                        margin-top: .2rem;
+                    }
+                }
+                @include summaryHide();
+            }
+        }
+    }
+
+}
+/////////////////////////////图文列表样式-5 article-list-5 end ///////////////////////
+
+
 
 /////////////////////////////  图文详情  start ///////////////////////
     .article-detail {

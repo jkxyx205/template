@@ -5,7 +5,33 @@ html, body {
 section {
     .panel-title {
         .label {
-            width: calc(100% - 92px);
+            position: relative;
+            padding: 0 15px;
+            max-width: calc(100% - 92px);
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 8px;
+                height: 8px;
+                left: 0;
+                top: 28px;
+                border-top: 1px solid $main-color;
+                border-left: 1px solid $main-color;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                right: 0;
+                bottom: 28px;
+                border-right: 1px solid $main-color;
+                border-bottom: 1px solid $main-color;
+            }
         }
 
         .more-text {
@@ -31,25 +57,3 @@ section {
          }
     }
 }
-
-
-// .article-bar {
-//     $width: 8px;
-//     padding-left: 14px;
-//     margin-left: 2px;
-//     position: relative;
-//     &:before {
-//         content: '';
-//         position: absolute;
-//         width: $width;
-//         height: $width;
-//         background-color: #505050;
-//         left: 0;
-//         top: 50%;
-//         transform: translateY(-50%);
-//         -webkit-transform: translateY(-50%);
-//         -moz-transform: translateY(-50%);
-//         -ms-transform: translateY(-50%);
-
-//     }
-// }
