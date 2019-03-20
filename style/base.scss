@@ -29,6 +29,12 @@ html {
     }
 }
 
+@media (min-width: 992px) {
+    .col-md-offset-15 {
+        margin-left: 12.5%;
+    }
+}
+
 %position-center {
     position: absolute;
     left: 50%;

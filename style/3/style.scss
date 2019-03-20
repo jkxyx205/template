@@ -3,8 +3,6 @@ html, body {
     font-weight: 150;
 }
 
-
-
 section {
 
     .panel {
@@ -13,24 +11,50 @@ section {
             padding: 0;
          
             .label {
-               
+                position: relative;
                 line-height: 35px;
                 z-index: 1;
-                padding: 0 15px;
+                padding: 0 20px;
                 top: 11px;
                 max-width: calc(100% - 92px);
-                transform: skewX(-15deg);
-                margin-left: 5px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left:0;
+                    top: 0;
+                    height: 100%;
+                    border-left: 10px solid $background-color;
+                    border-right: 0;
+                    border-top: 0;
+                    border-bottom: 35px solid $main-color;
+                }
+
                 &:after {
                     content: "";
                     position: absolute;
-                    right: -10px;
-                    top: 45%;
-                    width: 10px;
-                    height: 4px;
-                    background-color: #fff;
-
+                    right: 0;
+                    top: 0;
+                    width: 5px;
+                    height: 100%;
+                    border-left: 10px solid $main-color;
+                    border-right: 0;
+                    border-top: 0;
+                    border-bottom: 35px solid $background-color;
                 }
+
+                
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: -10px;
+                top: 45%;
+                width: 10px;
+                height: 4px;
+                background-color: #fff;
+
             }
 
             .more {

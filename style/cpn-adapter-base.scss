@@ -1,12 +1,3 @@
-@mixin titleLine($line) { // 标题行数
-    // .title {
-    //     display: -webkit-box;
-    //     white-space: normal;
-    //     -webkit-box-orient: vertical;
-    //     -webkit-line-clamp: $line;
-    // }
-}
-
 @mixin titleHide() {//隐藏标题
     .title {
         display: none;
@@ -82,6 +73,10 @@ $summaryFixedH2: 38px; //36xx
 
 $summaryFixedH3: 62px;
 $summaryFixedH4: 54px;
+
+$summaryFixedH39: 39px;
+
+/////////////////只有标题的基类/////////////////////
 
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
 
@@ -192,57 +187,6 @@ $summaryFixedH4: 54px;
             
         }
     }
-
-    //ipad plus
-    // @media screen and(max-width: 992px) and (min-width: 768px) {
-    //     .col-md-12,
-    //     .col-md-6 {
-    //         .content {
-    //             padding: $content-padding-big;
-
-    //             .title {
-    //                 font-size: $title-font-size-big;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //     }
-
-
-    //      .col-md-4,
-    //      .col-md-3 {
-    //         .content {
-    //             padding: $content-padding-small;
-
-    //             .title {
-    //                 font-size: $title-font-size-big;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //      }
-        
-        
-    //     .col-md-5, 
-    //     .col-md-2 {
-    //         .content {
-    //             padding: $content-padding-small;
-
-    //             .title {
-    //                 font-size: $title-font-size-medium;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-            
-    //     }
-    // }
  }
 
 .c-3 {
@@ -307,64 +251,6 @@ $summaryFixedH4: 54px;
 
      }
 
-     //ipad plus
-    // @media screen and(max-width: 992px) and (min-width: 768px) {
-    //     .col-md-12 {
-    //         .content {
-    //             padding: $content-padding-small;
-    //             .title {
-    //                 font-size: $title-font-size-big;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //     }
-         
-    //      .col-md-6 {
-    //         .content {
-    //             padding: $content-padding-small;
-
-    //             .title {
-    //                 font-size: $title-font-size-small;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-    //      }
-
-    //      .col-md-4,
-    //      .col-md-3,
-    //      .col-md-5 {
-    //         .content {
-    //             padding: $content-padding-small;
-    //             .title {
-    //                 font-size: $title-font-size-smallest;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-    //      }
-
-    //      .col-md-2 {
-    //             .content {
-    //             padding: $content-padding-smallest;
-    //             .title {
-    //                 font-size: $title-font-size-smallest;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-
-    //      }
-    // }
  }
 
  .c-9 {
@@ -443,71 +329,7 @@ $summaryFixedH4: 54px;
             }
          }
      }
-
-
-
-     //ipad plus
-    // @media screen and(max-width: 992px) and (min-width: 768px) {
-    //     .col-md-12 {
-    //         .content {
-    //             padding: $content-padding-medium;
-
-    //             .title {
-    //                 font-size: $title-font-size-big;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //     }
-
-    //     .col-md-6,
-    //     .col-md-4 {
-    //         .content {
-    //             padding: $content-padding-small;
-
-    //             .title {
-    //                 font-size: $title-font-size-big;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //     }
-
-
-        
-
-    //     .col-md-3 {
-    //         .content {
-    //             padding: $content-padding-small;
-
-    //             .title {
-    //                 font-size: $title-font-size-medium;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //      }
-
-    //      .col-md-5,
-    //      .col-md-2 {
-    //         .content {
-    //             padding: $content-padding-small;
-    //             .title {
-    //                 font-size: $title-font-size-medium;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-    //      }
-    // }
+    
  }
 
 .c-6 {
@@ -580,63 +402,7 @@ $summaryFixedH4: 54px;
             }
          }
      }
-
-     //ipad plus
-    // @media screen and(max-width: 992px) and (min-width: 768px) {
-    //     .col-md-12 {
-    //         .content {
-    //             padding: $content-padding-medium;
-    //             .title {
-    //                 font-size: $title-font-size-big;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //     }
-    //     .col-md-6 {
-    //         .content {
-    //             padding: $content-padding-small;
-
-    //             .title {
-    //                 font-size: $title-font-size-big;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //     }
-         
-    //      .col-md-4 {
-    //         .content {
-    //             padding: $content-padding-small;
-    //             .title {
-    //                 font-size: $title-font-size-small;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-    //      }
-
-    //      .col-md-3,
-    //      .col-md-5,
-    //      .col-md-2 {
-    //         .content {
-    //             padding: $content-padding-small;
-    //             .title {
-    //                 font-size: $title-font-size-smallest;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-    //      }
-    // }
+     
  }
 
 .c-4 {
@@ -694,62 +460,6 @@ $summaryFixedH4: 54px;
             }
          }
      }
-
-     //ipad plus
-    // @media screen and(max-width: 992px) and (min-width: 768px) {
-    //     .col-md-12 {
-    //         .content {
-    //             padding: $content-padding-medium;
-
-    //             .title {
-    //                 font-size: $title-font-size-big;
-    //             }
-
-    //             .summary-line, .summary-fixed {
-    //                 font-size: $summary-font-size-big;
-    //             }
-    //         }
-    //      }
-    //      .col-md-6 {
-    //         .content {
-    //             padding: $content-padding-small;
-    //             .title {
-    //                 font-size: $title-font-size-medium;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-    //      }
-
-    //      .col-md-4,
-    //      .col-md-3 {
-    //         .content {
-    //             padding: $content-padding-small;
-    //             .title {
-    //                 font-size: $title-font-size-small;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-    //      }
-    //      .col-md-5,
-    //      .col-md-2 {
-    //         .content {
-    //             padding: $content-padding-small;
-    //             .title {
-    //                 font-size: $title-font-size-smallest;
-    //             }
-
-    //             .summay-line, .summary-fixed {
-    //                 font-size: $summary-font-size-small;
-    //             }
-    //         }
-    //      }
-    // }
  }
 
             
@@ -865,28 +575,6 @@ $summaryFixedH4: 54px;
                 }
             }
         }
-
-         //ipad plus
-        @media screen and(max-width: 992px) and (min-width: 768px) {
-            .col-md-12,
-            .col-md-6 {
-                .content {
-                    padding: $content-padding-big2;
-                }
-            }
-            .col-md-4,
-            .col-md-3 {
-                .content {
-                    padding: $content-padding-medium2;
-                }
-            }
-            .col-md-5, 
-            .col-md-2 {
-                .content {
-                    padding: $content-padding-medium2;
-                }
-            }
-        }
     }
 }
 
@@ -907,53 +595,6 @@ $summaryFixedH4: 54px;
     .pic-list-31 {
          //PC & pad pro
         @media screen and(min-width: 992px) {
-            .col-md-12,
-            .col-md-6 {
-                 .content {
-                    padding: $content-padding-big2;
-                    .title {
-                        font-size: $title-font-size-big;
-                    }
-
-                    .summary-line, .summary-fixed {
-                        font-size: $summary-font-size-big;
-                    }
-                }
-            }
-
-            .col-md-4,
-            .col-md-3 {
-                .content {
-                    padding: $content-padding-medium2;
-                    .title {
-                        font-size: $title-font-size-big;
-                    }
-
-                    .summary-line, .summary-fixed {
-                        font-size: $summary-font-size-big;
-                    }
-                }
-                    
-            }
-
-            
-            .col-md-5,
-            .col-md-2 {
-                 .content {
-                    padding: $content-padding-medium2;
-
-                    .title {
-                        font-size: $title-font-size-medium;
-                    }
-                    
-                    .summary-fixed, .summary-line {
-                        font-size: $summary-font-size-small;
-                    }
-                }
-            }
-        }
-
-        @media screen and(max-width: 992px) and (min-width: 768px) {
             .col-md-12,
             .col-md-6 {
                  .content {
@@ -1060,48 +701,6 @@ $summaryFixedH4: 54px;
             }
 
         }
-
-        @media screen and(max-width: 992px) and (min-width: 768px) {
-            .col-md-12,
-            .col-md-6 {
-                 .content {
-                    padding: $content-padding-big2;
-                    .title {
-                        font-size: $title-font-size-big;
-                    }
-                }
-            }
-
-            .col-md-4, 
-            .col-md-3{
-                 .content {
-                    padding: $content-padding-medium2;
-                    .title {
-                        font-size: $title-font-size-big;
-                    }
-
-                    .summary-line, .summary-fixed {
-                        font-size: $summary-font-size-big;
-                    }
-                }
-            }
-
-
-            
-
-            .col-md-5,
-            .col-md-2 {
-                 .content {
-                    padding: $content-padding-medium2;
-                    .title {
-                        font-size: $title-font-size-medium;
-                    }
-                    .summary-fixed, .summary-line {
-                        font-size: $summary-font-size-small;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -1150,35 +749,7 @@ $summaryFixedH4: 54px;
                 }
             }
         }
-        @media screen and(max-width: 992px) and (min-width: 768px) {
-            .col-md-12,
-            .col-md-6,
-            .col-md-4 {
-                 .content {
-                    padding: $content-padding-medium2;
-                    .title {
-                        font-size: $title-font-size-big
-                    }
-                    .summary-fixed, .summary-line {
-                        font-size: $summary-font-size-big;
-                    }
-                }
-            }
-
-            .col-md-3,
-            .col-md-5,
-            .col-md-2 {
-                 .content {
-                    padding: $content-padding-medium2;
-                    .title {
-                        font-size: $title-font-size-medium
-                    }
-                    .summary-fixed, .summary-line {
-                        font-size: $summary-font-size-small;
-                    }
-                }
-            }
-        }
+        
     }
 }
 
@@ -1245,57 +816,10 @@ $summaryFixedH4: 54px;
                 @include contentHide()
             }
         }
-
-        @media screen and(max-width: 992px) and (min-width: 768px) {
-            .col-md-12 {
-                .content {
-                    padding: $content-padding-medium2;
-                    .title {
-                        font-size: $title-font-size-big
-                    }
-                    .summary-fixed, .summary-line {
-                        font-size: $summary-font-size-big;
-                    }
-
-                }
-            }
-
-            .col-md-6,
-            .col-md-4,
-            .col-md-3 {
-                .content {
-                    padding: $content-padding-medium2;
-                    .title {
-                        font-size: $title-font-size-medium
-                    }
-                    .summary-fixed, .summary-line {
-                        font-size: $summary-font-size-small;
-                    }
-
-                }
-            }
-
-            .col-md-5 {
-                .content {
-                    padding: $content-padding-small;
-                    .title {
-                        font-size: $title-font-size-small
-                    }
-                    .summary-fixed, .summary-line {
-                        font-size: $summary-font-size-small;
-                    }
-
-                }
-            }
-
-            .col-md-2 {
-                @include contentHide()
-            }
-        }
     }
 }
 
-/////////////////////////////pic-list-7 列表样式-7 end ////////////////
+/////////////////标题的基类/////////////////////
 
 @mixin smallestPlay() { //局中 缩小图标
     // left: 50%;
@@ -1357,97 +881,91 @@ $summaryFixedH4: 54px;
         }
     } 
 
- 
+    //ipad plus
+    @media screen and(max-width: 992px) and (min-width: 768px) {
+        .content-box .cover {
+            .container-icon-center,
+            .container-icon-right,
+            .container-icon-left {
+                        @include mediumPlay()
+                    }
+        }
 
-
-
-
-
-        //ipad plus
-        @media screen and(max-width: 992px) and (min-width: 768px) {
-            .content-box .cover {
-                .container-icon-center,
-                .container-icon-right,
-                .container-icon-left {
+        .pic-list-27 {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .cover:hover {
+                    .container-icon-center,
+                    .container-icon-right,
+                    .container-icon-left {
                             @include mediumPlay()
-                        }
-            }
-
-            .pic-list-27 {
-                .col-md-12,
-                .col-md-6,
-                .col-md-4,
-                .col-md-3,
-                .col-md-5,
-                .col-md-2 {
-                    .cover:hover {
-                        .container-icon-center,
-                        .container-icon-right,
-                        .container-icon-left {
-                                @include mediumPlay()
-                        }
                     }
                 }
             }
         }
+    }
 
-        //iphone 6
-        @media screen and(max-width: 768px) and (min-width: 640px) {
-            .content-box .cover {
-                .container-icon-center,
-                .container-icon-right,
-                .container-icon-left {
-                            @include smallPlay()
-                }
-            }
-
-            .pic-list-27 {
-                .col-md-12,
-                .col-md-6,
-                .col-md-4,
-                .col-md-3,
-                .col-md-5,
-                .col-md-2 {
-                    .cover:hover {
-                        .container-icon-center,
-                        .container-icon-right,
-                        .container-icon-left {
-                            @include smallPlay()
-                        }
-                    }
-                }
+    //iphone 6
+    @media screen and(max-width: 768px) and (min-width: 640px) {
+        .content-box .cover {
+            .container-icon-center,
+            .container-icon-right,
+            .container-icon-left {
+                        @include smallPlay()
             }
         }
 
-
-        //iphone 5
-        @media screen and (max-width: 640px) {
-            .content-box .cover {
-                .container-icon-center,
-                .container-icon-right,
-                .container-icon-left {
+        .pic-list-27 {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .cover:hover {
+                    .container-icon-center,
+                    .container-icon-right,
+                    .container-icon-left {
                         @include smallPlay()
                     }
+                }
             }
+        }
+    }
 
-            .pic-list-27 {
-                .col-md-12,
-                .col-md-6,
-                .col-md-4,
-                .col-md-3,
-                .col-md-5,
-                .col-md-2 {
-                    .cover:hover {
-                        .container-icon-center,
-                        .container-icon-right,
-                        .container-icon-left {
-                            @include smallPlay()
-                        }
+
+    //iphone 5
+    @media screen and (max-width: 640px) {
+        .content-box .cover {
+            .container-icon-center,
+            .container-icon-right,
+            .container-icon-left {
+                    @include smallPlay()
+                }
+        }
+
+        .pic-list-27 {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .cover:hover {
+                    .container-icon-center,
+                    .container-icon-right,
+                    .container-icon-left {
+                        @include smallPlay()
                     }
                 }
             }
-            
         }
+        
+    }
             
     
 }

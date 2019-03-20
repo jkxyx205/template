@@ -445,6 +445,7 @@ $pic-title-top:10px;
 
 
             .relative-content-right {
+                width: 100%;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -525,6 +526,7 @@ $pic-title-top:10px;
 
             .content-right {
                 flex: 1;
+                width: calc(100% - 80px)
             }
         } 
     }
@@ -1033,31 +1035,27 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                
 
                 .icon-Headportrait-m {
-                    // background-color: $main-color;
                     color: $main-color;;
                     font-size: 1.4rem;
                     margin-right: 5px;
                 }
 
 
-                // line-height: 40px;
+      
             }
         }
 
-        &:hover {
-            // .content {
-            //     background-color: $main-color;
-            //     .summary-fix {
-            //         color: #fff;    
-            //     }
-                
+    }
+}
 
-            //     .title a, .title a:hover {
-            //         color: #fff;
-            //     }
-            // } 
-        }
-
+.pic-list-8.article-type {
+        .wrapper {
+            .content {
+                .content-footer {
+                    line-height: 60px;
+                    height: 60px;
+                }
+            }
     }
 }
 
@@ -2178,7 +2176,8 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     }
 
     .article-summary {
-        
+        word-wrap: break-word;
+        word-break: break-all; 
         background-color: #f6f6f6;
         .article-summary-tip {
             font-weight: bold;
@@ -2187,6 +2186,10 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
     .article-content {
         padding-bottom: 4rem;
+
+        img {
+            width: 100%;
+        }
     }
 
 }
