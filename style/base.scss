@@ -357,7 +357,7 @@ section {
 
         &.paddingDisplayFalse {
             background: transparent;
-            padding: 0;
+            padding: 0!important;
 
             &.single-line-1.single-col-1 .content-box {
                 padding-bottom: 0;
