@@ -2057,6 +2057,13 @@ $content-padding-medium2: 1.4rem 1rem;
 
                 .wrapper .content:last-of-type {
                     padding-bottom: $summaryFixedH2 * .8;
+
+                     
+                }
+
+                .wrapper .cover .readmore {
+                        padding: .4rem .4rem;
+                        font-size: 12px;
                 }
 
                 .col-xs-6 {
@@ -2105,6 +2112,11 @@ $content-padding-medium2: 1.4rem 1rem;
 
                 .wrapper .content:last-of-type {
                     padding-bottom: $summaryFixedH2 * .8;
+                }
+
+                .wrapper .cover .readmore {
+                        padding: .4rem .4rem;
+                        font-size: 12px;
                 }
 
                 .content {
@@ -3373,8 +3385,6 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
             }
 
-
-
             //ipad plus
             @media screen and(max-width: 992px) and (min-width: 768px) {
                 @include summaryLineHeight($summaryFixedH1)
@@ -3438,19 +3448,20 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-4 {
                      .content {
                         .btn {
-                            margin-top: 1.6rem;
+                            margin-top: .6rem;
+                            padding: 0 15px;
                         }
                     }
 
                     .article-bar {
-                        margin-top: .8rem;
+                        margin-top: .2rem;
                     }
 
                     .content-box .content {
                            padding: 1rem 1.6rem;
 
                             .summary-fixed {
-                                margin-top: .8rem;
+                                margin-top: 0;
                             }
                     }
 
@@ -3495,6 +3506,10 @@ $content-padding-medium2: 1.4rem 1rem;
                       padding: 1rem 1.6rem;
                 }
 
+                .article-bar {
+                    margin-top: .4rem;
+                }
+
                 @include summaryHide()
                 .btn {
                     display: none;
@@ -3520,54 +3535,61 @@ $content-padding-medium2: 1.4rem 1rem;
                 }
 
                 .col-md-6 {
-                     .content {
-                        .btn {
-                            margin-top: 2.4rem;
-                        }
-                    }
-                    @include summaryLineHeight($summaryFixedH3)
-                    @include summaryLine(3)
-                }
-                .col-md-4 {
-                     .content {
-                        .btn {
-                            margin-top: 1.2rem;
-                        }
-                    }
-
-                    .article-bar {
-                        margin-top: .4rem;
-                    }
 
                     .content-box .content {
-                            padding: 1rem 1.6rem;
+                            // padding: 1rem 1.6rem;
 
                             .summary-fixed {
-                                margin-top: .4rem;
+                                margin-top: 0;
+                            }
+
+                            .btn {
+                                margin-top: 1.6rem;
                             }
                     }
 
-                    @include summaryLineHeight($summaryFixedH2)
-                    @include summaryLine(2)
 
+                    @include summaryLineHeight($summaryFixedH3)
+                    @include summaryLine(3)
                 }
 
-                .col-md-3 {
+                .col-md-4 {
+
                     .content {
                         .btn {
                             margin-top: .8rem;
                         }
                     }
 
+
                     .article-bar {
-                        margin-top: .4rem;
+                        margin-top: 0;
                     }
 
                     .content-box .content {
                             padding: 1rem 1.6rem;
 
                             .summary-fixed {
-                                margin-top: .4rem;
+                                margin-top: 0
+                            }
+                    }
+
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
+
+                }
+
+                .col-md-3 {
+
+                    .article-bar {
+                        margin-top: 0;
+                    }
+
+                    .content-box .content {
+                            padding: .4rem .8rem;
+
+                            .summary-fixed {
+                                margin-top: 0;
                             }
                     }
 
@@ -3583,11 +3605,15 @@ $content-padding-medium2: 1.4rem 1rem;
 
             .col-md-5,
             .col-md-2 {
+                .article-bar {
+                    margin-top: 2px;
+                }
+
                 .content-box .content {
-                        padding: 1rem 1.6rem;
+                        padding: .6rem 1.6rem;
 
                         .summary-fixed {
-                            margin-top: .8rem;
+                            margin-top: 0;
                         }
                 }
                 @include summaryHide()
@@ -3618,19 +3644,19 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-6 {
                      .content {
                         .btn {
-                            margin-top: 1.6rem;
+                            margin-top: 1rem;
                         }
                     }
 
                     .article-bar {
-                        margin-top: .8rem;
+                        margin-top: 0;
                     }
 
                     .content-box .content {
                            padding: 1rem 1.6rem;
 
                             .summary-fixed {
-                                margin-top: .8rem;
+                                margin-top: 0;
                             }
                     }
 
@@ -3642,12 +3668,12 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-4 {
                     .content {
                         .btn {
-                            margin-top: 1.6rem;
+                            margin-top: 1.2rem;
                         }
                     }
 
                     .article-bar {
-                        margin-top: .4rem;
+                        margin-top: 0
                     }
 
                     .content-box .content {
@@ -3655,7 +3681,7 @@ $content-padding-medium2: 1.4rem 1rem;
                            
 
                             .summary-fixed {
-                                margin-top: .8rem;
+                                margin-top: 0;
                             }
                     }
 
@@ -3668,14 +3694,9 @@ $content-padding-medium2: 1.4rem 1rem;
                 }
 
                 .col-md-3 {
-                    .content {
-                        .btn {
-                            margin-top: .6rem;
-                        }
-                    }
 
                     .article-bar {
-                        margin-top: .4rem;
+                        margin-top: 0;
                     }
 
                     .content-box .content {
@@ -3687,8 +3708,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
 
-                   @include summaryLineHeight($summaryFixedH0)
-                   @include summaryLine(1)
+                    @include summaryHide()
                    .btn {
                         display: none;
                     }
@@ -3724,22 +3744,26 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                      .content {
                         .btn {
-                            margin-top: 2.4rem;
+                            margin-top: 1.6rem;
                         }
                     }
+
+                    .content-box .content {
+                        padding: 1rem 1.6rem;
+
+                        .summary-fixed {
+                            margin-top: .2rem;
+                        }
+                }
+
+
                     @include summaryLineHeight($summaryFixedH3)
                     @include summaryLine(3)
                 }
 
                 .col-md-6 {
-                    .content {
-                        .btn {
-                            margin-top: 1.6rem;
-                        }
-                    }
-
                     .article-bar {
-                        margin-top: .4rem;
+                        margin-top: 0;
                     }
 
                     .content-box .content {
@@ -3747,7 +3771,7 @@ $content-padding-medium2: 1.4rem 1rem;
                            
 
                             .summary-fixed {
-                                margin-top: .8rem;
+                                margin-top: 0;
                             }
                     }
 
@@ -3776,7 +3800,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-5,
                 .col-md-2 {
                     .content {
-                          padding: .5rem 1.6rem;
+                          padding: .2rem 1.6rem;
                     }
                 }
                
@@ -3793,24 +3817,24 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                      .content {
                         .btn {
-                            margin-top: 1.2rem;
+                            margin-top: .6rem;
                         }
                     }
 
                     .article-bar {
-                        margin-top: .4rem;
+                        margin-top: 0;
                     }
 
                     .content-box .content {
                             padding: .8rem 1.6rem;
 
                             .summary-fixed {
-                                margin-top: .2rem;
+                                margin-top: 0;
                             }
                     }
 
-                    @include summaryLineHeight($summaryFixedH2)
-                    @include summaryLine(2)
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
 
                 }
 
@@ -3820,7 +3844,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-5,
                 .col-md-2 {
                     .content {
-                          padding: 1rem 1.6rem;
+                          padding: .4rem 1.2rem;
                     }
 
                     @include summaryHide()
@@ -3837,6 +3861,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
                 }
 
+                .col-md-5,
                 .col-md-2 {
                     @include contentHide()
                 }
@@ -3854,12 +3879,12 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                     .content {
                         .btn {
-                            margin-top: 1.6rem;
+                            margin-top: 1rem;
                         }
                     }
 
                     .article-bar {
-                        margin-top: .4rem;
+                        margin-top: 0;
                     }
 
                     .content-box .content {
@@ -3867,7 +3892,7 @@ $content-padding-medium2: 1.4rem 1rem;
                            
 
                             .summary-fixed {
-                                margin-top: .8rem;
+                                margin-top: 0;
                             }
                     }
 
@@ -5500,17 +5525,17 @@ $padding24Small: .3rem 1rem;
         
         @media screen and (min-width: 992px) {
             .info-bar {
-                margin-bottom: 10px;
+                margin: 12px 0 48px 0;
             }
 
             .article-title-bar {
-                padding: 20px 0;
+                margin-top: 100px;
                 font-size: 24px;
             }
 
             .article-summary { 
-                padding: 15px;
-                margin-bottom: 20px;
+                padding: 40px;
+                margin-bottom: 40px;
             }
 
             .article-cover {
