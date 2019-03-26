@@ -1444,15 +1444,14 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     }
 }
 
+
 .pic-list-15 {
     @include pic-area();
 
 
     .wrapper {
 
-       
-        .cover {
-        }
+        background-color: #fbfbfb;
 
         .content {
             transition: all 0.5s ease 0s;
@@ -2046,6 +2045,9 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             left: 0;
             bottom: 0;
             z-index: 2;
+
+           
+
             &:after {
                 content: '';
                 position: absolute;
@@ -2057,6 +2059,11 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                 background-size: cover;
                 z-index: -1;
 
+                // background: -webkit-linear-gradient(#333, #f2f2f2); /* Safari 5.1 - 6.0 */
+                // background: -o-linear-gradient(#333, #f2f2f2); /* Opera 11.1 - 12.0 */
+                // background: -moz-linear-gradient(#333, #f2f2f2); /* Firefox 3.6 - 15 */
+                // background: linear-gradient(#333, #f2f2f2); /* 标准的语法（必须放在最后） */
+                // opacity: .4;
 
             }
 
@@ -2064,8 +2071,12 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                 position: static;
             }
 
-            .title>span, .summary-line {
+            .title>span{
                 color: #fff;
+            } 
+
+            .summary-line {
+                color: $summary-color;
             }
             
         }
@@ -2096,6 +2107,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
             &:nth-of-type(1) {
                 padding-top: 0!important;
+                padding-left: 0!important;
             }
 
             .content-footer {

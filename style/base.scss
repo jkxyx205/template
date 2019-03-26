@@ -428,7 +428,10 @@ section {
             position: relative;
             text-align: center;
             overflow: hidden;
-          
+
+            .btn {
+                background-color: transparent;
+            }
 
             .title {
                 position: absolute;

@@ -2046,11 +2046,6 @@ $content-padding-medium2: 1.4rem 1rem;
     .pic-list-28 {
             @include summaryLine(2)
 
-            .wrapper .content {
-                padding-left: 0!important;
-            }
-            
-
             //mobile 6 
             @media screen and(max-width: 768px) and (min-width: 640px) {
                 @include summaryLineHeight($summaryFixedH2)
