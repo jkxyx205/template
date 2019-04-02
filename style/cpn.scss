@@ -46,6 +46,7 @@ html, body {
 @media (max-width: 768px ) {
    .moban {
         h1, h2, h3, h4, h5, h6 {
+            font-size:  20px!important;
             span {
                 font-size:  20px!important;
             }
@@ -2323,8 +2324,14 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 ////////模版／／／／／／／
 
 .moban-float-p-img {
-    margin-right:15px;
-    float:left
+    margin-right: 20px;
+    float:left;
+
+    width: 40%;
+
+    img {
+        width: 100%;
+    }
 }
 
 //文章详情
@@ -2372,8 +2379,8 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
         word-break: break-all;
         padding-bottom: 4rem;
 
-        img {
-            width: 100%;
+        img, video, embed {
+            max-width: 100%!important;
         }
     }
 

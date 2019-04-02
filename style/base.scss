@@ -87,6 +87,12 @@ body .layui-layer-setwin .layui-layer-close2 {
     display: block;
 }
 
+.cke_editable {
+  img, video, embed {
+    max-width: 100%!important;
+  }
+}
+
 //侧边栏
 .sider-bar {
     position: fixed;
