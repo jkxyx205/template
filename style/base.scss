@@ -360,6 +360,13 @@ section {
     }
 
     .panel-body.moban { //模版
+
+        h1,h2,h3,h4,h5,h6,p,span {
+           line-height: 1;
+           margin: 0;
+           padding: 0;
+        }
+
         $item-padding: 15px;
         
 

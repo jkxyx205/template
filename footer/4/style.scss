@@ -1,19 +1,11 @@
 @import '../base';
 
 footer {
-     $bgColor: rgb(34, 35, 36);
-
-     .f-panel {
-        padding: 10px 0;
-        background-color: $bgColor;
+     .layout-content {
+        padding-top: 20px;
      }
 
-     .f-s-1, .f-s-2, .f-s-3 {
-        $height: 50px;
-        @include bar-container($height, $bgColor);
+     .seperator {
+        margin-top: 10px;
      }
-
 }
-
-
-

@@ -1,29 +1,18 @@
 @import '../base';
 
 footer {
-     $bgColor: rgb(34, 35, 36);
+     .layout-content {
+        padding-top: 20px;
+        text-align: center;
 
-     .f-d-panel {
-        background-color: $bgColor;
-        padding: 20px 0;
-     }
-
-     .container > div {
-        $height: 40px;
-
-        display: flex;
-        justify-content: center;
-    
-        @media (min-width: 1170px) {
-            height: $height;
+        .share {
+            padding: 10px 0;
         }
-        
-        @include bar-container($height, $bgColor);
-        
+
+        .menu-horizontal .menu-item {
+            padding-left: 0;
+        }
      }
 
-     .f-d-4 {
-        background-color: rgb(10, 11, 12);
-     }
-    
+
 }

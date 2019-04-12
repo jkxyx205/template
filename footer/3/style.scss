@@ -1,41 +1,23 @@
 @import '../base';
 
-.main-bg-color {
-    background-color: $main-color;
-    color: #fff;
-}
 footer {
-    .aaa {
-        $height: 100px;
+     .layout-content {
+        padding: 40px 0;
+        background-color: $main-color;
+        color: #fff;
 
-        @include bar-container($height, transparent);
-
-        .iconfont {
-            position: absolute; 
-            top: 50%;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            font-size: 40px;
+        & .info2 .detail  {
+            color: #fff;
         }
 
-        .box {
-            padding-left: 55px;
-            line-height: 100%;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .title {
-            margin-bottom: 10px;
-        }
+        
+     }
 
+     .menu-horizontal {
+        padding-top: 20px;
+        background-color: $layout-reserved-backgroud;
+        color: $layout-conent-font-color;
     }
-    
 
-    .bb {
-        $height: 70px;
-        $bgColor: rgb(34, 35, 36);
-        @include bar-container($height, $bgColor);
-    }
+     
 }

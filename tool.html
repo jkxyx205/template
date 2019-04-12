@@ -204,9 +204,10 @@
                 </div>
                 <div class="select-area" style="float: right;">
                         页面：<select name="" id="page">
+                          <option value="tpl/blank.html">首页</option>
                             <option value="tpl/index.html">首页</option>
                             <option value="tpl/article-specital-list">文章特殊列表样式</option>
-                            <option value="tpl/article_detail.html" selected="">文章详情</option>
+                            <option value="tpl/article_detail.html">文章详情</option>
                             <option value="tpl/full-text.html">分页-全文搜索</option>
                             <option value="tpl/list.html">图片列表</option>
                             <option value="tpl/waterfall.html">瀑布流</option>
@@ -229,13 +230,15 @@
                             <option value="10">10</option>
                         </select>
                         页脚：<select name="" id="footer">
-                           <option value="1">1</option>
+                          <option value="1">1</option>
                            <option value="2">2</option>
                            <option value="3">3</option>
                            <option value="4">4</option>
                            <option value="5">5</option>
                            <option value="6">6</option>
                            <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
 
                         </select>
                         风格：<select name="" id="style">
@@ -1301,31 +1304,67 @@
 </script>
 <!--------------------------------------------------------------------页脚开始-------------------------------------------------------------------------->
 
+<script type="text/html" id="footer_0">
+<footer>
+  <div class="layout-resvered">
+    <div class="container">
+          <ul>
+            <li>技术支持：苏州点研智能科技有限公司</li>
+            <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+           <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+         </ul>
+    </div>
 
+  </div>
+</footer>
 
+</script>
 
 
 
 
 <script type="text/html" id="footer_1">
 <footer>
-  <div class="footer-panel">
-     <div class="s1">
-           <div class="container">
-            <div class="wrapper">
-                           <div class="pull-left">
-                <div class="menu">
-                 <ul>
-                    <li><a href="#">首页</a></li>
+  <div class="layout-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="menu-horizontal">
+              <ul>
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
                     <li><a href="#">新闻中心</a></li>
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">业务中心</a></li>
-                    <li><a href="#">创新发现</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="pull-right">
-              <div class="share">
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+
+                  </ul>
+                </li>
+
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+      </div>
+        </div>
+        <div class="col-md-2">
+          <div class="share">
                 <ul> 
                  <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
                  <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
@@ -1333,85 +1372,122 @@
                  <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
                 </ul> 
             </div>
-          </div>
-          <div class="clearfix"></div>
-            </div>
- 
+        </div>
+      </div>
 
-          </div>
+      
+      <div class="seperator"></div>
+      <div class="info">
+        <ul class="li-float">
+              <li>地址：苏州点研智能科技有限公司</li>
+              <li>电话：苏州点研智能科技有限公司</li>
+              <li>邮箱：苏州点研智能科技有限公司</li>
+            </ul>
       </div>
-      <div class="s2">
-           <div class="container">
-            <div class="info">
-                 <ul>
-                    <li>地址：xxxx</li>
-                    <li>邮编：225432</li>
-                    <li>电话：19989876762</li>
-                    <li>邮箱：jkxx@qq.com</li>
-                    <li>传真：weda@163.com</li>
-                </ul>
-            </div>
-          </div> 
-      </div>
+    </div> 
   </div>
-      <div class="s3">
-          <!-- <div class="pull-center"> -->
-              <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
-          <!-- </div> -->
-      </div>
-    </footer>
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+            </ul>
+          </div>
+          <div class="pull-right">
+           <ul class="li-float">
+             <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+           </ul>
+          </div>
+    </div>
+
+  </div>
+     
+</footer>
 
 </script>
 
-
 <script type="text/html" id="footer_2">
-  <footer>
-     <div class="a">
-           <div class="container">
-              <div class="row">
-                <div class="col-sm-4">
-                  <i class="iconfont icon-shouji"></i>
-                 <div class="box">
+<footer>
+  <div class="layout-content">
+    <div class="container">
+      <div class="info2">
+        <div class="row">
+             <div class="col-sm-4">
+                <i class="iconfont icon-shouji"></i>
+                 <div class="info2-box">
                    <div class="title">联系我们</div>
                    <span class="detail">17796725527</span>
                  </div>
                </div>
-               <div class="col-sm-4"><i class="iconfont icon-dizhi"></i>
-                 <div class="box">
+               <div class="col-sm-4">
+                 <i class="iconfont icon-dizhi"></i>
+                 <div class="info2-box">
                    <div class="title">地址</div>
-                   <span class="detail">北京大道西</span>
+                   <span class="detail">北京大道西北京大道西北京大道西北京大道西北京大道西北京大道西</span>
                  </div>
                </div>
                <div class="col-sm-4"><i class="iconfont icon-youxiang1"></i>
-                 <div class="box">
+                 <div class="info2-box">
                    <div class="title">邮箱</div>
                    <span class="detail">18896717@qq.com</span>
                  </div>
                </div>
-              </div> 
-          </div>
+        </div>
       </div>
-      <div class="b">
-           <div class="container">
-             <div class="menu">
-                 <ul>
-                    <li><a href="#">首页</a></li>
+      <div class="seperator"></div>
+      <div class="menu-horizontal">
+              <ul>
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
                     <li><a href="#">新闻中心</a></li>
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">业务中心</a></li>
-                    <li><a href="#">创新发现</a></li>
-                </ul>
-            </div>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                        <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
 
-          </div> 
+                  </ul>
+                </li>
+
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
       </div>
-      <div class="c">
-          <div class="container">
-              <div class="pull-left">
-              <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
+
+    </div> 
+  </div>
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+            </ul>
           </div>
-           <div class="pull-right">
-              <div class="share">
+          <div class="pull-right">
+           <ul class="li-float">
+             <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+             <li>
+               <div class="share">
                 <ul> 
                  <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
                  <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
@@ -1419,86 +1495,158 @@
                  <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
                 </ul> 
             </div>
+             </li>
+           </ul>
           </div>
-          </div>
-      </div>
-    </footer>
+    </div>
+
+  </div>
+     
+</footer>
+
 </script>
 
 <script type="text/html" id="footer_3">
-  <footer>
-      <div class="main-bg-color">
-        <div class="container">
-          <div class="aaa">
-             <div class="row">
-                <div class="col-sm-4">
-                  <i class="iconfont icon-shouji"></i>
-                 <div class="box">
+<footer>
+  <div class="layout-content">
+    <div class="container">
+      <div class="info2">
+        <div class="row">
+             <div class="col-sm-4">
+                <i class="iconfont icon-shouji"></i>
+                 <div class="info2-box">
                    <div class="title">联系我们</div>
                    <span class="detail">17796725527</span>
                  </div>
                </div>
-               <div class="col-sm-4"><i class="iconfont icon-dizhi"></i>
-                 <div class="box">
+               <div class="col-sm-4">
+                 <i class="iconfont icon-dizhi"></i>
+                 <div class="info2-box">
                    <div class="title">地址</div>
-                   <span class="detail">北京大道西</span>
+                   <span class="detail">北京大道西北京大道西北京大道西北京大道西北京大道西北京大道西</span>
                  </div>
                </div>
                <div class="col-sm-4"><i class="iconfont icon-youxiang1"></i>
-                 <div class="box">
+                 <div class="info2-box">
                    <div class="title">邮箱</div>
                    <span class="detail">18896717@qq.com</span>
                  </div>
                </div>
-              </div> 
-          </div>
-        </div> 
+        </div>
       </div>
-      <div class="bb">
-           <div class="container">
-             <div class="line-text pull-left" style="margin-right: 25px;">Copyright © 2004 - 2017  xx.com 版权所有</div>
-             <div class="menu pull-right">
-                 <ul>
-                    <li><a href="#">首页</a></li>
+   
+
+    </div> 
+  </div>
+
+      <div class="menu-horizontal">
+        <div class="container">
+              <ul>
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
                     <li><a href="#">新闻中心</a></li>
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">业务中心</a></li>
-                    <li><a href="#">创新发现</a></li>
-                </ul>
-            </div>
-          </div> 
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                        <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+
+                  </ul>
+                </li>
+
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+              </div>
       </div>
-    </footer>
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+            </ul>
+          </div>
+          <div class="pull-right">
+           <ul class="li-float">
+             <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+           </ul>
+          </div>
+    </div>
+
+  </div>
+     
+</footer>
+
 </script>
 
 <script type="text/html" id="footer_4">
-  <footer>
-      <div class="f-panel">
-         <div class="container">
-            <div class="f-s-1">
-                <div class="menu">
-                   <ul>
-                      <li><a href="#">首页</a></li>
-                      <li><a href="#">新闻中心</a></li>
-                      <li><a href="#">关于我们</a></li>
-                      <li><a href="#">业务中心</a></li>
-                      <li><a href="#">创新发现</a></li>
+<footer>
+  <div class="layout-content">
+    <div class="container">
+      <div class="menu-horizontal">
+              <ul>
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+
                   </ul>
-              </div>
-              <div class="clearfix"></div>
+                </li>
+
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+      </div>
+      
+      
+      <div class="info">
+            <div class="pull-left">
+              <ul class="li-float">
+                <li>地址：苏州点研智能科技有限公司</li>
+                <li>电话：苏州点研智能科技有限公司</li>
+                <li>邮箱：苏州点研智能科技有限公司</li>
+              </ul>
             </div>
-             <div class="f-s-2">
-              <div class="info">
-                 <ul>
-                    <li>地址：xxxx</li>
-                    <li>邮编：225432</li>
-                    <li>电话：19989876762</li>
-                    <li>邮箱：jkxx@qq.com</li>
-                    <li>传真：weda@163.com</li>
-                </ul>
-               
-              </div>
-               <div class="share2 pull-right">
+
+            <div class="share2 pull-right">
                 <ul> 
                  <li><a href="#" class="weibo"><i class="iconfont icon-weibo1"></i></a></li>
                  <li><a href="#" class="facebook"><i class="iconfont icon-facebook"></i></a></li>
@@ -1506,122 +1654,336 @@
                  <li><a href="#" class="linkedin"><i class="iconfont icon-linkedin"></i></a></li>
                 </ul> 
             </div>
-             <div class="clearfix"></div>
-            </div>
-             <div class="f-s-3">
-              <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
-            </div>
-         </div>
+      </div>
+    </div> 
+  </div>
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+            </ul>
+          </div>
+          <div class="pull-right">
+           <ul class="li-float">
+             <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+           </ul>
+          </div>
     </div>
-    </footer>
-    
-</script>
 
+  </div>
+     
+</footer>
+
+</script>
 
 <script type="text/html" id="footer_5">
-  <footer>
-      <div class="f-d-panel">
-         <div class="container">
-            <div class="f-d-1">
-                <div class="menu">
-                   <ul>
-                      <li><a href="#">首页</a></li>
-                      <li><a href="#">新闻中心</a></li>
-                      <li><a href="#">关于我们</a></li>
-                      <li><a href="#">业务中心</a></li>
-                      <li><a href="#">创新发现</a></li>
+<footer>
+  <div class="layout-content">
+    <div class="container">
+
+          <div class="menu-horizontal">
+              <ul>
+                <li class="menu-item">
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+
                   </ul>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-             <div class="f-d-2">
-              <div class="info">
-                 <ul>
-                    <li>地址：xxxx</li>
-                    <li>邮编：225432</li>
-                    <li>电话：19989876762</li>
-                    <li>邮箱：jkxx@qq.com</li>
-                    <li>传真：weda@163.com</li>
-                </ul>
-               
-              </div>
-             <div class="clearfix"></div>
-            </div>
-             <div class="f-d-3">
-             <div class="share">
+                </li>
+              </ul>
+      </div>
+
+
+      
+      
+      <div class="info">
+        <ul class="li-float">
+              <li>地址：苏州点研智能科技有限公司</li>
+              <li>电话：苏州点研智能科技有限公司</li>
+              <li>邮箱：苏州点研智能科技有限公司</li>
+            </ul>
+      </div>
+
+       <div class="share">
                 <ul> 
                  <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
                  <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
                  <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
                  <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
                 </ul> 
-            </div>
-             <div class="clearfix"></div>
-            </div>
-             
-         </div>
+          </div>
+    </div> 
+  </div>
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+            </ul>
+          </div>
+          <div class="pull-right">
+           <ul class="li-float">
+             <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+           </ul>
+          </div>
     </div>
-    <div class="f-d-4" style="text-align: center;">
-              <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
-    </div>
-    </footer>
-</script>
 
+  </div>
+     
+</footer>
+
+</script>
 
 <script type="text/html" id="footer_6">
-  <footer>
-      <div class="f-j-panel">
-         <div class="container">
-            <div class="f-j-1">
-        
-               <div class="share pull-left">
+<footer>
+  
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+              <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+            </ul>
+          </div>
+          <div class="pull-right share">
                 <ul> 
                  <li><a href="#"><i class="iconfont icon-weibo1"></i></a></li>
                  <li><a href="#"><i class="iconfont icon-facebook"></i></a></li>
                  <li><a href="#"><i class="iconfont icon-twitter"></i></a></li>
                  <li><a href="#"><i class="iconfont icon-linkedin"></i></a></li>
                 </ul> 
-            </div>
-            <div class="line-text pull-right">Copyright © 2004 - 2017  xx.com 版权所有</div>
-            </div>
-
-         </div>
+          </div>
     </div>
-    </footer>
-    
+
+  </div>
+     
+</footer>
+
+</script>
+
+<script type="text/html" id="footer_7">
+<footer>
+  <div class="layout-content">
+    <div class="container">
+      <div class="pull-left logo">
+        <img src="../images/logo-small.png" alt="">
+      </div>
+      
+      <div class="pull-right info">
+        <ul class="li-float">
+              <li>地址：苏州点研智能科技有限公司</li>
+              <li>电话：苏州点研智能科技有限公司</li>
+              <li>邮箱：苏州点研智能科技有限公司</li>
+          </ul>
+      </div>
+    </div> 
+  </div>
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+            </ul>
+          </div>
+          <div class="pull-right">
+           <ul class="li-float">
+             <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+           </ul>
+          </div>
+    </div>
+
+  </div>
+     
+</footer>
+
+</script>
+
+<script type="text/html" id="footer_8">
+<footer>
+  <div class="layout-content">
+    <div class="container">
+          <div class="menu-horizontal">
+              <ul>
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+
+                  </ul>
+                </li>
+
+                <li class="menu-item">
+                  <h3>热门产品</h3>
+                  <ul class="li-float sub-menu">
+                    <li><a href="#">热门产品1</a></li>
+                    <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                      <li><a href="#">首页2</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+      </div>
+    </div> 
+  </div>
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+            </ul>
+          </div>
+          <div class="pull-right">
+           <ul class="li-float">
+             <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+           </ul>
+          </div>
+    </div>
+
+  </div>
+     
+</footer>
+
 </script>
 
 
-<script type="text/html" id="footer_7">
-  <footer>
-     <div class="f-q-1">
-      <div class="container">
-          <div class="logo pull-left">
-              <img src="../images/logo-small.png" alt="">
+<script type="text/html" id="footer_9">
+<footer>
+  <div class="layout-content">
+    <div class="container">
+      <div class="menu-vertical">
+          <ul class="li-float">
+            <li class="menu-item">
+              <h3>热门产品</h3>
+              <ul class="sub-menu">
+                <li><a href="#">热门产品1</a></li>
+                <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                  <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                  <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <h3>热门产品</h3>
+              <ul class="sub-menu">
+                <li><a href="#">热门产品1</a></li>
+                <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                  <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                  <li><a href="#">首页2</a></li>
+                
+              </ul>
+            </li>
+
+               <li class="menu-item">
+              <h3>热门产品</h3>
+              <ul class="sub-menu">
+                <li><a href="#">热门产品1</a></li>
+                <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                  <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                  <li><a href="#">首页2</a></li>
+                
+              </ul>
+            </li>
+
+
+               <li class="menu-item">
+              <h3>热门产品</h3>
+              <ul class="sub-menu">
+                <li><a href="#">热门产品1</a></li>
+                <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                  <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                  <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                
+              </ul>
+            </li>
+
+                  <li class="menu-item">
+              <h3>热门产品</h3>
+              <ul class="sub-menu">
+                <li><a href="#">热门产品1</a></li>
+                <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                <li><a href="#">创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下创新发下3</a></li>
+                  <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                  <li><a href="#">首页2</a></li>
+                <li><a href="#">新闻中心</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="menu-item code-item">
+              <ul class="sub-menu">
+                <li>
+                  <img src="../images/qcore.jpg" alt="">
+                  <img src="../images/qcore.jpg" alt="">
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+      </div>
+  
+    </div> 
+  </div>
+  <div class="layout-resvered">
+    <div class="container">
+          <div class="pull-left">
+            <ul class="li-float">
+              <li>技术支持：苏州点研智能科技有限公司</li>
+              <li>Copyright 1999-2019 by Yodean.com. All Rights Reserved.</li>
+            </ul>
           </div>
-           <div class="info pull-right">
-                 <ul>
-                    <li>地址：xxxx</li>
-                    <li>邮编：225432</li>
-                    <li>电话：19989876762</li>
-                    <li>邮箱：jkxx@qq.com</li>
-                    <li>传真：weda@163.com</li>
-                </ul>
-               
-              </div>
+          <div class="pull-right">
+           <ul class="li-float">
+             <li>京ICP备 12003892号-11 | 京公安备案 12003892号-22</li>
+           </ul>
+          </div>
+    </div>
 
-      </div>
-      <div class="clearfix"></div>
-     </div>
-     <div class="f-q-2">
-      <div class="container">
-         <div class="line-text">Copyright © 2004 - 2017  xx.com 版权所有</div>
-      </div>
-     </div>
-    </footer>
-  </script>
+  </div>
+     
+</footer>
 
-
+</script>
 
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>

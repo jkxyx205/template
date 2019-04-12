@@ -1,54 +1,11 @@
-
-// $menu-color: #fff;
 @import '../base';
 
-
 footer {
-     $bgColor: rgb(34, 35, 36);
-     $border-bottom-color: #333;
+     .layout-content {
+        padding-top: 20px;
+     }
 
-    .a {
-        $height: 100px;
-        color: #fff;
-        @include bar-container($height, $bgColor);
-        border-bottom: 1px solid $border-bottom-color;
-
-        .iconfont {
-            position: absolute; 
-            top: 50%;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            font-size: 40px;
-        }
-
-        .box {
-            padding-left: 55px;
-            line-height: 100%;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .title {
-            margin-bottom: 10px;
-        }
-
-        .detail {
-            color: #666;
-        }
-
-
-
-    }
-
-    .b {
-        $height: 70px;
-        @include bar-container($height, $bgColor);
-        border-bottom: 1px solid $border-bottom-color;
-    }
-
-    .c {
-        $height: 60px;
-        @include bar-container($height, $bgColor);
-    }
+     .seperator {
+        margin: 20px 0;
+     }
 }

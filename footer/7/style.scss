@@ -1,16 +1,25 @@
 @import '../base';
 
 footer {
-     $bgColor: rgb(34, 35, 36);
+     .layout-content {
 
-     .f-q-1 {
-        $height: 80px;
-        @include bar-container($height, $bgColor);
+        &>.container {
+            position: relative;
+        }
+        
+        padding: 40px 0;
+
+        .logo img {
+            display: block;
+            max-width: 300px;
+        }
      }
 
-     .f-q-2 {
-         $height: 50px;
-         $bgColor: rgb(10, 11, 12);
-        @include bar-container($height, $bgColor);
+     .info {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
      }
+    
 }

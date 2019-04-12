@@ -1,44 +1,11 @@
 @import '../base';
 
-$line-color: #333;
-
 footer {
-    .footer-panel {
-        padding: 30px 0;
-        background-color: rgb(34, 35, 36);
-    }
+     .layout-content {
+        padding-top: 20px;
+     }
 
-    $bgColor: transparent;
-
-    .s1 {
-        $height: 50px;
-        color: #fff;
-        @include bar-container($height, $bgColor);
-        .wrapper {
-            border-bottom: 1px solid $line-color;
-            line-height: $height - 1;
-        }
-
-        .share {
-            .iconfont {
-                font-size: 12px;
-            }
-        }
-
-    }
-
-    .s2 {
-        $height: 50px;
-        @include bar-container($height, $bgColor);
-    }
-
-    .s3 {
-        $height: 40px;
-        $bgColor: rgb(10, 11, 12);
-        @include bar-container($height, $bgColor);
-        text-align: center;
-    }
+     .seperator {
+        margin-top: 10px;
+     }
 }
-
-
-
