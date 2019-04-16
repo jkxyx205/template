@@ -2,11 +2,16 @@
 
 footer {
      .layout-content {
-        padding: 20px 0;
+        padding: 32px 0;
      }
 
-     .code-item img {
-        width: 128px;
-        vertical-align: top;
+     .code-item {
+        margin-right: -15px;
+        padding-top: 48px;
+        img {
+            width: 128px;
+            vertical-align: top;
+            margin-right: 15px;
+        }
      }
 }

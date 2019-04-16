@@ -51,19 +51,22 @@ footer {
 
     .info2 {
         .iconfont {
-            position: absolute;
-            left: 0;
-            top: -12px;
+            // position: absolute;
+            // left: 0;
+            // top: -12px;
             font: {
-                size: 48px;
+                size: 40px;
                 weight: bold;
             }
 
         }
 
         .info2-box {
-            margin-left: 50px;
             display: inline-block;
+            vertical-align: top;
+            padding-top: 10px;
+            margin-left: 8px;
+            width: calc(100% - 60px);
         }
 
         .detail {
@@ -80,11 +83,13 @@ footer {
     .share {
         ul {
             @extend .li-float; //分享组件
+
+            & > li {
+                margin-right: 8px;
+            }
         }
 
-        li {
-            margin-right: 8px;
-        }
+        
     }
 
     .share2 {
@@ -97,6 +102,10 @@ footer {
             height: 30px;
             line-height: 30px;
             color: #fff;
+        }
+
+        .email {
+            background-color: #f2da81;
         }
 
         .weibo {
@@ -117,10 +126,11 @@ footer {
     }
 
   .menu-horizontal { //水平菜单组件
-        $height: 40px;
+        $height: 32px;
         .menu-item {
             position: relative;
-            padding-left: 90px;
+            padding-left: 120px;
+            margin-bottom: 4px;
             line-height: $height;
             .sub-menu li, h3 {
                 width: 100px;
@@ -131,15 +141,16 @@ footer {
 
             h3 {
                 position: absolute;
-                width: 90px;
+                width: 120px;
                 left: 0;
                 color: #d2d2d2;
+                font-weight: bold;
             }
         }
     }
 
-    .menu-vertical {
-        $height: 40px;
+    .menu-vertical { //垂直菜单组件
+        $height: 32px;
         .menu-item {
             width: 130px;
 
@@ -153,6 +164,9 @@ footer {
             }
 
             line-height: $height;
+            .sub-menu {
+                margin-top: 10px;
+            }
             .sub-menu li, h3 {
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -161,6 +175,7 @@ footer {
 
             h3 {
                 color: #d2d2d2;
+                font-weight: bold;
             }
         }
     }
@@ -179,7 +194,7 @@ footer {
 
         .pull-right .li-float {
             li {
-                margin-left: 20px;
+                margin-left: 8px;
                 margin-right: 0;
             }
         }
@@ -192,7 +207,4 @@ footer {
             }
         }
     }
-
-
-    
 }
