@@ -97,6 +97,7 @@ a {
 }
 
 
+
 .content-box { 
     // .cover {
     //     .title {
@@ -154,6 +155,196 @@ a {
          }
     }
 }
+/////////////////////////////sitebar 侧边栏 start ////////////////
+
+#upTop {
+    display: none;
+}
+.sitebar {
+    $sitebar-size: 60px;
+    $sitebar-split-color: #e3e3e3;
+    $icon-size: 30px;
+    $color: #999;
+
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    background-color: #fff;
+    z-index: 999;
+    a {
+        color: $color;
+
+        &:focus, &:visited {
+            color: $color;
+        }
+    }
+
+    .sitebar-item {
+        position: relative;
+        display: block;
+        width: $sitebar-size;
+        height: $sitebar-size;
+        text-align: center;
+        border: 1px solid $sitebar-split-color;
+        margin-top: -1px;
+        // overflow: hidden;
+
+        .sub-group {
+            position: absolute;
+            text-align: left;
+            right: $sitebar-size + 1px;
+            bottom: 0;
+            padding: 15px;
+            box-shadow: 1px 1px 15px $sitebar-split-color;
+            background-color: #fff;
+            max-height: 330px;
+            overflow: auto;
+            opacity: 0;
+            transform: scale(0.01);
+            transform-origin: right bottom;
+            line-height: 1;
+            
+
+            img.img-code {
+                width: 128px;
+                margin: 10px 0;
+            }
+
+            &.contact-us {
+                padding: 20px;
+                h2 {
+                    text-align: center;
+                    margin-bottom: 15px;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: $sitebar-split-color;
+                        left: 0;
+                        top: 50%;
+                    }
+
+                    span {
+                        position: relative;
+                        z-index: 1;
+                        padding: 0 15px;
+                        background-color: #fff;
+                    }
+                }
+                li {
+                    line-height: 1.6;
+                }
+                .contact-us-value {
+                    display: inline-block;
+                    width: 260px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+
+            &.share-group {
+                $weibo-color: #ff763b;
+                $wechat-color: #7bc549;
+                $qq-color: #56b6e7;
+                text-align: center;
+                padding: 20px;
+                width: 260px;
+
+                span {
+                    display: inline-block;
+                    padding: 5px;
+                    border: 1px solid transparent;
+                    border-radius: 21px;
+                    margin: 0 5px;
+
+                    &.wechat-share {
+                        border-color: $wechat-color;
+                        color: $wechat-color;
+                    }
+
+                    &.weibo-share {
+                        border-color: $weibo-color;
+                        color: $weibo-color;
+                    }
+
+                    &.qq-share {
+                        border-color: $qq-color;
+                        color: $qq-color;
+                    }
+                }
+            }
+
+            &.qq-group {
+                $qq-group-color: #56B6E7;
+                text-align: center;
+                padding: 20px;
+                width: 160px;
+                li {
+                    border: 1px solid $qq-group-color;
+                    line-height: 30px;
+                    margin: 15px 0;
+                    border-radius: 5px;
+                    color: $qq-group-color;
+
+                    .icon-qq {
+                        font-size: 18px;
+                        margin-right: 5px;
+                        margin-top: 4px;
+                    }
+
+                    &:hover {
+                        background-color: $qq-group-color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+
+            .sub-group {
+                transition: all .6s ease;
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        &:hover{
+            .sub-group {
+               color: $color; 
+            }
+        }
+
+        .text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        &.icon-item {
+            line-height: $sitebar-size;
+
+            i {
+                font-size: $icon-size;
+            }
+        }
+
+        &.img-item {
+           background-repeat:  no-repeat;
+           background-size:  50%;
+           background-position: 50%
+           
+        }
+    }
+    
+}
+
+/////////////////////////////sitebar 侧边栏 end ////////////////
 
 /////////////////////////////s-pic 单图片 start ////////////////
 .s-pic {
