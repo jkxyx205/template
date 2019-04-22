@@ -161,6 +161,11 @@ a {
     display: none;
 }
 .sitebar {
+
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+
     $sitebar-size: 60px;
     $sitebar-split-color: #e3e3e3;
     $icon-size: 30px;

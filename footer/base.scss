@@ -18,6 +18,15 @@ $menu-label-color: #fff;
     .footer-pc {
         display: none;
     }
+
+    .footer-mobile {
+
+        .layout-resvered {
+            line-height: 1.8;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -125,11 +134,14 @@ footer {
         }
     }
 
+  
+
   .menu-horizontal { //水平菜单组件
         $height: 32px;
+        font-size: $layout-reserved-font-size;
         .menu-item {
             position: relative;
-            padding-left: 120px;
+            padding-left: 150px;
             margin-bottom: 4px;
             line-height: $height;
             .sub-menu li, h3 {
@@ -141,7 +153,7 @@ footer {
 
             h3 {
                 position: absolute;
-                width: 120px;
+                width: 100px;
                 left: 0;
                 color: #d2d2d2;
                 font-weight: bold;
@@ -151,6 +163,7 @@ footer {
 
     .menu-vertical { //垂直菜单组件
         $height: 32px;
+        font-size: $layout-reserved-font-size;
         .menu-item {
             width: 130px;
 
