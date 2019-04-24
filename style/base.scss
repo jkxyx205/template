@@ -49,8 +49,32 @@ html {
     background: $main-color;
 }
 
+#bdshare_weixin_qrcode_dialog {
+  box-sizing: content-box;
+}
 
-.front-side .btn {
+$error-color: #f56c6c;
+
+form {
+    label.required-label:before {
+                content: '*';
+                color: $error-color;
+                margin-right: 4px;
+            }
+
+    .error {
+        font-size: 12px;
+        color: $error-color;
+    }
+
+    input.error, textarea.error {
+        border: 1px solid $error-color;
+    }
+
+}
+
+
+.front-side .btn { //模版编辑的时候，区分前台还是后台
         display: inline-block;
         border-radius: $btn-radius;
         line-height: $btn-height;
@@ -64,12 +88,14 @@ html {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+}
 
-        &:hover {
-            background: $main-color;
-            border-color: $main-color;
-            color: #fff;
-        }
+.cpn .btn {
+    &:hover {
+        background: $main-color;
+        border-color: $main-color;
+        color: #fff;
+    }
 }
 
 body .layui-layer-setwin .layui-layer-close2 {
@@ -92,63 +118,6 @@ body .layui-layer-setwin .layui-layer-close2 {
     max-width: 100%!important;
   }
 }
-
-//侧边栏
-// .sider-bar {
-//     position: fixed;
-//     right: 0px;
-//     top: 50%;
-//     z-index: 99999;
-//     width: 58px;
-//     padding: 0 16px;
-//     text-align: center;
-//     box-shadow: rgba(7, 17, 27, 0.1) 0px 4px 12px 0px;
-//     background-color: #fff;
-//     font-size: 12px;
-
-
-//     a {
-//         position: relative;
-//         color: rgb(217, 221, 225);
-//         display: block;
-//         height: 57px;
-//         padding-top: 18px;
-//         border-bottom: 1px solid rgb(237, 241, 242);
-//         text-decoration: none;
-
-//         span {
-//             display: none;
-//             line-height: 12px;
-//             color: #07111b;
-//         }
-
-//         img {
-//             position: absolute;
-//             top: 0;
-//             right: 43px; 
-//             display: none;
-//             width: 120px;
-//         }
-//         &:hover {
-//             i {
-//                 display: none;
-//             }
-//             span {
-//                 display: inline-block;
-//             }
-
-//             img {
-//                 display: block;
-//             }
-//         }
-//     }
-
-//     .iconfont {
-//         font-size: 2.4rem;
-//         font-weight: bold;
-//     }
-// }
-
 
 //分页
 div.page-container {

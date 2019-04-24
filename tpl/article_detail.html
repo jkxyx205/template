@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     
     <!-- <link rel="stylesheet" href="css/iconfont.css"> -->
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_417789_ey0og22jzdnjc3di.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_417789_9uu2pfrof4c.css">
 
     <link rel="stylesheet" href="../plugins/drawer/css/drawer.min.css">
     
@@ -50,12 +50,21 @@
         <span>爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由爱你需要理由</span>
       </div>
       <div class="info-bar">
-          <div class="bdsharebuttonbox pull-right" data-tag="share_1">
-                <a class="bds_weixin" data-cmd="weixin"></a>
-                <a class="bds_tsina" data-cmd="tsina"></a>
-                <a class="bds_qzone" data-cmd="qzone"></a>
-                <a class="bds_sqq" data-cmd="sqq"></a>
+        <div class="bdsharebuttonbox pull-right" data-tag="share_1" style="display: none;">
+              <a class="bds_weixin" data-cmd="weixin" id="src_share_wexin_btn"></a>
+              <a class="bds_tsina" data-cmd="tsina" id="src_share_tsina_btn"></a>
+              <a class="bds_qzone" data-cmd="qzone" id="src_share_qzone_btn"></a>
+              <a class="bds_sqq" data-cmd="sqq" id="src_share_sqq_btn"></a>
         </div>
+        <div class="article-detail-share pull-right" id="article-detail-share">
+          <ul>
+            <li class="wechat-share" id="hare_wexin_btn"><i class="iconfont icon-wechat"></i></li>
+            <li class="weibo-share" id="hare_tsina_btn"><i class="iconfont icon-weibo"></i></li>
+            <li class="qq-share" id="hare_sqq_btn"><i class="iconfont icon-qq"></i></li>
+            <li class="qzone-share" id="hare_qzone_btn"><i class="iconfont icon-qzone"></i></li>
+          </ul>
+        </div>
+
         <ul>
           <li><span class="info-user">章三</span></li>
           <li><span class="info-date">三天前</span></li>
@@ -91,6 +100,12 @@
 <script src="../plugins/drawer/js/drawer.min.js"></script>
 
 <script>
+  $('#article-detail-share li').each(function() {
+    $(this).on('click', function() {
+      document.getElementById('src_s' + this.id).click()
+    })
+  })
+
   window._bd_share_config = {
         common : {
             bdText : '那些不能忘记的青葱', 

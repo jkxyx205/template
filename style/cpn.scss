@@ -27,20 +27,25 @@ html, body {
         // font-weight: 100;
 }
 
-/****字体库****/
-@font-face{
-    font-family:NotoSansHans-Thin;
-    // font-style:normal;
-    // font-weight:150;
-    src:url('http://114.55.173.102:3000/fonts//NotoSansSC-Light.woff2') format('woff2'),
-    url('http://114.55.173.102:3000/fonts/NotoSansSC-Light.woff') format('woff'),
-    url('http://114.55.173.102:3000/fonts/NotoSansSC-Light.otf') format('opentype');
-}
+$weibo-color: #ff763b;
+$wechat-color: #7bc549;
+$qq-color: #56b6e7;
+$qzone-color: #ffce00;
 
-@font-face{
-    font-family:artingStyle;
-    src: url('http://114.55.173.102:3000/fonts/artingStyle.woff') format('woff');
-}
+/****字体库****/
+// @font-face{
+//     font-family:NotoSansHans-Thin;
+//     // font-style:normal;
+//     // font-weight:150;
+//     src:url('http://114.55.173.102:3000/fonts//NotoSansSC-Light.woff2') format('woff2'),
+//     url('http://114.55.173.102:3000/fonts/NotoSansSC-Light.woff') format('woff'),
+//     url('http://114.55.173.102:3000/fonts/NotoSansSC-Light.otf') format('opentype');
+// }
+
+// @font-face{
+//     font-family:artingStyle;
+//     src: url('http://114.55.173.102:3000/fonts/artingStyle.woff') format('woff');
+// }
 
 
 @media (max-width: 768px ) {
@@ -175,12 +180,16 @@ a {
     right: 5%;
     bottom: 5%;
     background-color: #fff;
-    z-index: 999;
+    z-index: 1050;
     a {
         color: $color;
 
         &:focus, &:visited {
             color: $color;
+        }
+
+        &:hover {
+            color: $main-color;
         }
     }
 
@@ -192,6 +201,7 @@ a {
         text-align: center;
         border: 1px solid $sitebar-split-color;
         margin-top: -1px;
+        cursor: pointer;
         // overflow: hidden;
 
         .sub-group {
@@ -255,9 +265,6 @@ a {
             }
 
             &.share-group {
-                $weibo-color: #ff763b;
-                $wechat-color: #7bc549;
-                $qq-color: #56b6e7;
                 text-align: center;
                 padding: 20px;
                 width: 260px;
@@ -282,6 +289,11 @@ a {
                     &.qq-share {
                         border-color: $qq-color;
                         color: $qq-color;
+                    }
+
+                    &.qzone-share {
+                        border-color: $qzone-color;
+                        color: $qzone-color;
                     }
                 }
             }
@@ -351,10 +363,26 @@ a {
         &.img-item {
            background-repeat:  no-repeat;
            background-size:  50%;
-           background-position: 50%
+           background-position: 50%;
+           transition: all .5s ease;
+
+           &:hover {
+                background-size:  60%;
+           }
            
         }
     }
+
+    #msgModal {
+        label {
+            font-weight: normal;
+        }
+
+        .btn.btn-primary {
+            background-color: $main-color;
+            color: #fff;
+        }
+    } 
     
 }
 
@@ -2559,7 +2587,9 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
     .article-cover {
         position: relative;
-        background: url(/images/D.jpg) 50% 50% no-repeat;
+        // background: url('') 50% 50% no-repeat;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
         background-size: cover;
     }
 
@@ -2588,6 +2618,46 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             max-width: 100%!important;
         }
     }
+
+    .article-detail-share {
+
+        li {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 15px;
+            cursor: pointer;
+
+            i {
+                font-size: 18px;
+            }
+
+            &.wechat-share {
+                color: $wechat-color;
+                border: 1px solid $wechat-color;
+            }
+
+            &.weibo-share {
+                color: $weibo-color;
+                border: 1px solid $weibo-color;
+            }
+
+            &.qq-share {
+                color: $qq-color;
+                border: 1px solid $qq-color;
+            }
+
+            &.qzone-share {
+                color: $qzone-color;
+                border: 1px solid $qzone-color;
+            }
+
+        }
+    }
+
+
+    
 
 }
 
