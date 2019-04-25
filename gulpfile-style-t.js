@@ -28,9 +28,9 @@ gulp.task('sass-header', function() {
 })
 
 gulp.task('sass-style', function() { 
-    return  gulp.src('style/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+    return gulp.src('style/1/sass/1.scss') //gulp.src('style/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
-     .pipe(gulp.dest('dist/tpl-css/style'))
+     .pipe(gulp.dest('dist/tpl-css/style/1/sass/'))
      // sync()
 })
 
@@ -73,8 +73,8 @@ gulp.task('default', ['sass-style'], function() {
 // })
 
 
-// gulp.task('watch', function() {  
-//     gulp.watch('header/**/sass/*.scss', ['sass-header'])
-//     gulp.watch('style/**/sass/*.scss', ['sass-style', 'sass-style'])
-//     gulp.watch('footer/**/sass/*.scss', ['sass-footer'])
-// });  
+gulp.task('watch', function() {  
+    // gulp.watch('header/**/sass/*.scss', ['sass-header'])
+    gulp.watch('style/cpn.scss', ['sass-style'])
+    // gulp.watch('footer/**/sass/*.scss', ['sass-footer'])/
+});  

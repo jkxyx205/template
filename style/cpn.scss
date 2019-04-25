@@ -171,13 +171,13 @@ a {
         display: none;
     }
 
-    $sitebar-size: 60px;
+    $sitebar-size: 45px;
     $sitebar-split-color: #e3e3e3;
-    $icon-size: 30px;
+    $icon-size: 24px;
     $color: #999;
 
     position: fixed;
-    right: 5%;
+    right: 0;
     bottom: 5%;
     background-color: #fff;
     z-index: 1050;
@@ -340,15 +340,16 @@ a {
         }
 
         .text {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-              word-break:break-all;
-              display:-webkit-box;
-              -webkit-line-clamp:2;
-              -webkit-box-orient:vertical;
-              overflow:hidden;
+            $font-size: 12px;
+
+            font-size: $font-size;
+            width: 2em;
+            word-break:break-all;
+            display:-webkit-box;
+            -webkit-line-clamp:2;
+            -webkit-box-orient:vertical;
+            overflow:hidden;
+            margin: (($sitebar-size - 2) - $font-size * 2 * ( 1 + .2 )) / 2 0 0 (($sitebar-size - 2) - $font-size * 2) / 2;
         }
 
 
@@ -387,6 +388,16 @@ a {
 }
 
 /////////////////////////////sitebar 侧边栏 end ////////////////
+
+/////////////////////////////留言板 start ////////////////
+#msg-pad {
+    padding: 20px 10px;
+
+    textarea {
+        height: 96px;
+    }
+}
+/////////////////////////////留言板 end ////////////////
 
 /////////////////////////////s-pic 单图片 start ////////////////
 .s-pic {
