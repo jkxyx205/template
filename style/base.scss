@@ -49,6 +49,10 @@ html {
     background: $main-color;
 }
 
+label {
+        font-weight: normal;
+}
+
 #bdshare_weixin_qrcode_dialog {
   box-sizing: content-box;
 }

@@ -47,6 +47,13 @@ $qzone-color: #ffce00;
 //     src: url('http://114.55.173.102:3000/fonts/artingStyle.woff') format('woff');
 // }
 
+@mixin calmp($line: 1) {
+    word-break:break-all;
+    display:-webkit-box;
+    -webkit-line-clamp:$line;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
 
 @media (max-width: 768px ) {
    .moban {
@@ -172,9 +179,9 @@ a {
     }
 
     $sitebar-size: 45px;
-    $sitebar-split-color: #ebebeb;
+    $sitebar-split-color: $split-color;
     $icon-size: 24px;
-    $color: #999;
+    $color: $summary-color; 
 
     position: fixed;
     right: 0;
@@ -375,10 +382,6 @@ a {
     }
 
     #msgModal {
-        label {
-            font-weight: normal;
-        }
-
         .btn.btn-primary {
             background-color: $main-color;
             color: #fff;
@@ -521,31 +524,174 @@ a {
 }
 
 /*****全文检索********/
-.panel-full-text  {
+.full-text-container {
+    .page-container {
+        margin: 4rem 0;
+    }
     em {
-        color: red;
+        color: #c00;
     }
 
-    input {
-        margin-right: 5px;
-    }
-
-    a {
-        text-decoration: underline;
-    }
-
-     .content-box .content .title a:hover {
+    a:hover, a:focus, a:visited {
         color: inherit;
-        text-decoration: underline;
+    }
+    .search-banner {
+        position: relative;
+        height: 200px;
+        background-size: cover;    
+        background-position: 50% 50%;
+
+        @media screen and (max-width: 768px) {
+            height: 150px;
+        }
+
+        .full-text-search-input {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+            
+            input {
+                width: 460px;
+                max-width: calc(90% - 70px);
+                // border-color: transparent;
+                border: none;
+                outline: none;
+                padding-left: 5px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                // &:focus {
+                //     border-color: $main-color;
+                // }
+            }
+
+            button {
+                height: 36px;
+                border: none;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                padding: 0 20px;
+                background-color: $main-color;
+                color: #fff;
+            }
+        }
+
+        
     }
 
-     input[type=text] {
-        width: 400px;
+
+    .result-tip-bar {
+        line-height: 50px;
+        font-size: 12px;
+        color: $summary-color;
+        border-bottom: 1px solid $split-color;
     }
 
+    .result-list {
+
+        margin-bottom: 20px;
+
+        .img-container a {
+            position: relative;
+            display: block;
+            .black-mask {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                opacity: .2;
+                background: #000;
+            }
+            .icon-bofang {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                font-size: 28px;
+            }
+
+            img {
+            width: 100%;
+            max-height: 250px;
+            }
+        } 
 
 
+
+
+        .result-list-item {
+            padding: 25px 0;
+            border-bottom: 1px solid $split-color;
+        }
+
+        .content-container {
+            h2 {
+                color: $title-color;
+                padding-top: 10px;
+                font-size: 20px;
+                @include calmp();
+                border: none;
+            }
+
+            p {
+                margin: 10px 0;
+                line-height: 1.6;
+                color: $panel-title-color;
+                @include calmp(2);
+            }
+
+            .content-label {
+                margin-bottom: 10px;
+               
+                font: {
+                    size: 12px;
+                }
+
+                color: $summary-color;
+
+                label, span {
+                    margin-right: 5px;
+                }
+
+                dl {
+                    display: flex;
+                }
+
+                dt, dd {
+                   margin-right: 2px;
+                }
+
+                .icon-label {
+                    font-size: 12px;
+                }
+            }
+
+            .content-date {
+                color: $summary-color;
+            }
+
+            .result-list-item-bar {
+                // line-height: 30px;
+                color: $panel-title-color;
+                li {
+                    float: left;
+                    margin-right: 15px;
+                }
+
+                .avatar {
+                    height: 16px;
+                    width: 16px;
+                    border-radius: 8px;
+                    margin: -4px 2px 0 0;
+                }
+            }
+        }
+    }
 }
+
 
 /////////////////////////////////瀑布流/////////////////////////////////////////////////////
 .waterfall {
