@@ -185,7 +185,8 @@ a {
 
     position: fixed;
     right: 0;
-    bottom: 5%;
+    top: 50%;
+    transform: translateY(-50%); 
     background-color: #fff;
     z-index: 1050;
     a {
@@ -214,7 +215,7 @@ a {
         .sub-group {
             position: absolute;
             text-align: left;
-            right: $sitebar-size + 1px;
+            right: $sitebar-size;
             bottom: 0;
             padding: 15px;
             box-shadow: 1px 1px 15px $sitebar-split-color;
@@ -260,14 +261,21 @@ a {
                     }
                 }
                 li {
-                    line-height: 1.6;
+                    position: relative;
+                    line-height: 1.8;
+                    padding-left: 50px;
+                }
+
+                h3 {
+                    position: absolute;
+                    left: 0;
                 }
                 .contact-us-value {
                     display: inline-block;
                     width: 260px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                    // overflow: hidden;
+                    // text-overflow: ellipsis;
+                    // white-space: nowrap;
                 }
             }
 
@@ -380,13 +388,6 @@ a {
            
         }
     }
-
-    #msgModal {
-        .btn.btn-primary {
-            background-color: $main-color;
-            color: #fff;
-        }
-    } 
     
 }
 

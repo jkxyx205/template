@@ -53,6 +53,7 @@ label {
         font-weight: normal;
 }
 
+
 #bdshare_weixin_qrcode_dialog {
   box-sizing: content-box;
 }
@@ -78,21 +79,32 @@ form {
 }
 
 
-.front-side .btn { //模版编辑的时候，区分前台还是后台
-        display: inline-block;
-        border-radius: $btn-radius;
-        line-height: $btn-height;
-        color: $summary-color;//$main-color;
-        border: 1px solid $split-color;//$main-color;
-        padding: 0 20px;
-        letter-spacing: 2px;
-        background-color: transparent;
-        font-size: 1.2rem;
+.front-side {
 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-}
+    .btn { //模版编辑的时候，区分前台还是后台
+            display: inline-block;
+            border-radius: $btn-radius;
+            line-height: $btn-height;
+            color: $summary-color;//$main-color;
+            border: 1px solid $split-color;//$main-color;
+            padding: 0 20px;
+            letter-spacing: 2px;
+            background-color: transparent;
+            font-size: 1.2rem;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+    }
+
+    .btn.btn-primary { //留言板
+        background-color: $main-color;
+        color: #fff;
+    }
+} 
+
+
+
 
 .cpn .btn {
     &:hover {
