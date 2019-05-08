@@ -19,11 +19,10 @@ var fs = require('fs');
 
 // var index = 0;
 gulp.task('sass-header', function() {
-     return gulp.src('header/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+     return gulp.src('header/1/sass/1.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
-     .pipe(gulp.dest('dist/tpl-css/header'))
+     .pipe(gulp.dest('dist/tpl-css/header/1/sass/'))
 // sync()
-
       
 })
 
@@ -61,7 +60,7 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['sass-style'], function() {
+gulp.task('default', ['sass-header'], function() {
     // gulp.task("minify-css")
     // console.log('red;')
 })
