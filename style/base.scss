@@ -35,6 +35,10 @@ html {
     }
 }
 
+.article-editor { //模版使用
+    color: $title-color;
+}
+
 %position-center {
     position: absolute;
     left: 50%;

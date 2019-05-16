@@ -2727,6 +2727,9 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
 //文章详情
 .article-detail {
+    ol, ul {
+        list-style: none;
+    }
 
     .info-bar {
         display: block;
@@ -2825,5 +2828,260 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 section .panel.super-seperator {
     background-color: transparent!important;
     border: 0;
+}
+
+
+//模版样式重置问题 与后台 ckcontent.scss同步更新
+section [data-component-id="401"] .panel .panel-body,
+section .article-detail .article-content {
+
+  blockquote {
+      font-style: italic;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      padding-left: 20px;
+      border-left: 5px solid #ccc;
+  }
+
+
+  ol,ul,dl
+  {
+    /* IE7: reset rtl list margin. (#7334) */
+    *margin-right: 0px;
+    /* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+    padding: 0 40px;
+
+  }
+
+  h1,h2,h3,h4,h5,h6
+  {
+    font-weight: normal;
+    line-height: 1.2;
+  }
+
+  hr
+  {
+    border: 0px;
+    border-top: 1px solid #ccc;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  img.right
+  {
+    border: 1px solid #ccc;
+    float: right;
+    margin-left: 15px;
+    padding: 5px;
+  }
+
+  img.left
+  {
+    border: 1px solid #ccc;
+    float: left;
+    margin-right: 15px;
+    padding: 5px;
+  }
+
+  pre
+  {
+    white-space: pre-wrap; /* CSS 2.1 */
+    word-wrap: break-word; /* IE7 */
+    -moz-tab-size: 4;
+    tab-size: 4;
+  }
+
+  .marker
+  {
+    background-color: Yellow;
+  }
+
+  span[lang]
+  {
+    font-style: italic;
+  }
+
+  blockquote p:first-of-type {
+    margin-bottom: 1.5rem;
+  }
+
+  a > img {
+    padding: 1px;
+    margin: 1px;
+    border: none;
+    outline: 1px solid #0782C1;
+  }
+
+  /* Widget Styles */
+  .code-featured
+  {
+    border: 5px solid red;
+  }
+
+  .math-featured
+  {
+    padding: 20px;
+    box-shadow: 0 0 2px rgba(200, 0, 0, 1);
+    background-color: rgba(255, 0, 0, 0.05);
+    margin: 10px;
+  }
+
+  .image-clean
+  {
+    border: 0;
+    background: none;
+    padding: 0;
+  }
+
+  .image-clean > figcaption
+  {
+    font-size: .9em;
+    text-align: right;
+  }
+
+  .image-grayscale
+  {
+    background-color: white;
+    color: #666;
+  }
+
+  .image-grayscale img, img.image-grayscale
+  {
+    filter: grayscale(100%);
+  }
+
+  .embed-240p
+  {
+    max-width: 426px;
+    max-height: 240px;
+    margin:0 auto;
+  }
+
+  .embed-360p
+  {
+    max-width: 640px;
+    max-height: 360px;
+    margin:0 auto;
+  }
+
+  .embed-480p
+  {
+    max-width: 854px;
+    max-height: 480px;
+    margin:0 auto;
+  }
+
+  .embed-720p
+  {
+    max-width: 1280px;
+    max-height: 720px;
+    margin:0 auto;
+  }
+
+  .embed-1080p
+  {
+    max-width: 1920px;
+    max-height: 1080px;
+    margin:0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 600;
+    letter-spacing: inherit;
+  }
+
+  h1 {
+    font-size: 42px;
+    font-weight: 200;
+    line-height: 1.04;
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+
+  h4 {
+    font-size: 19px;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  h4, h5 {
+    font-weight: 700;
+  }
+
+  h2 + p,
+  h2 + ol,
+  h2 + ul,
+  h3 + p,
+  h3 + ol,
+  h3 + ul {
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  figure,
+  ol,
+  ul,
+  blockquote {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  ol ol {
+    margin: 0;
+  }
+
+  ul ul {
+    margin: 0;
+  }
+
+  figure {
+    text-align: center;
+    margin: 25px;
+    background-color: #fafafa;
+  }
+
+  figure img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  figure figcaption {
+    padding: 1em .5em;
+    font-size: 13px;
+    text-align: center;
+  }
+ 
 }
 
