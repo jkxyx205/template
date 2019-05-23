@@ -5518,7 +5518,7 @@ $padding24Small: .3rem 1rem;
 /////////////////////////////  图文详情  start ///////////////////////
     .article-detail {
         
-        @media screen and (min-width: 992px) {
+        @media (min-width: 992px) {
             .info-bar {
                 margin: 12px 0 48px 0;
             }
@@ -5539,7 +5539,7 @@ $padding24Small: .3rem 1rem;
         }
 
         //ipad plus
-        @media screen and(max-width: 992px) and (min-width: 768px) {
+        @media (max-width: 992px) and (min-width: 768px) {
             .article-cover {
                 padding-top: 35%;
             }
@@ -5565,7 +5565,7 @@ $padding24Small: .3rem 1rem;
         }
 
         //iphone 6
-        @media screen and(max-width: 768px) and (min-width: 640px) {
+        @media (max-width: 768px) and (min-width: 640px) {
             .article-cover {
                 padding-top: 50%;
             }
@@ -5598,7 +5598,7 @@ $padding24Small: .3rem 1rem;
 
 
         //iphone 5
-        @media screen and (max-width: 640px) {
+        @media (max-width: 640px) {
 
             .article-summary { 
                 padding: 10px;
