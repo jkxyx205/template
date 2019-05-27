@@ -36,6 +36,9 @@ $menu-label-color: #fff;
 }
 
 footer {
+  ul, li {
+    list-style: none;
+  }
   .li-float {
         &>li {
             display: inline-block;

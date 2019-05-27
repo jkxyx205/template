@@ -121,7 +121,7 @@
           </li>
           </ul>
       </div>
-      <div class="comment">
+      <div class="comment" id="comment-list">
         <h2><i class="iconfont icon-buchongiconsvg02"></i><span>评论（445）</span></h2>
 
         <div class="comment-item">
@@ -147,9 +147,11 @@
              </p>
            </div>
         </div>
-
-
       </div>
+       <div class="make-comment">
+          <textarea id="my-comment" maxlength="1000" placeholder="我要评论..."></textarea>
+          <button class="btn btn-primary" onclick="addcomment()">发布评论</button>
+        </div>
     </div>
     </div>
    </section>
@@ -198,6 +200,27 @@
     clipboard.on('success', function(e) {
       alert('链接已被复制到剪切板')   
     });
+
+    function addcomment() {
+      var comment = $('#my-comment').val().trim()
+
+      if (!comment) {
+        alert('评论不能为空!')
+        return;
+      }
+
+      $('#comment-list').append('<div class="comment-item">\
+           <div class="avatar">\
+              <img src="../images/E.jpg" alt="">\
+           </div>\
+           <div class="comment-content">\
+             <h2 class="comment-title">全能浪子 <span class="date">刚刚</span></h2>\
+             <p>'+comment.replace(/\n/g,'<br>')+'</p>\
+           </div>\
+        </div>')
+      $('#my-comment').val('')
+    }
+   
 
 </script>
 
