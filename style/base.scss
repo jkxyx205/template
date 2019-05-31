@@ -1,15 +1,28 @@
+@import "../css/mixin";
+
 html {
     font-size: 10px;
-    // @media (max-width: 768px) {
-    //     font-size: 9px;
-    // }
+    height: 100%;
 }
 
+body {
+    min-height: 100%;
+    @include flex();
+    @include flex-v();
+
+    @at-root #layout {
+        @include flex-1();
+    }
+}
+p {
+    word-break: break-word;
+}
 //5列
 .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5 {
     position: relative;
     min-height: 1px
 }
+
  
 @media ( min-width : 768px) {
     .col-sm-5 {
@@ -55,6 +68,10 @@ html {
 
 label {
         font-weight: normal;
+}
+
+video {
+    display: block; // 否则layer中下边会有边距
 }
 
 
