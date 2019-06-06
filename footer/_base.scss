@@ -1,0 +1,227 @@
+//SETTINGS
+
+//顶部内容区
+$layout-conent-backgroud: #222323;
+$layout-conent-font-size: 14px;
+$layout-conent-font-color: #a7a7a7;
+
+//底部版权区
+$layout-reserved-backgroud: #0a0b0c;
+$layout-reserved-font-size: 12px;
+$layout-reserved-font-color: #58595a;
+
+$info-color: #7f8080;
+
+$menu-label-color: #fff;
+
+@media screen and (max-width: 768px) {
+    .footer-pc {
+        display: none;
+    }
+
+    .footer-mobile {
+
+        .layout-resvered {
+            line-height: 1.8;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .footer-mobile {
+        display: none;
+    }
+}
+
+footer {
+  ul, li {
+    list-style: none;
+  }
+  
+  .li-float {
+        &>li {
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+    }
+
+    background-color: $layout-conent-backgroud;
+    color: $layout-conent-font-color;
+    font: {
+        size: $layout-conent-font-size;
+    }
+
+    .info {//基本信息组件
+        line-height: 50px;
+        // height: 50px;
+        font-size: $layout-reserved-font-size;
+        color: $info-color;
+    }
+
+    .info2 {
+        .iconfont {
+            // position: absolute;
+            // left: 0;
+            // top: -12px;
+            font: {
+                size: 40px;
+                weight: bold;
+            }
+
+        }
+
+        .info2-box {
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 10px;
+            margin-left: 8px;
+            width: calc(100% - 60px);
+        }
+
+        .detail {
+            font-size: $layout-reserved-font-size;
+            color: $info-color;
+        }
+    }
+
+    .seperator { //分割线组件
+        height: 1px;
+        width: 100%;
+        background-color: #454545;
+    }
+    .share {
+        ul {
+            @extend .li-float; //分享组件
+
+            & > li {
+                margin-right: 8px;
+            }
+        }
+
+        
+    }
+
+    .share2 {
+        @extend .share;
+
+        a {
+            display: inline-block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        .email {
+            background-color: #f2da81;
+        }
+
+        .weibo {
+            background-color: #e3172c;
+        }
+
+        .facebook {
+            background-color: #3a5999;
+        }
+
+        .twitter {
+            background-color: #4198ff;
+        }
+
+        .linkedin {
+            background-color: #0a77b6;
+        }
+    }
+
+  
+
+  .menu-horizontal { //水平菜单组件
+        $height: 32px;
+        font-size: $layout-reserved-font-size;
+        .menu-item {
+            position: relative;
+            padding-left: 150px;
+            margin-bottom: 4px;
+            line-height: $height;
+            .sub-menu li, h3 {
+                width: 100px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            h3 {
+                position: absolute;
+                width: 100px;
+                left: 0;
+                color: #d2d2d2;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .menu-vertical { //垂直菜单组件
+        $height: 32px;
+        font-size: $layout-reserved-font-size;
+        .menu-item {
+            width: 130px;
+
+    
+            &.code-item {
+                width: auto;
+                padding-top: 20px;
+
+                img {
+                    margin: 0 5px;
+                }
+            }
+
+            line-height: $height;
+            .sub-menu {
+                margin-top: 10px;
+            }
+            .sub-menu li, h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            h3 {
+                color: #d2d2d2;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+
+  .layout-resvered { //版权组件
+        $height: 40px;
+        background-color: $layout-reserved-backgroud;
+        line-height: $height;
+        font: {
+            size: $layout-reserved-font-size;
+        }
+
+        color: $layout-reserved-font-color;
+
+        .pull-right .li-float {
+            li {
+                margin-left: 8px;
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .li-float {
+                li {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,16 +1,16 @@
 @import "../css/mixin";
 
-html {
-    font-size: 10px;
-    height: 100%;
-}
+// html {
+    // font-size: 10px;
+//     height: 100%;
+// }
 
 body {
     min-height: 100%;
     @include flex();
     @include flex-v();
 
-    @at-root #layout {
+    @at-root #content {
         @include flex-1();
     }
 }

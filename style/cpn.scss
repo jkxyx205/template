@@ -47,13 +47,7 @@ $qzone-color: #ffce00;
 //     src: url('http://114.55.173.102:3000/fonts/artingStyle.woff') format('woff');
 // }
 
-@mixin calmp($line: 1) {
-    word-break:break-all;
-    display:-webkit-box;
-    -webkit-line-clamp:$line;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-}
+
 
 @media (max-width: 768px ) {
    .moban {
@@ -92,12 +86,7 @@ $qzone-color: #ffce00;
 a {
     color: inherit;
     text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-        color: $main-color;
-    }
-
+    
     &.cover:hover { //图片中的文字颜色显示「白色」fixed
         color: #fff;
     }
@@ -105,6 +94,12 @@ a {
     &:focus, &:visited {
         text-decoration: none;
         color: inherit;
+    }
+
+
+    &:hover {
+        text-decoration: none;
+        color: $main-color;
     }
 }
 

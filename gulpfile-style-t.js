@@ -60,7 +60,7 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['sass-header', 'sass-style'], function() {
+gulp.task('default', ['sass-header'], function() {
     // gulp.task("minify-css")
     // console.log('red;')
 })

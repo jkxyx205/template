@@ -1,0 +1,94 @@
+@import "../css/mixin";
+@import "../css/rem";
+
+//常规部分
+$main-color: #409EFF!default;   //主色
+$color: #a1a1a1!default;        //常规文字
+$split-color: #eaeaea!default;   //边框颜色  
+$deep-color: #a1a1a1!default;  //
+$light-color: #bfbfbf!default; //
+
+$deep-color: red!default;  //
+$light-color: blue!default; //
+
+
+// 菜单导航部分
+$nav-bgcolor: #fff!default; //菜单背景色
+$nav-color: $color!default;  //一级菜单文字色
+$nav-hover-color: $main-color!default; //一级菜单hover文字颜色
+$nav-hover-bgColor: transparent!default; //一级菜单hover背景色
+$nav-deep-color: #a1a1a1!default;  //
+$nav-light-color: #bfbfbf!default; //
+
+
+
+
+
+
+
+
+html {
+    height: 100%;
+    font-size: 10px;
+    @media (max-width: 768px) { //mobile
+         overflow: hidden;
+    }
+    @media (max-width: 414px) { //mobile
+        font-size: 10vw;
+    }
+
+    @media (min-width: 415px) and (max-width: 768px) { //mobile
+        font-size: 6vw;
+    }
+}
+
+a, a:hover, a:visited, a:focus {
+    text-decoration: none;
+}
+
+
+body { // 未来 删除该部分 style 中的base.css设置
+
+    header {
+
+        &, a {
+            color: $color;
+        }
+
+        a:hover, a:focus {
+            &, i, span {
+                color: $main-color!important;
+            }
+        }
+
+        .nav,
+        .mobile-header-info, 
+        .mobile-header-bar { //页眉共性设置:
+
+            &, a {
+                color: $nav-color;
+            }
+
+            a:hover, a:focus {
+                &, i, span {
+                    color: $nav-hover-color!important;
+                }
+            }
+             
+        }
+
+        @media (min-width: 768px) { //pc
+            .nav .sub-menu { // 导航栏二级菜单
+                &, a {
+                    color: $color;
+                }
+
+                a:hover, a:focus {
+                    &, i, span {
+                        color: $main-color!important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    
     <!-- <link rel="stylesheet" href="css/iconfont.css"> -->
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_417789_1bws8238pb6.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_417789_xr0uf9z9axl.css">
 
-    <link rel="stylesheet" href="../plugins/drawer/css/drawer.min.css">
+
     
 
     
@@ -25,55 +24,68 @@
 
     </style>
 </head>
-<body class="drawer drawer--left">
+<body>
    <!--页眉开始-->
-   <div class="header-container">
+   <div id="header-container" class="header-container">
      
    </div>
    <!--页眉结束-->
 
 
    <!--正文开始-->
-   <main>
-   <section id="layout">
-    
-    <div class="container">
-    </div>
-   </section>
-   </main>
-   
+  <!--  <section id="layout">
+     <h1>hello header</h1>
+   </section> -->
+
+   <main id="content" class="content">
+       
+        <div class="scroll-view" id="scroll-view">
+            <section id="layout">
+                <div class="container" style="height: 200px; color: red;">
+                  hello layout
+                </div>
+            </section>
+        </div>
+    </main>
    <!--正文结束 -->
 
 
-
    <!--页脚开始-->
-   <div class="footer-container">
+   <div id="footer-container" class="footer-container">
        
    </div>
    <!--页脚结束-->
 
 <script src="../js/jquery.min.js"></script>
-<script src="../plugins/iscroll/iscroll.js"></script>
-<script src="../plugins/drawer/js/drawer.min.js"></script>
+<!-- <script src="../js/header.js"></script> -->
 
 <script>
-
-
-
-    
-
 
   var loaded = false
 
   $(document).ready(function() {
     loaded = true
-  });
+  })
 
-  function init() {
-    $('.drawer').drawer();
-  }
+  function init(type) {
+
+    if (type === 'header') {
+      setTimeout(function () {
+        $.getScript('../js/header.js', function () {
+         
+        })  
+      }, 1000)
+    }
+    
+    
+  } 
+
+  // alert()
+
+
 
 
 </script>
+<!-- <script src="../js/header.js"></script> -->
 </body>
 </html>

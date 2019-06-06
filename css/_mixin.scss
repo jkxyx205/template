@@ -186,3 +186,11 @@
       color: $color;
     }
 }
+
+@mixin calmp($line: 1) {
+    word-break:break-all;
+    display:-webkit-box;
+    -webkit-line-clamp:$line;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}

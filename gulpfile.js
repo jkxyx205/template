@@ -19,7 +19,7 @@ var fs = require('fs');
 
 // var index = 0;
 gulp.task('sass-header', function() {
-     return gulp.src('header/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+     return gulp.src('header/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/header'))
 // sync()
@@ -36,7 +36,7 @@ gulp.task('sass-style', function() {
 
 
 gulp.task('sass-footer', function() {
-    return gulp.src('footer/**/sass/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
+    return gulp.src('footer/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs 
      .pipe(sass()) 
      .pipe(gulp.dest('dist/tpl-css/footer'))
      // sync()
@@ -61,7 +61,7 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['sass-style'], function() {
+gulp.task('default', ['sass-header'], function() {
     // gulp.task("minify-css")
     // console.log('red;')
 })
