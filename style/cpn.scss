@@ -51,18 +51,18 @@ $qzone-color: #ffce00;
 
 @media (max-width: 768px ) {
    .moban {
-        h1, h2, h3, h4, h5, h6 {
-            font-size:  20px!important;
-            span {
-                font-size:  20px!important;
-            }
+
+        span {
+            font-size:  14px!important;
         }
 
-        p {
+        h1, h2, h3, h4, h5, h6 {
+            font-size:  16px!important;
             span {
                 font-size:  16px!important;
             }
         }
+        
     } 
 }
 
@@ -108,7 +108,7 @@ a {
 .content-box { 
     // .cover {
     //     .title {
-    //         padding: .5rem;
+    //         padding: 5px;
     //     }
     // }
 
@@ -117,13 +117,13 @@ a {
         // padding: $content-box-padding;
 
         .summary-fixed, .summary-line {
-            margin-top: .8rem;
+            margin-top: 8px;
         }
 
         .content-footer { //底部时间，作者信息
             display: flex;
             display: -webkit-flex;
-            font-size: 1.2rem;
+            font-size: 12px;
             color: $content-summary-color;
 
             .author-bar, .date-bar  {
@@ -142,8 +142,8 @@ a {
 
          .float-content-footer {
             height: 21px;
-            margin-top: .8rem;
-            font-size: 1.2rem;
+            margin-top: 8px;
+            font-size: 12px;
             color: $content-summary-color;
             display: block;
             overflow: hidden;
@@ -157,7 +157,7 @@ a {
 
             li {
                 display: inline-block;
-                margin-right: .8rem;
+                margin-right: 8px;
             }
          }
     }
@@ -425,7 +425,7 @@ a {
     width: 100%;
     
     // .swiper-wrapper {
-    //     padding-bottom: 3rem; //
+    //     padding-bottom: 30px; //
     // }
 
     .swiper-button-next.swiper-button-disabled, 
@@ -487,7 +487,7 @@ a {
 
             
                 h1, p {
-                        font-size: 1.2rem;
+                        font-size: 12px;
                         font-weight: normal;
                         margin-top: 0;
                         padding: 0;
@@ -496,7 +496,7 @@ a {
                     }
              @media (max-width: 64em) {
                  h1, p {
-                    font-size: 1.2rem !important;
+                    font-size: 12px !important;
                  }
              }
              
@@ -708,7 +708,7 @@ a {
             padding: 0;
             float: left;
             .content {
-                padding: 2.4rem 1rem;
+                padding: 24px 10px;
             }
         }
         
@@ -767,7 +767,7 @@ $pic-title-top:10px;
             display: -webkit-flex;
 
             .title {
-                padding-right: 3rem;
+                padding-right: 30px;
                 flex: 1;
             }
 
@@ -776,7 +776,7 @@ $pic-title-top:10px;
                 
                 
                 color: $content-summary-color;
-                font-size: 1.2rem;
+                font-size: 12px;
             
                  span {
                     position: absolute;
@@ -800,20 +800,20 @@ $pic-title-top:10px;
 
         .content {
             position: relative;
-            display: flex;
-            display: -webkit-flex;
+            // display: flex;
+            // display: -webkit-flex;
+            @include flex()
 
             .title {
-                padding-right: 3rem;
-                flex: 1;
+                padding-right: 30px;
+                @include flex-1();
             }
 
             .publish-date {
                 width: 62px;
                 
-                
                 color: $content-summary-color;
-                font-size: 1.2rem;
+                font-size: 12px;
             
                  span {
                     position: absolute;
@@ -862,7 +862,7 @@ $pic-title-top:10px;
                
 
                 .month, .day {
-                    font-size: 2rem;
+                    font-size: 20px;
                     
                 }
             }
@@ -943,7 +943,7 @@ $pic-title-top:10px;
                 width: 80px;
                 
                 p {
-                    font-size: 3.6rem;
+                    font-size: 36px;
                 }
 
             }
@@ -965,7 +965,7 @@ $pic-title-top:10px;
             display: -webkit-flex;
 
             .title {
-                padding-right: 3rem;
+                padding-right: 30px;
                 flex: 1;
             }
 
@@ -974,7 +974,7 @@ $pic-title-top:10px;
                 
                 
                 color: $content-summary-color;
-                font-size: 1.2rem;
+                font-size: 12px;
             
                  span {
                     position: absolute;
@@ -1005,7 +1005,7 @@ $pic-title-top:10px;
             }
 
          // .content {
-         //    padding: 1.6rem 1rem;
+         //    padding: 16px 10px;
          // }
         }
     // }
@@ -1049,7 +1049,7 @@ $pic-title-top:10px;
             transition: all 0.36s ease 0s;
 
             .content-footer {
-                margin-top: 2rem;
+                margin-top: 20px;
             }
 
             // .content-bar {
@@ -1117,7 +1117,7 @@ $pic-title-top:10px;
 
             .summary-fixed {
                 color: #fff;
-                // margin-top: 1.6rem;
+                // margin-top: 16px;
             }
            
         }
@@ -1457,7 +1457,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
                 .icon-Headportrait-m {
                     color: $main-color;;
-                    font-size: 1.4rem;
+                    font-size: 14px;
                     margin-right: 5px;
                 }
 
@@ -1481,7 +1481,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 }
 
 .pic-list-9 {
-    @include pic-area($padding: 2rem,  $border-color: $split-color);
+    @include pic-area($padding: 20px,  $border-color: $split-color);
     .content-box {
         .wrapper {
             padding-bottom: 10px;
@@ -1546,10 +1546,10 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                     font-size: $content-summary-font-size;
                     color: $title-color;
                     font-weight: bold;
-                    margin-top: 1.6rem;
+                    margin-top: 16px;
 
                     i {
-                        margin-right: .6rem;
+                        margin-right: 6px;
                     }
                 }
         }
@@ -1623,7 +1623,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
         }
 
         .content .content-footer {
-            margin-top: 1rem;
+            margin-top: 10px;
         }
 
         .split-1 {
@@ -1658,7 +1658,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
         .content {
             .author-bar {
-                padding-right: 3rem;
+                padding-right: 30px;
             }
         }
             
@@ -2199,7 +2199,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             @extend %position-center;
             width: 70%;
             .title {
-                padding-bottom: .5rem;
+                padding-bottom: 5px;
             }
 
             .title, .summary-fixed {
@@ -2240,7 +2240,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
         .content {
             .article-bar {
-                margin-bottom: 1rem;
+                margin-bottom: 10px;
             }
 
             .summary-fixed {
@@ -2250,7 +2250,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
         }
 
         .btn {
-            margin-top: 2.4rem;
+            margin-top: 24px;
             opacity: 0;
             transition: all 0.3s ease 0.1s;
         }
@@ -2258,7 +2258,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
         &:hover {
            .summary-fixed {
                 border-left-width: 1px;
-                padding-left: 2rem;
+                padding-left: 20px;
            }
            .btn {
             opacity: 1;
@@ -2522,7 +2522,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                 bottom: 0;
                 color: #fff;
                 background: $main-color;
-                padding: .5rem .8rem;
+                padding: 5px 8px;
                 opacity: 0;
             }
         }
@@ -2535,7 +2535,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             }
 
             .content-footer {
-                margin-top: .8rem;
+                margin-top: 8px;
             }
 
             padding: 5px 0;
@@ -2555,7 +2555,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     @include pic-area();
 
     .content-box {
-        padding-bottom: 1.6rem;
+        padding-bottom: 16px;
     }
 
     .wrapper {
@@ -2699,7 +2699,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
         .content {
             .article-bar {
-                margin-top: .8rem;
+                margin-top: 8px;
             }            
         }
         
@@ -2754,7 +2754,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
     .info-bar li {
         float: left;
-        margin-right: 2rem;
+        margin-right: 20px;
     }
 
     .article-cover {
@@ -2805,7 +2805,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
         li {
             float: left;
-            margin: 0 1rem .5rem 0;
+            margin: 0 10px 5px 0;
             padding: 4px 15px;
             border-radius: 2px;
             @extend %common-style;
@@ -3120,7 +3120,7 @@ section .article-detail .article-content {
   }
 
   blockquote p:first-of-type {
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
   }
 
   a > img {

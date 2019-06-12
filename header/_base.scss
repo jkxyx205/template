@@ -3,33 +3,23 @@
 
 //常规部分
 $main-color: #409EFF!default;   //主色
-$color: #a1a1a1!default;        //常规文字
+$color: #767881!default;        //常规文字
 $split-color: #eaeaea!default;   //边框颜色  
 $deep-color: #a1a1a1!default;  //
 $light-color: #bfbfbf!default; //
-
-$deep-color: red!default;  //
-$light-color: blue!default; //
-
 
 // 菜单导航部分
 $nav-bgcolor: #fff!default; //菜单背景色
 $nav-color: $color!default;  //一级菜单文字色
 $nav-hover-color: $main-color!default; //一级菜单hover文字颜色
 $nav-hover-bgColor: transparent!default; //一级菜单hover背景色
-$nav-deep-color: #a1a1a1!default;  //
-$nav-light-color: #bfbfbf!default; //
-
-
-
-
-
-
+$nav-deep-color: $deep-color!default;  //
+$nav-light-color: $light-color!default; //
 
 
 html {
     height: 100%;
-    font-size: 10px;
+    font-size: 50px;
     @media (max-width: 768px) { //mobile
          overflow: hidden;
     }
@@ -50,6 +40,9 @@ a, a:hover, a:visited, a:focus {
 body { // 未来 删除该部分 style 中的base.css设置
 
     header {
+        ul, li {
+            list-style: none;
+        }
 
         &, a {
             color: $color;

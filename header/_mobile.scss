@@ -9,9 +9,9 @@ $mobile-header-bgcolor: $nav-bgcolor!default; //指明`!default`才能被覆盖�
 $mobile-header-bgcolor2: $nav-bgcolor2!default;
 $mobile-header-split-color: $split-color!default;
 
-$mobile-header-item-bgcolor1: #f9fafc!default;
-$mobile-header-item-bgcolor2: #f9fafc!default;
-$mobile-header-item-bgcolor3: #f9fafc!default;
+$mobile-header-item-bgcolor1: #fafafa!default;
+$mobile-header-item-bgcolor2: #f6f6f6!default;
+$mobile-header-item-bgcolor3: #f0f0f0!default;
 
 body {
 
@@ -56,7 +56,8 @@ body {
             
 
             .nav {
-                height: calc(100% - 4.7rem);
+                // height: calc(100% - 4.7rem);
+                height: calc(100% - #{rem(160px)});
 
                 .container {
                     height: 100%;
@@ -69,7 +70,7 @@ body {
             }
         }
 
-        .content {
+        .main {
             position: absolute;
             top: 0;
             left: 0;
@@ -213,7 +214,7 @@ body {
 
             }
 
-            .content, .mobile-header-bar {
+            .main, .mobile-header-bar {
                 left: $mobile-left-width;
                 //CSS calc() in media queries  CSS暂时未支持：
                 //https://www.chromestatus.com/feature/5643732019838976
@@ -222,7 +223,7 @@ body {
                 }
             }
 
-            .content {
+            .main {
                 @include box-shadow(-2px, 0px, 6px, 0px, rgba(0, 0, 0, .1));
             }
         }
@@ -262,6 +263,10 @@ body {
                             + .sub-menu a {
                                 @include rem(padding-left, $li-padding-width * 3);
                             }
+                        }
+
+                        &.current > a {
+                            color: $nav-hover-color;
                         }
                     }
 
@@ -388,7 +393,7 @@ body {
             }
         }
 
-        .content {
+        .main {
             float: left;
             width: 100%;
             height: 100%;

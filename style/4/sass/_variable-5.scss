@@ -15,7 +15,7 @@ $btn-height: 30px;
 //控件样式
 $panel-title-height: 50px;  //标题高度
 $panel-title-position: left; //left center
-$panel-title-font-size: 1.6rem;  //标题文字大小
+$panel-title-font-size: 16px;  //标题文字大小
 $panel-title-bgColor: #f1f1f0; // 标题背景色
 $panel-title-color: #8f9092; // 标题文字颜色
 
@@ -29,18 +29,18 @@ $panel-body-bgColor: #fff;      //内容背景色
 $content-bgColor: transparent;        //内容背景色
 $pic-content-bgColor: #fafafa; 
 
-$content-box-padding: 1.2rem;
+$content-box-padding: 12px;
 $content-box-hover-bgColor: #f9f9f9;        //box  hover背景色
 $content-box-hover-borderColor: $main-color; //box hover 边框色
 
 $content-title-bgColor: transparent;  //标题背景色 
-$content-title-font-size: 1.6rem;  //标题文字大小
+$content-title-font-size: 16px;  //标题文字大小
 $content-title-color: $title-color;  //标题文字颜色
 
 $content-summary-fix-height: 70px;   //概要高度
 $content-summary-bgColor: transparent;  //概要背景色
 $content-summary-color: $summary-color;  //概要文字颜色
-$content-summary-font-size: 1.4rem;  //概要文字大小
+$content-summary-font-size: 14px;  //概要文字大小
 
 //控件样式
 //图文列表

@@ -1,11 +1,12 @@
 ////////////////////////////////////////////////////////////// 复杂配置
-$main-color: #28c27d;   //主色
+$main-color: #203b34;   //主色
 $color: #a1a1a1;        //通用文字色
 
 //菜单
 $nav-bgcolor: $main-color; //菜单背景色
-$nav-color: #e3fcf1; //一级菜单文字色
+$nav-color: #bcc4c2; //一级菜单文字色
 $nav-hover-color: #fff; //一级菜单hover文字颜色
+$nav-hover-bgColor: #fdbb2c; //菜单背景色
 
 $nav-deep-color: $nav-color;
 $nav-light-color: #ef948b; 

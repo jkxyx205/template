@@ -10,8 +10,8 @@
         @media screen and(max-width: 992px) and (min-width: 768px) {
             .cover {
                 .title {
-                    padding: 1.2rem 1rem;
-                    font-size: 1.4rem;
+                    padding: 12px 10px;
+                    font-size: 14px;
                 }
             }
         }
@@ -21,8 +21,8 @@
             .cover {
                 
                 .title {
-                    padding: .8rem 1rem;
-                    font-size: 1.4rem;
+                    padding: 8px 10px;
+                    font-size: 14px;
                 }
 
             }
@@ -31,8 +31,8 @@
         @media screen and (max-width: 640px) {
             .cover {
                 .title {
-                    padding: .8rem 1rem;
-                    font-size: 1.4rem;
+                    padding: 8px 10px;
+                    font-size: 14px;
                 }
 
             }
@@ -46,8 +46,8 @@
         @media screen and (min-width: 992px) {
             .cover {
                 .title {
-                    font-size: 1.8rem;
-                    padding: 2.4rem 1.6rem;
+                    font-size: 18px;
+                    padding: 24px 16px;
                 }
             }
         }
@@ -59,8 +59,8 @@
         @media screen and (min-width: 992px) {
             .cover {
                 .title {
-                    font-size: 1.6rem;
-                    padding: 1.8rem 1rem;
+                    font-size: 16px;
+                    padding: 18px 10px;
                 }
             }
         }
@@ -73,8 +73,8 @@
         @media screen and (min-width: 992px) {
             .cover {
                 .title {
-                    font-size: 1.4rem;
-                    padding: 1.6rem 1rem;
+                    font-size: 14px;
+                    padding: 16px 10px;
                 }
             }
         }
@@ -86,7 +86,7 @@
  .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
     .waterfall {
         .title {
-            font-size: 1.6rem;
+            font-size: 16px;
         }
 
         &.col-3,
@@ -254,7 +254,7 @@
             .col-md-5.even, .col-md-5.odd, 
             .col-md-2.even, .col-md-2.odd {
                 .content-box .content {
-                    padding: .2rem;
+                    padding: 2px;
                     @include summaryHide()
                    
                 }
@@ -1034,7 +1034,7 @@
                   
                     &:hover {
                         .content {
-                            padding-left: 2rem;
+                            padding-left: 20px;
                         }
                     }
                 }
@@ -1293,7 +1293,7 @@
         .col-md-5,
         .col-md-2 {
             .btn {
-                padding: 0 .2rem;
+                padding: 0 2px;
             }
         }
         
@@ -1308,7 +1308,7 @@
         .col-md-5,
         .col-md-2 {
             .btn {
-                padding: 0 .2rem;
+                padding: 0 2px;
             }
         }
         
@@ -1325,7 +1325,7 @@
         .col-md-5,
         .col-md-2 {
             .btn {
-                padding: 0 .2rem;
+                padding: 0 2px;
             }
         }
         
@@ -1341,7 +1341,7 @@
          @media screen and(min-width: 992px) {
             .col-md-2 {
                 .wrapper {
-                    padding: 1.5rem;
+                    padding: 15px;
                 }
             }
          }
@@ -1354,7 +1354,7 @@
          @media screen and(min-width: 992px) {
             .col-md-3 {
                 .wrapper {
-                    padding: 1.5rem;
+                    padding: 15px;
                 }
             }
 
@@ -1362,7 +1362,7 @@
             .col-md-5,
             .col-md-2 {
                 .wrapper {
-                    padding: 1rem;
+                    padding: 10px;
                 }
             }
          }
@@ -1375,7 +1375,7 @@
          @media screen and(min-width: 992px) {
             .col-md-4 {
                 .wrapper {
-                    padding: 1rem;
+                    padding: 10px;
                 }
             }
        
@@ -1383,7 +1383,7 @@
             .col-md-5,
             .col-md-2 {
                 .wrapper {
-                    padding: .5rem;
+                    padding: 5px;
                 }
             }
 
@@ -1401,7 +1401,7 @@
             .col-md-4,
             .col-md-3 {
                 .wrapper {
-                    padding: .5rem;
+                    padding: 5px;
                 }
             }
        
@@ -1409,7 +1409,7 @@
             .col-md-2 {
                 @include contentHide()
                 .wrapper {
-                    padding: .2rem;
+                    padding: 2px;
                 }
             }
          }
@@ -1543,8 +1543,8 @@
     .pic-list-15 {
                
             .wrapper .content {
-                padding-left: 1.6rem;
-                padding-right: 1.6rem; 
+                padding-left: 16px;
+                padding-right: 16px;
             }
 
             @include summaryLine(3)
@@ -1567,7 +1567,7 @@
             }
 
             .btn {
-                margin-top: 2rem;
+                margin-top: 20px;
             }
     }
         
@@ -1587,7 +1587,7 @@
                 .col-md-3 {
                     @include summaryLineHeight($summaryFixedH3)
                     .btn {
-                        margin-top: 2rem;
+                        margin-top: 20px;
                     }
                 }
 
@@ -1596,7 +1596,7 @@
                     @include summaryLineHeight($summaryFixedH4)
 
                     .btn {
-                        margin-top: 2rem;
+                        margin-top: 20px;
                     }
                 }
                
@@ -1889,10 +1889,10 @@
             @media screen and(max-width: 768px) and (min-width: 640px) {
                 @include summaryLineHeight($summaryFixedH3)
                 .wrapper .content .more {
-                    font-size: 1.2rem;
+                    font-size: 12px;
 
                     .iconfont {
-                        font-size: 1.2rem;
+                        font-size: 12px;
                         margin-right: 4px;
                     }
 
@@ -1903,7 +1903,7 @@
             @media screen and (max-width: 640px) {
                 @include summaryLineHeight($summaryFixedH3)
                 .wrapper .content .more {
-                    font-size: 1.2rem;
+                    font-size: 12px;
                 }
             }
     }
@@ -1925,9 +1925,9 @@
             .col-md-2 {
                 @include summaryLineHeight($summaryFixedH4)
                 .wrapper .content .more {
-                    font-size: 1.2rem;
+                    font-size: 12px;
                     .iconfont {
-                        font-size: 1.2rem;
+                        font-size: 12px;
                         margin-right: 4px;
                     }
                 }
@@ -1942,7 +1942,7 @@
         @media screen and(min-width: 992px) {
             .col-md-5 {
                 .wrapper .content .more {
-                    font-size: 1.2rem;
+                    font-size: 12px;
                 }
             }
 
@@ -1993,9 +1993,9 @@
             .col-md-2 {
                 @include summaryLineHeight($summaryFixedH4)
                 .wrapper .content .more {
-                    font-size: 1.2rem;
+                    font-size: 12px;
                     .iconfont {
-                        font-size: 1.2rem;
+                        font-size: 12px;
                         margin-right: 4px;
                     }
                 }
@@ -2039,7 +2039,7 @@
 /////////////////////////////pic-list-14 列表样式-16 end ////////////////
 
 /////////////////////////////pic-list-28 列表样式-19 start ////////////////
-$content-padding-medium2: 1.4rem 1rem;
+$content-padding-medium2: 14px 10px;
 
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
 
@@ -2057,7 +2057,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 }
 
                 .wrapper .cover .readmore {
-                        padding: .4rem .4rem;
+                        padding: 4px 4px;
                         font-size: 12px;
                 }
 
@@ -2074,7 +2074,7 @@ $content-padding-medium2: 1.4rem 1rem;
                         }
 
                         .article-bar {
-                                margin-top: .2rem;
+                                margin-top: 2px;
                         }
                     }
                 }
@@ -2092,7 +2092,7 @@ $content-padding-medium2: 1.4rem 1rem;
                         }
 
                         .article-bar {
-                                margin-top: .2rem;
+                                margin-top: 2px;
                         }
                     }
                 }
@@ -2110,7 +2110,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 }
 
                 .wrapper .cover .readmore {
-                        padding: .4rem .4rem;
+                        padding: 4px 4px;
                         font-size: 12px;
                 }
 
@@ -2971,16 +2971,16 @@ $content-padding-medium2: 1.4rem 1rem;
         //ipad plus
         @media screen and(max-width: 992px) and (min-width: 768px) {
             .content-box .content {
-               padding-left: 1rem;
-               padding-right: 1rem;
+               padding-left: 10px;
+               padding-right: 10px;
             }
         }
 
         //iphone 6
         @media screen and(max-width: 768px) and (min-width: 640px) {
             .content-box .content {
-               padding-left: 1rem;
-               padding-right: 1rem;
+               padding-left: 10px;
+               padding-right: 10px;
             }
         }
 
@@ -2988,8 +2988,8 @@ $content-padding-medium2: 1.4rem 1rem;
         //iphone 5
         @media screen and (max-width: 640px) {
            .content-box .content {
-               padding-left: 1rem;
-               padding-right: 1rem;
+               padding-left: 10px;
+               padding-right: 10px;
            }
                     
         }
@@ -3003,8 +3003,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-12, 
             .col-md-6 {
                .content-box .content {
-                   padding-left: 5rem;
-                   padding-right: 5rem;
+                   padding-left: 50px;
+                   padding-right: 50px;
                }
             }
 
@@ -3013,8 +3013,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-5,
             .col-md-2 {
                .content-box .content {
-                   padding-left: 3rem;
-                   padding-right: 3rem;
+                   padding-left: 30px;
+                   padding-right: 30px;
                }
             }
                
@@ -3028,8 +3028,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-12, 
             .col-md-6 {
                .content-box .content {
-                   padding-left: 4rem;
-                   padding-right: 4rem;
+                   padding-left: 40px;
+                   padding-right: 40px;
                }
             }
 
@@ -3038,8 +3038,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-5,
             .col-md-2 {
                .content-box .content {
-                   padding-left: 2rem;
-                   padding-right: 2rem;
+                   padding-left: 20px;
+                   padding-right: 20px;
                }
             }
                
@@ -3053,8 +3053,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-12, 
             .col-md-6 {
                .content-box .content {
-                   padding-left: 3rem;
-                   padding-right: 3rem;
+                   padding-left: 30px;
+                   padding-right: 30px;
                }
             }
 
@@ -3063,8 +3063,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-5,
             .col-md-2 {
                .content-box .content {
-                   padding-left: 2rem;
-                   padding-right: 2rem;
+                   padding-left: 20px;
+                   padding-right: 20px;
                }
             }
                
@@ -3078,8 +3078,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-12, 
             .col-md-6 {
                .content-box .content {
-                   padding-left: 2rem;
-                   padding-right: 2rem;
+                   padding-left: 20px;
+                   padding-right: 20px;
                }
             }
 
@@ -3088,8 +3088,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-5,
             .col-md-2 {
                .content-box .content {
-                   padding-left: 1rem;
-                   padding-right: 1rem;
+                   padding-left: 10px;
+                   padding-right: 10px;
                }
             }
                
@@ -3103,8 +3103,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-12, 
             .col-md-6 {
                .content-box .content {
-                   padding-left: 2rem;
-                   padding-right: 2rem;
+                   padding-left: 20px;
+                   padding-right: 20px;
                }
             }
 
@@ -3113,8 +3113,8 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-5
              {
                .content-box .content {
-                   padding-left: 1rem;
-                   padding-right: 1rem;
+                   padding-left: 10px;
+                   padding-right: 10px;
                }
             }
 
@@ -3138,7 +3138,7 @@ $content-padding-medium2: 1.4rem 1rem;
 
         @include summaryLine(2)
         .wrapper {
-            padding: 1rem 4rem 2.4rem 4rem;
+            padding: 10px 40px 24px 40px;
 
             .content {
                 padding-left: 0;
@@ -3164,7 +3164,7 @@ $content-padding-medium2: 1.4rem 1rem;
             .content-box .content {
                 @include summaryLineHeight($summaryFixedH2)
                 .article-bar {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                  } 
             }
         }
@@ -3174,7 +3174,7 @@ $content-padding-medium2: 1.4rem 1rem;
             .content-box .content {
                 @include summaryLineHeight($summaryFixedH2)
                  .article-bar {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                  } 
             }
         }
@@ -3185,7 +3185,7 @@ $content-padding-medium2: 1.4rem 1rem;
             .content-box .content {
                 @include summaryLineHeight($summaryFixedH2)
                 .article-bar {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                  } 
             }
                     
@@ -3202,7 +3202,7 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-4,
             .col-md-3 {
                 .content-box .content .article-bar {
-                    font-size: 2rem;
+                    font-size: 20px;
                  }
                 @include summaryLineHeight($summaryFixedH1)
             }
@@ -3211,9 +3211,9 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-2 {
                 @include summaryLineHeight($summaryFixedH2)
                 .wrapper {
-                    padding: 1rem 2rem 1.4rem 2rem;
+                    padding: 10px 20px 14px 20px;
                     .content .article-bar {
-                        font-size: 1.8rem;
+                        font-size: 18px;
                     }
                 } 
             }
@@ -3229,7 +3229,7 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-4,
             .col-md-3 {
                 .content-box .content .article-bar {
-                    font-size: 1.8rem;
+                    font-size: 18px;
                  }
                 @include summaryLineHeight($summaryFixedH1)
             }
@@ -3238,16 +3238,16 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-2 {
                 @include summaryLineHeight($summaryFixedH2)
                 .wrapper {
-                    padding: 1rem 2rem 1.4rem 2rem;
+                    padding: 10px 20px 14px 20px;
                     .content .article-bar {
-                        font-size: 1.6rem;
+                        font-size: 16px;
                     }
                 } 
             }
 
             .col-md-2 {
                 .btn {
-                    padding: 0 .5rem;
+                    padding: 0 5px;
                 }
             }
         }
@@ -3262,7 +3262,7 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-4
              {
                 .content-box .content .article-bar {
-                    font-size: 1.8rem;
+                    font-size: 18px;
                  }
                 @include summaryLineHeight($summaryFixedH1)
             }
@@ -3271,14 +3271,14 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-2 {
                 @include summaryLineHeight($summaryFixedH2)
                 .wrapper {
-                    padding: 1rem 2rem 1.4rem 2rem;
+                    padding: 10px 20px 14px 20px;
                     .content .article-bar {
-                        font-size: 1.6rem;
+                        font-size: 16px;
                     }
                 } 
 
                 .btn {
-                    padding: 0 .5rem;
+                    padding: 0 5px;
                 }
             }
           
@@ -3294,7 +3294,7 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-4
              {
                 .content-box .content .article-bar {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                  }
                 @include summaryLineHeight($summaryFixedH1)
             }
@@ -3303,14 +3303,14 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-2 {
                 @include summaryLineHeight($summaryFixedH2)
                 .wrapper {
-                    padding: 1rem 1rem 1.2rem 1rem;
+                    padding: 10px 10px 12px 10px;
                     .content .article-bar {
-                        font-size: 1.4rem;
+                        font-size: 14px;
                     }
                 } 
 
                 .btn {
-                    padding: 0 .5rem;
+                    padding: 0 5px;
                 }
             }
         }
@@ -3322,7 +3322,7 @@ $content-padding-medium2: 1.4rem 1rem;
         @media screen and(min-width: 992px) {
             .col-md-12 {
                 .content-box .content .article-bar {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                  }
                 @include summaryLineHeight($summaryFixedH1)
             }
@@ -3334,14 +3334,14 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-2 {
                 @include summaryLineHeight($summaryFixedH2)
                 .wrapper {
-                    padding: 1rem 1rem 1.2rem 1rem;
+                    padding: 10px 10px 12px 10px;
                     .content .article-bar {
-                        font-size: 1.4rem;
+                        font-size: 14px;
                     }
                 } 
 
                 .btn {
-                    padding: 0 .5rem;
+                    padding: 0 5px;
                 }
             }
         }
@@ -3359,7 +3359,7 @@ $content-padding-medium2: 1.4rem 1rem;
     .pic-list-26 {
 
             .article-bar {
-                margin-top: .8rem;
+                margin-top: 8px;
                 display: block;
 
                  li {
@@ -3373,10 +3373,10 @@ $content-padding-medium2: 1.4rem 1rem;
             }
 
             .content-box .content {
-                    padding: 2rem 2.4rem;
+                    padding: 20px 24px;
 
                     .summary-fixed {
-                        margin-top: 1.6rem;
+                        margin-top: 16px;
                     }
             }
 
@@ -3386,7 +3386,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 @include summaryLine(2)
                 .content {
                         .btn {
-                            margin-top: 2.4rem;
+                            margin-top: 24px;
                         }
                     }
             }
@@ -3397,7 +3397,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 @include summaryLine(2)
                 .content {
                         .btn {
-                            margin-top: 2.4rem;
+                            margin-top: 24px;
                         }
                 }
             }
@@ -3408,7 +3408,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 @include summaryLine(2)
                 .content {
                         .btn {
-                            margin-top: 2.4rem;
+                            margin-top: 24px;
                         }
                 }
             }
@@ -3425,7 +3425,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                     .content {
                         .btn {
-                            margin-top: 2.4rem;
+                            margin-top: 24px;
                         }
                     }
                 }
@@ -3433,7 +3433,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-6 {
                      .content {
                         .btn {
-                            margin-top: 2.4rem;
+                            margin-top: 24px;
                         }
                     }
                     @include summaryLineHeight($summaryFixedH3)
@@ -3443,17 +3443,17 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-4 {
                      .content {
                         .btn {
-                            margin-top: .6rem;
+                            margin-top: 6px;
                             padding: 0 15px;
                         }
                     }
 
                     .article-bar {
-                        margin-top: .2rem;
+                        margin-top: 2px;
                     }
 
                     .content-box .content {
-                           padding: 1rem 1.6rem;
+                           padding: 10px 16px;
 
                             .summary-fixed {
                                 margin-top: 0;
@@ -3468,20 +3468,20 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-3 {
                     .content {
                         .btn {
-                            margin-top: 1.6rem;
+                            margin-top: 16px;
                         }
                     }
 
                     .article-bar {
-                        margin-top: .4rem;
+                        margin-top: 4px;
                     }
 
                     .content-box .content {
-                            padding: 1rem 1.6rem;
+                            padding: 10px 16px;
                            
 
                             .summary-fixed {
-                                margin-top: .8rem;
+                                margin-top: 8px;
                             }
                     }
 
@@ -3498,11 +3498,11 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-5,
             .col-md-2 {
                 .content {
-                      padding: 1rem 1.6rem;
+                      padding: 10px 16px;
                 }
 
                 .article-bar {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                 }
 
                 @include summaryHide()
@@ -3524,7 +3524,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                     .content {
                         .btn {
-                            margin-top: 2.4rem;
+                            margin-top: 24px;
                         }
                     }
                 }
@@ -3532,14 +3532,14 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-6 {
 
                     .content-box .content {
-                            // padding: 1rem 1.6rem;
+                            // padding: 10px 16px;
 
                             .summary-fixed {
                                 margin-top: 0;
                             }
 
                             .btn {
-                                margin-top: 1.6rem;
+                                margin-top: 16px;
                             }
                     }
 
@@ -3552,7 +3552,7 @@ $content-padding-medium2: 1.4rem 1rem;
 
                     .content {
                         .btn {
-                            margin-top: .8rem;
+                            margin-top: 8px;
                         }
                     }
 
@@ -3562,7 +3562,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
                     .content-box .content {
-                            padding: 1rem 1.6rem;
+                            padding: 10px 16px;
 
                             .summary-fixed {
                                 margin-top: 0
@@ -3581,7 +3581,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
                     .content-box .content {
-                            padding: .4rem .8rem;
+                            padding: 4px 8px;
 
                             .summary-fixed {
                                 margin-top: 0;
@@ -3605,7 +3605,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 }
 
                 .content-box .content {
-                        padding: .6rem 1.6rem;
+                        padding: 6px 16px;
 
                         .summary-fixed {
                             margin-top: 0;
@@ -3631,7 +3631,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                     .content {
                         .btn {
-                            margin-top: 2.4rem;
+                            margin-top: 24px;
                         }
                     }
                 }
@@ -3639,7 +3639,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-6 {
                      .content {
                         .btn {
-                            margin-top: 1rem;
+                            margin-top: 10px;
                         }
                     }
 
@@ -3648,7 +3648,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
                     .content-box .content {
-                           padding: 1rem 1.6rem;
+                           padding: 10px 16px;
 
                             .summary-fixed {
                                 margin-top: 0;
@@ -3663,7 +3663,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-4 {
                     .content {
                         .btn {
-                            margin-top: 1.2rem;
+                            margin-top: 12px;
                         }
                     }
 
@@ -3672,7 +3672,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
                     .content-box .content {
-                            padding: 1rem 1.6rem;
+                            padding: 10px 16px;
                            
 
                             .summary-fixed {
@@ -3695,7 +3695,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
                     .content-box .content {
-                            padding: .8rem 1.6rem;
+                            padding: 8px 16px;
 
                             .summary-fixed {
                                 margin-top: 0;
@@ -3714,10 +3714,10 @@ $content-padding-medium2: 1.4rem 1rem;
             .col-md-5,
             .col-md-2 {
                 .content-box .content {
-                        padding: 1rem 1.6rem;
+                        padding: 10px 16px;
 
                         .summary-fixed {
-                            margin-top: .8rem;
+                            margin-top: 8px;
                         }
                 }
                 @include summaryHide()
@@ -3739,15 +3739,15 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                      .content {
                         .btn {
-                            margin-top: 1.6rem;
+                            margin-top: 16px;
                         }
                     }
 
                     .content-box .content {
-                        padding: 1rem 1.6rem;
+                        padding: 10px 16px;
 
                         .summary-fixed {
-                            margin-top: .2rem;
+                            margin-top: 2px;
                         }
                 }
 
@@ -3762,7 +3762,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
                     .content-box .content {
-                            padding: 1rem 1.6rem;
+                            padding: 10px 16px;
                            
 
                             .summary-fixed {
@@ -3783,7 +3783,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-5,
                 .col-md-2 {
                     .content {
-                          padding: 1rem 1.6rem;
+                          padding: 10px 16px;
                     }
 
                     @include summaryHide()
@@ -3795,7 +3795,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-5,
                 .col-md-2 {
                     .content {
-                          padding: .2rem 1.6rem;
+                          padding: 2px 16px;
                     }
                 }
                
@@ -3812,7 +3812,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                      .content {
                         .btn {
-                            margin-top: .6rem;
+                            margin-top: 6px;
                         }
                     }
 
@@ -3821,7 +3821,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
                     .content-box .content {
-                            padding: .8rem 1.6rem;
+                            padding: 8px 16px;
 
                             .summary-fixed {
                                 margin-top: 0;
@@ -3839,7 +3839,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-5,
                 .col-md-2 {
                     .content {
-                          padding: .4rem 1.2rem;
+                          padding: 4px 12px;
                     }
 
                     @include summaryHide()
@@ -3852,7 +3852,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-5,
                 .col-md-2 {
                     .content {
-                          padding: 0 1.6rem;
+                          padding: 0 16px;
                     }
                 }
 
@@ -3874,7 +3874,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-12 {
                     .content {
                         .btn {
-                            margin-top: 1rem;
+                            margin-top: 10px;
                         }
                     }
 
@@ -3883,7 +3883,7 @@ $content-padding-medium2: 1.4rem 1rem;
                     }
 
                     .content-box .content {
-                            padding: 1rem 1.6rem;
+                            padding: 10px 16px;
                            
 
                             .summary-fixed {
@@ -3905,7 +3905,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-5,
                 .col-md-2 {
                     .content {
-                          padding: 1rem 1.6rem;
+                          padding: 10px 16px;
                     }
 
                     @include summaryHide()
@@ -3919,7 +3919,7 @@ $content-padding-medium2: 1.4rem 1rem;
                 .col-md-5,
                 .col-md-2 {
                     .content {
-                          padding: 0 1.6rem;
+                          padding: 0 16px;
                     }
                      @include contentHide()
                 }
@@ -3938,9 +3938,9 @@ $content-padding-medium2: 1.4rem 1rem;
 /////////////////////////////pic-list-24 列表样式-26 start ////////////////
  //通用样式
 
-$padding24Big: 1rem 1rem;
-$padding24Medium: .6rem 1rem;
-$padding24Small: .3rem 1rem;
+$padding24Big: 10px 10px;
+$padding24Medium: 6px 10px;
+$padding24Small: 3px 10px;
 
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
 
@@ -4204,7 +4204,7 @@ $padding24Small: .3rem 1rem;
             .col-md-2 {
 
                 .content {
-                        padding: .2rem 0;
+                        padding: 2px 0;
                 }
 
                 @include summaryHide()
@@ -4227,7 +4227,7 @@ $padding24Small: .3rem 1rem;
             .col-md-2 {
                 .wrapper {
                     .content {
-                        padding: .2rem 0;
+                        padding: 2px 0;
                         .title {
                             font-size: $title-font-size-smallest;
                         }
@@ -4260,7 +4260,7 @@ $padding24Small: .3rem 1rem;
             .col-md-5,
             .col-md-2 {
                 .content {
-                        padding: .2rem 0;
+                        padding: 2px 0;
                 }
                 @include contentHide()
             }
@@ -4281,7 +4281,7 @@ $padding24Small: .3rem 1rem;
             .col-md-5,
             .col-md-2 {
                 .content {
-                        padding: .2rem 0;
+                        padding: 2px 0;
                 }
                 @include contentHide()
             }
@@ -4307,7 +4307,7 @@ $padding24Small: .3rem 1rem;
             .col-md-5,
             .col-md-2 {
                 .wrapper {
-                    padding: .2rem;
+                    padding: 2px;
                 }
                 @include contentHide()
             }
@@ -4328,7 +4328,7 @@ $padding24Small: .3rem 1rem;
             .col-md-5,
             .col-md-2 {
                 .wrapper {
-                    padding: .2rem;
+                    padding: 2px;
                 }
                 @include contentHide()
             }
@@ -4351,7 +4351,7 @@ $padding24Small: .3rem 1rem;
             .col-md-5,
             .col-md-2 {
                 .wrapper {
-                    padding: .2rem;
+                    padding: 2px;
                 }
                 @include contentHide()
             }
@@ -4369,7 +4369,7 @@ $padding24Small: .3rem 1rem;
             .col-md-5,
             .col-md-2 {
                 .wrapper {
-                    padding: .2rem;
+                    padding: 2px;
                 }
                 @include contentHide()
             }
@@ -4395,7 +4395,7 @@ $padding24Small: .3rem 1rem;
             //     padding: $content-padding-medium;
             // }
             .summary-line {
-                margin-top: .4rem;
+                margin-top: 4px;
             }
         }
 
@@ -4405,7 +4405,7 @@ $padding24Small: .3rem 1rem;
             //     padding: $content-padding-medium;
             // }
             .summary-line {
-                margin-top: .4rem;
+                margin-top: 4px;
             }
         }
 
@@ -4416,7 +4416,7 @@ $padding24Small: .3rem 1rem;
             //    padding: $content-padding-medium;
             // }
             .summary-line {
-                margin-top: .4rem;
+                margin-top: 4px;
             }
                     
         }
@@ -4433,7 +4433,7 @@ $padding24Small: .3rem 1rem;
             .col-md-4,
             .col-md-3 {
                 .summary-line {
-                    margin-top: .6rem;
+                    margin-top: 6px;
                   }
             }
 
@@ -4442,7 +4442,7 @@ $padding24Small: .3rem 1rem;
             .col-md-2 {
                 .content-box .content {
                   .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
                 }
             }
@@ -4454,7 +4454,7 @@ $padding24Small: .3rem 1rem;
             .col-md-4,
             .col-md-3 {
                 .summary-line {
-                    margin-top: .6rem;
+                    margin-top: 6px;
                   }
             }
 
@@ -4462,7 +4462,7 @@ $padding24Small: .3rem 1rem;
             .col-md-2 {
                 .content-box .content {
                    .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
                 }
             }
@@ -4473,7 +4473,7 @@ $padding24Small: .3rem 1rem;
             .col-md-4,
             .col-md-3 {
                 .summary-line {
-                    margin-top: .6rem;
+                    margin-top: 6px;
                   }
             }
 
@@ -4481,7 +4481,7 @@ $padding24Small: .3rem 1rem;
             .col-md-2 {
                 .content-box .content {
                    .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
                 }
             }
@@ -4500,7 +4500,7 @@ $padding24Small: .3rem 1rem;
             .col-md-4,
             .col-md-3 {
                 .summary-line {
-                    margin-top: .6rem;
+                    margin-top: 6px;
                   }
             }
 
@@ -4508,7 +4508,7 @@ $padding24Small: .3rem 1rem;
             .col-md-2 {
                 .content-box .content {
                    .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
                 }
             }
@@ -4521,7 +4521,7 @@ $padding24Small: .3rem 1rem;
             .col-md-4,
             .col-md-3 {
                 .summary-line {
-                    margin-top: .6rem;
+                    margin-top: 6px;
                   }
             }
 
@@ -4529,7 +4529,7 @@ $padding24Small: .3rem 1rem;
             .col-md-2 {
                 .content-box .content {
                    .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
                 }
             }
@@ -4541,7 +4541,7 @@ $padding24Small: .3rem 1rem;
             .col-md-4,
             .col-md-3 {
                 .summary-line {
-                    margin-top: .6rem;
+                    margin-top: 6px;
                   }
             }
 
@@ -4549,7 +4549,7 @@ $padding24Small: .3rem 1rem;
             .col-md-2 {
                 .content-box .content {
                    .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
                 }
             }
@@ -4566,7 +4566,7 @@ $padding24Small: .3rem 1rem;
         @media screen and(min-width: 1200px) {
              .col-md-12,
              .col-md-6 {
-                margin-top: .6rem;
+                margin-top: 6px;
              }
 
             .col-md-5,
@@ -4574,7 +4574,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
         }
@@ -4583,7 +4583,7 @@ $padding24Small: .3rem 1rem;
         @media screen and(max-width: 1200px) and (min-width: 992px) {
             .col-md-12,
              .col-md-6 {
-                margin-top: .6rem;
+                margin-top: 6px;
              }
 
             .col-md-5,
@@ -4591,7 +4591,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
         }
@@ -4600,7 +4600,7 @@ $padding24Small: .3rem 1rem;
         @media screen and(max-width: 992px) and (min-width: 768px) {
            .col-md-12,
              .col-md-6 {
-                margin-top: .6rem;
+                margin-top: 6px;
              }
 
             .col-md-5,
@@ -4608,7 +4608,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
 
@@ -4623,7 +4623,7 @@ $padding24Small: .3rem 1rem;
         //lg
         @media screen and(min-width: 1200px) {
              .col-md-12 {
-                margin-top: .6rem;
+                margin-top: 6px;
              }
 
             .col-md-6,
@@ -4632,7 +4632,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
         }
@@ -4640,7 +4640,7 @@ $padding24Small: .3rem 1rem;
          //ipad pro
         @media screen and(max-width: 1200px) and (min-width: 992px) {
              .col-md-12 {
-                margin-top: .6rem;
+                margin-top: 6px;
              }
 
             .col-md-6,
@@ -4649,7 +4649,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
         }
@@ -4657,7 +4657,7 @@ $padding24Small: .3rem 1rem;
          //ipad mini
         @media screen and(max-width: 992px) and (min-width: 768px) {
             .col-md-12 {
-                margin-top: .6rem;
+                margin-top: 6px;
              }
 
             .col-md-6,
@@ -4666,7 +4666,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
 
@@ -4687,7 +4687,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
 
@@ -4709,7 +4709,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
             .col-md-2 {
@@ -4729,7 +4729,7 @@ $padding24Small: .3rem 1rem;
             .col-md-3,
             .col-md-2 {
                 .summary-line {
-                    margin-top: .4rem;
+                    margin-top: 4px;
                   }
             }
 
@@ -4817,7 +4817,7 @@ $padding24Small: .3rem 1rem;
                 .content-box .content {
                     padding: $content-padding-smallest;
                     // .title {
-                    //     font-size: 1.6rem;
+                    //     font-size: 16px;
                     // }
                 }
                 @include barHide();
@@ -4829,7 +4829,7 @@ $padding24Small: .3rem 1rem;
                 .content-box .content {
                     padding: $content-padding-zero;
                     .title {
-                        font-size: 1.6rem;
+                        font-size: 16px;
                     }
                 }
                 @include barHide();
@@ -4855,7 +4855,7 @@ $padding24Small: .3rem 1rem;
                 .content-box .content {
                     padding: $content-padding-smallest;
                     .title {
-                        font-size: 1.6rem;
+                        font-size: 16px;
                     }
                 }
                 @include barHide();
@@ -4867,7 +4867,7 @@ $padding24Small: .3rem 1rem;
                 .content-box .content {
                     padding: $content-padding-zero;
                     .title {
-                        font-size: 1.4rem;
+                        font-size: 14px;
                     }
                 }
                 @include barHide();
@@ -4908,7 +4908,7 @@ $padding24Small: .3rem 1rem;
                 .content-box .content {
                     padding: $content-padding-zero;
                     .title {
-                        font-size: 1.4rem;
+                        font-size: 14px;
                     }
                 }
                 @include barHide();
@@ -4921,7 +4921,7 @@ $padding24Small: .3rem 1rem;
                 .content-box .content {
                     padding: $content-padding-zero;
                     .title {
-                        font-size: 1.2rem;
+                        font-size: 12px;
                     }
                 }
                 @include barHide();
@@ -4948,7 +4948,7 @@ $padding24Small: .3rem 1rem;
             .col-md-6 {
                  padding: $content-padding-zero;
                 .title {
-                    font-size: 1.4rem;
+                    font-size: 14px;
                 }
                 @include barHide();
                 @include summaryHide();
@@ -4960,7 +4960,7 @@ $padding24Small: .3rem 1rem;
                 .content-box .content {
                     padding: $content-padding-zero;
                     .title {
-                        font-size: 1rem;
+                        font-size: 10px;
                     }
                 }
                 @include barHide();
@@ -4981,11 +4981,11 @@ $padding24Small: .3rem 1rem;
                     padding: $content-padding-zero;
 
                     .title {
-                        font-size: 1.6rem;
+                        font-size: 16px;
                     }
 
                     .float-content-footer {
-                        margin-top: .2rem;
+                        margin-top: 2px;
                     }
                 }
                 @include summaryHide();
@@ -4999,7 +4999,7 @@ $padding24Small: .3rem 1rem;
                 .content-box .content {
                     padding: $content-padding-zero;
                     .title {
-                        font-size: 1rem;
+                        font-size: 10px;
                     }
                 }
                 @include barHide();
@@ -5042,7 +5042,7 @@ $padding24Small: .3rem 1rem;
         @media screen and(max-width: 992px) and (min-width: 768px) {
             .content-box .content {
                 .title {
-                    font-size: 1.8rem;
+                    font-size: 18px;
                 }
             }
 
@@ -5055,7 +5055,7 @@ $padding24Small: .3rem 1rem;
         @media screen and(max-width: 768px) and (min-width: 640px) {
             .content-box .content {
                 .title {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                 }
             }
             .header-content-box.content-box .content {
@@ -5067,7 +5067,7 @@ $padding24Small: .3rem 1rem;
         @media screen and (max-width: 640px) {
             .content-box .content {
                 .title {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                 }
             }
             .header-content-box.content-box .content {
@@ -5136,11 +5136,11 @@ $padding24Small: .3rem 1rem;
                 //     padding-left: 15px;
 
                 //     .title {
-                //         font-size: 1.6rem;
+                //         font-size: 16px;
                 //     }
 
                 //     .float-content-footer {
-                //         margin-top: .2rem;
+                //         margin-top: 2px;
                 //     }
                 // }
                 @include summaryHide();
@@ -5405,7 +5405,7 @@ $padding24Small: .3rem 1rem;
         @media screen and(max-width: 992px) and (min-width: 768px) {
             .content-box .content {
                 .title {
-                    font-size: 1.8rem;
+                    font-size: 18px;
                 }
             }
 
@@ -5418,7 +5418,7 @@ $padding24Small: .3rem 1rem;
         @media screen and(max-width: 768px) and (min-width: 640px) {
             .content-box .content {
                 .title {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                 }
             }
             .header-content-box.content-box .content {
@@ -5430,7 +5430,7 @@ $padding24Small: .3rem 1rem;
         @media screen and (max-width: 640px) {
             .content-box .content {
                 .title {
-                    font-size: 1.6rem;
+                    font-size: 16px;
                 }
             }
             .header-content-box.content-box .content {
@@ -5498,11 +5498,11 @@ $padding24Small: .3rem 1rem;
                 //     padding: $content-padding-zero;
 
                 //     .title {
-                //         font-size: 1.6rem;
+                //         font-size: 16px;
                 //     }
 
                 //     .float-content-footer {
-                //         margin-top: .2rem;
+                //         margin-top: 2px;
                 //     }
                 // }
                 @include summaryHide();
@@ -5556,7 +5556,7 @@ $padding24Small: .3rem 1rem;
 
             .article-title-bar {
                 padding: 20px 0;
-                font-size: 2rem;
+                font-size: 20px;
             }
 
             .bdsharebuttonbox {
@@ -5576,7 +5576,7 @@ $padding24Small: .3rem 1rem;
             }
 
             .info-bar {
-                margin-bottom: 1rem;
+                margin-bottom: 10px;
 
                 li:nth-of-type(1) {
                     max-width: 250px;

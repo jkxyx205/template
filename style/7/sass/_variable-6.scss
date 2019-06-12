@@ -1,6 +1,6 @@
 //全局变量
 $title-color: #505050;        //主标题颜色
-// $title-font-size: 1.6rem;  //主标题文字大小
+// $title-font-size: 16px;  //主标题文字大小
 $summary-color: #a8a8a8;       //概述颜色
 $split-color: #eaeaea;     //分割线颜色
 $background-color: #f8f8f7;   //页面背景色
@@ -31,18 +31,18 @@ $panel-body-bgColor: $panel-title-bgColor;      //内容背景色
 $content-bgColor: transparent;          //内容背景色
 $pic-content-bgColor: #fafafa; 
 
-$content-box-padding: 1.2rem;
+$content-box-padding: 12px;
 $content-box-hover-bgColor: $main-color;        //box  hover背景色
 $content-box-hover-borderColor: $main-color; //box hover 边框色
 
 $content-title-bgColor: transparent;  //标题背景色 
-$content-title-font-size: 1.8rem;  //标题文字大小
+$content-title-font-size: 18px;  //标题文字大小
 $content-title-color: $title-color;  //标题文字颜色
 
 $content-summary-fix-height: 70px;   //概要高度
 $content-summary-bgColor: transparent;  //概要背景色
 $content-summary-color: $summary-color;  //概要文字颜色
-$content-summary-font-size: 1.4rem;  //概要文字大小
+$content-summary-font-size: 14px;  //概要文字大小
 
 //控件样式
 //图文列表

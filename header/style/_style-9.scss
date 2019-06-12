@@ -2,18 +2,20 @@
     
 }
 
+
 @media (min-width: 769px) { //pc端
-    header {
-       
+    body header {
+        background: #252525; 
         .menu-items {
             .sub-menu {
                 border-top: 1px solid $main-color;
             }
         }
 
-        // .side-bar {
-            // background: $nav-bgcolor;
-        // }
+        .top-container {
+            border-bottom: none;
+            background: #252525;
+        }
 
     }
 }
