@@ -12,7 +12,7 @@ body {
     @include flex();
     @include flex-v();
 
-    @at-root #content {
+    @at-root #main {
         @include flex-1();
     }
 

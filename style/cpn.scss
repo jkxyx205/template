@@ -281,8 +281,8 @@ a {
 
             &.share-group {
                 text-align: center;
-                padding: 20px;
-                width: 260px;
+                padding: 20px 0;
+                width: 220px;
 
                 span {
                     display: inline-block;
@@ -392,6 +392,14 @@ a {
 }
 
 /////////////////////////////sitebar 侧边栏 end ////////////////
+
+/////////////////////////////间隔 高级控件 start ////////////////
+ @media (max-width: 768px) {
+    .super-seperator {
+        max-height: 20px!important;
+    }
+}
+/////////////////////////////间隔 高级控件 end ////////////////
 
 /////////////////////////////留言板 start ////////////////
 #msg-pad {

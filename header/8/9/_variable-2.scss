@@ -3,15 +3,22 @@ $main-color: #ebd305;   //主色
 $color: #666;        //通用文字色
 
 //菜单
-$nav-bgcolor: #000; //菜单背景色
-$nav-color: $color; //一级菜单文字色
+$nav-bgcolor: #1f1f1f; //菜单背景色
+$nav-color: #818181; //一级菜单文字色
 $nav-hover-color: $main-color; //一级菜单hover文字颜色
 
-$nav-deep-color: $nav-color;
-$nav-light-color: $color; 
+$deep-color: #565656;
+$light-color: #4e4e4e;
+
+$nav-deep-color: $deep-color;
+$nav-light-color: $light-color;
+
+$split-color: #373737;
 
 // 手机三色
-$mobile-header-item-bgcolor1: #e6594c!default;
-$mobile-header-item-bgcolor2: #d04334!default;
-$mobile-header-item-bgcolor3: #bb3c2f!default;
+$mobile-header-item-bgcolor1: #333333!default;
+$mobile-header-item-bgcolor2: #202020!default;
+$mobile-header-item-bgcolor3: #191919!default;
+
+$mobile-header-bar-bgcolor: #2f2f2f!default;
 

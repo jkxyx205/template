@@ -7,10 +7,12 @@ $menu-nav-height: 114px;
 $header-top-height: 48px;
 $empty-height: 30px;
 
+$mobile-header-bar-bgcolor: $main-color; //指明`!default`才能被覆盖；没有default的变量，不不受到引用顺序的影响，直接覆盖
+$mobile-header-bar-bgcolor2: $main-color;
+$mobile-header-bar-hover-color: #fff;
 
 @import "../mobile";
 @import "../pc";
-
 
 @media (min-width: 768px) { //mobile端
     

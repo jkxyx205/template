@@ -1,12 +1,15 @@
 @import "base";
 
-$nav-bgcolor2:$nav-bgcolor!default;
+$nav-bgcolor2: $nav-bgcolor!default;
 
 $mobile-left-width: 260px;
 $mobile-header-bar-height: 50px;
 
-$mobile-header-bgcolor: $nav-bgcolor!default; //指明`!default`才能被覆盖；没有default的变量，不不受到引用顺序的影响，直接覆盖
-$mobile-header-bgcolor2: $nav-bgcolor2!default;
+$mobile-header-bar-bgcolor: #fff!default; //指明`!default`才能被覆盖；没有default的变量，不不受到引用顺序的影响，直接覆盖
+$mobile-header-bar-bgcolor2: $mobile-header-bar-bgcolor!default;
+$mobile-header-bar-color: $deep-color!default;
+$mobile-header-bar-hover-color: $main-color!default;
+
 $mobile-header-split-color: $split-color!default;
 
 $mobile-header-item-bgcolor1: #fafafa!default;
@@ -50,7 +53,7 @@ body {
                 max-width: calc(100% - #{rem($ham-width)});
                 height: 100%;
                 white-space: nowrap;
-                @include linear-gradient($mobile-header-bgcolor, $mobile-header-bgcolor2);
+                @include linear-gradient($nav-bgcolor, $nav-bgcolor2);
                 @include transition(width);
             }
             
@@ -88,10 +91,19 @@ body {
             width: 100%;
             @include rem(font-size, 18px);
             @include box-shadow(0, 2px, 6px, 0px, rgba(0, 0, 0, .1));
-            @include linear-gradient($nav-bgcolor, $nav-bgcolor2);
+            @include linear-gradient($mobile-header-bar-bgcolor, $mobile-header-bar-bgcolor2);
             z-index: 999;
             @include transition(left);
+            
+            a {
+                color: $mobile-header-bar-color;
+            }
 
+            a:hover, a:focus {
+                &, i, span {
+                    color: $mobile-header-bar-hover-color!important;
+                }
+            }
 
             .m-logo {
                 display: block;
@@ -104,6 +116,7 @@ body {
                 img {
                     vertical-align: baseline;
                     height: 100%;
+                    max-width: 4 * $mobile-header-bar-height;
                 }
             }
 
@@ -131,7 +144,7 @@ body {
                 &:hover {
                     .drawer-hamburger-icon {
                         &, &:after, &:before {
-                            background-color: $nav-hover-color;
+                            background-color: $mobile-header-bar-hover-color;
                         }
                     }
                 }
@@ -149,7 +162,7 @@ body {
                         height: 1px;
                         width: 100%;
                         left: 0;
-                        background-color: $nav-color;
+                        background-color: $mobile-header-bar-color;
                      }
 
                     &:after, &:before {
@@ -179,15 +192,14 @@ body {
                 padding: 0 5px;
                 @include transition(top);
                 @include rem(font-size, 16px);
-                color: $color; 
-                @include linear-gradient($nav-bgcolor, $nav-bgcolor2);
+                @include linear-gradient($mobile-header-bar-bgcolor, $mobile-header-bar-bgcolor2);
     
-                color: $nav-color;
+                color: $mobile-header-bar-color;
                 &.show {
                     top: 0;
                 }
 
-                @include placeholder($nav-color);
+                @include placeholder($mobile-header-bar-color);
             }
 
         }
@@ -254,6 +266,7 @@ body {
                         position: absolute;
                         @include rem(right, $li-padding-width);
                         @include transform(rotate(-90deg))
+                        color: $nav-light-color;
                     }
 
                     &.menu-nav-item {
@@ -286,6 +299,10 @@ body {
                     &.open {
                         & > a  .icon-arrowdropdown {
                             @include transform(rotate(0))
+                        }
+
+                        a {
+                            // color: blue; //TODO
                         }
                     }
                 }
@@ -363,7 +380,7 @@ body {
                 height: 0;
                 width: $mobile-left-width; 
                 overflow: hidden;
-                @include linear-gradient($mobile-header-bgcolor, $mobile-header-bgcolor2);;
+                @include linear-gradient($nav-bgcolor, $nav-bgcolor2);
                 @include transition(all);
                 @include opacity(0);
 
@@ -381,7 +398,7 @@ body {
 
                     .icon-back {
                         line-height: 1;
-                        color: $nav-deep-color;
+                        color: $deep-color;
                     }
                 }
 

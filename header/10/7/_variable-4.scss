@@ -4,13 +4,14 @@ $color: #a1a1a1;        //通用文字色
 
 //菜单
 $nav-bgcolor: $main-color; //菜单背景色
+$nav-bgcolor2: #267871; //菜单背景色2
 $nav-color: #bfd5d7; //一级菜单文字色
 $nav-hover-color: #fff; //一级菜单hover文字颜色
 
 $nav-deep-color: $nav-color;
-$nav-light-color: #ef948b; 
+$nav-light-color: #679fb1; 
 
 // 手机三色
-$mobile-header-item-bgcolor1: #e6594c!default;
-$mobile-header-item-bgcolor2: #d04334!default;
-$mobile-header-item-bgcolor3: #bb3c2f!default;
+$mobile-header-item-bgcolor1: #277794!default;
+$mobile-header-item-bgcolor2: #12627e!default;
+$mobile-header-item-bgcolor3: #105771!default;

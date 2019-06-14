@@ -13,8 +13,8 @@ $nav-bgcolor: #fff!default; //菜单背景色
 $nav-color: $color!default;  //一级菜单文字色
 $nav-hover-color: $main-color!default; //一级菜单hover文字颜色
 $nav-hover-bgColor: transparent!default; //一级菜单hover背景色
-$nav-deep-color: $deep-color!default;  //
-$nav-light-color: $light-color!default; //
+$nav-deep-color: #a1a1a1!default;  //
+$nav-light-color: #bfbfbf!default; //
 
 
 html {
@@ -55,8 +55,7 @@ body { // 未来 删除该部分 style 中的base.css设置
         }
 
         .nav,
-        .mobile-header-info, 
-        .mobile-header-bar { //页眉共性设置:
+        .mobile-header-info { //导航栏共性设置
 
             &, a {
                 color: $nav-color;
