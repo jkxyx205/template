@@ -194,3 +194,9 @@
     -webkit-box-orient:vertical;
     overflow:hidden;
 }
+
+@mixin calc($prop) {
+  width:-moz-calc($prop);
+  width:-webkit-calc($prop);
+  width: calc($prop);
+}

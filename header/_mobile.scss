@@ -243,6 +243,8 @@ body {
         .menu-nav {
             height: 100%;
             overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
             .menu-items {
                 
                 li {
@@ -257,7 +259,7 @@ body {
                         @include rem(line-height, 50px);
                         @include ellipsis();
                         &:hover {
-                             background: $mobile-header-item-bgcolor1;
+                             // background: $mobile-header-item-bgcolor1; // 手机端不要hover色
                         }
                     }
 
@@ -398,7 +400,7 @@ body {
 
                     .icon-back {
                         line-height: 1;
-                        color: $deep-color;
+                        color: $nav-deep-color;
                     }
                 }
 
@@ -420,6 +422,8 @@ body {
             height: calc(100% - #{$mobile-header-bar-height});
             @include rem(margin-top, $mobile-header-bar-height);
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
         }
     } // mobile end
 }
