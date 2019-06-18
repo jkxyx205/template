@@ -47,6 +47,30 @@ $qzone-color: #ffce00;
 //     src: url('http://114.55.173.102:3000/fonts/artingStyle.woff') format('woff');
 // }
 
+.moban {
+    h1,h2,h3,h4,h5,h6,p,span {
+       line-height: 1;
+       margin: 0;
+       padding: 0;
+    }
+
+    $item-padding: 15px;
+    
+
+    .row {
+        margin-left: -$item-padding;
+        margin-right: -$item-padding;
+    }
+
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        padding-left: $item-padding;
+        padding-right: $item-padding
+    }
+
+    
+
+}
+
 
 
 @media (max-width: 768px ) {
@@ -65,7 +89,11 @@ $qzone-color: #ffce00;
         }
 
         h1 {
-            @include rem(margin-bottom, 25px!important);
+            @include rem(margin-bottom, 15px!important);
+        }
+
+        p {
+            @include rem(margin-bottom, 10px!important);
         }
 
         td {
@@ -457,7 +485,7 @@ a {
             }
 
             @media (max-width: 768px) {
-                 min-width: 100%;
+                 // min-width: 100%;
                  @include rem(height, 230px);
             }
            
@@ -3062,16 +3090,14 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 }
 
 //super-seperator 间隔
-
-
 section .panel.super-seperator {
-    background-color: transparent!important;
+    background-color: transparent;
     border: 0;
 }
 
 
 //模版样式重置问题 与后台 ckcontent.scss同步更新
-section [data-component-id="401"] .panel .panel-body,
+section [data-component-id="401"] .panel .panel-body, //嵌入页面
 section .article-detail .article-content {
 
   blockquote {

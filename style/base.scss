@@ -9,23 +9,26 @@
 
 body {
     min-height: 100%;
-    @include flex();
-    @include flex-v();
 
-    @at-root #main {
-        @include flex-1();
-    }
+    @media (min-width: 769px) {    
+        @include flex();
+        @include flex-v();
 
-    @media (max-width: 768px) {
-        @at-root #scroll-view {
-            @include flex();
-            @include flex-v();
-        }
-
-        @at-root #layout {
+        @at-root #main {
             @include flex-1();
         }
     }
+
+    // @media (max-width: 768px) { //iphone6 有兼容性问题
+    //     @at-root #scroll-view {
+    //         @include flex();
+    //         @include flex-v();
+    //     }
+
+    //     @at-root #layout {
+    //         @include flex-1();
+    //     }
+    // }
 }
 p {
     word-break: break-word;
@@ -373,11 +376,11 @@ section {
 
     .panel-body.moban { //模版
 
-        h1,h2,h3,h4,h5,h6,p,span {
-           line-height: 1;
-           margin: 0;
-           padding: 0;
-        }
+        // h1,h2,h3,h4,h5,h6,p,span {
+        //    line-height: 1;
+        //    margin: 0;
+        //    padding: 0;
+        // }
 
         $item-padding: 15px;
         
