@@ -47,6 +47,10 @@ $qzone-color: #ffce00;
 //     src: url('http://114.55.173.102:3000/fonts/artingStyle.woff') format('woff');
 // }
 
+.view-mode .element-id--1 {// 占位符浏览的时候不显示
+    display: none;
+}
+
 .moban {
     h1,h2,h3,h4,h5,h6,p,span {
        line-height: 1;
