@@ -17,7 +17,7 @@
   var $nav = $('#nav')
   var $menuItem = $('#menu-items')
   var $searchBtnTrigger1 = $('#searchBtn-trigger')
-  var $dropdownLi = $('header li.dropdown > a')
+  var $dropdownLi = $('header li.dropdown > a[href="javascript:;"]')
   var $search = $('#searchInput')
 
   //768窗口切换阀值
