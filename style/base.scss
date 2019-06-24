@@ -10,14 +10,14 @@
 body {
     min-height: 100%;
 
-    @media (min-width: 769px) {    
-        @include flex();
-        @include flex-v();
+    // @media (min-width: 769px) {    
+    //     @include flex();
+    //     @include flex-v();
 
-        @at-root #main {
-            @include flex-1();
-        }
-    }
+    //     @at-root #main {
+    //         @include flex-1();
+    //     }
+    // }
 
     // @media (max-width: 768px) { //iphone6 有兼容性问题
     //     @at-root #scroll-view {
