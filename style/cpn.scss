@@ -52,11 +52,11 @@ $qzone-color: #ffce00;
 }
 
 .moban {
-    h1,h2,h3,h4,h5,h6,p,span {
-       line-height: 1;
-       margin: 0;
-       padding: 0;
-    }
+    // h1,h2,h3,h4,h5,h6,p,span {
+    //    line-height: 1;
+    //    margin: 0;
+    //    padding: 0;
+    // }
 
     $item-padding: 15px;
     
@@ -3102,6 +3102,7 @@ section .panel.super-seperator {
 
 //模版样式重置问题 与后台 ckcontent.scss同步更新
 section [data-component-id="401"] .panel .panel-body, //嵌入页面
+section .panel .panel-body.moban, //模版
 section .article-detail .article-content {
 
   blockquote {
@@ -3177,10 +3178,10 @@ section .article-detail .article-content {
   }
 
   a > img {
-    padding: 1px;
-    margin: 1px;
-    border: none;
-    outline: 1px solid #0782C1;
+    // padding: 1px;
+    // margin: 1px;
+    // border: none;
+    // outline: 1px solid #0782C1;
   }
 
   /* Widget Styles */
@@ -3315,7 +3316,7 @@ section .article-detail .article-content {
 
   p {
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 8.5px;
   }
 
   figure,
