@@ -48,7 +48,7 @@ $qzone-color: #ffce00;
 // }
 
 .view-mode .element-id--1 {// 占位符浏览的时候不显示
-    display: none;
+    display: none!important;
 }
 
 .moban {
