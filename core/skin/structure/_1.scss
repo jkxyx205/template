@@ -1,0 +1,49 @@
+.panel {
+    .panel-title  {
+        position: relative;
+        color: $--color-text-regular;
+        text-align: center;
+        height: 150px;
+        line-height: 150px;
+
+        .pull-right.more {
+            display: none;
+        }
+
+        .label {
+            position: relative;
+            font-weight: bold;
+            max-width: 100%;
+            display: inline-block;
+            font-size: 18px;
+            .more-position-bottom {
+                margin: 25px 0;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                width: 60%;
+                bottom: 40px;
+                height: 2px;
+                background-color: $--color-primary;
+            }
+        }
+
+    }
+
+   
+    .more-position-bottom {
+        text-align: center;
+    }
+
+    .btn {
+        color: $--color-text-secondary;
+        border: 1px solid $--border-color-lighter;
+    }
+}

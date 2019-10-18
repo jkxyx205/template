@@ -1,0 +1,43 @@
+$--panel-title-background-color: red!default;
+$--panel-body-background-color: blue!default;
+$--panel-title-color: #8f9092!default;
+
+.panel {
+
+    border: 1px solid $--panel-title-background-color;
+
+    .panel-title  {
+        position: relative;
+        text-align: left;
+        height: 50px;
+        line-height: 50px;
+        background: $--panel-title-background-color;
+        padding: 0 25px;
+        color: $--panel-title-color;
+
+        
+        .label {
+            max-width: calc(100% - 92px);
+        }
+        
+        .icon-more1:before {
+            content: "\e643";
+            font-size: 12px;
+        }
+
+        .more-text {
+            font-size: 12px;
+        }
+    }
+
+    .panel-body {
+       padding: 0 25px;
+       background: $--panel-body-background-color;
+    }
+
+    .more-position-bottom {
+        display: none;
+    }
+
+}
+

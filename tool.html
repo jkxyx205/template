@@ -204,7 +204,8 @@
                 </div>
                 <div class="select-area" style="float: right;">
                         页面：<select name="" id="page">
-                            <option value="tpl/blank.html" selected="">空白页面</option>
+                            <option value="tpl/blank.html">空白页面</option>
+                            <option value="tpl/title.html" selected="">标题页面</option>
                             <option value="tpl/sitebar.html">侧边栏</option>
                             <option value="tpl/index.html">首页</option>
                             <option value="tpl/article-specital-list">文章特殊列表样式</option>
@@ -243,16 +244,25 @@
                            <option value="9">9</option>
 
                         </select>
-                        风格：<select name="" id="style">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
+                        字体：<select name="" id="font">
+                            <option value="1">宋体</option>
+                            <option value="2">黑体</option>
+                            <option value="3">Comic Sans MS</option>
+                        </select>
+                        按钮形状：<select name="" id="button">
+                            <option value="1">直角</option>
+                            <option value="2">小圆角</option>
+                            <option value="3">圆角</option>
+                        </select>
+                        控件外观：<select name="" id="structure">
+                            <option value="1">外观-1</option>
+                            <option value="2">外观-2</option>
+                            <option value="3">外观-3</option>
+                            <option value="4" selected="">外观-4</option>
+                        </select>
+                        底色：<select name="" id="style">
+                            <option value="white">白底</option>
+                            <option value="black">黑底</option>
                         </select>
                         配色：<select name="" id="block">
                            <option value="1">1</option>
@@ -325,7 +335,13 @@
                     change()
                 } else if (id === "block") { //global
                     change()
-                } 
+                } else if (id === "button") { //global
+                    change()
+                } else if (id === "font") { //global
+                    change()
+                } else if (id === "structure") { //global
+                    change()
+                }  
 
             })
 
@@ -368,14 +384,14 @@
                  var doc = $(window.frames["iframe"].document)[0];
                  removeStyles(doc)
                  var params = getParams()
-                 // loadStyles(doc, '../header/'+params.header+'/'+params.style+'/css/'+params.block+'.css')
-                 // loadStyles(doc, '../footer/'+params.footer+'/'+params.style+'/css/'+params.block+'.css')
-                 // loadStyles(doc, '../style/'+params.style+'/css/'+params.block+'.css')
 
-                 loadStyles(doc, '../dist/tpl-css/header/'+params.header+'/'+params.style+'/'+params.block+'.css?time'+ (new Date()))
-                 loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/'+params.style+'/'+params.block+'.css?time'+ (new Date()))
-                 // loadStyles(doc, '../dist/tpl-css/footer/'+params.footer+'/sass/'+params.block+'.css?time'+ (new Date()))
-                 loadStyles(doc, '../dist/tpl-css/style/'+params.style+'/sass/'+params.block+'.css?time'+ (new Date()))
+                 var s = params.style === 'white' ? '1' : '9';
+
+                 loadStyles(doc, '../dist/headers/'+params.header+'/'+s+'/'+params.block+'.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/footers/'+params.footer+'/1/'+params.block+'.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/skin/'+params.style+'/'+params.structure+'/'+params.block+'.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/buttons/'+params.button+'.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/fonts/'+params.font+'.css?time'+ (new Date().getTime()))
             }
 
 
@@ -386,6 +402,9 @@
                 params.header = $('#header').val()
                 params.footer = $('#footer').val()
                 params.block = $('#block').val()
+                params.font = $('#font').val()
+                params.button = $('#button').val()
+                params.structure = $('#structure').val()
                 return params;
             }
 
@@ -406,7 +425,9 @@
                     if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null &&
                         (allsuspects[i].href.indexOf("header") > -1
                             || allsuspects[i].href.indexOf("footer") > -1
-                            || allsuspects[i].href.indexOf("style") > -1
+                            || allsuspects[i].href.indexOf("skin") > -1
+                            || allsuspects[i].href.indexOf("buttons") > -1
+                            || allsuspects[i].href.indexOf("fonts") > -1
                         )) {
                         // console.log(allsuspects[i])
                         allsuspects[i].parentNode.removeChild(allsuspects[i]);

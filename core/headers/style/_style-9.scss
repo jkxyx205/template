@@ -1,0 +1,21 @@
+@media (min-width: 768px) { //mobile端
+    
+}
+
+
+@media (min-width: 769px) { //pc端
+    body header {
+        background: #2f2f2f;
+        .menu-items {
+            .sub-menu {
+                border-top: 1px solid $--color-primary;
+            }
+        }
+
+        .top-container {
+            border-bottom: none;
+            background: #2f2f2f;
+        }
+
+    }
+}

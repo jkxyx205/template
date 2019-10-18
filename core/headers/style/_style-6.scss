@@ -1,0 +1,40 @@
+@media (min-width: 768px) { //mobile端
+    
+}
+
+@media (min-width: 769px) { //pc端
+    body header {
+
+        .menu-nav .menu-items-container .menu-items {
+            position: relative;
+
+            .second-sub-menu {
+                border-top: 1px solid $--color-primary;
+                margin-top: $menu-nav-height - 30px;
+            }
+
+
+            li.menu-nav-item {
+                
+                & > a {
+                    @include center(vertical);
+                    position: relative;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    margin: 0 2px;
+                    line-height: inherit;
+                    height: auto;
+                    // border-radius: 4px;
+
+                }
+
+                &.current > a, &:hover > a, & > a:hover {
+                   &, i {
+                     color: #fff!important;
+                   }
+                }
+            } 
+        } 
+
+    }
+}

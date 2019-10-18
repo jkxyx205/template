@@ -1,0 +1,16 @@
+////////////////////////////////////////////////////////////// 复杂配置
+$--color-primary: #c06c6c;   //主色
+$color: #a1a1a1;        //通用文字色
+
+//菜单
+$nav-bgcolor: $--color-primary; //菜单背景色
+$nav-color: #ebd3d3; //一级菜单文字色
+$nav-hover-color: #fff; //一级菜单hover文字颜色
+$nav-hover-bgColor: #cc7272;
+$nav-deep-color: $nav-color;
+$nav-light-color: #d69f9e; 
+
+// 手机三色
+$mobile-header-item-bgcolor1: #c47a79!default;
+$mobile-header-item-bgcolor2: #ae6463!default;
+$mobile-header-item-bgcolor3: #9e5959!default;
