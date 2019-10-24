@@ -242,23 +242,6 @@
                            <option value="7">7</option>
                            <option value="8">8</option>
                            <option value="9">9</option>
-
-                        </select>
-                        字体：<select name="" id="font">
-                            <option value="1">宋体</option>
-                            <option value="2">黑体</option>
-                            <option value="3">Comic Sans MS</option>
-                        </select>
-                        按钮形状：<select name="" id="button">
-                            <option value="1">直角</option>
-                            <option value="2">小圆角</option>
-                            <option value="3">圆角</option>
-                        </select>
-                        控件外观：<select name="" id="structure">
-                            <option value="1">外观-1</option>
-                            <option value="2">外观-2</option>
-                            <option value="3">外观-3</option>
-                            <option value="4" selected="">外观-4</option>
                         </select>
                         底色：<select name="" id="style">
                             <option value="white">白底</option>
@@ -273,6 +256,22 @@
                            <option value="6">6</option>
                            <option value="7">7</option>
                            <option value="8">8</option>
+                        </select>
+                        字体：<select name="" id="font">
+                          <option value="1">宋体</option>
+                          <option value="2">黑体</option>
+                          <option value="3">Comic Sans MS</option>
+                        </select>
+                        按钮形状：<select name="" id="button">
+                            <option value="1">直角</option>
+                            <option value="2">小圆角</option>
+                            <option value="3">圆角</option>
+                        </select>
+                        控件外观：<select name="" id="structure">
+                            <option value="1">外观-1</option>
+                            <option value="2">外观-2</option>
+                            <option value="3">外观-3</option>
+                            <option value="4">外观-4</option>
                         </select>
                          <button onclick="change()">刷新</button>
                 </div>
@@ -385,10 +384,10 @@
                  removeStyles(doc)
                  var params = getParams()
 
-                 var s = params.style === 'white' ? '1' : '9';
 
-                 loadStyles(doc, '../dist/headers/'+params.header+'/'+s+'/'+params.block+'.css?time'+ (new Date().getTime()))
-                 loadStyles(doc, '../dist/footers/'+params.footer+'/1/'+params.block+'.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/headers/'+params.header+'/'+params.style+'/'+params.block+'.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/footers/'+params.footer+'/'+params.style+'/'+params.block+'.css?time'+ (new Date().getTime()))
+
                  loadStyles(doc, '../dist/skin/'+params.style+'/'+params.structure+'/'+params.block+'.css?time'+ (new Date().getTime()))
                  loadStyles(doc, '../dist/buttons/'+params.button+'.css?time'+ (new Date().getTime()))
                  loadStyles(doc, '../dist/fonts/'+params.font+'.css?time'+ (new Date().getTime()))

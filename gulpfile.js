@@ -12,7 +12,7 @@ gulp.task('build', function() {
      return gulp.src(
      [
      'core/**/*.scss',
-     '!core/headers/**'
+     // '!core/headers/**'
      ])
      .pipe(sass()) 
      .pipe(gulp.dest('dist'))

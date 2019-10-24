@@ -1,0 +1,55 @@
+.panel-body {
+    img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.content-box { 
+    .content {
+        line-height: 1.5;
+
+        .summary-fixed, .summary-line {
+            margin-top: 8px;
+        }
+
+        .content-footer { //底部时间，作者信息
+            display: flex;
+            display: -webkit-flex;
+            font-size: 12px;
+            color: $--color-text-secondary;
+
+            .author-bar, .date-bar  {
+               overflow: hidden;
+               white-space: nowrap;
+               text-overflow: ellipsis;
+            }
+
+            .author-bar {
+                flex: 1;
+            }
+        }
+
+        .float-content-footer {
+            height: 21px;
+            margin-top: 8px;
+            font-size: 12px;
+            color: $--color-text-secondary;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            .seperator {
+                margin: 0 5px
+            }
+
+
+            li {
+                display: inline-block;
+                margin-right: 8px;
+            }
+        }
+    }
+}
