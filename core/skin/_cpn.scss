@@ -67,12 +67,11 @@
 }
 
 
+
+
 .content-box { 
-    // .cover {
-    //     .title {
-    //         padding: 5px;
-    //     }
-    // }
+   
+    padding-bottom: 10px;
 
     .content {
         line-height: 1.5;
@@ -1852,7 +1851,6 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 .pic-list-15 {
     @include pic-area();
 
-
     .wrapper {
 
         background-color: $--background-color-base-light;
@@ -1878,13 +1876,15 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             .content {
                 
                 background: $--color-primary;
-                .title>a {
+
+                .title > a {
                     margin-left: 5px;
                     color: #fff;
                 }
+
                 .summary-fixed {
                     margin-left: 5px;
-                    color: #fff;
+                    color: #fff!important;
                 }
 
                 .btn {
@@ -2557,14 +2557,12 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     @include pic-area();
 
     $background-color: $--background-color-base-light;
+
     &.panel-body {
         padding-bottom: 25px;
 
         &>.row {
             margin: 0;
-            
-            // background-color: $--color-primary;
-
             &>div {
                 padding: 0;
             }
@@ -2575,7 +2573,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
         }
 
         .content-container {
-            background-color: $background-color;//$--color-primary;
+            background-color: $background-color;
         }
     }
    

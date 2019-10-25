@@ -6,7 +6,8 @@
             line-height: 60px;
          
             .label {
-                position: relative;
+                position: absolute;
+                top: 12.5px;
                 display: inline-block;
                 line-height: 35px;
                 z-index: 1;
@@ -59,7 +60,7 @@
                 top: 50%;
                 height: 1px;
                 width: calc(100% - 24px);
-                background-color: $--border-color-base;
+                background-color: $--border-color-lighter;
                
             }
         }
