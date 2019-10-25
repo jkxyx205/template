@@ -10,8 +10,13 @@
     .content {
         line-height: 1.5;
 
+        .title {
+            color: $--color-text-regular;
+        }
+
         .summary-fixed, .summary-line {
             margin-top: 8px;
+            color: $--color-text-secondary;
         }
 
         .content-footer { //底部时间，作者信息

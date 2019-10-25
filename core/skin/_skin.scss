@@ -1,6 +1,6 @@
 @import './base';
-@import './cpn';
+@import './cpn-adapter';
 
-section {
+body, section {
     background-color: $--background-color-base;
 }

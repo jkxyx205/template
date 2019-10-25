@@ -80,6 +80,7 @@
 
         .summary-fixed, .summary-line {
             margin-top: 8px;
+            color: $--color-text-secondary;
         }
 
         .content-footer { //底部时间，作者信息
@@ -1541,7 +1542,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     .wrapper {
 
         .row {
-            background-color: #f6f6f6;
+            background-color: $--background-color-base-light;
         }
         
         // @media (min-width: 992px) {
@@ -1854,7 +1855,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
     .wrapper {
 
-        background-color: #fbfbfb;
+        background-color: $--background-color-base-light;
 
         .content {
             transition: all 0.5s ease 0s;
@@ -2555,7 +2556,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 .pic-list-30 {
     @include pic-area();
 
-    $background-color: #f6f6f6;
+    $background-color: $--background-color-base-light;
     &.panel-body {
         padding-bottom: 25px;
 
@@ -2754,7 +2755,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     .article-summary {
         word-wrap: break-word;
         word-break: break-all; 
-        background-color: #f6f6f6;
+        background-color: $--background-color-base-light;
         .article-summary-tip {
             font-weight: bold;
         }
@@ -2774,8 +2775,8 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
     %common-style {
         color: #8c8c8c;
-        border: 1px solid #f6f6f6;
-        background: #fafafa;
+        border: 1px solid $--border-color-lighter;
+        background: $--background-color-base-light;
         text-align: center;
     }
 

@@ -1,10 +1,10 @@
-$--panel-title-background-color: red!default;
-$--panel-body-background-color: blue!default;
-$--panel-title-color: #8f9092!default;
+$--panel-title-background-color: $--color-text-primary!default;
+$--panel-body-background-color: transparent!default;
+$--panel-title-color: $--color-text-regular!default;
 
 .panel {
 
-    border: 1px solid $--panel-title-background-color;
+    border: 1px solid $--border-color-light;
 
     .panel-title  {
         position: relative;

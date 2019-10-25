@@ -1,0 +1,5640 @@
+@import "./cpn";
+@import "./cpn-adapter-base";
+
+//////////////////////////////单图片 单视频
+ //通用样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .s-pic {
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .cover {
+                .title {
+                    padding: 12px 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .cover {
+                
+                .title {
+                    padding: 8px 10px;
+                    font-size: 14px;
+                }
+
+            }
+        }
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .cover {
+                .title {
+                    padding: 8px 10px;
+                    font-size: 14px;
+                }
+
+            }
+        }
+    }
+        
+}
+
+.f-12, .c-12, .c-9, .c-6 {
+    .s-pic {
+        @media screen and (min-width: 992px) {
+            .cover {
+                .title {
+                    font-size: 18px;
+                    padding: 24px 16px;
+                }
+            }
+        }
+    }
+}
+
+.c-9, .c-6 {
+    .s-pic {
+        @media screen and (min-width: 992px) {
+            .cover {
+                .title {
+                    font-size: 16px;
+                    padding: 18px 10px;
+                }
+            }
+        }
+    }
+}
+
+
+.c-4, .c-3 {
+    .s-pic {
+        @media screen and (min-width: 992px) {
+            .cover {
+                .title {
+                    font-size: 14px;
+                    padding: 16px 10px;
+                }
+            }
+        }
+    }
+}
+
+
+ ///////////////////////////// 瀑布流 start
+ .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .waterfall {
+        .title {
+            font-size: 16px;
+        }
+
+        &.col-3,
+        &.col-5,
+        &.col-2 {
+            @include summaryLine(3)
+        }
+    }
+}
+
+.c-3 {
+    .waterfall {
+        @include summaryLine(3)
+       
+        &.col-4 {
+             @media screen and(min-width: 992px) {
+                @include summaryHide()
+            }
+        }
+
+        &.col-3,
+        &.col-5,
+        &.col-2 {
+            @media screen and(min-width: 992px) {
+                @include contentHide()
+            }
+        }
+
+    }
+}
+
+.c-9 {
+    .waterfall {
+         @media screen and(min-width: 992px) {
+            &.col-4,
+            &.col-3,
+            &.col-5,
+            &.col-2 {
+                @include summaryLine(3)
+            }
+         }
+    }
+}
+
+.c-6 {
+    .waterfall {
+         @media screen and(min-width: 992px) {
+
+            &.col-6,
+            &.col-4,
+            &.col-3,
+            &.col-5,
+            &.col-2 {
+                @include summaryLine(3)
+            }
+         }
+    }
+}
+
+.c-4 {
+    .waterfall {
+
+        @include summaryLine(3) //
+
+         @media screen and(min-width: 992px) {
+             
+            &.col-5,
+            &.col-2 {
+                @include summaryHide()
+            }
+           
+         }
+
+         @media screen and(max-width: 1200px) and (min-width: 992px) {
+            
+            &.col-3,
+            &.col-5,
+            &.col-2 {
+                @include summaryHide()
+            }
+         }
+    }
+}
+
+
+ //移动端样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 { //2. 固定手机端样式
+    
+
+    .waterfall {
+        //mobile 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                @include summaryLine(3) //
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content-box .content {
+                @include summaryLine(3)
+            }
+        }
+    }
+        
+}
+
+///////////////////////////// 瀑布流 end
+
+/////////////////////////////.pic-list-30  照片墙 start
+.f-12, 
+.c-12 {
+     .pic-list-30 {
+
+        @mixin textOverflow() {
+            .content-box .content {
+                @include summaryLine(3)
+            }
+        }
+
+        .col-md-2.even, .col-md-2.odd,
+        .col-md-3.even, .col-md-3.odd,
+        .col-md-4.even, .col-md-4.odd,
+        .col-md-5.even, .col-md-5.odd,
+        .col-md-6.even, .col-md-6.odd {
+             @include textOverflow();
+        }
+
+        @media (max-width: 768px) {
+            .col-md-12.even, .col-md-12.odd {
+                @include textOverflow();
+            }
+        }    
+        
+        @media (min-width: 992px) {
+            .col-md-5.even, .col-md-5.odd,
+            .col-md-2.even, .col-md-2.odd { //5,6列不显示描述
+
+                .content-box .content {
+                    @include summaryHide()
+                }
+            }
+
+            .col-md-3.even, .col-md-3.odd {//4列
+                .content-box .content {
+                    @include summaryLine(3)
+                }
+            }
+        }
+         
+    }
+
+}
+.c-3 {
+     
+    .pic-list-30 {
+
+        @include summaryLine(3)
+
+
+        @media (min-width: 992px) {
+            .col-md-6.even, .col-md-6.odd,
+            .col-md-4.even, .col-md-4.odd,
+            .col-md-3.even, .col-md-3.odd, 
+            .col-md-5.even, .col-md-5.odd, 
+            .col-md-2.even, .col-md-2.odd {
+                .content-box .content {
+                    padding: 2px;
+                    @include summaryHide()
+                   
+                }
+            }
+        }
+
+    }   
+    
+}
+
+.c-4 {
+    .pic-list-30 {
+
+        @include summaryLine(3)
+
+        @media (min-width: 992px) {
+            .col-md-4.even, .col-md-4.odd,
+            .col-md-3.even, .col-md-3.odd, 
+            .col-md-5.even, .col-md-5.odd, 
+            .col-md-2.even, .col-md-2.odd {
+                .content-box .content {
+                    padding: 0;
+
+                    @include summaryHide()
+                }
+            }
+
+
+            .col-md-6.even, .col-md-6.odd {
+                .content-box .content {
+                    @include summaryLine(1)
+                }
+            }
+        }
+    }   
+    
+}
+
+.c-9 {
+     .pic-list-30 {
+
+        @mixin textOverflow() {
+            .content-box .content {
+                @include summaryLine(3)
+            }
+        }
+
+        .col-md-2.even, .col-md-2.odd,
+        .col-md-3.even, .col-md-3.odd,
+        .col-md-4.even, .col-md-4.odd,
+        .col-md-5.even, .col-md-5.odd,
+        .col-md-6.even, .col-md-6.odd {
+             @include textOverflow();
+        }
+
+        @media (max-width: 768px) {
+            .col-md-12.even, .col-md-12.odd {
+                @include textOverflow();
+            }
+        }    
+        
+        @media (min-width: 992px) {
+            .col-md-5.even, .col-md-5.odd,
+            .col-md-2.even, .col-md-2.odd { //5,6列不显示描述
+                .content-box .content {
+                    @include summaryHide()
+                }
+            }
+
+            .col-md-4.even, .col-md-4.odd {//3列
+                .content-box .content {
+
+                   @include summaryLine(3)
+                }
+            }
+
+            .col-md-3.even, .col-md-3.odd {//4列
+                .content-box .content {
+
+                    @include summaryLine(2)
+                }
+            }
+
+        }
+         
+    }
+
+}
+
+.c-6 {
+     .pic-list-30 {
+
+        @media screen and (max-width: 992px) {
+            @include summaryLine(3)
+        }
+
+        @media screen and (min-width: 992px) {
+            .col-md-12.even, .col-md-12.odd {
+            @include summaryLine(3)
+        } 
+
+        
+        .col-md-6.even, .col-md-6.odd {
+            .content-box .content {
+                @include summaryLine(3)
+            }
+        }
+       
+
+        .col-md-4.even, .col-md-4.odd {
+            @include summaryLine(2)
+        }   
+
+        
+        .col-md-3.even, .col-md-3.odd,
+        .col-md-5.even, .col-md-5.odd,
+        .col-md-2.even, .col-md-2.odd {
+            @include summaryHide()
+        } 
+
+        }
+         
+    }
+}
+
+/////////////////////////////.pic-list-30 end
+
+ /////////////////////////////.pic-list-1 列表样式-1 /////////////////////////////////
+ //共性样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 { //2. 固定手机端样式
+    .pic-list-1 {
+        
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+                @include summaryLine(2) //
+            }
+        }
+
+        //mobile 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                @include summaryLine(2) //
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content-box .content {
+                @include summaryLine(2)
+            }
+                    
+        }
+    }
+        
+}
+
+
+.f-12, 
+.c-12 {
+     .pic-list-1 {
+        //ipad pro & pc
+        @media screen and (min-width: 992px) {
+            .content-box .content {
+                @include summaryLine(3) //1. 总体定基调
+            }
+
+        }
+       
+
+     }
+ }
+
+ .c-12 {
+     .pic-list-1 {
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+                .col-md-2 {
+                    .content-box .content {
+                        @include summaryLine(2)  
+                    }
+                }
+        }
+     }
+ }
+
+ .c-9 {
+     .pic-list-1 {
+        //PC
+        @media screen and(min-width: 1200px) {
+            @include summaryLine(3) //1. 总体定基调
+            .col-md-5 {
+                @include summaryLine(2)
+            }
+
+            .col-md-2 {
+                @include summaryLine(1) //
+            }
+               
+        }
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-4, .col-md-3 {
+                @include summaryLine(3)
+            }
+
+            .col-md-5 {
+                @include summaryLine(2)
+            }
+            .col-md-2 {
+                @include summaryLine(1)
+            }
+        }
+
+     }
+ }
+
+  .c-3 {
+     .pic-list-1 {
+        //ipad pro
+        @media screen and (min-width: 992px) {
+           .col-md-12 {
+                @include summaryLine(3) //
+            }
+
+            .col-md-6 {
+                @include summaryLine(1) //
+            }
+
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                @include summaryHide() //
+
+                .content {
+                    padding: $content-padding-smallest;
+                }
+                
+            }
+        }
+
+     }
+ }
+
+  .c-6 {
+     .pic-list-1 {
+        //PC
+        @media screen and(min-width: 1200px) {
+            @include summaryLine(3) //1. 总体定基调
+
+           
+            
+            .col-md-4 {
+                @include summaryLine(2) 
+            }
+
+            .col-md-3 {
+                @include summaryLine(1) 
+            }
+
+            .col-md-2,
+            .col-md-5 {
+                @include summaryHide() 
+            }
+               
+        }
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            @include summaryLine(3) //1. 总体定基调
+
+            .col-md-12{
+            }
+
+            .col-md-4 {
+                @include summaryLine(2)
+            }
+
+            .col-md-3 {
+                @include summaryLine(1)
+            }
+
+            .col-md-5, .col-md-2 {
+                @include summaryHide()
+                .content {
+                    padding: $content-padding-smallest;
+                }
+            }
+            
+        }
+     }
+ }
+
+.c-4 {
+ .pic-list-1 {
+    //PC
+    @media screen and(min-width: 1200px) {
+
+       .col-md-12 {
+            @include summaryLine(3) //
+        }
+
+        .col-md-6 {
+            @include summaryLine(2) //
+        }
+    
+        // .col-md-4 {
+        //    @include summaryLine(1) //   
+        // }
+        
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+            @include summaryHide() //
+            .content {
+                    padding: $content-padding-smallest;
+            }
+        }
+    }
+
+    //ipad pro
+    @media screen and(max-width: 1200px) and (min-width: 992px) {
+       .col-md-12 {
+            @include summaryLine(3) //
+        }
+
+        .col-md-6 {
+            @include summaryLine(2) //
+        }
+
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+            @include summaryHide() //
+            
+            .content {
+                padding: $content-padding-smallest;
+            }
+        }
+    }
+
+ }
+}
+
+
+ /////////////////////////////.pic-list-1 列表样式-1 end /////////////////////////////////
+
+ /////////////////////////////pic-list-3 列表样式-3 start ////////////////
+  //共性样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 { //2. 固定手机端样式
+    .pic-list-3 {
+        
+        .wrapper .content {
+            padding: 0 30px;
+        }
+
+        @include summaryLine(3) //
+
+        //mobile 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                @include summaryLine(2) //
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content-box .content {
+                @include summaryLine(1)
+            }
+                    
+        }
+    }
+        
+}
+
+ .f-12, .c-12 {
+     .pic-list-3 {
+
+        //PC
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6 {
+                @include summaryLine(10) //
+
+                .wrapper .content {
+                    padding: 0 50px;
+                }
+
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                .wrapper .content {
+                    padding: 0 42px;
+                }
+                @include summaryLine(3) //
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .wrapper .content {
+                    padding: 0 34px;
+                }
+                @include summaryLine(2) //
+            }
+
+               
+        }
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-3 {
+                @include summaryLine(2)
+            }
+
+        }
+
+     }
+ }
+
+.c-12 {
+     .pic-list-3 {
+       
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-2 {
+                @include summaryLine(1)
+            }
+
+        }
+
+     }
+ }
+
+ .c-3 {
+     .pic-list-3 {
+      
+       
+        //pc && ipad pro
+        @media screen and (min-width: 992px) {
+            .col-md-12 {
+                .wrapper .content {
+                    padding: 0 42px;
+                }
+                @include summaryLine(2)
+            }
+
+            .col-md-6 {
+                @include summaryHide()
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryHide()
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include contentHide()
+            }
+
+        }
+
+     }
+ }
+
+ .c-9 {
+    .pic-list-3 {
+        //pc && ipad pro
+        @media screen and (min-width: 992px) {
+            .col-md-12 {
+                .wrapper .content {
+                    padding: 0 50px;
+                }
+
+                @include summaryLine(10)
+            }
+
+            .col-md-6 {
+                .wrapper .content {
+                    padding: 0 50px;
+                }
+                @include summaryLine(3)
+            }
+
+            .col-md-4 {
+                @include summaryLine(2)
+            }
+
+            .col-md-3,
+            .col-md-5 {
+                @include summaryLine(1)
+            }
+
+            .col-md-2 {
+                
+                @include summaryHide()
+            }
+
+        }
+    }
+ }
+
+.c-6 {
+    .pic-list-3 {
+        //pc && ipad pro
+        @media screen and (min-width: 992px) {
+            .col-md-12 {
+                .wrapper .content {
+                    padding: 0 50px;
+                }
+                @include summaryLine(10)
+            }
+
+            .col-md-6,
+            .col-md-4 {
+                @include summaryLine(2)
+            }
+
+            .col-md-3 {
+                @include summaryLine(1)
+            }
+
+            .col-md-2,
+            .col-md-5 {
+                @include summaryHide()
+            }
+
+        }
+
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-4 {
+                @include summaryLine(1)
+            }
+
+            .col-md-3,
+            .col-md-5 {
+                @include summaryHide()
+            }
+
+        }
+
+    }
+ }
+
+
+.c-4 {
+    .pic-list-3 {
+        //pc && ipad pro
+        @media screen and (min-width: 992px) {
+            .col-md-12 {
+                .wrapper .content {
+                    padding: 0 42px;
+                }
+                @include summaryLine(2)
+            }
+
+            .col-md-6 {
+                @include summaryLine(2)
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryHide()
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include contentHide()
+            }
+
+        }
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-6 {
+                @include summaryLine(1)
+            }
+
+            .col-md-4 {
+                @include summaryHide()
+            }
+
+        }
+
+    }
+ }
+
+ /////////////////////////////pic-list-3 列表样式-3 end ////////////////
+
+
+/////////////////////////////pic-list-27 列表样式-6 start ////////////////
+ .c-3 {
+     .pic-list-27 {
+        
+        //ipad pro & PC
+        @media screen and (min-width: 992px) {
+
+            .col-md-4,
+            .col-md-3,
+            .col-md-5 {
+                @include summaryHide()
+            }
+
+            .col-md-2 {
+                @include contentHide()
+            }
+        }
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-6 {
+                @include summaryHide()
+            }
+        }
+
+     }
+ }
+
+  .c-6 {
+     .pic-list-27 {
+        
+        //ipad pro & PC
+        @media screen and (min-width: 992px) {
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-5,
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+
+     }
+ }
+
+.c-4 {
+     .pic-list-27 {
+        
+        //ipad pro & PC
+        @media screen and (min-width: 992px) {
+
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+
+        //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            
+        }
+
+     }
+ }
+
+/////////////////////////////pic-list-27 列表样式-6 end ////////////////
+
+
+/////////////////////////////pic-list-2 列表样式-2 start ////////////////
+
+ .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+     .pic-list-2 {
+        .col-md-12,
+        .col-md-6,
+        .col-md-4,
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+            .wrapper .content {              
+                // padding: $content-padding-medium;s
+            }
+        }
+
+
+        @media screen and (min-width: 992px) {
+            .content-box {
+                .content {
+                  bottom: -48px;
+                }
+
+                &:hover {
+                   .content {
+                        bottom: 0;
+                    }
+                }
+
+            }
+        }
+
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .wrapper {
+                .content-parent {
+                    height: 72px;
+                }
+            }
+            
+
+            .content-box {
+                .content {
+                  bottom: -48px;
+                }
+
+                &:hover {
+                   .content {
+                        bottom: 0;
+                    }
+                }
+
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box {
+                .content {
+                  bottom: -35px;
+                }
+
+                &:hover {
+                   .content {
+                        bottom: 0;
+                    }
+                }
+
+            } 
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+             .content-box {
+                .content {
+                  bottom: -35px;
+                }
+
+                &:hover {
+                   .content {
+                        bottom: 0;
+                    }
+                }
+
+            } 
+                    
+        }
+
+     }
+ }
+
+ /////////////////////////////pic-list-2 列表样式-2 end ////////////////
+
+
+/////////////////////////////pic-list-6 列表样式-4 start ////////////////
+  .f-12, .c-12 {
+     .pic-list-6 {
+        
+        //PC
+        @media screen and(min-width: 992px) {
+            .col-md-12, .col-md-6, .col-md-4 {
+                 .wrapper  {
+                    .content {
+                          padding: $content-padding-big;
+                    }
+                  
+                    &:hover {
+                        .content {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+
+     }
+ }
+
+.c-3 {
+     .pic-list-6 {
+        
+        //PC
+        @media screen and(min-width: 992px) {
+            .col-md-4,
+            .col-md-3,
+            .col-md-5 {
+               @include summaryHide()
+            }
+
+            .col-md-2 {
+               @include contentHide()
+            }
+        }
+     }
+ }
+
+ .c-6 {
+     .pic-list-6 {
+        
+        //PC
+        @media screen and(min-width: 992px) {
+            .col-md-4,
+            .col-md-3,
+            .col-md-5 {
+               @include summaryHide()
+            }
+
+            .col-md-2 {
+               @include contentHide()
+            }
+        }
+     }
+ }
+
+ /////////////////////////////pic-list-6 列表样式-4 end ////////////////
+
+
+/////////////////////////////pic-list-17 列表样式-18 start ///////////////
+.f-12, .c-12 {
+    .pic-list-17 {
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6 {
+                .content {
+                    padding: $content-padding-medium;
+                }
+            }
+
+
+             .col-md-4,
+             .col-md-3 {
+                .content {
+                    padding: $content-padding-small;
+
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+             }
+            
+            
+            .col-md-5, 
+            .col-md-2 {
+                .content {
+                    padding: $content-padding-small;
+
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+/////////////////////////////pic-list-17 列表样式-18 end ////////////////
+
+/////////////////////////////pic-list-23 列表样式-24 start ///////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-23 {
+
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            @include summaryLine(2)
+        }
+
+        //mobile 6 
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            @include summaryLine(1)
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            @include summaryLine(1)
+        }
+
+    }
+}
+
+.f-12, .c-12 {
+    .pic-list-23 {
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4 {
+               @include summaryLine(3)
+            }
+
+
+             
+             .col-md-3 {
+                @include summaryLine(2)
+                   
+             }
+            
+            
+            .col-md-5 {
+                @include summaryLine(1)
+            }
+
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+    }
+}
+
+
+.c-9 {
+    .pic-list-23 {
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6 {
+               @include summaryLine(3)
+            }
+
+
+             .col-md-4 {
+                @include summaryLine(2) 
+             }
+
+             .col-md-3 {
+                @include summaryLine(1)
+                   
+             }
+            
+            
+            .col-md-5,
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+    }
+}
+
+.c-3 {
+    .pic-list-23 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                @include summaryLine(2)
+             }
+
+             .col-md-6, 
+             .col-md-4,
+             .col-md-3 {
+                @include summaryHide()
+                   
+             }
+            
+            .col-md-5,
+            .col-md-2 {
+                @include contentHide()
+            }
+        }
+    }
+}
+
+.c-6 {
+    .pic-list-23 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+               @include summaryLine(3)
+            }
+
+            
+            .col-md-6 {
+               @include summaryLine(2)
+            }
+
+
+             .col-md-4 {
+                @include summaryLine(1) 
+             }
+            
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+    }
+}
+
+.c-4 {
+    .pic-list-23 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+               @include summaryLine(3)
+            }
+
+            .col-md-6 {
+               @include summaryLine(1)
+            }
+
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+    }
+}
+
+/////////////////////////////pic-list-23 列表样式-24 end ////////////////
+
+/////////////////////////////pic-list-13 列表样式-14 start ////////////////
+
+
+.c-6 {
+   .pic-list-13 {
+     @media screen and(min-width: 768px) and(max-width: 1200px) {
+        .col-md-5,
+        .col-md-2 {
+            .btn {
+                padding: 0 2px;
+            }
+        }
+        
+     }
+   }
+}
+
+.c-4 {
+   .pic-list-13 {
+     @media screen and(min-width: 768px) and(max-width: 1200px) {
+        .col-md-3,
+        .col-md-5,
+        .col-md-2 {
+            .btn {
+                padding: 0 2px;
+            }
+        }
+        
+     }
+   }
+}
+
+.c-3 {
+   .pic-list-13 {
+     @media screen and(min-width: 768px) and(max-width: 1200px) {
+
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-2 {
+            .btn {
+                padding: 0 2px;
+            }
+        }
+        
+     }
+   }
+}
+
+/////////////////////////////pic-list-13 列表样式-14 end ////////////////
+
+/////////////////////////////pic-list-9 列表样式-9 start ////////////////
+.c-9 {
+    .pic-list-9 {
+         @media screen and(min-width: 992px) {
+            .col-md-2 {
+                .wrapper {
+                    padding: 15px;
+                }
+            }
+         }
+
+    }
+}
+
+.c-6 {
+    .pic-list-9 {
+         @media screen and(min-width: 992px) {
+            .col-md-3 {
+                .wrapper {
+                    padding: 15px;
+                }
+            }
+
+            
+            .col-md-5,
+            .col-md-2 {
+                .wrapper {
+                    padding: 10px;
+                }
+            }
+         }
+
+    }
+}
+
+.c-4 {
+    .pic-list-9 {
+         @media screen and(min-width: 992px) {
+            .col-md-4 {
+                .wrapper {
+                    padding: 10px;
+                }
+            }
+       
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .wrapper {
+                    padding: 5px;
+                }
+            }
+
+            .col-md-2 {
+                @include contentHide()
+            }
+         }
+
+    }
+}
+
+.c-3 {
+    .pic-list-9 {
+         @media screen and(min-width: 992px) {
+            .col-md-4,
+            .col-md-3 {
+                .wrapper {
+                    padding: 5px;
+                }
+            }
+       
+            .col-md-5,
+            .col-md-2 {
+                @include contentHide()
+                .wrapper {
+                    padding: 2px;
+                }
+            }
+         }
+
+    }
+}
+
+/////////////////////////////pic-list-9 列表样式-9 end ////////////////
+
+/////////////////////////////pic-list-8 列表样式-8 start ////////////////
+
+
+
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-8 {
+            @include summaryLine(2)
+
+            //ipad plus
+            @media screen and(max-width: 992px) and (min-width: 768px) {
+                @include summaryLineHeight($summaryFixedH39)
+            }
+
+            //iphone 6
+            @media screen and(max-width: 768px) and (min-width: 640px) {
+                @include summaryLineHeight($summaryFixedH39)
+            }
+
+
+            //iphone 5
+            @media screen and (max-width: 640px) {
+                @include summaryLineHeight($summaryFixedH39)
+            }
+
+
+
+    }
+
+    .pic-list-8.article-type {
+        .content {
+            padding-bottom: 0;
+        }
+    }
+    
+        
+}
+
+.f-12, 
+.c-12,
+.c-9,
+.c-6 {
+    .pic-list-8 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12,
+                .col-md-6,
+                .col-md-4,
+                .col-md-3 {
+                    @include summaryLineHeight($summaryFixedH1)
+                }
+
+                .col-md-5,
+                .col-md-2 {
+                    @include summaryLineHeight($summaryFixedH2)
+                }
+               
+            }
+
+           
+    }
+        
+}
+
+.c-4 {
+
+    .pic-list-8 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12,
+                .col-md-6,
+                .col-md-4 {
+                    @include summaryLineHeight($summaryFixedH1)
+                }
+
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include summaryLineHeight($summaryFixedH2)
+                }
+               
+            }
+
+           
+    }
+        
+}
+
+.c-3 {
+
+    .pic-list-8 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                    @include summaryLineHeight($summaryFixedH1)   
+                }
+
+                .col-md-6,
+                .col-md-4,
+                .col-md-3 {
+                    @include summaryLineHeight($summaryFixedH2)
+                }
+
+                
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+               
+            }
+
+           
+    }
+        
+}
+
+
+
+/////////////////////////////pic-list-8 列表样式-8 end ////////////////
+
+/////////////////////////////pic-list-15 列表样式-12 start ////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-15 {
+               
+            .wrapper .content {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            @include summaryLine(3)
+
+            
+
+             //pad
+            @media screen and(max-width: 992px) and (min-width: 768px) {
+                @include summaryLineHeight($summaryFixedH3)
+            }
+
+            //mobile 6 
+            @media screen and(max-width: 768px) and (min-width: 640px) {
+                @include summaryLineHeight($summaryFixedH3)
+            }
+
+            //iphone 5
+            @media screen and (max-width: 640px) {
+                @include summaryLineHeight($summaryFixedH3)
+            }
+
+            .btn {
+                margin-top: 20px;
+            }
+    }
+        
+}
+
+.f-12, 
+.c-12,
+.c-9,
+.c-6 {
+    .pic-list-15 {
+            
+            @media screen and(min-width: 992px) {
+
+                .col-md-12,
+                .col-md-6,
+                .col-md-4,
+                .col-md-3 {
+                    @include summaryLineHeight($summaryFixedH3)
+                    .btn {
+                        margin-top: 20px;
+                    }
+                }
+
+                .col-md-5,
+                .col-md-2 {
+                    @include summaryLineHeight($summaryFixedH4)
+
+                    .btn {
+                        margin-top: 20px;
+                    }
+                }
+               
+            }
+    }
+        
+}
+
+.c-9 {
+    .pic-list-15 {
+        @media screen and(min-width: 992px) {
+                .col-md-2 {
+                    .btn {
+                        padding: 0 5px;
+                    }
+                }
+               
+            }
+    }
+}
+
+.c-6 {
+    .pic-list-15 {
+        @media screen and(min-width: 992px) {
+                .col-md-5,
+                .col-md-2 {
+                    .btn {
+                        padding: 0 5px;
+                    }
+                }
+
+                .col-md-2 {
+                    .btn {
+                        // padding: 0 5px;
+                        display: none;
+
+                    }
+                }
+               
+            }
+    }
+}
+
+.c-4 {
+    .pic-list-15 {
+        @media screen and(min-width: 992px) {
+                .col-md-12,
+                .col-md-6,
+                .col-md-4 {
+                    @include summaryLineHeight($summaryFixedH3)
+                    .btn {
+                        padding: 0 5px;
+                    }
+                }
+
+                .col-md-3,
+                .col-md-5 {
+                    @include summaryLineHeight($summaryFixedH4)
+                    .btn {
+                        // padding: 0 5px;
+                        display: none;
+
+                    }
+                }
+
+                .col-md-2 {
+                    @include contentHide()
+                }
+               
+            }
+    }
+}
+
+.c-3 {
+    .pic-list-15 {
+        @media screen and(min-width: 992px) {
+                .col-md-12 {
+                    @include summaryLineHeight($summaryFixedH3)
+                }
+
+                .col-md-6,
+                .col-md-4,
+                .col-md-3 {
+                    @include summaryLineHeight($summaryFixedH4)
+                    .btn {
+                        // padding: 0 5px;
+                        display: none;
+
+                    }
+                }
+
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+               
+            }
+    }
+}
+
+
+/////////////////////////////pic-list-15 列表样式-12 end ////////////////
+
+/////////////////////////////pic-list-12 列表样式-13 start ////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-12 {
+            //ipad plus
+            @media screen and(max-width: 992px) and (min-width: 768px) {
+                @include summaryLine(3)
+            }
+
+            //mobile 6 
+            @media screen and(max-width: 768px) and (min-width: 640px) {
+                @include summaryLine(1)
+            }
+
+            //iphone 5
+            @media screen and (max-width: 640px) {
+                @include summaryLine(1)
+            }
+    }
+        
+}
+
+
+.f-12, .c-12 {
+
+    .pic-list-12 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-6,
+                .col-md-4,
+                .col-md-3 {
+                    @include summaryLine(3)
+                }
+
+                
+                .col-md-5 {
+                    @include summaryLine(2)
+                }
+                .col-md-2 {
+                   @include summaryLine(1)
+                }
+               
+            }
+
+           
+    }
+        
+}
+
+.c-9 {
+
+    .pic-list-12 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-6 {
+                  @include summaryLine(3)
+                }
+
+                .col-md-4 {
+                  @include summaryLine(2)
+                }
+
+                .col-md-3 {
+                    @include summaryLine(1)
+                }
+
+                
+                .col-md-5, 
+                .col-md-2 {
+                   @include summaryHide()
+                }
+               
+            }
+
+           
+    }
+        
+}
+
+.c-6 {
+    .pic-list-12 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12,
+                .col-md-6 {
+                  @include summaryLine(3)
+                }
+
+                .col-md-4 {
+                    @include summaryLine(2)
+                }
+                .col-md-3 {
+                    @include summaryLine(1)
+                }
+
+                
+                .col-md-5 {
+                    @include summaryHide()
+                }
+
+                .col-md-2 {
+                   @include contentHide()
+                }
+            }
+
+           
+    }
+}
+
+.c-4 {
+    .pic-list-12 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                  @include summaryLine(3)
+                }
+                .col-md-6 {
+                  @include summaryLine(1)
+                }
+
+                .col-md-4 {
+                    @include summaryHide()
+                }
+
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                   @include contentHide()
+                }
+            }
+
+           
+    }
+}
+
+
+
+.c-3 {
+
+    .pic-list-12 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                  @include summaryLine(3)
+                }
+
+                .col-md-6 {
+                  @include summaryLine(1)
+                }
+
+                // ,
+                // .col-md-3 {
+                //     @include summaryLine(0)
+                // }
+
+                .col-md-4,
+                .col-md-3,
+                .col-md-5, 
+                .col-md-2 {
+                   @include contentHide()
+                }
+               
+            }
+
+           
+    }
+        
+}
+
+
+/////////////////////////////pic-list-12 列表样式-13 end ////////////////
+
+
+/////////////////////////////pic-list-11 列表样式-15 start ////////////////
+
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-11 {
+            @include summaryLine(3)
+
+            //ipad plus
+            @media screen and(max-width: 992px) and (min-width: 768px) {
+                @include summaryLineHeight($summaryFixedH3)
+            }
+
+
+
+            //mobile 6 
+            @media screen and(max-width: 768px) and (min-width: 640px) {
+                @include summaryLineHeight($summaryFixedH3)
+                .wrapper .content .more {
+                    font-size: 12px;
+
+                    .iconfont {
+                        font-size: 12px;
+                        margin-right: 4px;
+                    }
+
+                }
+            }
+
+            //iphone 5
+            @media screen and (max-width: 640px) {
+                @include summaryLineHeight($summaryFixedH3)
+                .wrapper .content .more {
+                    font-size: 12px;
+                }
+            }
+    }
+        
+}
+
+.f-12, .c-12, .c-9, .c-6 {
+
+    .pic-list-11 {
+            @media screen and(min-width: 992px) {
+            .col-md-12, 
+            .col-md-6, 
+            .col-md-4, 
+            .col-md-3 {
+                @include summaryLineHeight($summaryFixedH3)
+            } 
+
+            .col-md-5, 
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH4)
+                .wrapper .content .more {
+                    font-size: 12px;
+                    .iconfont {
+                        font-size: 12px;
+                        margin-right: 4px;
+                    }
+                }
+            } 
+                    
+        }
+    }
+}
+
+.c-6 {
+    .pic-list-11 {
+        @media screen and(min-width: 992px) {
+            .col-md-5 {
+                .wrapper .content .more {
+                    font-size: 12px;
+                }
+            }
+
+            .col-md-2 {
+                .wrapper .content .more {
+                    display: none;
+                }
+            } 
+        }
+    }
+}
+
+.c-4 {
+
+    .pic-list-11 {
+            @media screen and(min-width: 992px) {
+            .col-md-12, 
+            .col-md-6, 
+            .col-md-4 {
+                @include summaryLineHeight($summaryFixedH3)
+            } 
+
+            .col-md-3,
+            .col-md-5, 
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH4)
+                .wrapper .content .more {
+                    display: none;
+                }
+            } 
+
+        }
+    }
+}
+
+.c-3 {
+
+    .pic-list-11 {
+            @media screen and(min-width: 992px) {
+            .col-md-12{
+                @include summaryLineHeight($summaryFixedH3)
+            } 
+
+            .col-md-6, 
+            .col-md-4,
+            .col-md-3,
+            .col-md-5, 
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH4)
+                .wrapper .content .more {
+                    font-size: 12px;
+                    .iconfont {
+                        font-size: 12px;
+                        margin-right: 4px;
+                    }
+                }
+               
+            } 
+
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .wrapper .content .more {
+                    display: none;
+                }
+            }
+                    
+        }
+    }
+}
+
+
+
+
+/////////////////////////////pic-list-11 列表样式-15 end ////////////////
+
+/////////////////////////////pic-list-14 列表样式-16 end ////////////////
+
+.c-3 {
+    .pic-list-14 {
+        @media screen and(min-width: 992px) {
+            .col-md-2 {
+                .wrapper .cover {
+                    padding-bottom: 20%;
+                }
+            }
+
+        }
+         
+    }
+}
+
+/////////////////////////////pic-list-14 列表样式-16 end ////////////////
+
+/////////////////////////////pic-list-28 列表样式-19 start ////////////////
+$content-padding-medium2: 14px 10px;
+
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .pic-list-28 {
+            @include summaryLine(2)
+
+            //mobile 6 
+            @media screen and(max-width: 768px) and (min-width: 640px) {
+                @include summaryLineHeight($summaryFixedH2)
+
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH2 * .8;
+
+                     
+                }
+
+                .wrapper .cover .readmore {
+                        padding: 4px 4px;
+                        font-size: 12px;
+                }
+
+                .col-xs-6 {
+                    .content {
+                        padding: $content-padding-small;
+
+                        .title {
+                            font-size: $title-font-size-medium;
+                        }
+
+                        .summary-fixed, .summary-line {
+                            font-size: $summary-font-size-big;
+                        }
+
+                        .article-bar {
+                                margin-top: 2px;
+                        }
+                    }
+                }
+
+                .col-sm-4 {
+                    .content {
+                        padding: $content-padding-small;
+
+                        .title {
+                            font-size: $title-font-size-medium;
+                        }
+
+                        .summary-fixed, .summary-line {
+                            font-size: $summary-font-size-big;
+                        }
+
+                        .article-bar {
+                                margin-top: 2px;
+                        }
+                    }
+                }
+
+                
+            }
+
+            //iphone 5
+            @media screen and (max-width: 640px) {
+
+                @include summaryLineHeight($summaryFixedH2)
+
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH2 * .8;
+                }
+
+                .wrapper .cover .readmore {
+                        padding: 4px 4px;
+                        font-size: 12px;
+                }
+
+                .content {
+                    padding: $content-padding-small;
+
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+
+                    .summary-fixed, .summary-line {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+                        
+            }
+    }
+
+
+
+    
+        
+}
+
+
+.f-12, .c-12 {
+
+    .pic-list-28 {  
+
+        //PC & pad pro
+        @media screen and(min-width: 768px) {
+            .col-md-12,
+            .col-md-6 {
+                @include summaryLineHeight($summaryFixedH1)
+
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+
+                .content {
+                    padding: $content-padding-medium;
+
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+
+             .col-md-4,
+             .col-md-3 {
+                @include summaryLineHeight($summaryFixedH1)
+
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+
+                .content {
+                    padding: $content-padding-medium;
+
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+             }
+            
+            
+            .col-md-5, 
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH2 * .8;
+                }
+                .content {
+                    padding: $content-padding-medium2;
+
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-small;
+                    }
+                    
+                }
+
+                .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+                }
+                
+            }
+        }
+    }
+ }
+
+.c-3 {
+    .pic-list-28 {
+
+         //PC & pad pro
+         @media screen and(min-width: 768px) {
+            .col-md-12 {
+                @include summaryLineHeight($summaryFixedH1)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summay-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+             
+             .col-md-6 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH2 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+
+                    .title {
+                        font-size: $title-font-size-small;
+                    }
+
+                    .summay-line, .summary-fixed {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+
+                .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+                }
+             }
+
+             .col-md-4,
+             .col-md-3,
+             .col-md-5 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH2 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+                    .title {
+                        font-size: $title-font-size-smallest;
+                    }
+
+                    .summay-line, .summary-fixed {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+
+                .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+                }
+             }
+
+             .col-md-2 {
+                .content {
+                    padding: $content-padding-smallest;
+                    .title {
+                        font-size: $title-font-size-smallest;
+                    }
+
+                    .summay-line, .summary-fixed {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+
+                .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+                }
+
+             }
+
+         }
+     }
+ }
+
+ .c-9 {
+    .pic-list-28 {
+        @media screen and(min-width: 768px) {
+            .col-md-12 {
+                @include summaryLineHeight($summaryFixedH1)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+                .content {
+                    padding: $content-padding-medium2;
+
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+            .col-md-6,
+            .col-md-4 {
+                @include summaryLineHeight($summaryFixedH1)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+
+
+            
+
+            .col-md-3 {
+                @include summaryLineHeight($summaryFixedH1)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+             }
+
+             .col-md-5,
+             .col-md-2 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH2 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+                    .title {
+                        font-size: $title-font-size-medium;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+                .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+                }
+             }
+         }
+     }
+ }
+
+.c-6 {
+    .pic-list-28 {
+         @media screen and(min-width: 768px) {
+
+            .col-md-12 {
+                @include summaryLineHeight($summaryFixedH1)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+                .content {
+                    padding: $content-padding-medium;
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summay-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+            .col-md-6 {
+                @include summaryLineHeight($summaryFixedH1)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+
+                    .title {
+                        font-size: $title-font-size-big;
+                    }
+
+                    .summary-line, .summary-fixed {
+                        font-size: $summary-font-size-big;
+                    }
+                }
+            }
+             
+             .col-md-4 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+                    .title {
+                        font-size: $title-font-size-small;
+                    }
+
+                    .summay-line, .summary-fixed {
+                        font-size: $summary-font-size-small;
+                    }
+                }
+
+                .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+                }
+             }
+
+             .col-md-3,
+             .col-md-5,
+             .col-md-2 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH2 * .8;
+                }
+                .content {
+                    padding: $content-padding-small;
+                    .title {
+                        font-size: $title-font-size-smallest;
+                    }
+
+                    .summay-line, .summary-fixed{
+                        font-size: $summary-font-size-small;
+                    }
+                }
+
+                .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+                }
+             }
+         }
+     }
+ }
+
+.c-4 {
+     @media screen and(min-width: 768px) {
+    .pic-list-28 {
+         .col-md-12 {
+            @include summaryLineHeight($summaryFixedH1)
+            .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+            .content {
+                padding: $content-padding-medium;
+
+                .title {
+                    font-size: $title-font-size-big;
+                }
+
+                .summary-line, .summary-fixed {
+                    font-size: $summary-font-size-big;
+                }
+            }
+         }
+         .col-md-6 {
+            @include summaryLineHeight($summaryFixedH2)
+            .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-medium;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+
+            .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+            }
+         }
+
+         .col-md-4,
+         .col-md-3 {
+            @include summaryLineHeight($summaryFixedH2)
+            .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH1 * .8;
+                }
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-small;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+
+            .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+            }
+         }
+         .col-md-5,
+         .col-md-2 {
+            @include summaryLineHeight($summaryFixedH2)
+            .wrapper .content:last-of-type {
+                    padding-bottom: $summaryFixedH2 * .8;
+                }
+            .content {
+                padding: $content-padding-small;
+                .title {
+                    font-size: $title-font-size-smallest;
+                }
+
+                .summay-line, .summary-fixed {
+                    font-size: $summary-font-size-small;
+                }
+            }
+
+            .wrapper .cover .readmore {
+                        font-size: $summary-font-size-small;
+                }
+         }
+     }
+ }
+}
+
+/////////////////////////////pic-list-28 列表样式-19 end ////////////////
+
+/////////////////////////////pic-list-18 列表样式-17 start ////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-18 {
+           .content {
+                @media screen and(max-width: 992px) and (min-width: 768px) {
+                    @include summaryLine(2)
+                }
+
+                //mobile 6 
+                @media screen and(max-width: 768px) and (min-width: 640px) {
+                    @include summaryHide()    
+                }
+
+                //iphone 5
+                @media screen and (max-width: 640px) {
+                    @include summaryHide()
+                    
+                }
+           } 
+           
+    }
+        
+}
+
+.f-12, .c-12 {
+    .pic-list-18 {
+            @media screen and(min-width: 992px) {
+
+                .col-md-4,
+                .col-md-3 {
+                    @include summaryLine(3)
+                }
+
+                .col-md-5 {
+                    @include summaryLine(2)
+                }
+
+                .col-md-2 {
+                    @include summaryLine(1)
+                }
+            }
+    }
+}
+
+.c-9 {
+    .pic-list-18 {
+            @media screen and(min-width: 1200px) {
+
+                .col-md-6,
+                .col-md-4 {
+                    @include summaryLine(3)
+                }
+
+                .col-md-3 {
+                    @include summaryLine(2)
+                }
+
+                .col-md-5 {
+                    @include summaryLine(1)
+                }
+                .col-md-2 {
+                    @include summaryHide()
+                }
+            }
+
+            @media screen and(min-width: 768px) and (max-width: 1200px) {
+
+                .col-md-6 {
+                    @include summaryLine(3)
+                }
+
+                .col-md-4 {
+                    @include summaryLine(2)
+                }
+
+                .col-md-3 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-5,
+                .col-md-2 {
+                    @include summaryHide()
+                }
+            }
+    }
+}
+
+
+.c-6 {
+    .pic-list-18 {
+            @media screen and(min-width: 1200px) {
+                
+                .col-md-6 {
+                    @include summaryLine(2)
+                }
+
+                .col-md-4 {
+                    @include summaryLine(1)
+                }
+                .col-md-3,
+                .col-md-5 {
+                    @include summaryHide()
+                }
+                
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+
+            @media screen and(min-width: 768px) and (max-width: 1200px) {
+
+                .col-md-6 {
+                    @include summaryLine(2)
+                }
+
+                .col-md-4 {
+                    @include summaryHide()
+                }
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+    }
+}
+
+.c-4 {
+    .pic-list-18 {
+            @media screen and(min-width: 1200px) {
+                .col-md-12 {
+                    @include summaryLine(3)
+                }
+
+                .col-md-6 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-4{
+                    @include summaryHide()
+                }
+
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+
+            @media screen and(min-width: 768px) and (max-width: 1200px) {
+
+                .col-md-12 {
+                    @include summaryLine(3)
+                }
+
+                .col-md-6 {
+                    @include summaryHide()
+                }
+
+                .col-md-4,
+                .col-md-3
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+    }
+}
+
+
+
+.c-3 {
+    .pic-list-18 {
+            @media screen and(min-width: 1200px) {
+                .col-md-12 {
+                    @include summaryLine(2)
+                }
+
+                .col-md-6 {
+                    @include summaryHide()
+                }
+                
+
+                .col-md-4,
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+
+            @media screen and(min-width: 768px) and (max-width: 1200px) {
+
+                .col-md-12 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-6 {
+                    @include summaryHide()
+                }
+
+                .col-md-4,
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+    }
+}
+
+/////////////////////////////pic-list-18 列表样式-17 end ////////////////
+
+
+
+/////////////////////////////pic-list-21 列表样式-21 start ////////////////
+
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+    .pic-list-21 {
+           .content {
+                //ipad plus
+                @media screen and(max-width: 992px) and (min-width: 768px) {
+                    @include summaryLine(1);  
+                }
+
+                 //mobile 6 
+                @media screen and(max-width: 768px) and (min-width: 640px) {
+                    @include summaryHide()    
+                }
+
+                //iphone 5
+                @media screen and (max-width: 640px) {
+                    @include summaryHide()
+                    
+                }
+           } 
+    }
+        
+}
+
+.f-12, .c-12 {
+    .pic-list-21 {
+            @media screen and(min-width: 992px) {
+                .col-md-6 {
+                    @include summaryLine(3)
+                }
+
+                .col-md-4 {
+                    @include summaryLine(2)
+                }
+
+                .col-md-3 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-5,
+                .col-md-2 {
+                    @include summaryHide()
+                }
+            }
+    }
+}
+
+.c-9 {
+    .pic-list-21 {
+            @media screen and(min-width: 1200px) {
+
+                .col-md-6 {
+                    @include summaryLine(2)
+                }
+                .col-md-4 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include summaryHide()
+                }
+            }
+
+            @media screen and(min-width: 992px) and (max-width: 1200px) {
+                .col-md-12,
+                .col-md-6 {
+                    @include summaryLine(2)
+                }
+
+                .col-md-4 {
+                    @include summaryLine(1)
+                }
+                 
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include summaryHide()
+                }
+            }
+    }
+}
+
+
+.c-6 {
+    .pic-list-21 {
+            @media screen and(min-width: 1200px) {
+                .col-md-12 {
+                    @include summaryLine(3)
+                }
+                
+                .col-md-6 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-4, 
+                .col-md-3,
+                .col-md-5 {
+                    @include summaryHide()
+                }
+                
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+
+            @media screen and(min-width: 992px) and (max-width: 1200px) {
+
+                .col-md-12 {
+                    @include summaryLine(3)
+                }
+                
+                .col-md-6 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-4, 
+                .col-md-3,
+                .col-md-5 {
+                    @include summaryHide()
+                }
+                
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+    }
+}
+
+.c-4 {
+    .pic-list-21 {
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-6,
+                .col-md-4{
+                    .content {
+                        padding: 0;
+                    }
+                    @include summaryHide()
+                }
+
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+    }
+}
+
+
+
+.c-3 {
+    .pic-list-21 {
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                    @include summaryLine(1)
+                }
+
+                .col-md-6,
+                .col-md-3,
+                .col-md-4 {
+                    .content {
+                        padding: 0;
+                    }
+                    @include summaryHide()
+                }
+
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+            }
+    }
+}
+
+/////////////////////////////pic-list-21 列表样式-21 end ////////////////
+
+/////////////////////////////pic-list-19 列表样式-22 end ////////////////
+
+ //通用样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .pic-list-19 {
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+               padding-left: 10px;
+               padding-right: 10px;
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+               padding-left: 10px;
+               padding-right: 10px;
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+           .content-box .content {
+               padding-left: 10px;
+               padding-right: 10px;
+           }
+                    
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .pic-list-19 {
+        @media screen and(min-width: 992px) {
+            .col-md-12, 
+            .col-md-6 {
+               .content-box .content {
+                   padding-left: 50px;
+                   padding-right: 50px;
+               }
+            }
+
+            .col-md-4, 
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+               .content-box .content {
+                   padding-left: 30px;
+                   padding-right: 30px;
+               }
+            }
+               
+        }
+    }
+}
+
+.c-9 {
+    .pic-list-19 {
+        @media screen and(min-width: 992px) {
+            .col-md-12, 
+            .col-md-6 {
+               .content-box .content {
+                   padding-left: 40px;
+                   padding-right: 40px;
+               }
+            }
+
+            .col-md-4, 
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+               .content-box .content {
+                   padding-left: 20px;
+                   padding-right: 20px;
+               }
+            }
+               
+        }
+    }
+}
+
+.c-6 {
+    .pic-list-19 {
+        @media screen and(min-width: 992px) {
+            .col-md-12, 
+            .col-md-6 {
+               .content-box .content {
+                   padding-left: 30px;
+                   padding-right: 30px;
+               }
+            }
+
+            .col-md-4, 
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+               .content-box .content {
+                   padding-left: 20px;
+                   padding-right: 20px;
+               }
+            }
+               
+        }
+    }
+}
+
+.c-4 {
+    .pic-list-19 {
+        @media screen and(min-width: 992px) {
+            .col-md-12, 
+            .col-md-6 {
+               .content-box .content {
+                   padding-left: 20px;
+                   padding-right: 20px;
+               }
+            }
+
+            .col-md-4, 
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+               .content-box .content {
+                   padding-left: 10px;
+                   padding-right: 10px;
+               }
+            }
+               
+        }
+    }
+}
+
+.c-3 {
+    .pic-list-19 {
+        @media screen and(min-width: 992px) {
+            .col-md-12, 
+            .col-md-6 {
+               .content-box .content {
+                   padding-left: 20px;
+                   padding-right: 20px;
+               }
+            }
+
+            .col-md-4, 
+            .col-md-3,
+            .col-md-5
+             {
+               .content-box .content {
+                   padding-left: 10px;
+                   padding-right: 10px;
+               }
+            }
+
+            .col-md-2 {
+
+                @include contentHide()   
+            }
+            
+        }
+    }
+}
+
+/////////////////////////////pic-list-19 列表样式-22 end ////////////////
+
+/////////////////////////////pic-list-22 列表样式-23 start ////////////////
+
+ //通用样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .pic-list-22 {
+
+        @include summaryLine(2)
+        .wrapper {
+            padding: 10px 40px 24px 40px;
+
+            .content {
+                padding-left: 0;
+                padding-right: 0;
+
+                .article-bar  {
+                    display: block;
+                    li {
+                        margin-right: 0;  
+                        float: none;  
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                   
+                }
+            }
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+                @include summaryLineHeight($summaryFixedH2)
+                .article-bar {
+                    font-size: 16px;
+                 } 
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                @include summaryLineHeight($summaryFixedH2)
+                 .article-bar {
+                    font-size: 16px;
+                 } 
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content-box .content {
+                @include summaryLineHeight($summaryFixedH2)
+                .article-bar {
+                    font-size: 16px;
+                 } 
+            }
+                    
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .pic-list-22 {
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4,
+            .col-md-3 {
+                .content-box .content .article-bar {
+                    font-size: 20px;
+                 }
+                @include summaryLineHeight($summaryFixedH1)
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper {
+                    padding: 10px 20px 14px 20px;
+                    .content .article-bar {
+                        font-size: 18px;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+.c-9 {
+    .pic-list-22 {
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4,
+            .col-md-3 {
+                .content-box .content .article-bar {
+                    font-size: 18px;
+                 }
+                @include summaryLineHeight($summaryFixedH1)
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper {
+                    padding: 10px 20px 14px 20px;
+                    .content .article-bar {
+                        font-size: 16px;
+                    }
+                } 
+            }
+
+            .col-md-2 {
+                .btn {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+.c-6 {
+    .pic-list-22 {
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4
+             {
+                .content-box .content .article-bar {
+                    font-size: 18px;
+                 }
+                @include summaryLineHeight($summaryFixedH1)
+            }
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper {
+                    padding: 10px 20px 14px 20px;
+                    .content .article-bar {
+                        font-size: 16px;
+                    }
+                } 
+
+                .btn {
+                    padding: 0 5px;
+                }
+            }
+          
+        }
+    }
+}
+
+.c-4 {
+    .pic-list-22 {
+        @media screen and(min-width: 992px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-4
+             {
+                .content-box .content .article-bar {
+                    font-size: 16px;
+                 }
+                @include summaryLineHeight($summaryFixedH1)
+            }
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper {
+                    padding: 10px 10px 12px 10px;
+                    .content .article-bar {
+                        font-size: 14px;
+                    }
+                } 
+
+                .btn {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+.c-3 {
+    .pic-list-22 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .content-box .content .article-bar {
+                    font-size: 16px;
+                 }
+                @include summaryLineHeight($summaryFixedH1)
+            }
+
+            .col-md-6,
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH2)
+                .wrapper {
+                    padding: 10px 10px 12px 10px;
+                    .content .article-bar {
+                        font-size: 14px;
+                    }
+                } 
+
+                .btn {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+/////////////////////////////pic-list-22 列表样式-23 end ////////////////
+
+
+
+
+/////////////////////////////pic-list-26 列表样式-25 start ////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .pic-list-26 {
+
+            .article-bar {
+                margin-top: 8px;
+                display: block;
+
+                 li {
+                        margin-right: 0;  
+                        float: none;  
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                 }
+            }
+
+            .content-box .content {
+                    padding: 20px 24px;
+
+                    .summary-fixed {
+                        margin-top: 16px;
+                    }
+            }
+
+            //ipad plus
+            @media screen and(max-width: 992px) and (min-width: 768px) {
+                @include summaryLineHeight($summaryFixedH1)
+                @include summaryLine(2)
+                .content {
+                        .btn {
+                            margin-top: 24px;
+                        }
+                    }
+            }
+
+            //mobile 6 
+            @media screen and(max-width: 768px) and (min-width: 640px) {
+                @include summaryLineHeight($summaryFixedH1)
+                @include summaryLine(2)
+                .content {
+                        .btn {
+                            margin-top: 24px;
+                        }
+                }
+            }
+
+            //iphone 5
+            @media screen and (max-width: 640px) {
+                @include summaryLineHeight($summaryFixedH1)
+                @include summaryLine(2)
+                .content {
+                        .btn {
+                            margin-top: 24px;
+                        }
+                }
+            }
+    }
+        
+}
+
+
+.f-12 {
+
+    .pic-list-26 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                    .content {
+                        .btn {
+                            margin-top: 24px;
+                        }
+                    }
+                }
+
+                .col-md-6 {
+                     .content {
+                        .btn {
+                            margin-top: 24px;
+                        }
+                    }
+                    @include summaryLineHeight($summaryFixedH3)
+                    @include summaryLine(3)
+                }
+
+                .col-md-4 {
+                     .content {
+                        .btn {
+                            margin-top: 6px;
+                            padding: 0 15px;
+                        }
+                    }
+
+                    .article-bar {
+                        margin-top: 2px;
+                    }
+
+                    .content-box .content {
+                           padding: 10px 16px;
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+                    }
+
+                    @include summaryLineHeight($summaryFixedH2)
+                    @include summaryLine(2)
+
+                }
+
+                .col-md-3 {
+                    .content {
+                        .btn {
+                            margin-top: 16px;
+                        }
+                    }
+
+                    .article-bar {
+                        margin-top: 4px;
+                    }
+
+                    .content-box .content {
+                            padding: 10px 16px;
+                           
+
+                            .summary-fixed {
+                                margin-top: 8px;
+                            }
+                    }
+
+
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
+                   .btn {
+                        display: none;
+                    }
+                }
+               
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .content {
+                      padding: 10px 16px;
+                }
+
+                .article-bar {
+                    margin-top: 4px;
+                }
+
+                @include summaryHide()
+                .btn {
+                    display: none;
+                }
+            }
+
+           
+    }
+        
+}
+
+.c-12 {
+
+    .pic-list-26 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                    .content {
+                        .btn {
+                            margin-top: 24px;
+                        }
+                    }
+                }
+
+                .col-md-6 {
+
+                    .content-box .content {
+                            // padding: 10px 16px;
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+
+                            .btn {
+                                margin-top: 16px;
+                            }
+                    }
+
+
+                    @include summaryLineHeight($summaryFixedH3)
+                    @include summaryLine(3)
+                }
+
+                .col-md-4 {
+
+                    .content {
+                        .btn {
+                            margin-top: 8px;
+                        }
+                    }
+
+
+                    .article-bar {
+                        margin-top: 0;
+                    }
+
+                    .content-box .content {
+                            padding: 10px 16px;
+
+                            .summary-fixed {
+                                margin-top: 0
+                            }
+                    }
+
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
+
+                }
+
+                .col-md-3 {
+
+                    .article-bar {
+                        margin-top: 0;
+                    }
+
+                    .content-box .content {
+                            padding: 4px 8px;
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+                    }
+
+
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
+                   .btn {
+                        display: none;
+                    }
+                }
+               
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .article-bar {
+                    margin-top: 2px;
+                }
+
+                .content-box .content {
+                        padding: 6px 16px;
+
+                        .summary-fixed {
+                            margin-top: 0;
+                        }
+                }
+                @include summaryHide()
+                .btn {
+                    display: none;
+                }
+            }
+
+           
+    }
+        
+}
+
+
+.c-9 {
+
+    .pic-list-26 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                    .content {
+                        .btn {
+                            margin-top: 24px;
+                        }
+                    }
+                }
+
+                .col-md-6 {
+                     .content {
+                        .btn {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .article-bar {
+                        margin-top: 0;
+                    }
+
+                    .content-box .content {
+                           padding: 10px 16px;
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+                    }
+
+                    @include summaryLineHeight($summaryFixedH2)
+                    @include summaryLine(2)
+
+                }
+
+                .col-md-4 {
+                    .content {
+                        .btn {
+                            margin-top: 12px;
+                        }
+                    }
+
+                    .article-bar {
+                        margin-top: 0
+                    }
+
+                    .content-box .content {
+                            padding: 10px 16px;
+                           
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+                    }
+
+
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
+                   .btn {
+                        display: none;
+                    }
+                }
+
+                .col-md-3 {
+
+                    .article-bar {
+                        margin-top: 0;
+                    }
+
+                    .content-box .content {
+                            padding: 8px 16px;
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+                    }
+
+
+                    @include summaryHide()
+                   .btn {
+                        display: none;
+                    }
+                }
+               
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                        padding: 10px 16px;
+
+                        .summary-fixed {
+                            margin-top: 8px;
+                        }
+                }
+                @include summaryHide()
+                .btn, .article-bar {
+                    display: none;
+                }
+            }
+
+           
+    }
+        
+}
+
+.c-6 {
+
+    .pic-list-26 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                     .content {
+                        .btn {
+                            margin-top: 16px;
+                        }
+                    }
+
+                    .content-box .content {
+                        padding: 10px 16px;
+
+                        .summary-fixed {
+                            margin-top: 2px;
+                        }
+                }
+
+
+                    @include summaryLineHeight($summaryFixedH3)
+                    @include summaryLine(3)
+                }
+
+                .col-md-6 {
+                    .article-bar {
+                        margin-top: 0;
+                    }
+
+                    .content-box .content {
+                            padding: 10px 16px;
+                           
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+                    }
+
+
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
+                   .btn {
+                        display: none;
+                    }
+                }
+
+                .col-md-4,
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    .content {
+                          padding: 10px 16px;
+                    }
+
+                    @include summaryHide()
+                    .btn, .article-bar {
+                        display: none;
+                    }
+                }
+
+                .col-md-5,
+                .col-md-2 {
+                    .content {
+                          padding: 2px 16px;
+                    }
+                }
+               
+            }
+    }
+        
+}
+
+.c-4 {
+
+    .pic-list-26 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                     .content {
+                        .btn {
+                            margin-top: 6px;
+                        }
+                    }
+
+                    .article-bar {
+                        margin-top: 0;
+                    }
+
+                    .content-box .content {
+                            padding: 8px 16px;
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+                    }
+
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
+
+                }
+
+                .col-md-6,
+                .col-md-4,
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    .content {
+                          padding: 4px 12px;
+                    }
+
+                    @include summaryHide()
+                    .btn, .article-bar {
+                        display: none;
+                    }
+                }
+
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    .content {
+                          padding: 0 16px;
+                    }
+                }
+
+                .col-md-5,
+                .col-md-2 {
+                    @include contentHide()
+                }
+               
+            }
+    }
+        
+}
+
+.c-3 {
+
+    .pic-list-26 {
+            
+            @media screen and(min-width: 992px) {
+                .col-md-12 {
+                    .content {
+                        .btn {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .article-bar {
+                        margin-top: 0;
+                    }
+
+                    .content-box .content {
+                            padding: 10px 16px;
+                           
+
+                            .summary-fixed {
+                                margin-top: 0;
+                            }
+                    }
+
+
+                   @include summaryLineHeight($summaryFixedH0)
+                   @include summaryLine(1)
+                   .btn {
+                        display: none;
+                    }
+                }
+
+                .col-md-6,
+                .col-md-4,
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    .content {
+                          padding: 10px 16px;
+                    }
+
+                    @include summaryHide()
+                    .btn, .article-bar {
+                        display: none;
+                    }
+                }
+
+                .col-md-4,
+                .col-md-3,
+                .col-md-5,
+                .col-md-2 {
+                    .content {
+                          padding: 0 16px;
+                    }
+                     @include contentHide()
+                }
+               
+            }
+    }
+        
+}
+
+
+
+/////////////////////////////pic-list-26 列表样式-25 end ////////////////
+
+
+
+/////////////////////////////pic-list-24 列表样式-26 start ////////////////
+ //通用样式
+
+$padding24Big: 10px 10px;
+$padding24Medium: 6px 10px;
+$padding24Small: 3px 10px;
+
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .pic-list-24 {
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .cover  .tip-content .title {
+                padding: $padding24Medium;
+            }
+
+            .content-box .content {
+                @include summaryLine(4)
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .cover  .tip-content .title {
+                padding: $padding24Medium;
+            }
+
+
+            .content-box .content {
+                @include summaryLine(3)
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .cover  .tip-content .title {
+                padding: $padding24Medium;
+            }
+
+            .content-box .content {
+                @include summaryLine(2)
+            }
+                    
+        }
+    }
+        
+}
+
+
+
+.f-12, .c-12, .c-9 {
+
+    .pic-list-24 {
+
+        @media screen and(min-width: 992px) {
+            .cover  .tip-content .title {
+                padding: $padding24Big;
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryLine(4)
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLine(3)
+
+                .cover  .tip-content .title {
+                    padding: $padding24Medium;
+                }
+            }
+        }
+    }
+}
+
+.c-6 {
+
+    .pic-list-24 {
+
+        @media screen and(min-width: 992px) {
+            .cover  .tip-content .title {
+                padding: $padding24Medium;
+            }
+
+            .col-md-12,
+            .col-md-6 {
+                @include summaryLine(4)
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryLine(3)
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLine(2)
+            }
+        }
+    }
+}
+
+.c-4 {
+
+    .pic-list-24 {
+
+        @media screen and(min-width: 992px) {
+            .cover  .tip-content .title {
+                padding: $padding24Medium;
+            }
+
+            .col-md-12,
+            .col-md-6 {
+                @include summaryLine(4)
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryLine(3)
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                
+                .cover  .tip-content .title {
+                    padding: $padding24Small;
+                }
+                @include summaryLine(2)
+            }
+        }
+    }
+}
+
+
+.c-3 {
+
+    .pic-list-24 {
+
+        @media screen and(min-width: 992px) {
+            .cover  .tip-content .title {
+                padding: $padding24Medium;
+            }
+
+            .col-md-12,
+            .col-md-6 {
+                @include summaryLine(4)
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryLine(3)
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .cover  .tip-content .title {
+                    padding: $padding24Small;
+                }
+                @include summaryLine(2)
+            }
+        }
+    }
+}
+
+/////////////////////////////pic-list-24 列表样式-26 end ////////////////
+
+/////////////////////////////pic-list-25 列表样式-27 end ////////////////
+ //通用样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .pic-list-25 {
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+                padding: $content-padding-medium;
+                @include summaryLineHeight($summaryFixedH00)
+                @include summaryLine(1)
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                padding: $content-padding-medium;
+                @include summaryLineHeight($summaryFixedH00)
+                @include summaryLine(1)
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            
+            .content-box .content {
+                padding: $content-padding-medium;
+                @include summaryLineHeight($summaryFixedH00)
+                @include summaryLine(1)
+            }
+                    
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .pic-list-25 {
+
+        @media screen and(min-width: 1200px) {
+            .col-md-6 {
+                @include summaryLine(4)
+            }
+
+            .col-md-4 {
+                @include summaryLine(2)
+            }
+
+            .col-md-3,
+            .col-md-5 {
+                @include summaryLine(1)
+            }
+
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+
+        //pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-6 {
+                @include summaryLine(4)
+            }
+
+            .col-md-4 {
+                @include summaryLine(2)
+            }
+
+            .col-md-3{
+                @include summaryLine(1)
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include summaryHide()
+            }
+        }
+    }
+}
+
+.c-9 {
+    .pic-list-25 {
+
+        @media screen and(min-width: 1200px) {
+            .col-md-6 {
+                @include summaryLine(4)
+            }
+
+            .col-md-4 {
+                @include summaryLine(1)
+            }
+
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+
+                .content {
+                        padding: 2px 0;
+                }
+
+                @include summaryHide()
+            }
+        }
+
+        //pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-6 {
+                @include summaryLine(3)
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryHide()
+            }
+
+            
+            .col-md-5,
+            .col-md-2 {
+                .wrapper {
+                    .content {
+                        padding: 2px 0;
+                        .title {
+                            font-size: $title-font-size-smallest;
+                        }
+                    }
+
+                }
+                @include summaryHide()
+            }
+        }
+    }
+}
+
+.c-6 {
+    .pic-list-25 {
+
+        @media screen and(min-width: 1200px) {
+            .col-md-12 {
+                @include summaryLine(5)
+            }
+
+            .col-md-6 {
+                @include summaryLine(1)
+            }
+
+            .col-md-4,
+            .col-md-3 {
+                @include summaryHide()
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .content {
+                        padding: 2px 0;
+                }
+                @include contentHide()
+            }
+        }
+
+        //pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-12 {
+                @include summaryLine(4)
+            }
+
+            .col-md-6,
+            .col-md-4 {
+                @include summaryHide()
+            }
+
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .content {
+                        padding: 2px 0;
+                }
+                @include contentHide()
+            }
+        }
+    }
+}
+
+
+.c-4 {
+    .pic-list-25 {
+
+        @media screen and(min-width: 1200px) {
+            .col-md-12 {
+                @include summaryLine(2)
+            }
+        
+            .col-md-6,{
+                @include summaryHide()
+            }
+
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .wrapper {
+                    padding: 2px;
+                }
+                @include contentHide()
+            }
+        }
+
+        //pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-12 {
+                @include summaryLine(1)
+            }
+        
+            .col-md-6,{
+                @include summaryHide()
+            }
+
+            .col-md-4,
+            .col-md-3,
+            .col-md-5,
+            .col-md-2 {
+                .wrapper {
+                    padding: 2px;
+                }
+                @include contentHide()
+            }
+        }
+    }
+}
+
+
+.c-3 {
+    .pic-list-25 {
+
+        @media screen and(min-width: 1200px) {
+            .col-md-12 {
+                @include summaryLine(1)
+            }
+        
+            .col-md-6,
+            .col-md-4,
+            .col-md-3, 
+            .col-md-5,
+            .col-md-2 {
+                .wrapper {
+                    padding: 2px;
+                }
+                @include contentHide()
+            }
+        }
+
+        //pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-12 {
+                @include summaryHide()
+            }
+        
+            .col-md-6,
+            .col-md-4,
+            .col-md-3, 
+            .col-md-5,
+            .col-md-2 {
+                .wrapper {
+                    padding: 2px;
+                }
+                @include contentHide()
+            }
+        }
+    }
+}
+
+
+
+/////////////////////////////pic-list-25 列表样式-27 end ////////////////
+
+/////////////////////////////pic-list-31 列表样式-28 start ////////////////
+ //通用样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .pic-list-31 {
+
+
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            // .content-box .content {
+            //     padding: $content-padding-medium;
+            // }
+            .summary-line {
+                margin-top: 4px;
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            // .content-box .content {
+            //     padding: $content-padding-medium;
+            // }
+            .summary-line {
+                margin-top: 4px;
+            }
+        }
+
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            // .content-box .content {
+            //    padding: $content-padding-medium;
+            // }
+            .summary-line {
+                margin-top: 4px;
+            }
+                    
+        }
+    }
+        
+}
+
+.f-12 {
+    
+    .pic-list-31 {
+
+        //lg
+        @media screen and(min-width: 1200px) {
+            .col-md-4,
+            .col-md-3 {
+                .summary-line {
+                    margin-top: 6px;
+                  }
+            }
+
+
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                  .summary-line {
+                    margin-top: 4px;
+                  }
+                }
+            }
+           
+        }
+
+         //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-4,
+            .col-md-3 {
+                .summary-line {
+                    margin-top: 6px;
+                  }
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                   .summary-line {
+                    margin-top: 4px;
+                  }
+                }
+            }
+        }
+
+         //ipad mini
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-4,
+            .col-md-3 {
+                .summary-line {
+                    margin-top: 6px;
+                  }
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                   .summary-line {
+                    margin-top: 4px;
+                  }
+                }
+            }
+        }
+
+    }
+}
+
+.c-12 {
+    
+    .pic-list-31 {
+
+        //lg
+        @media screen and(min-width: 1200px) {
+            .col-md-6,
+            .col-md-4,
+            .col-md-3 {
+                .summary-line {
+                    margin-top: 6px;
+                  }
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                   .summary-line {
+                    margin-top: 4px;
+                  }
+                }
+            }
+           
+        }
+
+         //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-6,
+            .col-md-4,
+            .col-md-3 {
+                .summary-line {
+                    margin-top: 6px;
+                  }
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                   .summary-line {
+                    margin-top: 4px;
+                  }
+                }
+            }
+        }
+
+         //ipad mini
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-6,
+            .col-md-4,
+            .col-md-3 {
+                .summary-line {
+                    margin-top: 6px;
+                  }
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                   .summary-line {
+                    margin-top: 4px;
+                  }
+                }
+            }
+        }
+
+    }
+}
+
+.c-9 {
+    
+    .pic-list-31 {
+
+        //lg
+        @media screen and(min-width: 1200px) {
+             .col-md-12,
+             .col-md-6 {
+                margin-top: 6px;
+             }
+
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+        }
+
+         //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-12,
+             .col-md-6 {
+                margin-top: 6px;
+             }
+
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+        }
+
+         //ipad mini
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+           .col-md-12,
+             .col-md-6 {
+                margin-top: 6px;
+             }
+
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+
+        }
+    }
+}
+
+.c-6, .c-4 {
+    
+    .pic-list-31 {
+
+        //lg
+        @media screen and(min-width: 1200px) {
+             .col-md-12 {
+                margin-top: 6px;
+             }
+
+            .col-md-6,
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+        }
+
+         //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+             .col-md-12 {
+                margin-top: 6px;
+             }
+
+            .col-md-6,
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+        }
+
+         //ipad mini
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-12 {
+                margin-top: 6px;
+             }
+
+            .col-md-6,
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+
+        }
+    }
+}
+
+.c-3 {
+    
+    .pic-list-31 {
+
+        //lg
+        @media screen and(min-width: 1200px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+
+            .col-md-2 {
+                @include contentHide()
+
+                .wrapper:after {
+                    display: none;
+                }
+            }
+        }
+
+         //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+            .col-md-2 {
+                .wrapper:after {
+                    display: none;
+                }
+                @include contentHide()
+            }
+        }
+
+         //ipad mini
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .col-md-12,
+            .col-md-6,
+            .col-md-5,
+            .col-md-4,
+            .col-md-3,
+            .col-md-2 {
+                .summary-line {
+                    margin-top: 4px;
+                  }
+            }
+
+            .col-md-2 {
+                .wrapper:after {
+                    display: none;
+                }
+                @include contentHide()
+            }
+
+        }
+    }
+}
+/////////////////////////////pic-list-31 列表样式-28 end ////////////////
+
+
+/////////////////////////////图文列表样式-1 article-list-1 start ///////////////////////
+
+ //通用样式
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .article-list-1 {
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            
+
+            .col-md-12,
+            .col-md-6,
+            .col-md-4,
+            .col-md-3 {
+                @include summaryLineHeight($summaryFixedH3)        
+            }
+
+            .col-md-5,
+            .col-md-2 {
+                @include summaryLineHeight($summaryFixedH4)        
+            }
+
+            @include summaryLine(3)
+
+            .content-box {
+                padding-top: 0;
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            
+            @include summaryLine(3)   
+            .content-box {
+                padding-top: 0;
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            @include summaryLine(3)
+            .content-box {
+                padding-top: 0;
+            }
+                    
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .article-list-1 {
+         //lg
+        @media screen and(min-width: 1200px) {
+             .col-md-12 {
+                @include summaryLine(3)
+            }
+
+            .col-md-6 {
+                .content-box .content {
+                    padding: $content-padding-small;
+                }
+                @include summaryHide();
+            }
+
+            .col-md-3,
+            .col-md-4 {
+                .content-box .content {
+                    padding: $content-padding-smallest;
+                    // .title {
+                    //     font-size: 16px;
+                    // }
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+            
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+                    .title {
+                        font-size: 16px;
+                    }
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+        }
+
+         //ipad pro
+        @media screen and(max-width: 1200px) and (min-width: 992px) {
+            .col-md-12 {
+                @include summaryLine(2)
+            }
+
+            .col-md-6 {
+                .content-box .content {
+                    padding: $content-padding-small;
+                }
+                @include summaryHide();
+            }
+
+            .col-md-3,
+            .col-md-4 {
+                .content-box .content {
+                    padding: $content-padding-smallest;
+                    .title {
+                        font-size: 16px;
+                    }
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+            
+            .col-md-5,
+            .col-md-2 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+                    .title {
+                        font-size: 14px;
+                    }
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+        }
+    }
+}
+
+.c-9 {
+    .article-list-1 {
+        @media screen and(min-width: 992px) {
+            
+            .col-md-12 {
+                .content-box .content {
+                    padding: $content-padding-small;
+                }
+                @include summaryLine(2)
+            }
+
+            .col-md-6 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+                }
+                @include summaryHide();
+            }
+
+            .col-md-4 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+
+             
+            .col-md-3 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+                    .title {
+                        font-size: 14px;
+                    }
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+
+
+            .col-md-5, 
+            .col-md-2 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+                    .title {
+                        font-size: 12px;
+                    }
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+        }
+
+        
+    }
+}
+
+
+.c-6 {
+    .article-list-1 {
+        @media screen and(min-width: 992px) {
+            
+            .col-md-12 {
+                .content-box .content {
+                    padding: $content-padding-small;
+                }
+                @include summaryHide()
+            }
+
+            .col-md-6 {
+                 padding: $content-padding-zero;
+                .title {
+                    font-size: 14px;
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+            .col-md-4, 
+            .col-md-3, 
+            .col-md-5, 
+            .col-md-2 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+                    .title {
+                        font-size: 10px;
+                    }
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+        }
+
+        
+    }
+}
+
+.c-4, .c-3 {
+    .article-list-1 {
+        @media screen and(min-width: 992px) {
+            
+            .col-md-12 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+
+                    .title {
+                        font-size: 16px;
+                    }
+
+                    .float-content-footer {
+                        margin-top: 2px;
+                    }
+                }
+                @include summaryHide();
+            }
+
+            .col-md-6, 
+            .col-md-4, 
+            .col-md-3, 
+            .col-md-5, 
+            .col-md-2 {
+                .content-box .content {
+                    padding: $content-padding-zero;
+                    .title {
+                        font-size: 10px;
+                    }
+                }
+                @include barHide();
+                @include summaryHide();
+            }
+        }
+
+        
+    }
+}
+/////////////////////////////图文列表样式-1 article-list-1 end ///////////////////////
+
+/////////////////////////////图文列表样式-2 article-list-2 start ///////////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .article-list-2 {
+
+        
+
+        .list-content-box.content-box .content {
+            padding: $content-padding-zero;
+            padding-left: 15px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                background-color: $--color-primary;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+                .title {
+                    font-size: 18px;
+                }
+            }
+
+            .header-content-box.content-box .content {
+                    @include summaryLine(3)
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                .title {
+                    font-size: 16px;
+                }
+            }
+            .header-content-box.content-box .content {
+                    @include summaryLine(3)
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content-box .content {
+                .title {
+                    font-size: 16px;
+                }
+            }
+            .header-content-box.content-box .content {
+                @include summaryLine(3)
+            }
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .article-list-2 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .header-content-box.content-box .content {
+                    @include summaryLine(3)
+                }
+            }
+        }
+    }
+}
+
+.c-9 {
+    .article-list-2 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                // .content-box .content {
+                //     padding: $content-padding-medium;
+                //     padding-left: 15px;
+                // }
+                
+                .header-content-box.content-box .content {
+                    @include summaryLine(3)
+                }
+            }
+        }
+    }
+} 
+
+
+.c-6 {
+    .article-list-2 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                // .content-box .content {
+                //     padding: $content-padding-medium;
+                //     padding-left: 15px;
+                // }
+                .header-content-box.content-box .content {
+                    @include summaryLine(2)
+                }
+            }
+        }
+    }
+} 
+
+
+
+.c-4, .c-3 {
+
+    .article-list-2 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                // .content-box .content {
+                //     padding: $content-padding-zero;
+                //     padding-left: 15px;
+
+                //     .title {
+                //         font-size: 16px;
+                //     }
+
+                //     .float-content-footer {
+                //         margin-top: 2px;
+                //     }
+                // }
+                @include summaryHide();
+            }
+        }
+    }
+
+}
+/////////////////////////////图文列表样式-2 article-list-2 end ///////////////////////
+
+
+
+
+/////////////////////////////图文列表样式-3 article-list-3 start ///////////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .article-list-3 {
+
+            .col-md-12//, 
+            // .col-md-6, 
+            // .col-md-4, 
+            // .col-md-3, 
+            // .col-md-5, 
+            // .col-md-2 
+            {
+                .content-box .content {
+                    padding: $content-padding-zero;
+
+                    padding-left: 15px;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 6px;
+                        height: 6px;
+                        background-color: $--color-primary;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                }
+            }
+       
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+                    
+        }
+    }
+        
+}
+
+// .article-list-3 {
+//     .col-md-6:nth-of-type(odd) {
+//         @media screen and (min-width: 768px) {
+//            .content-box {
+//                 padding-right: $panel-padding;
+//            }      
+//         }
+//     }
+
+//     .col-md-6:nth-of-type(even) {
+//         @media screen and (min-width: 768px) {
+//            .content-box {
+//                 padding-left: $panel-padding;
+//            }      
+//         }
+//     }
+
+
+//     .col-md-4:nth-of-type(3n + 1) {
+//         @media screen and (min-width: 768px) {
+//            .content-box {
+//                 padding-right: $panel-padding;
+//            }      
+//         }
+//     }
+
+//     .col-md-4:nth-of-type(3n + 2) {
+//         @media screen and (min-width: 768px) {
+//            .content-box {
+//                 padding: 5px $panel-padding/2;
+//            }      
+//         }
+//     }
+
+//     .col-md-4:nth-of-type(3n) {
+//         @media screen and (min-width: 768px) {
+//            .content-box {
+//                 padding-left: $panel-padding;
+//            }      
+//         }
+//     }
+
+//     .col-md-3,
+//     .col-md-5,
+//     .col-md-2 {
+//         @media screen and (min-width: 768px) {
+//            .content-box .content {
+//               .publish-date {
+//                 display: none;
+//               }
+//            }      
+//         }
+//     }
+
+// }
+
+
+// .c-9 {
+//     .article-list-3 {
+//           @media screen and(min-width: 992px) {
+//             .col-md-2 {
+//                 .content-box .content {
+//                     .publish-date {
+//                         display: none;
+//                     }
+//                 }
+//             }
+//           }
+//     }
+// }
+
+// .c-6 {
+//     .article-list-3 {
+//           @media screen and(min-width: 992px) {
+//             .col-md-3, 
+//             .col-md-5, 
+//             .col-md-2 {
+//                 .content-box .content {
+//                     .publish-date {
+//                         display: none;
+//                     }
+//                 }
+//             }
+//           }
+//     }
+// }
+
+
+// .c-4, .c-3 {
+//     .article-list-3 {
+//           @media screen and(min-width: 992px) {
+//             .col-md-4, 
+//             .col-md-3, 
+//             .col-md-5, 
+//             .col-md-2 {
+//                 .content-box .content {
+//                     .publish-date {
+//                         display: none;
+//                     }
+//                 }
+//             }
+//           }
+//     }
+// }
+
+
+/////////////////////////////图文列表样式-3 article-list-3 end ///////////////////////
+
+/////////////////////////////图文列表样式-4 article-list-4 start ///////////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .article-list-4 {
+
+            .col-md-12, 
+            .col-md-6, 
+            .col-md-4, 
+            .col-md-3, 
+            .col-md-5, 
+            .col-md-2 {
+                .list-content-box.content-box .content {
+                    padding: 0 8px 8px 8px;
+                    @include summaryLine(2)
+                }
+            }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+                    
+        }
+    }
+        
+}
+
+.c-4, .c-3 {
+
+    .article-list-4 {
+
+        @media screen and(min-width: 992px) {
+            .list-content-box.content-box .content {
+                height: 91px;
+                .content-left, .relative-line {
+                    display: none;
+                }
+
+                .relative-content-right {
+                    position: static;
+                    padding-left: 0;
+
+                    .relative-content {
+                        width: 100%;    
+                    }
+                }
+            } 
+        }
+    
+    }
+        
+}
+
+/////////////////////////////图文列表样式-4 article-list-4 end ///////////////////////
+
+
+
+/////////////////////////////图文列表样式-5 article-list-5 start ///////////////////////
+.f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
+
+    .article-list-5 {
+
+        .list-content-box.content-box .content {
+            padding: 4px 0;
+            padding-left: 15px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background-color: $--color-primary;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+
+            border-bottom: 1px solid $--border-color-lighter;
+        }
+
+        //ipad plus
+        @media screen and(max-width: 992px) and (min-width: 768px) {
+            .content-box .content {
+                .title {
+                    font-size: 18px;
+                }
+            }
+
+            .header-content-box.content-box .content {
+                    @include summaryLine(3)
+            }
+        }
+
+        //iphone 6
+        @media screen and(max-width: 768px) and (min-width: 640px) {
+            .content-box .content {
+                .title {
+                    font-size: 16px;
+                }
+            }
+            .header-content-box.content-box .content {
+                    @include summaryLine(3)
+            }
+        }
+
+        //iphone 5
+        @media screen and (max-width: 640px) {
+            .content-box .content {
+                .title {
+                    font-size: 16px;
+                }
+            }
+            .header-content-box.content-box .content {
+                @include summaryLine(3)
+            }
+        }
+    }
+        
+}
+
+.f-12, .c-12 {
+    .article-list-5 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .header-content-box.content-box .content {
+                    padding: 24px;
+                    @include summaryLine(3)
+                }
+            }
+        }
+    }
+}
+
+.c-9 {
+    .article-list-5 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .header-content-box.content-box .content {
+                    padding: 24px;
+                    @include summaryLine(3)
+                }
+            }
+        }
+    }
+} 
+
+
+.c-6 {
+    .article-list-5 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                // .content-box .content {
+                //     padding: $content-padding-medium;
+                // }
+                .header-content-box.content-box .content {
+                    @include summaryLine(2)
+                }
+            }
+        }
+    }
+} 
+
+
+
+.c-4, .c-3 {
+
+    .article-list-5 {
+        @media screen and(min-width: 992px) {
+            .col-md-12 {
+                .header-content-box.content-box .content {
+                    @include summaryLine(1)
+                }
+
+                // .content-box .content {
+                //     padding: $content-padding-zero;
+
+                //     .title {
+                //         font-size: 16px;
+                //     }
+
+                //     .float-content-footer {
+                //         margin-top: 2px;
+                //     }
+                // }
+                @include summaryHide();
+            }
+        }
+    }
+
+}
+/////////////////////////////图文列表样式-5 article-list-5 end ///////////////////////
+
+
+
+/////////////////////////////  图文详情  start ///////////////////////
+    .article-detail {
+        
+        @media (min-width: 992px) {
+            .info-bar {
+                margin: 12px 0 48px 0;
+            }
+
+            .article-title-bar {
+                margin-top: 100px;
+                font-size: 24px;
+            }
+
+            .article-summary { 
+                padding: 40px;
+                margin-bottom: 40px;
+            }
+
+            .article-cover {
+                padding-top: 30%;
+            }
+        }
+
+        //ipad plus
+        @media (max-width: 992px) and (min-width: 768px) {
+            .article-cover {
+                padding-top: 35%;
+            }
+
+            .article-summary { 
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+
+            .info-bar {
+                margin-bottom: 15px;
+            }
+
+            .article-title-bar {
+                padding: 20px 0;
+                font-size: 20px;
+            }
+
+            .bdsharebuttonbox {
+                display: none;
+            }
+        }
+
+        //iphone 6
+        @media (max-width: 768px) and (min-width: 640px) {
+            .article-cover {
+                padding-top: 50%;
+            }
+
+            .article-summary { 
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            .info-bar {
+                margin-bottom: 10px;
+
+                li:nth-of-type(1) {
+                    max-width: 250px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .article-title-bar {
+                padding: 10px 0;
+                font-size: 18px;
+            }
+
+            .bdsharebuttonbox {
+                display: none;
+            }
+        }
+
+
+        //iphone 5
+        @media (max-width: 640px) {
+
+            .article-summary { 
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            .article-cover {
+                padding-top: 50%;
+            }
+
+            .info-bar {
+                margin-bottom: 10px;
+
+                li:nth-of-type(1) {
+                    max-width: 190px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .article-title-bar {
+                padding: 10px 0;
+                font-size: 18px;
+            }
+
+            .bdsharebuttonbox {
+                display: none;
+            }
+                    
+        }
+    }
+
+/////////////////////////////  图文详情  end ///////////////////////
+
+
+  
+
+

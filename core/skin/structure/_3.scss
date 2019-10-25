@@ -43,17 +43,6 @@
                 
             }
 
-            &:after {
-                content: "";
-                position: absolute;
-                right: -10px;
-                top: 45%;
-                width: 10px;
-                height: 4px;
-                background-color: #fff;
-
-            }
-
             .more {
                 z-index: 1;
                 color: $--color-text-secondary;
@@ -69,8 +58,8 @@
                 left: 4px;
                 top: 50%;
                 height: 1px;
-                width: calc(100% - 4px);
-                background-color: #efefef;
+                width: calc(100% - 24px);
+                background-color: $--border-color-base;
                
             }
         }
