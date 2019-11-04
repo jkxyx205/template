@@ -50,6 +50,11 @@ video {
     display: block; // 否则layer中下边会有边距
 }
 
+body .layui-layer-setwin .layui-layer-close2 {
+  top: -10px;
+  right: -50px; 
+}
+
 
 #bdshare_weixin_qrcode_dialog {
   box-sizing: content-box;
@@ -83,6 +88,7 @@ a {
 
     &:hover {
         color: $--color-primary;
+        text-decoration: none;
     }
 }
 

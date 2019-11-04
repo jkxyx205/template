@@ -139,13 +139,12 @@
     $sitebar-size: 45px;
     $sitebar-split-color: $--border-color-lighter;
     $icon-size: 24px;
-    $color: #a8a8a8; 
 
     position: fixed;
     right: 0;
     top: 50%;
     transform: translateY(-50%); 
-    background-color: #fff;
+    background-color: $--background-color-base;
     z-index: 1050;
 
     ul li {
@@ -153,10 +152,10 @@
     }
 
     a {
-        color: $color;
+        color: $--color-text-secondary;
 
         &:focus, &:visited {
-            color: $color;
+            color: $--color-text-secondary;
         }
 
         &:hover {
@@ -182,7 +181,7 @@
             bottom: 0;
             padding: 15px;
             box-shadow: 1px 1px 15px $sitebar-split-color;
-            background-color: #fff;
+            background-color: $--background-color-base-light;
             max-height: 330px;
             overflow: auto;
             opacity: 0;
@@ -313,7 +312,7 @@
 
         &:hover{
             .sub-group {
-               color: $color; 
+               color: $--color-text-regular;
             }
         }
 
@@ -364,6 +363,7 @@
 }
 /////////////////////////////间隔 高级控件 end ////////////////
 
+
 /////////////////////////////留言板 start ////////////////
 #msg-pad {
     padding: 20px 10px;
@@ -371,6 +371,8 @@
     textarea {
         height: 96px;
     }
+
+    
 }
 /////////////////////////////留言板 end ////////////////
 
@@ -470,7 +472,7 @@
                 font-weight: normal;
                 margin-top: 0;
                 padding: 0;
-                color: #ffff;
+                color: #fff;
                 word-wrap:break-word;
             }
              @media (max-width: 768px) {
@@ -1173,7 +1175,7 @@ $pic-title-top:10px;
                     right: 0;
                     bottom: 0;
                     border-top: 0 solid #c0c0c0;
-                    border-right: 0 solid #fff;
+                    border-right: 0 solid $--background-color-base;
                     transition: all 0.5s ease 0s;
             }
 

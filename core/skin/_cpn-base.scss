@@ -16,6 +16,24 @@
 
 //-------------------模版重写样式 end
 
+.main-block {
+    background: $--color-primary;
+}
+
+// 模态框 start
+.modal {
+  .modal-content {
+    background-color: $--background-color-base-light;
+    }
+    .modal-header {
+        border-bottom-color: $--border-color-lighter; 
+    }
+    .modal-footer {
+        border-top-color: $--border-color-lighter; 
+    }  
+}
+// 模态框 end
+
 //-------------------分页 start
 div.page-container {
     text-align: center;
@@ -154,7 +172,6 @@ section {
 
             img {
                 display: block;
-                max-width: 100%;
                 width: 100%;
             }
 
@@ -189,11 +206,16 @@ section {
                 $item-padding: 5px;
                 padding-bottom: $item-padding * 2;
 
-                .cover {
+                @at-root .cover {
                     display: block;
                     position: relative;
                     text-align: center;
                     overflow: hidden;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
 
                     .title {
                         position: absolute;
