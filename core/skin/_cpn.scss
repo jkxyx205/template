@@ -66,65 +66,6 @@
     }
 }
 
-
-
-
-.content-box { 
-   
-    padding-bottom: 10px;
-
-    .content {
-        line-height: 1.5;
-        // padding: $content-box-padding;
-
-        .summary-fixed, .summary-line {
-            margin-top: 8px;
-            color: $--color-text-secondary;
-        }
-
-        .content-footer { //底部时间，作者信息
-            display: flex;
-            display: -webkit-flex;
-            font-size: 12px;
-            color: $--color-text-placeholder;
-
-            .author-bar, .date-bar  {
-               overflow: hidden;
-               white-space: nowrap;
-               text-overflow: ellipsis;
-            }
-
-            .author-bar {
-                flex: 1;
-            }
-
-
-
-        }
-
-         .float-content-footer {
-            height: 21px;
-            margin-top: 8px;
-            font-size: 12px;
-            color: $--color-text-placeholder;
-            display: block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-
-            .seperator {
-                margin: 0 5px
-            }
-
-
-            li {
-                display: inline-block;
-                margin-right: 8px;
-            }
-         }
-    }
-}
-
 /////////////////////////////sitebar 侧边栏 start ////////////////
 
 #upTop {
@@ -756,9 +697,8 @@ $pic-title-top:10px;
             }
 
             .publish-date {
-                width: 62px;
-                
-                
+                position: relative;
+                width: 80px; // 浏览器兼容性可能需要扩大
                 color: $--color-text-placeholder;
                 font-size: 12px;
             
@@ -766,10 +706,13 @@ $pic-title-top:10px;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
+                    display: block;
                     width: 100%;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    text-align: right;
+                    // width: 100%;
+                    // overflow: hidden;
+                    // white-space: nowrap;
+                    // text-overflow: ellipsis;
                  }
             }
         }
@@ -794,8 +737,8 @@ $pic-title-top:10px;
             }
 
             .publish-date {
-                width: 62px;
-                
+                position: relative;
+                width: 80px;
                 color: $--color-text-placeholder;
                 font-size: 12px;
             
@@ -803,10 +746,13 @@ $pic-title-top:10px;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
+                    display: block;
                     width: 100%;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    text-align: right;
+                    // width: 100%;
+                    // overflow: hidden;
+                    // white-space: nowrap;
+                    // text-overflow: ellipsis;
                  }
             }
         }
@@ -954,9 +900,8 @@ $pic-title-top:10px;
             }
 
             .publish-date {
-                width: 62px;
-                
-                
+                position: relative;
+                width: 80px;
                 color: $--color-text-placeholder;
                 font-size: 12px;
             
@@ -964,10 +909,12 @@ $pic-title-top:10px;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
+                    display: block;
                     width: 100%;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    text-align: right;
+                    // overflow: hidden;
+                    // white-space: nowrap;
+                    // text-overflow: ellipsis;
                  }
             }
         }
@@ -2758,7 +2705,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     .article-summary {
         word-wrap: break-word;
         word-break: break-all; 
-        background-color: $--background-color-base-light;
+        background-color: $--background-color-base-summary;
         .article-summary-tip {
             font-weight: bold;
         }
@@ -3031,7 +2978,8 @@ section .panel.super-seperator {
 //模版样式重置问题 与后台 ckcontent.scss同步更新
 section [data-component-id="401"] .panel .panel-body, //嵌入页面
 section .panel .panel-body.moban, //模版
-section .article-detail .article-content {
+section .article-detail .article-content,
+.article-editor {
 
   blockquote {
       font-style: italic;
@@ -3190,13 +3138,12 @@ section .article-detail .article-content {
   h3,
   h4,
   h5 {
-    font-weight: 600;
+    font-weight: bold;
     letter-spacing: inherit;
   }
 
   h1 {
     font-size: 42px;
-    font-weight: 200;
     line-height: 1.04;
     margin-bottom: 25px;
   }

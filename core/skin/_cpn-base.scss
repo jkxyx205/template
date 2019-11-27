@@ -170,7 +170,7 @@ section {
 
         @at-root .panel-body {
 
-            img {
+            &:not(.moban) img {
                 display: block;
                 width: 100%;
             }
@@ -272,6 +272,7 @@ section {
 
                     .main-mask {
                         @extend %mask;
+                        background-color: $--color-primary;
                     } 
 
                     .icon-play2 {
