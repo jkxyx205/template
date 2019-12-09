@@ -1284,7 +1284,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             font-weight: lighter;
             color: #fff;
             border: 1px solid #fff;
-            line-height: 40px;
+            line-height: 32px;
             transition: all 0.36s ease 0s;
             opacity: 0;
          
@@ -2980,22 +2980,16 @@ section [data-component-id="401"] .panel .panel-body, //嵌入页面
 section .panel .panel-body.moban, //模版
 section .article-detail .article-content,
 .article-editor {
+    
+  em {
+    font-style: italic;
+  }
 
   blockquote {
       font-style: italic;
       font-family: Georgia, Times, "Times New Roman", serif;
       padding-left: 20px;
       border-left: 5px solid #ccc;
-  }
-
-
-  ol,ul,dl
-  {
-    /* IE7: reset rtl list margin. (#7334) */
-    *margin-right: 0px;
-    /* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
-    padding: 0 40px;
-
   }
 
   h1,h2,h3,h4,h5,h6
@@ -3189,26 +3183,20 @@ section .article-detail .article-content,
     margin-top: 0;
   }
 
+  ul, ol {
+    padding-left: 40px;
+  }
+
   p {
     margin-top: 0;
     margin-bottom: 8.5px;
   }
 
   figure,
-  ol,
-  ul,
   blockquote {
     display: block;
     margin-top: 25px;
     margin-bottom: 25px;
-  }
-
-  ol ol {
-    margin: 0;
-  }
-
-  ul ul {
-    margin: 0;
   }
 
   figure {
