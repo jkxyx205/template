@@ -326,7 +326,7 @@
 
 /////////////////////////////s-pic 单图片 end ////////////////
 
-/////////////////////////////////轮播图//////////////////////////////////////////
+/////////////////////////////////轮播图通用样式//////////////////////////////////////////
 
 .swiper-panel {
     .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -354,12 +354,6 @@
             @media (min-width: 769px) {
                  width: 100%;
             }
-
-            @media (max-width: 768px) {
-                 // min-width: 100%;
-                 @include rem(height, 230px);
-            }
-           
         }
     }
 
@@ -444,6 +438,19 @@
         text-align: right;
     }
 
+}
+
+/*****轮播图组件********/
+.swiper .swiper-container {
+    .swiper-slide {
+       
+         img {
+            @media (max-width: 768px) {
+                @include rem(height, 230px);
+            }
+           
+        }
+    }
 }
 
 /*****全文检索********/
@@ -2980,7 +2987,24 @@ section [data-component-id="401"] .panel .panel-body, //嵌入页面
 section .panel .panel-body.moban, //模版
 section .article-detail .article-content,
 .article-editor {
-    
+
+    .cke_image_nocaption {
+        line-height: 0;
+    }
+
+    .cke_widget_inline {
+        display: inline-block;
+    }
+
+    .cke_widget_wrapper {
+        position: relative;
+        outline: none;
+    }
+
+    .cke_image_nocaption {
+        line-height: 0;
+    }
+
   em {
     font-style: italic;
   }
