@@ -243,20 +243,6 @@
                            <option value="8">8</option>
                            <option value="9">9</option>
                         </select>
-                        底色：<select name="" id="style">
-                            <option value="white">白底</option>
-                            <option value="black">黑底</option>
-                        </select>
-                        配色：<select name="" id="block">
-                           <option value="1">1</option>
-                           <option value="2">2</option>
-                           <option value="3">3</option>
-                           <option value="4">4</option>
-                           <option value="5">5</option>
-                           <option value="6">6</option>
-                           <option value="7">7</option>
-                           <option value="8">8</option>
-                        </select>
                         字体：<select name="" id="font">
                           <option value="1">Arial Bold Italic</option>
                           <option value="2">Comic Sans MS</option>
@@ -333,8 +319,6 @@
                     var id = params.footer
                     addFooter(id)
                     change()
-                } else if (id === "block") { //global
-                    change()
                 } else if (id === "button") { //global
                     change()
                 } else if (id === "font") { //global
@@ -348,8 +332,6 @@
             function init() {
                 var params = getParams()
                 $('#iframe').attr("src", params.page);
-
-                
 
                 var sh;
                 sh=setInterval(function() {
@@ -384,12 +366,9 @@
                  var doc = $(window.frames["iframe"].document)[0];
                  removeStyles(doc)
                  var params = getParams()
-
-
-                 loadStyles(doc, '../dist/headers/'+params.header+'/'+params.style+'/'+params.block+'.css?time'+ (new Date().getTime()))
-                 loadStyles(doc, '../dist/footers/'+params.footer+'/'+params.style+'/'+params.block+'.css?time'+ (new Date().getTime()))
-
-                 loadStyles(doc, '../dist/skin/'+params.style+'/'+params.structure+'/'+params.block+'.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/headers/'+params.header+'/header.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/footers/'+params.footer+'/footer.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/skin/'+params.structure+'/skin.css?time'+ (new Date().getTime()))
                  loadStyles(doc, '../dist/buttons/'+params.button+'.css?time'+ (new Date().getTime()))
                  loadStyles(doc, '../dist/fonts/'+params.font+'.css?time'+ (new Date().getTime()))
             }
@@ -398,10 +377,8 @@
             function getParams() {
                 var params = {};
                 params.page = $('#page').val()
-                params.style = $('#style').val()
                 params.header = $('#header').val()
                 params.footer = $('#footer').val()
-                params.block = $('#block').val()
                 params.font = $('#font').val()
                 params.button = $('#button').val()
                 params.structure = $('#structure').val()
