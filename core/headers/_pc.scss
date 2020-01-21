@@ -402,9 +402,13 @@ body {
 
                         li {
 
+                            &.dropdown {
+                                position: relative;
+                            }
+
                             &.menu-nav-item  {
                                 // float: left; //会换行
-                                position: relative;
+                                
                                 display: inline-block; 
                                 vertical-align:top; //高度有问题
                                 height: $menu-nav-height;
@@ -485,7 +489,7 @@ body {
 
                                 .sub-menu {
                                     left: calc(100% + 1px);
-                                    top: 48px;
+                                    top: 1px;
                                 }
 
                             }
