@@ -98,10 +98,10 @@ section {
             border: none;
         }
 
-        &>.row {
-            margin-left: 0;
-            margin-right: 0;
-        }
+        // &>.row { // 不应该重置为0
+        //     margin-left: 0;
+        //     margin-right: 0;
+        // }
 
         .f-12 {
             padding-left: 0;
