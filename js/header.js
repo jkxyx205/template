@@ -146,8 +146,8 @@
                                 return
 
                             initPageInfo()
-
                             moveItem()
+                            handleArrowIcon()
                             resizeWaiting = false
 
                         } , 500);
@@ -244,6 +244,13 @@
 
             $('#selectLangBtn, #langSelect').on(EVENT_NAME, function () {
                 $('#m-language-container').toggleClass('open')
+            })
+
+            // 解决锚点点击
+            $('#nav a[href^="#"]').on(EVENT_NAME, function() {
+                setTimeout(function () {
+                    $('body').toggleClass('open')
+                }, 200)
             })
 
         }
