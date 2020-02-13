@@ -674,7 +674,7 @@ $pic-title-top:10px;
         &:hover {
             background-color: $--color-primary;
 
-            .title a, .summary-fixed, .float-content-footer, .title a:hover {
+            .title, .summary-fixed, .float-content-footer, .title a:hover {
                 color: #fff;
             }
         }

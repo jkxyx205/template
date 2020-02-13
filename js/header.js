@@ -114,6 +114,7 @@
                     var resizeWaiting = false
 
                     this.init = function () {
+                        resizeWaiting = false
                         $(window).on('resize', resize)
                         initPageInfo()
                         handleArrowIcon() 
@@ -144,10 +145,10 @@
 
                             if (isMobileMode())
                                 return
-
+                            offsetCursor = 0 // 必须重置计算
                             initPageInfo()
-                            moveItem()
                             handleArrowIcon()
+                            moveItem()
                             resizeWaiting = false
 
                         } , 500);
