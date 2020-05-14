@@ -265,6 +265,7 @@
             word-break:break-all;
             display:-webkit-box;
             -webkit-line-clamp:2;
+            max-height: 3em; // 解决ie edge webkit-line-clamp属性不支持的问题
             -webkit-box-orient:vertical;
             overflow:hidden;
             margin: (($sitebar-size - 2) - $font-size * 2 * ( 1 + .2 )) / 2 0 0 (($sitebar-size - 2) - $font-size * 2) / 2;
@@ -2749,7 +2750,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     .bottom-operator {
 
         $width: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 72px;
 
         .left-corner, .right-corner {
             & > li {
@@ -2960,7 +2961,8 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
             .btn {
                 position: absolute;
-                top: 5px;
+                top: 50%;
+                transform: translateY(-50%);
                 right: 10px;
             }
         }

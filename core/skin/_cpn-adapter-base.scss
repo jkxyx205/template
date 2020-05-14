@@ -8,6 +8,7 @@
     .summary-fixed {
         display: -webkit-box;
         -webkit-line-clamp: $line;
+        max-height: $line * 1.5em;
     }
 }
 
@@ -858,28 +859,6 @@ $summaryFixedH39: 39px;
 
 
 .f-12, .c-12, .c-9, .c-6, .c-4, .c-3 {
-
-    .pic-list-27 {
-        
-        .col-md-12,
-        .col-md-6,
-        .col-md-4,
-        .col-md-3,
-        .col-md-5,
-        .col-md-2 {
-            .cover {
-                .container-icon-center,
-                .container-icon-right,
-                .container-icon-left {
-                     .iconfont.icon-bofang, 
-                     .iconfont.icon-shipinbofangyingpian2 {
-                        transition: all 0.36s ease 0s;
-                        font-size: 0;
-                     }
-                }
-            }
-        }
-    } 
 
     //ipad plus
     @media screen and(max-width: 992px) and (min-width: 768px) {
