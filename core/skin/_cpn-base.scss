@@ -93,7 +93,7 @@ section {
     .container-fluid {
         position: relative;
         & > .row {
-            overflow: hidden;
+            // overflow: hidden; // 通栏拖动会有问题
         }
         // padding: 0;
 
