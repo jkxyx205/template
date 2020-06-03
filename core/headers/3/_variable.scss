@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////// 复杂配置
+@import '../../color/variables';
+
+////////////////////////////////////////////////////////////// 最简配置
+$color: $--background-text-regular;       //通用文字色
+
+// 菜单
+$nav-bgcolor: $--primary; //菜单背景色
+$nav-color: $--primary-text-primary; //一级菜单文字色
+$nav-hover-color: $--primary-text-primary; //一级菜单hover文字颜色
+
+// 
+$deep-color:  $--background-text-regular;
+$light-color: $--background-text-secondary;
+
+$nav-deep-color: $--primary-text-regular;
+$nav-light-color: $--primary-text-secondary;
+
+$split-color: $--primary-text-placeholder;
+
+// 手机端
+$mobile-header-item-bgcolor1: $--primary-background-color-light;
+$mobile-header-item-bgcolor2: $--primary-background-color-lighter;
+$mobile-header-item-bgcolor3: $--primary-background-color-extra-lighter;
+
+$mobile-header-bar-bgcolor: $--background;
+$mobile-header-bar-color: $--background-text-secondary;
+$mobile-header-bar-hover-color: $--background-text-primary;

@@ -2,7 +2,7 @@
 @import "../../css/rem";
 
 //常规部分
-$--color-primary: #409EFF!default;   //主色
+$--primary: #409EFF!default;   //主色
 $color: #767881!default;        //常规文字
 $split-color: #eaeaea!default;   //边框颜色  
 $deep-color: #a1a1a1!default;  //
@@ -11,7 +11,7 @@ $light-color: #bfbfbf!default; //
 // 菜单导航部分
 $nav-bgcolor: #fff!default; //菜单背景色
 $nav-color: $color!default;  //一级菜单文字色
-$nav-hover-color: $--color-primary!default; //一级菜单hover文字颜色
+$nav-hover-color: $--primary!default; //一级菜单hover文字颜色
 $nav-hover-bgColor: transparent!default; //一级菜单hover背景色
 $nav-deep-color: #a1a1a1!default;  //
 $nav-light-color: #bfbfbf!default; //
@@ -50,7 +50,7 @@ body { // 未来 删除该部分 style 中的base.css设置
 
         a:hover, a:focus {
             &, i, span {
-                color: $--color-primary!important;
+                color: $--primary!important;
             }
         }
 
@@ -77,7 +77,7 @@ body { // 未来 删除该部分 style 中的base.css设置
 
                 a:hover, a:focus {
                     &, i, span {
-                        color: $--color-primary!important;
+                        color: $--primary!important;
                     }
                 }
             }

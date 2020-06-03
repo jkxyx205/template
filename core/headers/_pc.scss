@@ -5,8 +5,6 @@ $menu-nav-position: right!default;
 $nav-bgcolor2: $nav-bgcolor!default;
 
 
-
-
 /*
 使用中ul元素上
 */
@@ -56,10 +54,11 @@ $nav-bgcolor2: $nav-bgcolor!default;
             @include center(horizontal);
     
             a {
-                color: $color;
+                // color: $color;
+                color: #666666;
     
                 &:hover {
-                    color: $--color-primary;
+                    color: $--primary;
                 }       
             }     
     
@@ -94,7 +93,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
 @mixin operator-bar-1($height: 50px, $width: 30px, $margin-right: 15px, $deepColor: $deep-color, $lightColor: $light-color) {
     @at-root header.search-open {
        #searchBtn-trigger i {
-            color: $--color-primary!important;
+            color: $--primary!important;
         }
 
         #searchInput {
@@ -118,7 +117,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
                 border-radius: 50%;
                 border: 1px solid $lightColor;
                 &:hover {
-                    border-color: $--color-primary;
+                    border-color: $--primary;
                 }
                 line-height: $width;
                 width: 100%;
@@ -187,7 +186,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
                     position: absolute;
                     right: 0;
                     padding: 10px;
-                    background: $--color-primary;
+                    background: $--primary;
                     @include opacity(0);
                     @include transition(opacity);
                 }
@@ -223,7 +222,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
     .contact-info {
         .contact-info-tel {
             position: relative;
-            color: $--color-primary;
+            color: $--primary;
             font-size: 1.6em;
 
             .icon-dianhua {
@@ -281,7 +280,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
     
    .search-fixed {
         display: inline-block;
-        background: $--color-primary;
+        background: $--primary;
         padding: $padding;
         input {
             float: left;
@@ -333,7 +332,6 @@ body {
             top: 0;
             width: 100%;
             @include transition(top);
-            background-color: #fff;
             z-index: 999;
 
             .top-container {
@@ -477,10 +475,11 @@ body {
                                 width:  calc(7em * 1 + #{$menu-item-padding * 4}); //显示7个汉字
                                 text-align: left;
                                 padding: 0 $menu-item-padding * 1.5;
-                                color: $color;
+                                // color: $color; 二级菜单背景默认白色
+                                color: #666666;
     
                                 &:hover {
-                                    color: $--color-primary;
+                                    color: $--primary;
                                 }
                             }
 

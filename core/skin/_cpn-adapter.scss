@@ -5029,7 +5029,7 @@ $padding24Small: 3px 10px;
                 width: 6px;
                 height: 6px;
                 border-radius: 3px;
-                background-color: $--color-primary;
+                background-color: $--primary;
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
@@ -5176,7 +5176,7 @@ $padding24Small: 3px 10px;
                         position: absolute;
                         width: 6px;
                         height: 6px;
-                        background-color: $--color-primary;
+                        background-color: $--primary;
                         left: 0;
                         top: 50%;
                         transform: translateY(-50%);
@@ -5391,14 +5391,14 @@ $padding24Small: 3px 10px;
                 position: absolute;
                 width: 6px;
                 height: 6px;
-                background-color: $--color-primary;
+                background-color: $--primary;
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
 
             }
 
-            border-bottom: 1px solid $--border-color-lighter;
+            border-bottom: 1px solid $--background-border-color-base;
         }
 
         //ipad plus

@@ -8,7 +8,7 @@ $mobile-header-bar-height: 50px;
 $mobile-header-bar-bgcolor: #fff!default; //指明`!default`才能被覆盖；没有default的变量，不不受到引用顺序的影响，直接覆盖
 $mobile-header-bar-bgcolor2: $mobile-header-bar-bgcolor!default;
 $mobile-header-bar-color: $deep-color!default;
-$mobile-header-bar-hover-color: $--color-primary!default;
+$mobile-header-bar-hover-color: $--primary!default;
 
 $mobile-header-split-color: $split-color!default;
 
@@ -94,7 +94,9 @@ body {
             @include rem(line-height, $mobile-header-bar-height);
             width: 100%;
             @include rem(font-size, 18px);
-            @include box-shadow(0, 2px, 6px, 0px, rgba(0, 0, 0, .1));
+            // @include box-shadow(0, 2px, 6px, 0px, #{mix($mobile-header-bar-color, #fff, 20%)}); // 模拟透明度
+            @include box-shadow(0, 2px, 6px, 0px, $mobile-header-bar-color); // 模拟透明度
+
             @include linear-gradient($mobile-header-bar-bgcolor, $mobile-header-bar-bgcolor2);
             z-index: 999;
             @include transition(left);
