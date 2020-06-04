@@ -1,0 +1,128 @@
+// $menu-nav-height: 64px;
+$menu-nav-position: center;
+
+// $mobile-header-bgcolor: red!default;
+// $mobile-header-split-color: blue!default;
+
+$header-top-height: 128px;
+
+
+@import "../mobile";
+@import "../pc";
+
+@media (min-width: 768px) { //mobile端
+    
+}
+
+@media (min-width: 769px) { //pc端
+    header {
+        $width: 24px;
+
+        &.fixed {
+            top:  -$header-top-height;
+        }
+
+        .top-container {
+            height: $header-top-height;
+            border-bottom: 1px solid $split-color;
+            .container {
+                height: 100%;
+            }
+        }
+        .tool-bar {
+            height: 100%;
+            
+            @include flex();
+            @include flex-align-center();
+            
+            @include operator-bar-2($menu-nav-height, 20px, $deep-color, $light-color); 
+            @include logo($menu-nav-height);
+            @include contact-info3();
+
+            .contact-info3 {
+                @include flex-1();
+            }
+
+        }
+
+        .nav {
+            .container {
+                position: relative;
+                @include flex(); 
+            }
+
+            .menu-container {
+                @include flex-1();
+                padding: 0px 30px;
+                overflow: hidden;
+            }
+
+            #searchInput {
+                @include opacity(0);
+                height: 0;
+                width: 0;
+                background: transparent;
+                border:none;
+                outline: none;
+                @include transition(opacity);
+
+                @include placeholder($nav-color);
+
+            }
+            @include operator-bar-2($menu-nav-height, 12px, $nav-deep-color, $nav-light-color);
+        }
+
+        &.search-open {
+            .menu-container {
+                @include opacity(0);
+            }
+
+            .nav .operator-bar-2 > li.search {
+                position: absolute;
+                left: 15px;
+                z-index: 999;
+
+                .icon-search {
+                    font-size: 24px;
+                }
+            }
+
+            #searchInput {
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 0 50px;
+                @include opacity(1);
+            }
+
+            .close {
+                position: relative;
+                height: $menu-nav-height;
+                width: $menu-nav-height / 2; 
+                cursor: pointer;
+
+                &:after, &:before {
+                    content: "";
+                    position: absolute;
+                    height: 50%;
+                    top: 25%;
+                    right: 50%;
+                    width: 1px;
+                    background: $nav-deep-color;
+                }
+
+                &:after {
+                    @include transform(rotate(45deg));
+                } 
+                &:before {
+                    @include transform(rotate(-45deg));
+                }
+            }
+        }
+    }
+
+    .main {
+        padding-top: $menu-nav-height + $header-top-height;
+    }
+}

@@ -11,19 +11,21 @@
         $top: $menu-nav-height / 2 - $width - 5px;
         
        
+        & > a {
+            position: relative;
+            &:after, &:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                @include opacity(0);
+                @include transition();
 
-        &:after, &:before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            @include opacity(0);
-            @include transition();
-
+            }
         }
 
 
-        &.current, &:hover {
+        &.current > a, & > a:hover {
             &:after, &:before {
                 @include opacity(1);
                 width: $width;

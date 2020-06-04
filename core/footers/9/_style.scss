@@ -1,0 +1,27 @@
+@import '../base';
+
+footer {
+     .layout-content {
+        padding: 32px 0;
+     }
+
+     .code-item {
+        margin-right: -15px;
+        padding-top: 48px;
+        img {
+            width: 128px;
+            vertical-align: top;
+            margin-right: 15px;
+        }
+     }
+
+     .menu-vertical .menu-item {
+        @media screen and (max-width: 1200px) and (min-width: 992px) {
+                width: 100px;
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 769px) {
+                width: 60px;
+        }
+     }
+}

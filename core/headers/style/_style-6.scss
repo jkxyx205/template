@@ -9,7 +9,7 @@
             position: relative;
 
             .second-sub-menu {
-                border-top: 1px solid $--primary;
+                // border-top: 1px solid $--primary;
                 margin-top: $menu-nav-height - 30px;
             }
 
@@ -25,14 +25,15 @@
                     line-height: inherit;
                     height: auto;
                     // border-radius: 4px;
-
                 }
 
                 &.current > a, &:hover > a, & > a:hover {
+                   background: $--primary-background-color-extra-lighter; 
                    &, i {
-                     color: #fff!important;
+                     color: $--primary-text-active!important;
                    }
                 }
+
             } 
         } 
 

@@ -2,20 +2,27 @@
     
 }
 
-
 @media (min-width: 769px) { //pc端
     body header {
-        background: #2f2f2f;
-        .menu-items {
-            .sub-menu {
-                border-top: 1px solid $--primary;
-            }
-        }
 
-        .top-container {
-            border-bottom: none;
-            background: #2f2f2f;
-        }
+        .menu-nav .menu-items-container .menu-items {
+            position: relative;
+            
+            li.menu-nav-item {
+                
+                & > a {
+                    position: relative;
+                }
+
+                &.current > a, &:hover > a, & > a:hover {
+                   background: $--primary-background-color-extra-lighter; 
+                   &, i {
+                     color: $--primary-text-active!important;
+                   }
+                }
+
+            } 
+        } 
 
     }
 }

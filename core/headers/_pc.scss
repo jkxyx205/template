@@ -38,7 +38,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
 
         &.search {
             input {
-                color: $color;
+                color: $--white-text-regular;
                 outline: none;
                 border: none;
             }
@@ -54,8 +54,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
             @include center(horizontal);
     
             a {
-                // color: $color;
-                color: #666666;
+                color: $--white-text-regular;
     
                 &:hover {
                     color: $--primary;
@@ -64,7 +63,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
     
             ul {
                 position: relative;
-                background-color: #fff;
+                background-color: $--white;
             }
     
             li {
@@ -83,7 +82,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
                 margin-left: -$width / 2;
                 top: calc(-#{$width} / 2);
                 @include transform(rotate(-45deg));
-                background-color: #fff;
+                background-color: $--white;
                 @include box-shadow(0, 2px, 6px, 0px, rgba(0, 0, 0, .1));
             }
         }
@@ -99,7 +98,7 @@ $nav-bgcolor2: $nav-bgcolor!default;
         #searchInput {
             padding-left: $width / 2;
             width: 200px;
-            background-color: #fff;
+            background-color: $--white;
 
         }
     }
@@ -449,7 +448,7 @@ body {
                         .sub-menu {
                             display: none;
                             position: absolute;
-                            background: #fff;
+                            background: $--white;
                             line-height: 48px;
 
                             border-top-left-radius: 0;
@@ -475,8 +474,7 @@ body {
                                 width:  calc(7em * 1 + #{$menu-item-padding * 4}); //显示7个汉字
                                 text-align: left;
                                 padding: 0 $menu-item-padding * 1.5;
-                                // color: $color; 二级菜单背景默认白色
-                                color: #666666;
+                                color: $--white-text-regular;
     
                                 &:hover {
                                     color: $--primary;

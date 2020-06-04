@@ -1,0 +1,23 @@
+@import '../base';
+
+footer {
+     .layout-content {
+        padding: 16px 0;
+        background-color: $--primary;
+        color: #fff;
+
+        & .info2 .detail  {
+            color: #fff;
+        }
+
+        
+     }
+
+     .menu-horizontal {
+        padding-top: 20px;
+        background-color: $layout-reserved-backgroud;
+        color: $layout-conent-font-color;
+    }
+
+     
+}

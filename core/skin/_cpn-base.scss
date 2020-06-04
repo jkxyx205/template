@@ -48,7 +48,7 @@ div.page-container {
         float: left;
      
         &.active > a,  &.active a:hover, &.active a:visited {
-            color: #fff;
+            color: $--white;
             background-color: $--primary;
         }
 
@@ -147,7 +147,7 @@ section {
             //     line-height: 40px;
 
             //     &:hover {
-            //         color: #fff;
+            //         color: $--white;
             //     }
             // }
         }
@@ -227,7 +227,7 @@ section {
                         left: 0;
                         width: 100%;
                         font-size: 14px;
-                        color: #fff;
+                        color: $--white;
                         opacity: .6;
                         filter: alpha(opacity=60);
                     }
@@ -259,19 +259,19 @@ section {
 
                     .white-mask {
                         @extend %mask;
-                        background-color: #fff;
+                        background-color: $--white;
                     } 
 
                     .black-mask {
                         @extend %mask;
-                        background-color: #000;
+                        background-color: $--black;
                     } 
 
                     .black-mask-fixed {
                         @extend %mask;
                         opacity: 0.3;
                         filter: alpha(opacity=30);
-                        background-color: #000;
+                        background-color: $--black;
                     }
 
                     .main-mask {
@@ -281,13 +281,13 @@ section {
 
                     .icon-play2 {
                         font-size: 20px;
-                        color: #fff;
+                        color: $--white;
                     }
 
                     %container-icon-play1 {
                         transition: all 0.36s ease 0s;
                         position: absolute;
-                        color: #fff;
+                        color: $--white;
                         z-index: 3;
                     }
 

@@ -12,7 +12,7 @@ $layout-reserved-font-color: #58595a;
 
 $info-color: #7f8080;
 
-$menu-label-color: #fff;
+$menu-label-color: $--white;
 
 @media screen and (max-width: 768px) {
     .footer-pc {
@@ -113,7 +113,7 @@ footer {
             width: 30px;
             height: 30px;
             line-height: 30px;
-            color: #fff;
+            color: $--white;
         }
 
         .email {

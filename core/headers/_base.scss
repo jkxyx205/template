@@ -2,19 +2,17 @@
 @import "../../css/rem";
 
 //常规部分
-$--primary: #409EFF!default;   //主色
-$color: #767881!default;        //常规文字
-$split-color: #eaeaea!default;   //边框颜色  
-$deep-color: #a1a1a1!default;  //
-$light-color: #bfbfbf!default; //
+$split-color: $--background-border-color-lighter!default; //分割线颜色  
+$deep-color: $--background-text-secondary!default;
+$light-color: $--background-text-placeholder!default;
 
 // 菜单导航部分
-$nav-bgcolor: #fff!default; //菜单背景色
-$nav-color: $color!default;  //一级菜单文字色
+$nav-bgcolor: $--background!default; //菜单背景色
+$nav-color: $--background-text-regular!default;  //一级菜单文字色
 $nav-hover-color: $--primary!default; //一级菜单hover文字颜色
 $nav-hover-bgColor: transparent!default; //一级菜单hover背景色
-$nav-deep-color: #a1a1a1!default;  //
-$nav-light-color: #bfbfbf!default; //
+$nav-deep-color: $deep-color!default;
+$nav-light-color: $light-color!default;
 
 
 html {
@@ -45,7 +43,7 @@ body { // 未来 删除该部分 style 中的base.css设置
         }
 
         &, a {
-            color: $color;
+            color: $deep-color;
         }
 
         a:hover, a:focus {
@@ -72,7 +70,7 @@ body { // 未来 删除该部分 style 中的base.css设置
         @media (min-width: 768px) { //pc
             .nav .sub-menu { // 导航栏二级菜单
                 &, a {
-                    color: $color;
+                    color: $nav-color;
                 }
 
                 a:hover, a:focus {
