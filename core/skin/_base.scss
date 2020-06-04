@@ -104,6 +104,12 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    &:hover {
+        color: $--primary;
+        background: $--primary-text-active;
+        border-color: $--primary-text-placeholder;
+    }
 }
 
 .btn.btn-primary {

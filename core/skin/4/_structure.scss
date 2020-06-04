@@ -1,0 +1,58 @@
+$--panel-title-background-color: $--background-background-color-lighter!default;
+$--panel-body-background-color: transparent!default;
+$--panel-title-color: $--background-text-regular!default;
+
+.panel {
+
+    border: 1px solid $--background-border-color-base;
+
+    .panel-title  {
+        position: relative;
+        text-align: left;
+        height: 50px;
+        line-height: 50px;
+        background: $--panel-title-background-color;
+        padding: 0 25px;
+        color: $--panel-title-color;
+
+        
+        .label {
+            max-width: calc(100% - 92px);
+        }
+        
+        .icon-more1:before {
+            content: "\e643";
+            font-size: 12px;
+            color: $--background-text-placeholder;
+            &:hover {
+                color: $--primary;
+            }
+        }
+
+        .more {
+            &:hover {
+                .more-text, .icon-more1:before {
+                    color: $--primary;
+                }
+            }
+        }
+
+        .more-text {
+            font-size: 12px;
+            color: $--background-text-secondary;
+
+            
+        }
+    }
+
+    .panel-body {
+       padding: 20px 20px 10px 20px;
+       background: $--panel-body-background-color;
+    }
+
+    .more-position-bottom {
+        display: none;
+    }
+
+}
+

@@ -1,6 +1,10 @@
 @import './base';
 @import './cpn-adapter';
 
-body, section {
+body {
     background-color: $--background-background-color-base;
+}
+
+section {
+    min-height: 300px;
 }
