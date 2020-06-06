@@ -230,7 +230,7 @@
                             <option value="7">7</option>
                             <option value="8">8</option>
                             <option value="9">9</option>
-                            <option value="10" selected="">10</option>
+                            <option value="10">10</option>
                         </select>
                         页脚：<select name="" id="footer">
                           <option value="1">1</option>
@@ -366,9 +366,9 @@
                  var doc = $(window.frames["iframe"].document)[0];
                  removeStyles(doc)
                  var params = getParams()
-                 loadStyles(doc, '../dist/headers/'+params.header+'/header.css?time'+ (new Date().getTime()))
-                 loadStyles(doc, '../dist/footers/'+params.footer+'/footer.css?time'+ (new Date().getTime()))
-                 loadStyles(doc, '../dist/skin/'+params.structure+'/skin.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/0/headers/'+params.header+'/header.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/0/footers/'+params.footer+'/footer.css?time'+ (new Date().getTime()))
+                 loadStyles(doc, '../dist/0/skin/'+params.structure+'/skin.css?time'+ (new Date().getTime()))
                  loadStyles(doc, '../dist/buttons/'+params.button+'.css?time'+ (new Date().getTime()))
                  loadStyles(doc, '../dist/fonts/'+params.font+'.css?time'+ (new Date().getTime()))
             }
