@@ -15,7 +15,7 @@ gulp.task('build', function() {
      // '!core/headers/**'
      ])
      .pipe(sass()) 
-     .pipe(gulp.dest('dist'))
+     .pipe(gulp.dest('dist/0'))
 })
 
 // 在命令行使用 gulp auto 启动此任务

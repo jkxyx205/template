@@ -448,7 +448,7 @@ body {
                         .sub-menu {
                             display: none;
                             position: absolute;
-                            background: $--white;
+                            background: mix($--white, $nav-bgcolor, 8%);
                             line-height: 48px;
 
                             border-top-left-radius: 0;
@@ -474,11 +474,11 @@ body {
                                 width:  calc(7em * 1 + #{$menu-item-padding * 4}); //显示7个汉字
                                 text-align: left;
                                 padding: 0 $menu-item-padding * 1.5;
-                                color: $--white-text-regular;
+                                // color: $--white-text-regular;
     
-                                &:hover {
-                                    color: $--primary;
-                                }
+                                // &:hover {
+                                //     color: $--primary;
+                                // }
                             }
 
                             &.second-sub-menu {

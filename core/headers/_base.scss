@@ -69,15 +69,15 @@ body { // 未来 删除该部分 style 中的base.css设置
 
         @media (min-width: 768px) { //pc
             .nav .sub-menu { // 导航栏二级菜单
-                &, a {
-                    color: $nav-color;
-                }
+                // &, a {
+                //     color: $nav-color;
+                // }
 
-                a:hover, a:focus {
-                    &, i, span {
-                        color: $--primary!important;
-                    }
-                }
+                // a:hover, a:focus {
+                //     &, i, span {
+                //         color: $--primary!important;
+                //     }
+                // 
             }
         }
     }
