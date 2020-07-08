@@ -360,24 +360,26 @@ body {
                         height: $menu-nav-height;
                         color: $nav-light-color;
 
-                        @include opacity(0);
+                        // @include opacity(0);
+                        display: none;
 
                         // &:hover {
                         //     color: $nav-hover-color;
                         // }
 
                         &.show {
-                            @include opacity(1);
+                            // @include opacity(1);
+                            display: inline;
                         }
                      }
 
                      #menu-nav-prev {
-                        padding-right: 15px;
+                        margin-right: 15px;
                      }
 
 
                      #menu-nav-next {
-                        padding-left: 15px;
+                        margin-left: 15px;
                      }
 
                     a {

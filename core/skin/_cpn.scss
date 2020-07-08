@@ -122,7 +122,7 @@
             bottom: 0;
             padding: 15px;
             box-shadow: 1px 1px 15px $sitebar-split-color;
-            background-color: $--background-border-color-base;
+            background-color: $--background-background-color-extra-lighter;
             max-height: 330px;
             overflow: auto;
             opacity: 0;
@@ -160,7 +160,7 @@
                         position: relative;
                         z-index: 1;
                         padding: 0 15px;
-                        background: $--background-border-color-base;
+                        background: $--background-background-color-extra-lighter;
                     }
                 }
                 li {
@@ -954,7 +954,7 @@ $pic-title-top:10px;
 }
 
 .pic-list-1 {
-    @include pic-area($--white, 10px, 2px, $--background-border-color-base);
+    @include pic-area($--background, 10px, 2px, $--background-border-color-base);
     .wrapper {
         box-shadow: 0 1px 2px rgba(0,0,0,0.07);
 
@@ -964,7 +964,7 @@ $pic-title-top:10px;
             top: 0px;
             width: 100%;
             height: 100%;
-            background: $--background-border-color-base;
+            background: $--background-background-color-extra-lighter;
             opacity: 0;
         }
 
@@ -986,7 +986,7 @@ $pic-title-top:10px;
            position: absolute;
            left: 0;
             width: 100%;
-            background: $--background-border-color-base;
+            background: $--background-background-color-extra-lighter;
             transition: all 0.36s ease 0s;
 
             .content-footer {
@@ -1428,9 +1428,8 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 }
 
 .pic-list-10 {
-    @include pic-area($padding: 20%,  $background-color: #fbfbfd);
+    @include pic-area($padding: 20%,  $background-color: $--background-background-color-extra-lighter);
     .wrapper {
-
 
         .cover {
            img {
@@ -1447,7 +1446,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
         }
 
         &:hover {
-            background-color: $--background-border-color-base;
+            background-color: $--background-background-color-lighter;
             -moz-box-shadow:0px 0px 20px rgba(0,0,0,.1); -webkit-box-shadow:0px 0px 20px rgba(0,0,0,.1); box-shadow:0px 0px 20px rgba(0,0,0,.1);
         }
 
@@ -1491,7 +1490,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     .wrapper {
 
         .row {
-            background-color: $--background-border-color-base;
+            background-color: $--background-background-color-extra-lighter;
         }
         
         // @media (min-width: 992px) {
@@ -1537,11 +1536,11 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 }
 
 .pic-list-13 {
-    @include pic-area($background-color: $--background-border-color-base, $border-color: $--background-border-color-base);
+    @include pic-area($background-color: $--background-background-color-extra-lighter, $border-color: $--background-border-color-base);
 
         .split-1, .split-2, .split-3 {
             height: 1px;
-            background-color: $--background-border-color-base;
+            background-color: $--background-background-color-extra-lighter;
             margin: 1px auto;
 
         }
@@ -1600,7 +1599,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 }
 
 .pic-list-14 {
-    @include pic-area($background-color: $--background-border-color-base);
+    @include pic-area($background-color: $--background-background-color-extra-lighter);
 
      &.panel-body .row {
         margin: 0;
@@ -1794,7 +1793,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
     .wrapper {
 
-        background-color: $--background-border-color-base;
+        background-color: $--background-background-color-extra-lighter;
 
         .content {
             transition: all 0.5s ease 0s;
@@ -1831,7 +1830,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                 .btn {
                     color: $--primary;
                     border: 1px solid $--background-border-color-base;
-                    background-color: $--background-border-color-base;
+                    background-color: $--background-background-color-extra-lighter;
                 }
             }
 
@@ -1914,7 +1913,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             .title>a {
                 transition: all 0.3s ease 0s;
             }
-            border-bottom: 1px solid $--background-border-color-base;
+            border-bottom: 1px solid $--background-border-color-light;
 
         }
 
@@ -1939,7 +1938,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             .content {
 
                 
-                background: $--background-border-color-base;
+                background: $--background-background-color-extra-lighter;
 
                 .title>a {
                     margin-left: 5px;
@@ -2097,7 +2096,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                 bottom: -6px;
                 height: 2px;
                 width: 60px;
-                background-color: $--background-border-color-base;
+                background-color: $--background-background-color-extra-lighter;
             }
 
             .summary-fixed {
@@ -2135,7 +2134,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                 bottom: 0;
                 height: 2px;
                 width: 60px;
-                background-color: $--background-border-color-base;
+                background-color: $--background-background-color-extra-lighter;
 
                 @media screen and (max-width: 992px){
                     height: 1px;
@@ -2152,7 +2151,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
 
 .pic-list-22 {
-    @include pic-area($background-color: #f8f8f8);
+    @include pic-area($background-color: $--background-background-color-extra-lighter);
     .wrapper {
 
         .cover {
@@ -2366,7 +2365,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
 
 .pic-list-27 {
-    @include pic-area($background-color: $--background-border-color-base);
+    @include pic-area($background-color: $--background-background-color-extra-lighter);
         
     .row {
         margin: 0;
@@ -2433,7 +2432,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
 
     .wrapper {
-        border-bottom: 1px solid $--background-border-color-base;
+        border-bottom: 1px solid $--background-border-color-light;
         .cover {
             .readmore {
                 position: absolute;
@@ -2495,7 +2494,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 .pic-list-30 {
     @include pic-area();
 
-    $background-color: $--background-border-color-base;
+    $background-color: $--background-background-color-extra-lighter;
 
     &.panel-body {
         padding-bottom: 25px;
@@ -2607,7 +2606,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             bottom: 5px;
             width: 100%;
             height: 1px;
-            background-color:  $--background-border-color-base;
+            background-color: $--background-border-color-light;
         }
 
         .content {
@@ -2709,7 +2708,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
     %common-style {
         color: #8c8c8c;
         border: 1px solid $--background-border-color-base;
-        background: $--background-border-color-base;
+        background: $--background-background-color-extra-lighter;
         text-align: center;
     }
 
@@ -2805,7 +2804,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                             -moz-transform: rotate(-45deg);
                             -o-transform: rotate(-45deg);
                             -ms-transform: rotate(-45deg);
-                            background-color: $--background-border-color-base;
+                            background-color: $--background-background-color-extra-lighter;
                             -webkit-box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.1);
                             -moz-box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.1);
                             box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.1);
@@ -2815,7 +2814,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                                 z-index: 9;
                                 height: 50px;
                                 padding: 10px 0 10px 10px;
-                                background: $--background-border-color-base;
+                                background: $--background-background-color-extra-lighter;
                             }
                         }
 
@@ -2842,7 +2841,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
         // padding: 10px 0 10px 10px;
         width: 170px;
         box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.1);
-        background-color: $--background-border-color-base;
+        background-color: $--background-background-color-extra-lighter;
         opacity: 0;
 
         li {
