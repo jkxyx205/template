@@ -1,0 +1,49 @@
+.panel {
+    .panel-title  {
+        position: relative;
+        color: $--background-text-primary;
+        text-align: center;
+        height: 150px;
+        line-height: 150px;
+
+        .pull-right.more {
+            display: none;
+        }
+
+        .label {
+            position: relative;
+            font-weight: bold;
+            max-width: 100%;
+            display: inline-block;
+            font-size: 18px;
+            padding: 0 20px;
+            .more-position-bottom {
+                margin: 25px 0;
+            }
+
+
+            &:before {
+               content: '';
+               position: absolute;
+               width: 6px;
+               height: 6px;
+               bottom: 72px;
+               border-radius: 50%;
+               background-color: $--primary;
+               left: 0;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                bottom: 72px;
+                border-radius: 50%;
+                background-color: $--primary;
+               right: 0;
+            }
+        }
+
+    }
+}

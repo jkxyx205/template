@@ -1,0 +1,41 @@
+.panel {
+    .panel-title  {
+        position: relative;
+        color: $--background-text-primary;
+        text-align: center;
+        height: 150px;
+        line-height: 150px;
+
+        .pull-right.more {
+            display: none;
+        }
+
+        .label {
+            position: relative;
+            font-weight: bold;
+            max-width: 100%;
+            display: inline-block;
+            font-size: 18px;
+            .more-position-bottom {
+                margin: 25px 0;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                top: 32px;
+                border-top: 10px solid $--primary;
+                border-right: 10px solid transparent;
+                border-left: 10px solid transparent;
+            }
+        }
+
+    }
+}
