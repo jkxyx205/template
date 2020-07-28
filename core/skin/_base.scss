@@ -107,8 +107,8 @@ a {
 
     &:hover {
         color: $--primary;
-        background: $--primary-text-active;
-        border-color: $--primary-text-placeholder;
+        background: $--background-background-color-light; // $--primary-text-active;
+        border-color: $--primary;
     }
 }
 

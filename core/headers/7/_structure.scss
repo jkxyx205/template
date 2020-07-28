@@ -39,7 +39,6 @@ body {
                         }
                     }
                 }
-
             }
 
             .nav {
@@ -61,11 +60,11 @@ body {
 
                 #searchInput {
                     @include opacity(0);
-                    height: 0;
-                    width: 0;
+                    // height: 0;
+                    // width: 0;
                     border:none;
                     outline: none;
-                    @include transition(opacity);
+                    // @include transition(opacity);
                 }
             }
 

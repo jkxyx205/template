@@ -21,7 +21,7 @@
            
             &:after {
                 border-right: $width solid transparent;
-                border-bottom: $width solid $nav-hover-color;
+                border-bottom: $width solid mix($--white, $nav-bgcolor, 8%); // $nav-hover-color; 二级菜单颜色
                 border-left: $width solid transparent;
                 bottom: 0;
             }

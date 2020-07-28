@@ -38,7 +38,7 @@ $--black-border-color-extra-lighter: mix($--white, $--black, 4%) !default;
 $--black-background-color-base: #000000;
 
 // primary
-$--primary: #b45f06;
+$--primary: #741b47;
 $--primary-background-color-light: mix($--white, $--primary, 12%) !default;
 $--primary-background-color-lighter: mix($--white, $--primary, 8%) !default;
 $--primary-background-color-extra-lighter: mix($--white, $--primary, 4%) !default;
@@ -54,24 +54,24 @@ $--primary-border-color-base: mix($--white, $--primary, 20%) !default;
 $--primary-border-color-light: mix($--white, $--primary, 12%) !default;
 $--primary-border-color-lighter: mix($--white, $--primary, 8%) !default;
 $--primary-border-color-extra-lighter: mix($--white, $--primary, 4%) !default;
-$--primary-background-color-base: #b45f06;
+$--primary-background-color-base: #741b47;
 
 // background
-$--background: #ffffff;
-$--background-background-color-light: mix($--black, $--background, 6%) !default;
-$--background-background-color-lighter: mix($--black, $--background, 4%) !default;
-$--background-background-color-extra-lighter: mix($--black, $--background, 2%) !default;
-$--background-white-color-light: mix($--white, $--background, 2%) !default;
-$--background-white-color-lighter: mix($--white, $--background, 4%) !default;
-$--background-white-color-extra-lighter: mix($--white, $--background, 6%) !default;
-$--background-text-active: mix($--black, $--background, 90%) !default;
-$--background-text-primary: mix($--black, $--background, 60%) !default;
-$--background-text-regular: mix($--black, $--background, 50%) !default;
-$--background-text-secondary: mix($--black, $--background, 40%) !default;
-$--background-text-placeholder: mix($--black, $--background, 30%) !default;
-$--background-border-color-base: mix($--black, $--background, 15%) !default;
-$--background-border-color-light: mix($--black, $--background, 6%) !default;
-$--background-border-color-lighter: mix($--black, $--background, 4%) !default;
-$--background-border-color-extra-lighter: mix($--black, $--background, 2%) !default;
-$--background-background-color-base: #ffffff;
+$--background: #4a86e8;
+$--background-background-color-light: mix($--white, $--background, 12%) !default;
+$--background-background-color-lighter: mix($--white, $--background, 8%) !default;
+$--background-background-color-extra-lighter: mix($--white, $--background, 4%) !default;
+$--background-white-color-light: mix($--white, $--background, 4%) !default;
+$--background-white-color-lighter: mix($--white, $--background, 8%) !default;
+$--background-white-color-extra-lighter: mix($--white, $--background, 12%) !default;
+$--background-text-active: mix($--white, $--background, 90%) !default;
+$--background-text-primary: mix($--white, $--background, 60%) !default;
+$--background-text-regular: mix($--white, $--background, 50%) !default;
+$--background-text-secondary: mix($--white, $--background, 40%) !default;
+$--background-text-placeholder: mix($--white, $--background, 30%) !default;
+$--background-border-color-base: mix($--white, $--background, 20%) !default;
+$--background-border-color-light: mix($--white, $--background, 12%) !default;
+$--background-border-color-lighter: mix($--white, $--background, 8%) !default;
+$--background-border-color-extra-lighter: mix($--white, $--background, 4%) !default;
+$--background-background-color-base: #4a86e8;
 

@@ -2201,7 +2201,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
 
             .main-mask {
                 transition: all 0.3s ease 0s;
-                opacity: .8;
+                opacity: 1;
                 height: 0;
                 top: auto;
                 bottom: 0;
@@ -2238,7 +2238,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
                 }
 
                 .summary-fixed, .title {
-                    color: $--white;
+                    color: $--primary-text-regular; //$--white;
                 }
             }
         }
@@ -2418,7 +2418,7 @@ section .pic-list-5 .content-box .wrapper:hover .container-icon-center {
             } 
 
             .summary-line {
-                color: $--background-text-secondary;
+                color: $--black-text-regular;
             }
             
         }
