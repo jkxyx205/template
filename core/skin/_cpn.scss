@@ -415,8 +415,12 @@
                 word-wrap:break-word;
             }
              @media (max-width: 768px) {
-                 h1, p {
+                 h1 {
                     font-size: 18px!important;
+                 }
+
+                 p {
+                    font-size: 16px!important;
                  }
              }
              
@@ -447,13 +451,18 @@
 /*****轮播图组件********/
 .swiper .swiper-container {
     .swiper-slide {
-       
-         img {
-            @media (max-width: 768px) {
-                @include rem(height, 230px);
-            }
-           
+        // 固定比例
+        //  img {
+        //     @media (max-width: 768px) {
+        //         @include rem(height, 230px);
+        //     }
+        // }
+
+        // 定高
+        @media (max-width: 768px) {
+            height: 230px!important;
         }
+
     }
 }
 

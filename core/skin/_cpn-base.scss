@@ -23,7 +23,7 @@
 // 模态框 start
 .modal {
   .modal-content {
-    background-color: $--background-border-color-base;
+    background-color: $--background;
     }
     .modal-header {
         border-bottom-color: $--background-border-color-base; 
@@ -131,6 +131,10 @@ section {
     }
     
     //----控件 start
+    .cpn {
+        background: $--background;
+    }
+    
     .panel {
         // overflow: hidden;
 

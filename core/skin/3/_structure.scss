@@ -13,35 +13,20 @@
                 z-index: 1;
                 padding: 0 20px;
                 max-width: calc(100% - 92px);
-                background-color: $--primary;      
                 color: $--primary-text-regular;
     
                 &:before {
                     content: "";
                     position: absolute;
-                    left:0;
+                    left: 5px;
                     top: 0;
                     height: 100%;
-                    border-left: 10px solid $--background-background-color-base;
-                    border-right: 0;
-                    border-top: 0;
-                    border-bottom: 35px solid $--primary;
+                    background-color: $--primary;      
+                    width: calc(100% - 10px);
+                    z-index: -1;
+                    transform: skewX(-15deg);
                 }
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    width: 5px;
-                    height: 100%;
-                    border-left: 10px solid $--primary;
-                    border-right: 0;
-                    border-top: 0;
-                    border-bottom: 35px solid $--background-background-color-base;
-                }
-
-                
+          
             }
 
             .more {
@@ -61,7 +46,6 @@
                 height: 1px;
                 width: calc(100% - 24px);
                 background-color: $--background-border-color-light;
-               
             }
         }
         
