@@ -57,7 +57,7 @@ $--primary-border-color-extra-lighter: mix($--white, $--primary, 4%) !default;
 $--primary-background-color-base: #ff00ff;
 
 // background
-$--background: #00ffff;
+$--background: #ffffff;
 $--background-background-color-light: mix($--black, $--background, 6%) !default;
 $--background-background-color-lighter: mix($--black, $--background, 4%) !default;
 $--background-background-color-extra-lighter: mix($--black, $--background, 2%) !default;
@@ -73,5 +73,5 @@ $--background-border-color-base: mix($--black, $--background, 15%) !default;
 $--background-border-color-light: mix($--black, $--background, 6%) !default;
 $--background-border-color-lighter: mix($--black, $--background, 4%) !default;
 $--background-border-color-extra-lighter: mix($--black, $--background, 2%) !default;
-$--background-background-color-base: #00ffff;
+$--background-background-color-base: #ffffff;
 
